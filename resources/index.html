@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Homeschool Resources for Parents | The Homeschool Admin</title>
+  <meta name="description" content="Instant access homeschool trainings, guides, bundles, worksheets, and resources for parents who want homeschool structure, clarity, and support." />
+  <link rel="canonical" href="https://www.thehomeschooladmin.com/resources/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --yellow: #FFD361;
+      --yellow-dark: #E6A909;
+      --powder: #8AA6A0;
+      --powder-pale: #EBF2F1;
+      --mauve: #C16F63;
+      --black: #1a1a1a;
+      --white: #ffffff;
+      --offwhite: #FAFAF8;
+      --gray: #3d3d2e;
+      --mid: #666666;
+      --rule: #e4eded;
+    }
+
+    body {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      background: var(--offwhite);
+      color: var(--black);
+      line-height: 1.8;
+    }
+
+    .nav {
+      background: var(--black);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .nav-brand {
+      font-family: 'Libre Baskerville', serif;
+      color: var(--white);
+      font-size: 15px;
+      text-decoration: none;
+      letter-spacing: .02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,.68);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover {
+      color: var(--yellow);
+    }
+
+    .nav-cta {
+      background: var(--yellow);
+      color: var(--black) !important;
+      padding: 8px 15px;
+      border-radius: 2px;
+    }
+
+    .hero {
+      padding: 86px 24px 70px;
+      background: linear-gradient(135deg, var(--powder-pale), var(--offwhite));
+      text-align: center;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 400;
+      font-size: clamp(36px, 6vw, 66px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    h1 em {
+      color: var(--powder);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      font-size: 20px;
+      color: var(--gray);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .instant {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 28px 24px;
+    }
+
+    .instant p {
+      color: rgba(255,255,255,.78);
+      font-size: 15px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .section {
+      padding: 74px 24px;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 400;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    h2 em {
+      color: var(--powder);
+      font-style: italic;
+    }
+
+    .section-heading p {
+      color: var(--mid);
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .grid-three {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      padding: 34px;
+      box-shadow: 0 14px 38px rgba(0,0,0,.04);
+    }
+
+    .card.video {
+      border-top: 6px solid var(--yellow-dark);
+    }
+
+    .card.free {
+      border-top: 6px solid var(--powder);
+    }
+
+    .card.bundle {
+      border-top: 6px solid var(--mauve);
+    }
+
+    .label {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--powder);
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 27px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .price {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--black);
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 18px 0 24px;
+    }
+
+    li {
+      color: var(--gray);
+      margin-bottom: 9px;
+      font-size: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      text-decoration: none;
+      padding: 14px 30px;
+      border-radius: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: 8px;
+    }
+
+    .button:hover {
+      background: var(--yellow-dark);
+      color: var(--white);
+    }
+
+    .button-dark {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .button-dark:hover {
+      background: var(--powder);
+      color: var(--black);
+    }
+
+    .pale {
+      background: var(--powder-pale);
+    }
+
+    .note-band {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 46px 24px;
+      text-align: center;
+    }
+
+    .note-band p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      font-size: 21px;
+      color: var(--black);
+    }
+
+    .footer {
+      background: var(--black);
+      color: rgba(255,255,255,.7);
+      text-align: center;
+      padding: 34px 24px;
+      font-size: 13px;
+    }
+
+    @media(max-width: 900px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 14px;
+      }
+
+      .grid,
+      .grid-three {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/">The Homeschool Admin</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="/organize/">Organize</a></li>
+        <li><a href="/confidence/">Confidence</a></li>
+        <li><a href="/thrive/">Thrive</a></li>
+        <li><a class="nav-cta" href="/organize/">Work With Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Resources for Homeschool Parents</span>
+      <h1>Homeschool trainings, guides, bundles, <em>and more.</em></h1>
+      <p class="hero-sub">
+        Simple, instant access resources to help you get clear, get organized, and move through the homeschool process with more confidence.
+      </p>
+    </div>
+  </header>
+
+  <section class="instant">
+    <p>Everything here is instant access</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Video Trainings</span>
+        <h2>Start here if you need the whole process to finally make sense.</h2>
+        <p>
+          These trainings are for parents who want less confusion, less second guessing, and more peace around how homeschool can actually work.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card video">
+          <span class="label">Video Training</span>
+          <h3>How to Homeschool in Less Than 3 Hours a Day</h3>
+          <p>
+            After this 47 minute video training, you will understand the homeschooling process much more clearly.
+          </p>
+          <p>
+            You will know how to structure your routine so your kids can receive a strong education and still spend most of each day living, hiking, going on playdates, honing their interests, learning life skills, and going on fun adventures with you.
+          </p>
+          <a class="button" href="#">Get Clear on the Homeschool Process</a>
+        </article>
+
+        <article class="card video">
+          <span class="label">Video Training</span>
+          <h3>Deschooling Mindset Reset</h3>
+          <p>
+            Ditch the school mindset and build a learning rhythm that works for your family.
+          </p>
+          <ul>
+            <li>Mindset reset to break free from traditional school thinking</li>
+            <li>Practical steps to tailor homeschooling to your child’s needs</li>
+            <li>A simplified approach with structure and flexibility</li>
+            <li>Instant access with an implementation guide included</li>
+          </ul>
+          <a class="button" href="#">Access the Mindset Reset</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pale">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Free Instant Downloads</span>
+        <h2>Start with a simple win.</h2>
+        <p>
+          These free homeschool resources help you organize your next step without falling into research mode for another three weeks.
+        </p>
+      </div>
+
+      <div class="grid-three">
+        <article class="card free">
+          <span class="label">Free Download</span>
+          <h3>Streamlined Starter Guide</h3>
+          <p>
+            This homeschool starter guide is a streamlined, resourceful tool for homeschool families who need the process made easier.
+          </p>
+          <ul>
+            <li>The law</li>
+            <li>Your mindset</li>
+            <li>Community</li>
+            <li>Resources</li>
+            <li>Bonus curriculum menu inside</li>
+            <li>Easy to use with linked resources</li>
+          </ul>
+          <a class="button button-dark" href="#">Download the Starter Guide</a>
+        </article>
+
+        <article class="card free">
+          <span class="label">Free Download</span>
+          <h3>Teach Reading Without Frustration</h3>
+          <p>
+            If your child is between the ages of 5 and 9 and beginning to learn to read, but you are concerned they are not catching on, this guide gives you unconventional tips that may be exactly what you and your child need.
+          </p>
+          <a class="button button-dark" href="#">Download the Reading Guide</a>
+        </article>
+
+        <article class="card free">
+          <span class="label">Free Download</span>
+          <h3>Connection and Values PDFs</h3>
+          <p>
+            A small set of parent support resources to help you connect, reflect, and better understand emotional needs at home.
+          </p>
+          <ul>
+            <li>Connect With My Teen Icebreaker</li>
+            <li>Core Values Worksheet PDF</li>
+            <li>Special audio note from Maria, The Homeschool Admin</li>
+            <li>The Feeling Wheel PDF</li>
+          </ul>
+          <a class="button button-dark" href="#">Access the Free PDFs</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="note-band">
+    <p>
+      Homeschool does not need to feel like you are piecing together a hundred random things. Start with the resource that gives you the next clear step.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Bundled Guides</span>
+        <h2>Simple homeschool bundles when you want the pieces pulled together.</h2>
+        <p>
+          These low cost bundles are designed to help you start, organize, document, and build confidence with practical homeschool tools.
+        </p>
+      </div>
+
+      <div class="grid-three">
+        <article class="card bundle">
+          <span class="label">Starter Bundle</span>
+          <div class="price">$7</div>
+          <h3>Set to Go Bundle</h3>
+          <ul>
+            <li>Homeschool Starter Guide</li>
+            <li>Curriculum Menu</li>
+            <li>Resource and Reference List</li>
+            <li>SMART Goal Worksheet</li>
+            <li>Homeschool Reflections</li>
+            <li>Portfolio Checklist</li>
+          </ul>
+          <a class="button" href="#">Get the $7 Bundle</a>
+        </article>
+
+        <article class="card bundle">
+          <span class="label">Organization Bundle</span>
+          <div class="price">$17</div>
+          <h3>Organization Bundle</h3>
+          <ul>
+            <li>Annual Attendance Chart</li>
+            <li>Weekly Planner</li>
+            <li>Monthly Planner</li>
+            <li>Daily Task List</li>
+            <li>Portfolio Checklist</li>
+            <li>15 Creative Lesson Prompts</li>
+          </ul>
+          <a class="button" href="#">Get the $17 Bundle</a>
+        </article>
+
+        <article class="card bundle">
+          <span class="label">Documentation Bundle</span>
+          <div class="price">$21</div>
+          <h3>Documentation Bundle</h3>
+          <ul>
+            <li>Attendance Sheet</li>
+            <li>Course Descriptions Template</li>
+            <li>Elements of a Story Worksheet</li>
+            <li>Essay Prompt on Freedom</li>
+            <li>Fine Arts Reflections</li>
+            <li>2 Physical Education Forms</li>
+            <li>Video Review Worksheet</li>
+            <li>Field Trip List</li>
+            <li>15 Creative Lesson Prompts</li>
+          </ul>
+          <a class="button" href="#">Get the $21 Bundle</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pale">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">State of Maine</span>
+        <h2>Letters of Intent to Homeschool</h2>
+        <p>
+          Need help finding or completing your homeschool letter of intent? Start here, then reach out if you need support understanding what your family needs next.
+        </p>
+        <a class="button button-dark" href="#">Access Maine Homeschool Letter Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © The Homeschool Admin. All rights reserved.
+  </footer>
+
+</body>
+</html>
