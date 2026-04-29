@@ -41,60 +41,113 @@
     }
 
     .nav {
-      background: var(--black);
-      padding: 0 24px;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
+  background: var(--black);
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
-    .nav-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      min-height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
+.nav-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
 
-    .nav-brand {
-      font-family: 'Libre Baskerville', serif;
-      color: var(--white);
-      font-size: 15px;
-      text-decoration: none;
-      letter-spacing: .02em;
-    }
+.nav-brand {
+  font-family: 'Libre Baskerville', serif;
+  color: var(--white);
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: .02em;
+  z-index: 1001;
+}
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      list-style: none;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
+.menu-toggle {
+  display: none;
+}
 
-    .nav-links a {
-      color: rgba(255,255,255,.68);
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-    }
+.menu-button {
+  display: none;
+  color: var(--black);
+  background: var(--yellow);
+  padding: 8px 14px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  cursor: pointer;
+  z-index: 1001;
+}
 
-    .nav-links a:hover {
-      color: var(--yellow);
-    }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+}
 
-    .nav-cta {
-      background: var(--yellow);
-      color: var(--black) !important;
-      padding: 8px 15px;
-      border-radius: 2px;
-    }
+.nav-links a {
+  color: rgba(255,255,255,.72);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
 
+.nav-links a:hover {
+  color: var(--yellow);
+}
+
+.nav-cta {
+  background: var(--yellow);
+  color: var(--black) !important;
+  padding: 8px 15px;
+  border-radius: 2px;
+}
+
+@media(max-width: 850px) {
+  .nav-inner {
+    min-height: 64px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: -24px;
+    right: -24px;
+    background: var(--black);
+    padding: 20px 24px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-top: 1px solid rgba(255,255,255,.12);
+  }
+
+  .menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-cta {
+    display: inline-block;
+    margin-top: 6px;
+  }
+}
     .hero {
       padding: 86px 24px 70px;
       background: linear-gradient(135deg, var(--powder-pale), var(--offwhite));
@@ -343,6 +396,10 @@
   <nav class="nav">
   <div class="nav-inner">
     <a class="nav-brand" href="/">The Homeschool Admin</a>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">Menu</label>
+
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/about/">About</a></li>
@@ -352,7 +409,7 @@
       <li><a href="/thrive/">Thrive</a></li>
     </ul>
   </div>
-
+</nav>
   <header class="hero">
     <div class="hero-inner">
       <span class="eyebrow">Resources for Homeschool Parents</span>
@@ -387,7 +444,7 @@
           <p>
             You will know how to structure your routine so your kids can receive a strong education and still spend most of each day living, hiking, going on playdates, honing their interests, learning life skills, and going on fun adventures with you.
           </p>
-          <a class="button" href="#">Get Clear on the Homeschool Process</a>
+          <a class="button" href="https://buy.stripe.com/7sYeVde2o5eY5J44Vq0RG2M">Get Clear on the Homeschool Process</a>
         </article>
 
         <article class="card video">
@@ -402,7 +459,7 @@
             <li>A simplified approach with structure and flexibility</li>
             <li>Instant access with an implementation guide included</li>
           </ul>
-          <a class="button" href="#">Access the Mindset Reset</a>
+          <a class="button" href="https://buy.stripe.com/6oEbKkgqc2wq2eAbK9">Access the Mindset Reset</a>
         </article>
       </div>
     </div>
@@ -433,7 +490,7 @@
             <li>Bonus curriculum menu inside</li>
             <li>Easy to use with linked resources</li>
           </ul>
-          <a class="button button-dark" href="#">Download the Starter Guide</a>
+          <a class="button button-dark" href="https://starterguide.thehomeschooladmin.com/?fbclid=IwAR3JKVdkcNvMqosFXItD6oHH1S-EY9KyZbXNWF7UWjvGPXxcX_yuyHE0yE0">Download the Starter Guide</a>
         </article>
 
         <article class="card free">
@@ -442,7 +499,7 @@
           <p>
             If your child is between the ages of 5 and 9 and beginning to learn to read, but you are concerned they are not catching on, this guide gives you unconventional tips that may be exactly what you and your child need.
           </p>
-          <a class="button button-dark" href="#">Download the Reading Guide</a>
+          <a class="button button-dark" href="https://starterguide.thehomeschooladmin.com/reading101">Download the Reading Guide</a>
         </article>
 
         <article class="card free">
@@ -457,7 +514,7 @@
             <li>Special audio note from Maria, The Homeschool Admin</li>
             <li>The Feeling Wheel PDF</li>
           </ul>
-          <a class="button button-dark" href="#">Access the Free PDFs</a>
+          <a class="button button-dark" href="https://thehomeschooladmin.ck.page/586ff0a36f">Access the Free PDFs</a>
         </article>
       </div>
     </div>
@@ -492,7 +549,7 @@
             <li>Homeschool Reflections</li>
             <li>Portfolio Checklist</li>
           </ul>
-          <a class="button" href="#">Get the $7 Bundle</a>
+          <a class="button" href="https://buy.stripe.com/5kAg0Agqc9YS4mIbJR">Get the $7 Bundle</a>
         </article>
 
         <article class="card bundle">
@@ -507,7 +564,7 @@
             <li>Portfolio Checklist</li>
             <li>15 Creative Lesson Prompts</li>
           </ul>
-          <a class="button" href="#">Get the $17 Bundle</a>
+          <a class="button" href="https://buy.stripe.com/bIYdSsde05IC06s28X">Get the $17 Bundle</a>
         </article>
 
         <article class="card bundle">
@@ -525,21 +582,8 @@
             <li>Field Trip List</li>
             <li>15 Creative Lesson Prompts</li>
           </ul>
-          <a class="button" href="#">Get the $21 Bundle</a>
+          <a class="button" href="https://buy.stripe.com/4gw9Cc4HufjccTe14U">Get the $21 Bundle</a>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section pale">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">State of Maine</span>
-        <h2>Letters of Intent to Homeschool</h2>
-        <p>
-          Need help finding or completing your homeschool letter of intent? Start here, then reach out if you need support understanding what your family needs next.
-        </p>
-        <a class="button button-dark" href="#">Access Maine Homeschool Letter Resources</a>
       </div>
     </div>
   </section>
