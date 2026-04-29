@@ -144,35 +144,6 @@ body{font-family:'Bricolage Grotesque',sans-serif;background:var(--offwhite);col
   }
 }
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a class="nav-brand" href="/">The Homeschool Admin</a>
-
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-button">Menu</label>
-
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/resources/">Resources</a></li>
-      <li><a href="/organize/">Organize</a></li>
-      <li><a href="/confidence/">Confidence</a></li>
-      <li><a href="/thrive/">Thrive</a></li>
-      <li><a class="nav-cta" href="/organize/">Work With Me</a></li>
-    </ul>
-  </div>
-</nav>  
-  
-/* NAV */
-.nav{background:var(--black);padding:0 24px}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
-.nav-brand{font-family:'Libre Baskerville',serif;font-size:15px;color:var(--white);text-decoration:none;letter-spacing:.02em}
-.nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{font-size:12px;color:rgba(255,255,255,.65);text-decoration:none;letter-spacing:.06em;transition:color .2s}
-.nav-links a:hover{color:var(--yellow)}
-.nav-cta{background:var(--yellow);color:var(--black);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:8px 20px;border-radius:2px;transition:background .2s}
-.nav-cta:hover{background:var(--yellow-dark);color:var(--white)}
-
 /* BUTTONS */
 .btn{display:inline-block;background:var(--yellow);color:var(--black);font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:16px 44px;border-radius:2px;transition:background .2s}
 .btn:hover{background:var(--yellow-dark);color:var(--white)}
@@ -324,6 +295,10 @@ p strong{color:var(--black)}
 <nav class="nav">
   <div class="nav-inner">
     <a class="nav-brand" href="/">The Homeschool Admin</a>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">Menu</label>
+
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/about/">About</a></li>
