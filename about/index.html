@@ -41,44 +41,113 @@
     }
 
     .nav {
-      background: var(--black);
-      padding: 0 24px;
-    }
+  background: var(--black);
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+.nav-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
 
-    .nav-brand {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 15px;
-      color: var(--white);
-      text-decoration: none;
-      letter-spacing: .02em;
-    }
+.nav-brand {
+  font-family: 'Libre Baskerville', serif;
+  color: var(--white);
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: .02em;
+  z-index: 1001;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
+.menu-toggle {
+  display: none;
+}
 
-    .nav-links a {
-      font-size: 12px;
-      color: rgba(255,255,255,.68);
-      text-decoration: none;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
+.menu-button {
+  display: none;
+  color: var(--black);
+  background: var(--yellow);
+  padding: 8px 14px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  cursor: pointer;
+  z-index: 1001;
+}
 
-    .nav-links a:hover {
-      color: var(--yellow);
-    }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,.72);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: var(--yellow);
+}
+
+.nav-cta {
+  background: var(--yellow);
+  color: var(--black) !important;
+  padding: 8px 15px;
+  border-radius: 2px;
+}
+
+@media(max-width: 850px) {
+  .nav-inner {
+    min-height: 64px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: -24px;
+    right: -24px;
+    background: var(--black);
+    padding: 20px 24px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-top: 1px solid rgba(255,255,255,.12);
+  }
+
+  .menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-cta {
+    display: inline-block;
+    margin-top: 6px;
+  }
+}
 
     .hero {
       background: linear-gradient(135deg, var(--powder-pale), var(--offwhite));
@@ -330,6 +399,10 @@
 <nav class="nav">
   <div class="nav-inner">
     <a class="nav-brand" href="/">The Homeschool Admin</a>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">Menu</label>
+
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/about/">About</a></li>
@@ -337,10 +410,10 @@
       <li><a href="/organize/">Organize</a></li>
       <li><a href="/confidence/">Confidence</a></li>
       <li><a href="/thrive/">Thrive</a></li>
+      <li><a class="nav-cta" href="/organize/">Work With Me</a></li>
     </ul>
   </div>
 </nav>
-
   <header class="hero">
     <div class="hero-inner">
       <span class="eyebrow">About The Homeschool Admin</span>
