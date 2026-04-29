@@ -149,9 +149,10 @@ a { color:inherit; }
   }
 }
 .hero {
-  background:linear-gradient(135deg, #075f64 0%, #04342C 100%);
-  color:var(--white);
+  background:var(--mist);
+  color:var(--ink);
   padding:72px 0 64px;
+  border-bottom:1px solid var(--line);
 }
 .hero-grid {
   display:grid;
@@ -226,7 +227,7 @@ h2 em {
   padding:82px 0;
 }
 .section.alt {
-  background:var(--white);
+  background:var(--mist);
 }
 .center {
   text-align:center;
@@ -248,8 +249,10 @@ h2 {
   color:var(--soft);
 }
 .quote-band {
-  background:var(--forest);
+  background:var(--white);
   padding:58px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 .quote-card {
   background:var(--white);
@@ -551,10 +554,11 @@ h2 {
   font-size:14px;
 }
 .footer-cta {
-  background:linear-gradient(135deg, #04342C 0%, #066970 100%);
+  background:var(--mist);
   padding:88px 0;
-  color:var(--white);
+  color:var(--ink);
   text-align:center;
+  border-top:1px solid var(--line);
 }
 .footer-cta p {
   color:rgba(255,255,255,.82);
