@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CONFIDENCE — Custom Portfolio Planner | The Homeschool Admin</title>
+<title>CONFIDENCE, Custom Portfolio Planner | The Homeschool Admin</title>
 <meta name="description" content="Pull and go curriculum and personalized plans for homeschoolers. Done with you, made for you, mailed to you. 1:1 with Maria Galyean, MLS.">
-<meta property="og:title" content="CONFIDENCE — Custom Portfolio Planner | The Homeschool Admin">
+<meta property="og:title" content="CONFIDENCE, Custom Portfolio Planner | The Homeschool Admin">
 <meta property="og:description" content="Get fully prepared and prepped to present lessons to your children each day without thinking about planning every week.">
 <meta property="og:url" content="https://www.thehomeschooladmin.com/confidence">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is CONFIDENCE from The Homeschool Admin?","acceptedAnswer":{"@type":"Answer","text":"CONFIDENCE is a custom curriculum portfolio program — done with you, made for you, and mailed to your home. Maria builds 9 months of weekly pull-and-go lesson plans tailored to your child, delivered as a physical planner that doubles as a documentation portfolio for your annual review."}},
+{"@type":"Question","name":"What is CONFIDENCE from The Homeschool Admin?","acceptedAnswer":{"@type":"Answer","text":"CONFIDENCE is a custom curriculum portfolio program, done with you, made for you, and mailed to your home. Maria builds 9 months of weekly pull and go lesson plans tailored to your child, delivered as a physical planner that doubles as a documentation portfolio for your annual review."}},
 {"@type":"Question","name":"How much does CONFIDENCE cost?","acceptedAnswer":{"@type":"Answer","text":"CONFIDENCE is $999 per month. Sibling portfolios are 50% off."}},
 {"@type":"Question","name":"What is included in CONFIDENCE?","acceptedAnswer":{"@type":"Answer","text":"CONFIDENCE includes 9 months of daily lesson plans, a REASSURED developmental assessment, a personal Telegram consulting channel, two 1:1 VIP calls, and a physical portfolio mailed to your home."}}
 ]}
@@ -35,27 +35,29 @@
   --mid:#666;
   --rule:#e4eded;
 }
-body{font-family:'Bricolage Grotesque',sans-serif;background:var(--offwhite);color:var(--black);line-height:1.8}
-.container{max-width:700px;margin:0 auto;padding:0 24px}
+html{scroll-behavior:smooth}
+body{font-family:'Bricolage Grotesque',sans-serif;background:var(--offwhite);color:var(--black);line-height:1.8;overflow-x:hidden}
+img{max-width:100%}
+.container{max-width:760px;margin:0 auto;padding:0 24px}
 .nav{background:var(--black);padding:14px 24px;text-align:center}
 .nav a{font-size:12px;color:var(--yellow);text-decoration:none;letter-spacing:.06em}
 .nav a:hover{color:var(--white)}
 .coming-band{background:var(--powder);padding:12px 24px;text-align:center}
-.coming-band p{font-size:13px;color:var(--black);margin:0}
+.coming-band p{font-size:13px;color:var(--black);margin:0;line-height:1.5}
 .coming-band strong{font-weight:600}
 
 /* HERO */
-.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,26,.9) 0%,rgba(26,26,26,.5) 55%,rgba(26,26,26,.1) 100%)}
-.hero-content{position:relative;z-index:2;padding:0 24px 72px;max-width:700px;margin:0 auto;width:100%;text-align:center}
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--black)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,26,.92) 0%,rgba(26,26,26,.55) 55%,rgba(26,26,26,.15) 100%)}
+.hero-content{position:relative;z-index:2;padding:0 24px 72px;max-width:760px;margin:0 auto;width:100%;text-align:center}
 .hero-eyebrow{display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:20px}
-.hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(52px,10vw,88px);font-weight:700;line-height:.95;color:var(--white);letter-spacing:-.02em;margin-bottom:12px}
-.hero-tagline{font-family:'Bricolage Grotesque',sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);margin-bottom:20px;display:block}
-.hero-desc{font-family:'Libre Baskerville',serif;font-size:clamp(15px,2.2vw,18px);font-style:italic;color:rgba(255,255,255,.82);max-width:540px;margin:0 auto 40px;line-height:1.7}
+.hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(48px,10vw,88px);font-weight:700;line-height:.95;color:var(--white);letter-spacing:-.02em;margin-bottom:12px}
+.hero-tagline{font-family:'Bricolage Grotesque',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin:0 auto 20px;display:block;line-height:1.8;max-width:640px}
+.hero-desc{font-family:'Libre Baskerville',serif;font-size:clamp(15px,2.2vw,18px);font-style:italic;color:rgba(255,255,255,.85);max-width:560px;margin:0 auto 40px;line-height:1.7}
 
 /* BUTTONS */
-.btn{display:inline-block;background:var(--yellow);color:var(--black);font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:16px 44px;border-radius:2px;transition:background .2s}
+.btn{display:inline-block;background:var(--yellow);color:var(--black);font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:16px 44px;border-radius:2px;transition:background .2s,color .2s}
 .btn:hover{background:var(--yellow-dark);color:var(--white)}
 .btn-dark{display:inline-block;background:var(--black);color:var(--white);font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:16px 44px;border-radius:2px;transition:background .2s}
 .btn-dark:hover{background:#333}
@@ -73,72 +75,67 @@ p strong{color:var(--black)}
 .italic-closer{font-family:'Libre Baskerville',serif;font-style:italic;font-size:17px;color:var(--black);margin-top:8px}
 
 /* PULL QUOTE */
-.pull-quote{border-left:3px solid var(--yellow);padding:16px 28px;margin:36px 0;background:var(--white)}
+.pull-quote{border-left:3px solid var(--yellow);padding:18px 28px;margin:36px 0;background:var(--white)}
 .pull-quote p{font-family:'Libre Baskerville',serif;font-size:20px;font-style:italic;color:var(--black);line-height:1.6;margin:0}
 
-/* VISION LIST */
-.vision-list{list-style:none;margin:24px 0}
-.vision-list li{font-size:16px;color:var(--gray);padding:16px 0 16px 28px;border-bottom:1px solid var(--rule);position:relative;line-height:1.8}
-.vision-list li:first-child{border-top:1px solid var(--rule)}
-.vision-list li::before{content:"—";position:absolute;left:0;color:var(--powder)}
-.vision-list li strong{color:var(--black)}
+/* READY LIST */
+.ready-list{list-style:none;margin:24px 0}
+.ready-list li{font-size:16px;color:var(--gray);padding:14px 0 14px 28px;border-bottom:1px solid var(--rule);position:relative;line-height:1.75}
+.ready-list li:first-child{border-top:1px solid var(--rule)}
+.ready-list li::before{content:"✓";position:absolute;left:0;color:var(--powder);font-weight:600}
 
 /* PHOTO BREAK */
-.photo-break{width:100%;overflow:hidden}
-.photo-break img{width:100%;object-fit:cover;display:block}
+.photo-break{width:100%;overflow:hidden;background:var(--black)}
+.photo-break img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .photo-break.h400{height:400px}
 .photo-break.h480{height:480px}
 .photo-break.h520{height:520px}
 
-/* SPLIT SECTION with photo */
+/* SPLIT SECTION */
 .split-section{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
-.split-photo{overflow:hidden}
-.split-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.split-photo{overflow:hidden;background:var(--black)}
+.split-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .split-body{padding:56px 48px;background:var(--offwhite);display:flex;flex-direction:column;justify-content:center}
 .split-body .eyebrow{color:var(--powder)}
 .split-body h2{font-size:clamp(20px,3vw,28px)}
 
-/* TESTIMONIALS over bg */
-.testi-section{position:relative;padding:80px 0;overflow:hidden}
-.testi-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+/* TESTIMONIALS OVER BACKGROUND */
+.testi-section{position:relative;padding:80px 0;overflow:hidden;background:var(--black)}
+.testi-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .testi-overlay{position:absolute;inset:0;background:rgba(26,26,26,.80)}
-.testi-inner{position:relative;z-index:2;max-width:700px;margin:0 auto;padding:0 24px}
+.testi-inner{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 24px}
 .testi-inner .eyebrow{color:var(--yellow);opacity:.9}
 .testi-inner h2{color:var(--white)}
 .testi-inner h2 em{color:var(--yellow)}
-.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
-.testi{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(4px);padding:24px;border-radius:2px}
-.testi p{font-family:'Libre Baskerville',serif;font-size:14px;color:rgba(255,255,255,.88);font-style:italic;margin-bottom:12px;line-height:1.8}
-.testi cite{font-family:'Bricolage Grotesque',sans-serif;font-size:12px;color:var(--yellow);font-style:normal;font-weight:600}
+.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0 0}
+.testi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(4px);padding:24px;border-radius:2px}
+.testi p{font-family:'Libre Baskerville',serif;font-size:14px;color:rgba(255,255,255,.90);font-style:italic;margin-bottom:12px;line-height:1.8}
+.testi cite{font-family:'Bricolage Grotesque',sans-serif;font-size:12px;color:var(--yellow);font-style:normal;font-weight:600;line-height:1.5;display:block}
 
 /* DELIVERABLES */
 .deliverable-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
-.deliverable{background:var(--white);border:1px solid var(--powder-light);border-radius:2px;overflow:hidden}
-.deliverable-img{width:100%;height:180px;object-fit:cover;object-position:center;display:block}
-.deliverable-body{padding:20px}
+.deliverable{background:var(--white);border:1px solid var(--powder-light);border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
+.deliverable-img{width:100%;height:180px;object-fit:cover;object-position:center;display:block;background:var(--powder-pale)}
+.deliverable-body{padding:20px;flex:1}
 .deliverable h3{font-family:'Libre Baskerville',serif;font-size:15px;font-weight:700;color:var(--black);margin-bottom:8px;line-height:1.4}
 .deliverable p{font-size:14px;color:var(--mid);margin:0;line-height:1.65}
 .deliverable .value-tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--powder);font-weight:600;margin-bottom:8px}
-.deliverable-plain{background:var(--powder-pale);border:1px solid var(--powder-light);padding:24px;border-radius:2px}
-.deliverable-plain h3{font-family:'Libre Baskerville',serif;font-size:15px;font-weight:700;color:var(--black);margin-bottom:8px;line-height:1.4}
-.deliverable-plain p{font-size:14px;color:var(--mid);margin:0;line-height:1.65}
-.deliverable-plain .value-tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--powder);font-weight:600;margin-bottom:8px}
 
 /* VALUE STACK */
-.value-stack{background:var(--black);padding:40px;margin:32px 0;border-radius:2px}
+.value-stack{background:var(--black);padding:40px;margin:32px 0 0;border-radius:2px}
 .value-stack .vs-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:24px;display:block;font-family:'Bricolage Grotesque',sans-serif}
 .vs-item{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);gap:20px}
 .vs-item:last-of-type{border-bottom:none}
 .vs-name{font-family:'Libre Baskerville',serif;font-size:15px;color:var(--white);line-height:1.4;flex:1}
 .vs-value{font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:var(--yellow);white-space:nowrap;font-weight:500}
-.vs-total{display:flex;justify-content:space-between;align-items:center;padding-top:20px;margin-top:4px;border-top:2px solid rgba(255,211,97,.4)}
+.vs-total{display:flex;justify-content:space-between;align-items:center;padding-top:20px;margin-top:4px;border-top:2px solid rgba(255,211,97,.4);gap:20px}
 .vs-total-label{font-family:'Bricolage Grotesque',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .vs-total-num{font-family:'Libre Baskerville',serif;font-size:28px;color:var(--yellow)}
 
 /* PRICING */
 .pricing-card{border:2px solid var(--black);padding:40px;text-align:center;background:var(--white);margin:32px 0}
 .pricing-title{font-family:'Libre Baskerville',serif;font-size:24px;font-weight:400;color:var(--black);margin-bottom:8px}
-.pricing-sub{font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:var(--mid);margin-bottom:28px;letter-spacing:.04em}
+.pricing-sub{font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:var(--mid);margin-bottom:28px;letter-spacing:.04em;line-height:1.7}
 .price-main{font-family:'Libre Baskerville',serif;font-size:52px;color:var(--black);line-height:1;margin-bottom:6px}
 .price-detail{font-size:15px;color:var(--mid);margin-bottom:4px}
 .price-note{font-size:13px;color:var(--powder);font-weight:600;margin-bottom:28px}
@@ -146,44 +143,59 @@ p strong{color:var(--black)}
 
 /* ABOUT */
 .about-section{background:var(--black);padding:72px 24px}
-.about-inner{max-width:700px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:start}
-.about-photo{width:100%;border-radius:2px;display:block}
+.about-inner{max-width:760px;margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:start}
+.about-photo{width:100%;border-radius:2px;display:block;object-fit:cover}
 .about-text .eyebrow{color:var(--yellow);opacity:.85}
 .about-text h2{color:var(--white)}
 .about-text h2 em{color:var(--yellow)}
 .about-text p{color:rgba(255,255,255,.75)}
 .about-text p strong{color:var(--white)}
 
-/* FOOTER with bg photo */
-.footer-cta{position:relative;padding:100px 24px;text-align:center;overflow:hidden}
-.footer-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+/* FOOTER CTA WITH BACKGROUND PHOTO */
+.footer-cta{position:relative;padding:100px 24px;text-align:center;overflow:hidden;background:var(--black)}
+.footer-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
 .footer-overlay{position:absolute;inset:0;background:rgba(26,26,26,.82)}
-.footer-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.footer-inner{position:relative;z-index:2;max-width:760px;margin:0 auto}
 .footer-inner h2{color:var(--white);margin-bottom:16px}
 .footer-inner h2 em{color:var(--yellow)}
-.footer-inner p{color:rgba(255,255,255,.70);max-width:520px;margin:0 auto 20px}
-.footer-inner .note{font-size:13px;color:rgba(255,255,255,.35);margin-top:20px}
+.footer-inner p{color:rgba(255,255,255,.72);max-width:540px;margin:0 auto 20px}
+.footer-inner .note{font-size:13px;color:rgba(255,255,255,.42);margin-top:20px}
 
-/* IF YOU ARE READY */
-.ready-list{list-style:none;margin:24px 0}
-.ready-list li{font-size:16px;color:var(--gray);padding:14px 0 14px 28px;border-bottom:1px solid var(--rule);position:relative;line-height:1.75}
-.ready-list li:first-child{border-top:1px solid var(--rule)}
-.ready-list li::before{content:"✓";position:absolute;left:0;color:var(--powder);font-weight:600}
+@media(max-width:760px){
+  .split-section{grid-template-columns:1fr}
+  .split-photo{height:340px}
+  .split-body{padding:48px 24px}
+  .about-inner{grid-template-columns:1fr;gap:32px}
+  .about-photo{max-width:300px;margin:0 auto}
+}
 
 @media(max-width:640px){
+  .container{padding:0 20px}
+  .section{padding:56px 0}
+  .hero{min-height:82vh}
+  .hero-img{object-position:center top}
+  .hero-content{padding:0 20px 48px}
+  .hero h1{font-size:44px}
+  .hero-eyebrow{font-size:10px;margin-bottom:14px}
+  .hero-tagline{font-size:10px;letter-spacing:.1em;line-height:1.8;margin-bottom:18px}
+  .hero-desc{font-size:15px;margin-bottom:30px}
+  .btn,.btn-dark,.btn-outline{width:100%;max-width:320px;text-align:center;padding-left:22px;padding-right:22px}
   .deliverable-grid,.testi-grid{grid-template-columns:1fr}
-  .split-section{grid-template-columns:1fr}
-  .split-photo{height:300px}
-  .about-inner{grid-template-columns:1fr}
-  .about-photo{max-width:260px;margin:0 auto}
-  .photo-break.h480,.photo-break.h520{height:300px}
+  .photo-break.h400,.photo-break.h480,.photo-break.h520{height:300px}
+  .pull-quote{padding:16px 20px}
+  .pull-quote p{font-size:18px}
+  .value-stack{padding:28px 22px}
+  .vs-item,.vs-total{flex-direction:column;gap:6px}
+  .pricing-card{padding:32px 22px}
+  .about-section{padding:56px 20px}
+  .footer-cta{padding:80px 20px}
 }
 </style>
 </head>
 <body>
 
 <div class="nav"><a href="https://www.thehomeschooladmin.com">The Homeschool Admin</a></div>
-<div class="coming-band"><p><strong>Coming Soon — REASSURED™:</strong> A record book for homeschool families to track their child's growth in 9 developmental domains. Next steps made clear!</p></div>
+<div class="coming-band"><p><strong>Coming Soon, REASSURED™:</strong> A record book for homeschool families to track their child's growth in 9 developmental domains. Next steps made clear.</p></div>
 
 <!-- HERO -->
 <div class="hero">
@@ -192,7 +204,7 @@ p strong{color:var(--black)}
   <div class="hero-content">
     <span class="hero-eyebrow">Custom Portfolio Planner</span>
     <h1>CONFIDENCE</h1>
-    <span class="hero-tagline">Pull &amp; Go Curriculum &nbsp;·&nbsp; Personalized Plans &nbsp;·&nbsp; Done With You — Made For You — Mailed To You</span>
+    <span class="hero-tagline">Pull &amp; Go Curriculum · Personalized Plans · Done With You, Made For You, Mailed To You</span>
     <p class="hero-desc">1:1 · 3 months of planning plus 9 months of weekly agendas, all designed to be pull and go and easy for others to follow.</p>
     <a href="https://forms.gle/DmPZ9wKF5p4tmjMz8" class="btn">Apply Now</a>
   </div>
@@ -204,14 +216,14 @@ p strong{color:var(--black)}
   <div class="section">
     <p>This is for homeschool parents who want to have everything planned for them.</p>
     <p>Get fully prepared and prepped to present lessons to your children each day without thinking about planning every week. We get organized and then I build your weekly agendas that rotate all your materials, plus I plug in supplemental plans that I print and put together in your ready-to-use homeschool planner I send to your home.</p>
-    <p>In the end, the homeschool plans double as a portfolio of all the work your child has done and is already prepared for your annual review (if required in your state).</p>
+    <p>In the end, the homeschool plans double as a portfolio of all the work your child has done and is already prepared for your annual review, if required in your state.</p>
 
     <div class="pull-quote"><p>Most homeschool support looks either like cookie-cutter plans that don't fit your family's unique rhythm, or overwhelming information dumps that leave you feeling more confused than empowered.</p></div>
 
     <p>You love being hands-on in your homeschool, and you wouldn't dream of handing it off to someone else.</p>
-    <p>But let's be honest — as a busy working or entrepreneur parent, you don't have the energetic capacity (or mental bandwidth) to do this all on your own.</p>
+    <p>But let's be honest, as a busy working or entrepreneur parent, you don't have the energetic capacity, or mental bandwidth, to do this all on your own.</p>
     <p>You know that in order to show up as the confident, intentional homeschool mom your kids deserve, you need structure, clarity, and guidance. You prefer to pre-plan with things ready to go ahead of time and I make sure you're 100% prepared.</p>
-    <p><strong>That's why I created Confidence!</strong></p>
+    <p><strong>That's why I created Confidence.</strong></p>
     <p>I wanted to offer a new solution, one that meets you exactly where you are.</p>
   </div>
 
@@ -223,10 +235,10 @@ p strong{color:var(--black)}
     <h2>No scrambling. No second-guessing.<br><em>No Sunday night spiral.</em></h2>
 
     <ul class="ready-list">
-      <li>No scrambling. No second-guessing. No spending hours searching for the "right" curriculum or making AI lessons for the week.</li>
+      <li>No scrambling. No second-guessing. No spending hours searching for the right curriculum or making AI lessons for the week.</li>
       <li>Homeschool days that flow effortlessly with your current life because you have pre-planned activities to engage your kids in learning they actually love.</li>
       <li>Fully trusting your homeschool plans, knowing you're providing the right education and experiences for your children.</li>
-      <li>Balancing homeschooling with your own empire you're building — and handing off the lessons to your nanny without guilt or chaos because you invested in homeschool support and structure.</li>
+      <li>Balancing homeschooling with your own empire you're building, and handing off the lessons to your nanny without guilt or chaos because you invested in homeschool support and structure.</li>
     </ul>
   </div>
 </div>
@@ -241,16 +253,16 @@ p strong{color:var(--black)}
     <h2>What your days<br><em>look like inside CONFIDENCE.</em></h2>
     <p>You wake up with a clear plan for the day. You know exactly what activities to do with each child to support the next level of their educational development.</p>
     <p>Your homeschooling is efficient, organized, and you feel reassured that your children are getting a well-rounded education under your roof.</p>
-    <p>You're homeschooling for just 1–3 hours a day, following a simple and structured routine that works for your family.</p>
+    <p>You're homeschooling for just 1 to 3 hours a day, following a simple and structured routine that works for your family.</p>
   </div>
 </div>
 
 <!-- VISION CONTINUED -->
 <div class="container">
   <div class="section" style="padding-top:56px">
-    <p>Your kids are eager to hear what they are doing today — whether it's a watercolor painting lesson, a fun audiobook, learning about different flags for your young homeschoolers, or learning to record a podcast, publish a book, or use math in real life for the homeschool teens in your family. I aim to build intrinsic motivation in my students by getting to know their interests and learning styles and suggesting curriculum and materials to fit them individually.</p>
+    <p>Your kids are eager to hear what they are doing today, whether it's a watercolor painting lesson, a fun audiobook, learning about different flags for your young homeschoolers, or learning to record a podcast, publish a book, or use math in real life for the homeschool teens in your family. I aim to build intrinsic motivation in my students by getting to know their interests and learning styles and suggesting curriculum and materials to fit them individually.</p>
 
-    <div class="pull-quote"><p>You feel confident in your homeschooling choices. No more wondering, "Am I doing enough?" or "Are they learning the right things?" With personalized curriculum recommendations and expert advice, you have developmentally appropriate activities and resources that support their growth at every stage. Plus, you have me in your corner, ready to answer any question, whenever you need it.</p></div>
+    <div class="pull-quote"><p>You feel confident in your homeschooling choices. No more wondering, Am I doing enough? or Are they learning the right things? With personalized curriculum recommendations and expert advice, you have developmentally appropriate activities and resources that support their growth at every stage. Plus, you have me in your corner, ready to answer any question, whenever you need it.</p></div>
   </div>
 
   <hr class="rule">
@@ -269,65 +281,74 @@ p strong{color:var(--black)}
 
     <div class="deliverable-grid">
       <div class="deliverable">
-        <img src="/assets/confidence/plans.jpg" alt="Homeschool planning system">
+        <img class="deliverable-img" src="/assets/confidence/plans.jpg" alt="Homeschool planning system">
         <div class="deliverable-body">
           <span class="value-tag">Value $5,000</span>
-          <h3>ORGANIZE™ — 9 Months of Daily Plans</h3>
-          <p>Save time and stress with this portfolio and planner designed to make homeschool routines simple. Say goodbye to the Sunday night scramble. Everything you need to open an organized daily planner with lessons tailored to your child — easy to implement and pull and go every week.</p>
+          <h3>ORGANIZE™ · 9 Months of Daily Plans</h3>
+          <p>Save time and stress with this portfolio and planner designed to make homeschool routines simple. Say goodbye to the Sunday night scramble. Everything you need to open an organized daily planner with lessons tailored to your child, easy to implement and pull and go every week.</p>
         </div>
       </div>
+
       <div class="deliverable">
-        <img src="/assets/confidence/reassured.jpg" alt="Reassured homeschool parent">
+        <img class="deliverable-img" src="/assets/confidence/reassured.jpg" alt="Reassured homeschool parent">
         <div class="deliverable-body">
           <span class="value-tag">Value $5,000</span>
           <h3>REASSURED™ Developmental Assessment</h3>
           <p>Clear insights into your child's development across key domains like literacy, math, and social-emotional skills. Receive a tailored plan with specific activities and lessons to help your child thrive in the areas that matter most.</p>
         </div>
       </div>
-      <div class="deliverable-plain">
-        <img src="/assets/confidence/telegram.jpeg" alt="Telegram homeschool support chat">
+
+      <div class="deliverable">
+        <img class="deliverable-img" src="/assets/confidence/telegram.jpeg" alt="Telegram homeschool support chat">
         <div class="deliverable-body">
           <span class="value-tag">Value $10,000</span>
           <h3>Personal Telegram Chat Channel</h3>
-          <p>As a CONFIDENCE client, you get access to me for a quick chat and help with ideas for a new lesson any time for continuous personalized support. Direct, focused, real-time guidance — streamlined 1:1 without delays or distractions. Drop in anytime.</p>
-      </div>
-      <div class="deliverable-plain">
-        <img src="/assets/confidence/onphone.jpg" alt="Homeschool support on phone">
-        <div class="deliverable-body">
-          <span class="value-tag">Value $4,000</span>
-          <h3>2 × 1:1 VIP Calls</h3>
-          <p>Two 60-minute calls — a chance to get to know one another, introduce your family to "the teacher," get your personal questions answered, and walk through the portfolio so you feel ready with homeschool support throughout the year.</p>
-      </div>
-      <div class="deliverable">
-        <img src="/assets/confidence/portfolio.jpg" alt="Homeschool portfolio binder">        
-        <div class="deliverable-body">
-          <span class="value-tag">Value $2,000</span>
-          <h3>Daily Task &amp; Documentation Portfolio — Mailed &amp; Digital</h3>
-          <p>Your portfolio will be filled with one-page weekly schedules you can check off as you go. Outlines your state's required subjects, includes guides and templates, an attendance tracker, end-of-year checklist, and more. Sent September through May.</p>
-        </div>
-      </div>
-      <div class="deliverable-plain">
-        <img src="/assets/confidence/curriculumsuggestions.svg" alt="Curriculum suggestions">
-          <span class="value-tag">Value $1,000</span>
-          <h3>Personalized Curriculum Suggestions</h3>
-          <p>When needed, I'll work with you to find materials and resources that meet your goals and excite your kids — no more one-size-fits-all solutions. Save money by not buying things your kids don't like or need.</p>
+          <p>As a CONFIDENCE client, you get access to me for a quick chat and help with ideas for a new lesson any time for continuous personalized support. Direct, focused, real-time guidance, streamlined 1:1 without delays or distractions. Drop in anytime.</p>
         </div>
       </div>
 
+      <div class="deliverable">
+        <img class="deliverable-img" src="/assets/confidence/onphone.jpg" alt="Homeschool support on phone">
+        <div class="deliverable-body">
+          <span class="value-tag">Value $4,000</span>
+          <h3>2 × 1:1 VIP Calls</h3>
+          <p>Two 60-minute calls, a chance to get to know one another, introduce your family to the teacher, get your personal questions answered, and walk through the portfolio so you feel ready with homeschool support throughout the year.</p>
+        </div>
+      </div>
+
+      <div class="deliverable">
+        <img class="deliverable-img" src="/assets/confidence/portfolio.jpg" alt="Homeschool portfolio binder">
+        <div class="deliverable-body">
+          <span class="value-tag">Value $2,000</span>
+          <h3>Daily Task &amp; Documentation Portfolio, Mailed &amp; Digital</h3>
+          <p>Your portfolio will be filled with one-page weekly schedules you can check off as you go. Outlines your state's required subjects, includes guides and templates, an attendance tracker, end-of-year checklist, and more. Sent September through May.</p>
+        </div>
+      </div>
+
+      <div class="deliverable">
+        <img class="deliverable-img" src="/assets/confidence/curriculumsuggestions.svg" alt="Curriculum suggestions">
+        <div class="deliverable-body">
+          <span class="value-tag">Value $1,000</span>
+          <h3>Personalized Curriculum Suggestions</h3>
+          <p>When needed, I'll work with you to find materials and resources that meet your goals and excite your kids. No more one-size-fits-all solutions. Save money by not buying things your kids don't like or need.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="value-stack">
       <span class="vs-label">Total Value</span>
-      <div class="vs-item"><span class="vs-name">ORGANIZE™ — 9 Months of Daily Plans</span><span class="vs-value">$5,000</span></div>
+      <div class="vs-item"><span class="vs-name">ORGANIZE™ · 9 Months of Daily Plans</span><span class="vs-value">$5,000</span></div>
       <div class="vs-item"><span class="vs-name">REASSURED™ Developmental Assessment</span><span class="vs-value">$5,000</span></div>
       <div class="vs-item"><span class="vs-name">Personal Telegram Chat Channel</span><span class="vs-value">$10,000</span></div>
       <div class="vs-item"><span class="vs-name">2 × 1:1 VIP Calls</span><span class="vs-value">$4,000</span></div>
-      <div class="vs-item"><span class="vs-name">Daily Task &amp; Documentation Portfolio — Mailed &amp; Digital</span><span class="vs-value">$2,000</span></div>
+      <div class="vs-item"><span class="vs-name">Daily Task &amp; Documentation Portfolio, Mailed &amp; Digital</span><span class="vs-value">$2,000</span></div>
       <div class="vs-item"><span class="vs-name">Personalized Curriculum Suggestions</span><span class="vs-value">$1,000</span></div>
       <div class="vs-total"><span class="vs-total-label">Total Value</span><span class="vs-total-num">$25,000</span></div>
     </div>
   </div>
 </div>
 
-<!-- TESTIMONIALS over bg photo -->
+<!-- TESTIMONIALS OVER BACKGROUND PHOTO -->
 <div class="testi-section">
   <img class="testi-bg" src="/assets/confidence/cc-and-i.jpg" alt="Maria with student">
   <div class="testi-overlay"></div>
@@ -363,14 +384,14 @@ p strong{color:var(--black)}
     <p>We work together to get you there.</p>
     <p>As your homeschool assistant, I work alongside you to simplify your homeschool routine, apply an approach that honors your family's values, and streamline documentation so you have sustainable, easy-to-implement systems that work with any curriculum or materials you choose and fit naturally into your busy family life.</p>
     <p>Using my experience as a teacher and my expertise in leadership and child development, I create a plan tailored to your homeschooler so they can thrive.</p>
-    <p class="italic-closer">Let me take all of the planning, researching, and curriculum development off your plate — so you can focus on doing what you love the most. Being a calm, present parent.</p>
+    <p class="italic-closer">Let me take all of the planning, researching, and curriculum development off your plate, so you can focus on doing what you love the most. Being a calm, present parent.</p>
 
     <hr class="rule" style="margin:48px 0">
 
     <span class="eyebrow">Your Investment</span>
     <div class="pricing-card">
       <div class="pricing-title">CONFIDENCE</div>
-      <div class="pricing-sub">Custom Curriculum Portfolio &nbsp;·&nbsp; Pull &amp; Go Plans &nbsp;·&nbsp; Mailed to Your Home</div>
+      <div class="pricing-sub">Custom Curriculum Portfolio · Pull &amp; Go Plans · Mailed to Your Home</div>
       <div class="price-main">$999</div>
       <div class="price-detail">per month</div>
       <div class="price-note">Sibling portfolios are 50% off</div>
@@ -383,7 +404,7 @@ p strong{color:var(--black)}
 <!-- ABOUT MARIA -->
 <div class="about-section">
   <div class="about-inner">
-    <img src="/assets/confidence/onphone.jpg" alt="Homeschool support on phone">
+    <img class="about-photo" src="/assets/confidence/onphone.jpg" alt="Homeschool support on phone">
     <div class="about-text">
       <span class="eyebrow">Who Is Maria Galyean, MLS?</span>
       <h2>Master of Leadership,<br><em>Child Development Specialist.</em></h2>
@@ -394,16 +415,16 @@ p strong{color:var(--black)}
   </div>
 </div>
 
-<!-- FOOTER CTA with bg photo -->
+<!-- FOOTER CTA WITH BACKGROUND PHOTO -->
 <div class="footer-cta">
-  <img src="/assets/confidence/onphone.jpg" alt="Homeschool support on phone">
+  <img class="footer-bg" src="/assets/confidence/onphone.jpg" alt="Homeschool support on phone">
   <div class="footer-overlay"></div>
   <div class="footer-inner">
     <h2>You chose this for your children.<br><em>Let's make it feel effortless.</em></h2>
     <p>Apply for one of these exclusive spots. Maria will send a simple voice message back to make sure this is the right fit. If it is, she'll send over your contract, payment link, and everything you need to get started.</p>
     <p>If it's not the best match, she'll share other options that might be a better fit.</p>
     <a href="https://forms.gle/DmPZ9wKF5p4tmjMz8" class="btn">Apply Here</a>
-    <p class="note">Find Maria at @thehomeschooladmin on Instagram · Looking forward to hearing from you!</p>
+    <p class="note">Find Maria at @thehomeschooladmin on Instagram · Looking forward to hearing from you.</p>
   </div>
 </div>
 
