@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homeschooling Without the Overwhelm | The Homeschool Admin</title>
+  <style>
+    :root {
+      --cream: #f7efe4;
+      --warm: #e7c7a6;
+      --tan: #b9825a;
+      --clay: #9b5f3d;
+      --espresso: #2d211a;
+      --ink: #1f1a16;
+      --sage: #6f7b5f;
+      --white: #fffaf3;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--ink);
+      background: var(--espresso);
+      overflow: hidden;
+    }
+
+    .deck {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      inset: 0;
+      background: var(--cream);
+      overflow: hidden;
+    }
+
+    .slide.active { display: grid; }
+
+    .photo-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(31,26,22,.82), rgba(31,26,22,.36), rgba(31,26,22,.05));
+      z-index: 1;
+    }
+
+    .scrim-light {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(247,239,228,.95), rgba(247,239,228,.74), rgba(247,239,228,.12));
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 7vh 7vw;
+      max-width: 880px;
+      align-self: center;
+    }
+
+    .content.wide { max-width: 1120px; }
+    .content.right { margin-left: auto; }
+    .content.center { margin: auto; text-align: center; }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.2;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 22px;
+      font-weight: 700;
+    }
+
+    .dark .eyebrow { color: var(--warm); }
+
+    h1, h2 {
+      margin: 0;
+      line-height: .95;
+      letter-spacing: -0.04em;
+      font-weight: 500;
+    }
+
+    h1 { font-size: clamp(58px, 8vw, 116px); }
+    h2 { font-size: clamp(44px, 6.5vw, 86px); }
+
+    p {
+      font-family: Arial, sans-serif;
+      font-size: clamp(20px, 2.1vw, 30px);
+      line-height: 1.35;
+      max-width: 760px;
+    }
+
+    .dark { color: var(--white); }
+
+    .big-line {
+      font-size: clamp(34px, 5vw, 68px);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+      max-width: 920px;
+      margin: 0;
+    }
+
+    .bullets {
+      font-family: Arial, sans-serif;
+      font-size: clamp(22px, 2.4vw, 34px);
+      line-height: 1.45;
+      margin-top: 28px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .bullets li { margin: 15px 0; }
+    .bullets li::before { content: '→ '; color: var(--clay); font-weight: 800; }
+    .dark .bullets li::before { color: var(--warm); }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      height: 100%;
+    }
+
+    .split .text-side {
+      padding: 7vh 6vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .split .image-side {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .split img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .quote {
+      font-size: clamp(34px, 4.5vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin: 0;
+    }
+
+    .small {
+      font-size: clamp(16px, 1.6vw, 22px);
+      line-height: 1.4;
+    }
+
+    .formula {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 26px;
+      align-items: center;
+      margin-top: 42px;
+      font-family: Arial, sans-serif;
+    }
+
+    .formula-box {
+      border: 2px solid var(--clay);
+      padding: 28px;
+      min-height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: rgba(255,250,243,.46);
+    }
+
+    .formula-box strong {
+      display: block;
+      font-size: clamp(46px, 6vw, 80px);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .plus { font-size: 56px; color: var(--clay); }
+
+    .system-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 42px;
+    }
+
+    .step {
+      border-top: 3px solid var(--clay);
+      padding-top: 18px;
+      font-family: Arial, sans-serif;
+      font-size: clamp(18px, 1.6vw, 24px);
+      line-height: 1.25;
+    }
+
+    .step span {
+      display: block;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 46px;
+      color: var(--clay);
+      margin-bottom: 8px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 18px 28px;
+      border: 2px solid var(--espresso);
+      font-family: Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      background: var(--white);
+    }
+
+    .dark .cta {
+      border-color: var(--white);
+      color: var(--espresso);
+      background: var(--white);
+    }
+
+    .brand {
+      position: absolute;
+      z-index: 4;
+      left: 28px;
+      bottom: 22px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(255,250,243,.8);
+    }
+
+    .light-brand { color: rgba(31,26,22,.55); }
+
+    .nav {
+      position: absolute;
+      z-index: 10;
+      right: 26px;
+      bottom: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      border: 0;
+      background: rgba(255,250,243,.9);
+      color: var(--espresso);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 8px 25px rgba(0,0,0,.18);
+    }
+
+    .counter {
+      color: var(--white);
+      background: rgba(31,26,22,.55);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 850px) {
+      body { overflow: auto; }
+      .deck, .slide { height: auto; min-height: 100vh; }
+      .slide { position: relative; }
+      .split { grid-template-columns: 1fr; }
+      .split .image-side { min-height: 42vh; order: -1; }
+      .formula, .system-steps { grid-template-columns: 1fr; }
+      .plus { display: none; }
+      .content, .split .text-side { padding: 9vh 7vw 12vh; }
+      .nav { position: fixed; }
+    }
+
+    @media print {
+      body { overflow: visible; background: white; }
+      .deck, .slide { width: 100%; height: 100vh; page-break-after: always; position: relative; display: grid !important; }
+      .nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-label="Homeschooling Without the Overwhelm presentation">
+    <section class="slide active dark">
+      <img class="photo-bg" src="/mnt/data/DSC04664.jpg" alt="Mother sitting with young child" />
+      <div class="scrim"></div>
+      <div class="content">
+        <div class="eyebrow">The Homeschool Admin™</div>
+        <h1>Homeschooling without the overwhelm.</h1>
+        <p>For the mother who knows there has to be a more peaceful, organized, individualized way.</p>
+      </div>
+      <div class="brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide">
+      <div class="split">
+        <div class="text-side">
+          <div class="eyebrow">First, breathe</div>
+          <h2>You are not failing.</h2>
+          <p>You are doing too many jobs at once: parent, teacher, principal, curriculum researcher, planner, administrator, and emotional anchor.</p>
+          <p class="small">The problem is not your commitment. The problem is the lack of a system.</p>
+        </div>
+        <div class="image-side"><img src="/mnt/data/DSC04764.jpg" alt="Mother and child by a window" /></div>
+      </div>
+      <div class="brand light-brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide dark">
+      <img class="photo-bg" src="/mnt/data/DSC04744.jpg" alt="Quiet café interior" />
+      <div class="scrim"></div>
+      <div class="content">
+        <div class="eyebrow">The late-night thought</div>
+        <p class="big-line">“I’ll try again tomorrow.”</p>
+        <p>But tomorrow feels heavy when every lesson still needs to be chosen, prepped, adjusted, documented, and made interesting.</p>
+      </div>
+      <div class="brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide">
+      <div class="split">
+        <div class="image-side"><img src="/mnt/data/DSC04652.jpg" alt="Water being poured into a glass cup" /></div>
+        <div class="text-side">
+          <div class="eyebrow">The 80/20 shift</div>
+          <h2>Homeschooling is not just teaching.</h2>
+          <div class="formula">
+            <div class="formula-box"><strong>20%</strong>Teaching, connecting, guiding</div>
+            <div class="plus">+</div>
+            <div class="formula-box"><strong>80%</strong>Planning, prepping, organizing</div>
+          </div>
+          <p class="small">You love the 20%. The 80% is what keeps stealing your peace.</p>
+        </div>
+      </div>
+      <div class="brand light-brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide">
+      <div class="content wide center">
+        <div class="eyebrow">What creates peace</div>
+        <h2>A homeschool system that fits your real life.</h2>
+        <div class="system-steps">
+          <div class="step"><span>1</span>Understand your child’s development, interests, and learning style.</div>
+          <div class="step"><span>2</span>Choose curriculum that fits instead of chasing what is trendy.</div>
+          <div class="step"><span>3</span>Build a routine that works for your home and energy.</div>
+          <div class="step"><span>4</span>Pre-plan lessons so your days feel pull-and-go.</div>
+        </div>
+      </div>
+      <div class="brand light-brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide dark">
+      <img class="photo-bg" src="/mnt/data/DSC04680.jpg" alt="Young child exploring food at table" />
+      <div class="scrim"></div>
+      <div class="content">
+        <div class="eyebrow">Development first</div>
+        <h2>Your child is always showing you the way.</h2>
+        <ul class="bullets">
+          <li>What are they curious about?</li>
+          <li>Where are they frustrated?</li>
+          <li>What skill is ready to grow next?</li>
+        </ul>
+      </div>
+      <div class="brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide">
+      <div class="split">
+        <div class="text-side">
+          <div class="eyebrow">The real quick win</div>
+          <h2>Stop starting with curriculum.</h2>
+          <p>Start with the child, then choose the materials, then build the rhythm.</p>
+          <p class="small">That is how homeschooling becomes lighter, more personal, and easier to sustain.</p>
+        </div>
+        <div class="image-side"><img src="/mnt/data/DSC04908.jpg" alt="Child exploring stacked firewood" /></div>
+      </div>
+      <div class="brand light-brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide dark">
+      <img class="photo-bg" src="/mnt/data/DSC04738.jpg" alt="Mother and child walking outside" />
+      <div class="scrim"></div>
+      <div class="content right">
+        <div class="eyebrow">A new standard</div>
+        <h2>Your homeschool can leave the house.</h2>
+        <p>Learning can happen at the table, in the yard, at the café, on a walk, through a conversation, and inside ordinary family life.</p>
+      </div>
+      <div class="brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide">
+      <div class="content wide center">
+        <div class="eyebrow">The simple weekly rhythm</div>
+        <h2>Plan once. Open daily. Adjust gently.</h2>
+        <ul class="bullets" style="display:inline-block;text-align:left;max-width:860px;">
+          <li>One anchor routine</li>
+          <li>One focused skill at a time</li>
+          <li>One check-off plan for documentation</li>
+          <li>One flexible path your family can actually follow</li>
+        </ul>
+      </div>
+      <div class="brand light-brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide dark">
+      <img class="photo-bg" src="/mnt/data/DSC04790.jpg" alt="Mother and child cuddling by brick wall" />
+      <div class="scrim"></div>
+      <div class="content">
+        <div class="eyebrow">The emotional result</div>
+        <p class="quote">You stop wondering, “Am I doing enough?”</p>
+        <p>You start seeing the learning already happening — and you have a way to organize it, build on it, and document it.</p>
+      </div>
+      <div class="brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide">
+      <div class="split">
+        <div class="image-side"><img src="/mnt/data/DSC04946.jpg" alt="Mother guiding child near a wooden fence" /></div>
+        <div class="text-side">
+          <div class="eyebrow">What support can look like</div>
+          <h2>You stay the mother. You do not have to be the whole admin team.</h2>
+          <p>Imagine opening a plan that already knows your child, your materials, your state requirements, your family rhythm, and your capacity.</p>
+        </div>
+      </div>
+      <div class="brand light-brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide dark">
+      <img class="photo-bg" src="/mnt/data/DSC04952.jpg" alt="Mother holding child by a tree" />
+      <div class="scrim"></div>
+      <div class="content">
+        <div class="eyebrow">The invitation</div>
+        <h2>That is why I created CONFIDENCE.</h2>
+        <p>Pull-and-go homeschool plans, personalized to your child and prepared for your real life — so you can stop scrambling and start leading with peace.</p>
+      </div>
+      <div class="brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide">
+      <div class="split">
+        <div class="text-side">
+          <div class="eyebrow">Inside CONFIDENCE</div>
+          <h2>Everything planned, organized, and ready to follow.</h2>
+          <ul class="bullets">
+            <li>Daily and weekly homeschool plans</li>
+            <li>Developmental insight and learning goals</li>
+            <li>Portfolio-style documentation</li>
+            <li>Personalized curriculum suggestions</li>
+            <li>Support in your back pocket</li>
+          </ul>
+        </div>
+        <div class="image-side"><img src="/mnt/data/DSC04978.jpg" alt="Mother carrying child in a sunny yard" /></div>
+      </div>
+      <div class="brand light-brand">The Homeschool Admin™</div>
+    </section>
+
+    <section class="slide dark">
+      <img class="photo-bg" src="/mnt/data/DSC05006.jpg" alt="Mother carrying smiling child outside" />
+      <div class="scrim"></div>
+      <div class="content">
+        <div class="eyebrow">Your next step</div>
+        <h2>You chose this for your children. Let’s make it feel lighter.</h2>
+        <p>Send: <strong>“Maria, I’m ready for support.”</strong></p>
+        <span class="cta">Apply through the link</span>
+      </div>
+      <div class="brand">The Homeschool Admin™</div>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Presentation navigation">
+    <button onclick="prevSlide()" aria-label="Previous slide">←</button>
+    <span class="counter"><span id="current">1</span>/<span id="total">13</span></span>
+    <button onclick="nextSlide()" aria-label="Next slide">→</button>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    let index = 0;
+    const current = document.getElementById('current');
+    const total = document.getElementById('total');
+    total.textContent = slides.length;
+
+    function showSlide(i) {
+      slides[index].classList.remove('active');
+      index = (i + slides.length) % slides.length;
+      slides[index].classList.add('active');
+      current.textContent = index + 1;
+    }
+
+    function nextSlide() { showSlide(index + 1); }
+    function prevSlide() { showSlide(index - 1); }
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight' || event.key === ' ') nextSlide();
+      if (event.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>
