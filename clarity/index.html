@@ -66,16 +66,27 @@ p strong{color:var(--black)}
   display:flex;
   align-items:center;
   overflow:hidden;
-
   background-image:
-  linear-gradient(
-    to top,
-    rgba(26,26,26,.75) 0%,
-    rgba(26,26,26,.55) 35%,
-    rgba(26,26,26,.28) 65%,
-    rgba(26,26,26,.08) 100%
-  ),
-  url('/assets/guiding%20homeschooling%20parents.jpg');
+    linear-gradient(
+      to top,
+      rgba(26,26,26,.75) 0%,
+      rgba(26,26,26,.55) 35%,
+      rgba(26,26,26,.28) 65%,
+      rgba(26,26,26,.08) 100%
+    ),
+    url('/assets/guiding%20homeschooling%20parents.jpg');
+  background-size:cover;
+  background-position:center top;
+}
+.hero-content{position:relative;z-index:2;padding:60px 24px 80px;max-width:700px;margin:0 auto;width:100%}
+.hero-eyebrow{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);font-weight:700;margin-bottom:18px}
+.hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(32px,5vw,54px);font-weight:400;color:var(--white);line-height:1.25;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--yellow);display:block;font-size:.75em;margin-top:10px}
+.hero-sub{font-size:18px;color:rgba(255,255,255,.85);max-width:560px;margin-bottom:32px;line-height:1.7}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:var(--white);font-size:12px;padding:7px 14px;border-radius:2px;backdrop-filter:blur(4px)}
+.badge strong{color:var(--yellow)}
 
 /* TRUST QUOTE BAR */
 .trust-quote-bar{background:var(--black);padding:40px 24px;text-align:center}
@@ -199,11 +210,20 @@ p strong{color:var(--black)}
   .hero{min-height:86vh}.hero-content{padding-bottom:60px}
 }
 @media(max-width:580px){
-  .hero h1{font-size:34px}.hero-sub{font-size:16px}
+  .hero h1{font-size:32px}
+  .hero-sub{font-size:16px}
+  .hero-content{padding:48px 20px 64px}
+  .hero-cta{flex-direction:column;gap:10px}
+  .hero-cta .btn,.hero-cta .btn-outline-light{width:100%;text-align:center;padding:16px}
+  .hero-badges{gap:8px}
+  .badge{font-size:11px;padding:6px 12px}
   .section,.steps-section,.maria-section{padding:60px 0}
   .search-box,.feature-card,.pricing-card,.step-card{padding:24px 20px}
   .btn,.btn-dark,.btn-outline-light{width:100%;text-align:center}
-  .hero-cta{gap:10px}
+  .pricing-card{padding:28px 18px}
+  .faq-item{padding:20px 18px}
+  .pull-quote{padding:16px 18px}
+  .pull-quote p{font-size:16px}
 }
 </style>
 </head>
