@@ -119,12 +119,13 @@ hr.rule{border:none;border-top:1px solid var(--rule);margin:0}
 /* ============================================================
    ABOUT SPLIT
    ============================================================ */
-.about-split{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.about-split{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
 .about-photo-col{overflow:hidden;position:relative}
 .about-photo-col img{width:100%;height:100%;object-fit:cover;object-position:center top}
-.about-body{padding:64px 56px;background:var(--offwhite);display:flex;flex-direction:column;justify-content:center}
+.about-body{padding:56px 48px;background:var(--offwhite);display:flex;flex-direction:column;justify-content:center}
 .about-body .eyebrow{color:var(--mauve)}
-
+.about-body p:last-child{margin-bottom:0
+                        
 /* ============================================================
    PHOTO STRIP
    ============================================================ */
@@ -370,9 +371,6 @@ hr.rule{border:none;border-top:1px solid var(--rule);margin:0}
 
 <!-- ABOUT / HI I'M MARIA -->
 <div class="about-split">
-  <div class="about-photo-col">
-    <img src="assets/homeschool-assistant-maria.jpg" alt="Maria Galyean, The Homeschool Admin" style="width:100%;height:100%;object-fit:cover;object-position:center top">
-  </div>
   <div class="about-body">
     <span class="eyebrow">Hi, I'm Maria</span>
     <h2><em>Child Development Specialist</em></h2>
@@ -381,8 +379,11 @@ hr.rule{border:none;border-top:1px solid var(--rule);margin:0}
     <p>I'm here to support you in finding a good-fit routine and curriculum that keeps you connected with your homeschooler.</p>
     <p>No research rabbit holes for you — I pull you out of those and keep you focused on what matters most: your child.</p>
   </div>
+  <div class="about-photo-col">
+    <img src="assets/homeschool-assistant-maria.jpg" alt="Maria Galyean, The Homeschool Admin">
+  </div>
 </div>
-
+   
 <!-- SHANNON PULL QUOTE -->
 <div class="container">
   <div class="pull-quote" style="margin:56px 0">
