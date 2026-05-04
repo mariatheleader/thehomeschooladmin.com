@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thehomeschooladmin.github.io/sitemap.xml
+Sitemap: https://thehomeschooladmin.sitemap.xml
