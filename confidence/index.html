@@ -38,11 +38,24 @@ html{scroll-behavior:smooth}
 body{font-family:'Bricolage Grotesque',sans-serif;background:var(--offwhite);color:var(--black);line-height:1.75;overflow-x:hidden}
 img{max-width:100%;display:block}
 .container{width:100%;max-width:720px;margin:0 auto;padding:0 20px}
-.nav{background:var(--black);padding:14px 20px;text-align:center}
-.nav a{font-size:12px;color:var(--yellow);text-decoration:none;letter-spacing:.06em}
-.coming-band{background:var(--powder);padding:12px 20px;text-align:center}
-.coming-band p{font-size:13px;color:var(--black);margin:0;line-height:1.45}
-.coming-band strong{font-weight:600}
+.nav{background:var(--black);padding:0 24px;position:sticky;top:0;z-index:999}
+.nav-inner{max-width:1120px;margin:0 auto;min-height:60px;display:flex;align-items:center;justify-content:space-between;position:relative}
+.nav-brand{font-family:'Libre Baskerville',serif;color:var(--white);font-size:15px;text-decoration:none;letter-spacing:.02em;z-index:1001}
+.menu-toggle{display:none}
+.menu-button{display:none;color:var(--black);background:var(--yellow);padding:8px 14px;border-radius:2px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;z-index:1001}
+.nav-links{display:flex;align-items:center;gap:20px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:8px 0;display:block;transition:color .15s}
+.nav-links a:hover{color:var(--yellow)}
+.nav-cta{background:var(--yellow)!important;color:var(--black)!important;padding:8px 16px!important;border-radius:2px}
+.nav-cta:hover{background:var(--yellow-dark)!important}
+@media(max-width:860px){
+  .nav-inner{min-height:64px}
+  .menu-button{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:-24px;right:-24px;background:var(--black);padding:20px 24px 28px;flex-direction:column;align-items:flex-start;gap:14px;border-top:1px solid rgba(255,255,255,.12)}
+  .menu-toggle:checked~.nav-links{display:flex}
+  .nav-links a{font-size:13px}
+  .nav-cta{display:inline-block;margin-top:4px}
+}
 
 /* HERO */
 .hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--black)}
@@ -185,9 +198,23 @@ p strong{color:var(--black)}
 </style>
 </head>
 <body>
-
-<div class="nav"><a href="https://www.thehomeschooladmin.com">The Homeschool Admin</a></div>
-<div class="coming-band"><p><strong>Coming Soon, REASSURED™:</strong> A record book for homeschool families to track their child's growth in 9 developmental domains. Next steps made clear.</p></div>
+  
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">The Homeschool Admin</a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+    <label for="menu-toggle" class="menu-button">Menu</label>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/organize/">Organize</a></li>
+      <li><a href="/confidence/">Confidence</a></li>
+      <li><a href="/thrive/">Thrive</a></li>
+      <li><a href="https://buy.stripe.com/7sY5kD7E0bDm9Zk73y0RG2Q" class="nav-cta">Get Help Now — $97/wk</a></li>
+    </ul>
+  </div>
+</nav>
 
 <!-- HERO -->
 <div class="hero">
