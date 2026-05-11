@@ -168,33 +168,75 @@ p strong{color:var(--black)}
 }
 
 
-/* PROGRAMS, TWO MAIN PATHWAYS */
-.programs-section{padding:92px 0;background:var(--offwhite)}
-.programs-intro{text-align:center;max-width:720px;margin:0 auto 48px}
-.programs-intro .eyebrow{color:var(--powder)}
-.pathway-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
-.pathway-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:38px;box-shadow:0 18px 45px rgba(26,26,26,.05);display:flex;flex-direction:column;position:relative;overflow:hidden}
-.pathway-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--yellow-dark)}
-.pathway-card.thrive::before{background:var(--powder)}
-.pathway-kicker{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mauve);margin-bottom:12px;display:block}
-.pathway-card.thrive .pathway-kicker{color:var(--powder)}
-.pathway-card h3{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3vw,32px);font-weight:700;line-height:1.2;color:var(--black);margin-bottom:12px}
-.pathway-card p{font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:18px}
-.pathway-price{font-family:'Libre Baskerville',serif;font-size:34px;color:var(--black);line-height:1.15;margin:4px 0 8px}
-.pathway-price span{font-family:'Bricolage Grotesque',sans-serif;font-size:14px;color:var(--mid)}
-.pathway-subnote{font-size:13px!important;color:var(--mid)!important;margin-bottom:22px!important}
-.pathway-list{list-style:none;margin:0 0 28px;padding:22px 0 0;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:11px;flex:1}
-.pathway-list li{font-size:14px;color:var(--gray);display:flex;gap:10px;line-height:1.6}
-.pathway-list li::before{content:"✓";color:var(--powder);font-weight:900;flex-shrink:0}
-.pathway-card.clarity .pathway-list li::before{color:var(--yellow-dark)}
-.pathway-card .btn,.pathway-card .btn-dark{width:100%;text-align:center;margin-top:auto}
-.pathway-footnote{margin-top:28px;background:var(--white);border:1px solid var(--rule);border-left:4px solid var(--yellow-dark);padding:20px 24px;border-radius:3px;text-align:left}
-.pathway-footnote p{font-size:14px;color:var(--gray);margin:0;line-height:1.75}
-.pathway-footnote strong{color:var(--black)}
-.apply-note{text-align:center;margin-top:26px;font-size:14px;color:var(--mid)}
-.apply-note em{font-family:'Libre Baskerville',serif;font-style:italic;color:var(--black)}
-.apply-note a{color:var(--black);font-weight:700;border-bottom:2px solid var(--yellow);text-decoration:none}
-@media(max-width:860px){.pathway-grid{grid-template-columns:1fr}.pathway-card{padding:30px 26px}}
+
+/* ── THRIVE FLAGSHIP SECTION ── */
+.thrive-section{padding:96px 0;background:var(--offwhite)}
+.thrive-inner{max-width:1100px;margin:0 auto;padding:0 24px}
+.thrive-header{text-align:center;max-width:720px;margin:0 auto 60px}
+.thrive-header .eyebrow{color:var(--powder)}
+.thrive-header h2{font-size:clamp(26px,4.2vw,44px);margin-bottom:16px}
+.thrive-header h2 em{color:var(--mauve)}
+.thrive-header p{font-size:17px;color:var(--gray);max-width:580px;margin:0 auto}
+ 
+.thrive-body{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:start}
+ 
+.thrive-what{margin-bottom:36px}
+.thrive-what h3{font-family:'Libre Baskerville',serif;font-size:20px;font-weight:400;color:var(--black);margin-bottom:16px}
+.thrive-pillars{list-style:none;padding:0;margin:0 0 36px;display:flex;flex-direction:column;gap:0}
+.thrive-pillars li{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.thrive-pillars li:last-child{border-bottom:none}
+.thrive-pillar-icon{width:36px;height:36px;background:var(--yellow);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.thrive-pillar-icon span{font-size:16px;line-height:1}
+.thrive-pillar-body strong{display:block;font-size:15px;color:var(--black);margin-bottom:4px;font-weight:700}
+.thrive-pillar-body p{font-size:14px;color:var(--mid);margin:0;line-height:1.65}
+ 
+.thrive-pullq{background:var(--white);border-left:4px solid var(--mauve);padding:20px 28px;margin-bottom:32px}
+.thrive-pullq p{font-family:'Libre Baskerville',serif;font-size:16px;font-style:italic;color:var(--black);line-height:1.75;margin:0}
+.thrive-pullq cite{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:11px;color:var(--powder);font-style:normal;font-weight:700;margin-top:10px;letter-spacing:.08em;text-transform:uppercase}
+ 
+/* THRIVE CARD */
+.thrive-card{background:var(--black);color:var(--white);padding:44px 40px;border-radius:2px;position:sticky;top:80px}
+.thrive-card-eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);font-weight:700;display:block;margin-bottom:10px}
+.thrive-card h3{font-family:'Libre Baskerville',serif;color:var(--white);font-size:24px;margin-bottom:4px;line-height:1.2}
+.thrive-card-sub{font-size:13px;color:rgba(255,255,255,.45);margin-bottom:0!important;letter-spacing:.02em}
+.thrive-price-line{font-family:'Libre Baskerville',serif;font-size:56px;color:var(--white);line-height:1;margin:20px 0 4px}
+.thrive-price-line span{font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:400;color:rgba(255,255,255,.4)}
+.thrive-price-note{font-size:12px;color:rgba(255,255,255,.35);margin-bottom:28px!important}
+.thrive-avail{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:2px;padding:14px 18px;margin-bottom:24px;font-size:13px;color:rgba(255,255,255,.65);line-height:1.6}
+.thrive-avail strong{color:var(--yellow);font-weight:700;display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.thrive-card-list{list-style:none;padding:0;margin:0 0 28px;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;flex-direction:column}
+.thrive-card-list li{font-size:14px;color:rgba(255,255,255,.7);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:10px}
+.thrive-card-list li:last-child{border-bottom:none}
+.thrive-card-list li::before{content:"✓";width:18px;height:18px;background:var(--yellow);border-radius:50%;font-size:10px;font-weight:900;color:var(--black);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.thrive-card .btn{display:block;text-align:center;width:100%;padding:18px;font-size:14px}
+.thrive-card-note{text-align:center;font-size:12px;color:rgba(255,255,255,.3);margin-top:12px!important}
+.thrive-card-note a{color:var(--yellow);text-decoration:none}
+ 
+@media(max-width:960px){
+  .thrive-body{grid-template-columns:1fr}
+  .thrive-card{position:static;margin-top:0;order:-1}
+}
+ 
+/* LIGHTER PATHWAYS */
+.pathways-section{padding:72px 0;background:var(--white);border-top:1px solid var(--rule)}
+.pathways-inner{max-width:1100px;margin:0 auto;padding:0 24px}
+.pathways-header{text-align:center;max-width:600px;margin:0 auto 48px}
+.pathways-header .eyebrow{color:var(--powder)}
+.pathways-header h2{font-size:clamp(20px,3vw,30px);margin-bottom:10px}
+.pathways-header p{font-size:15px;color:var(--mid)}
+.pathways-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pathway-card{border:1px solid var(--rule);border-top:4px solid var(--powder);padding:36px 32px;border-radius:2px;background:var(--offwhite)}
+.pathway-card.featured-path{border-top-color:var(--yellow-dark)}
+.pathway-card-eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);font-weight:700;display:block;margin-bottom:10px}
+.pathway-card h3{font-family:'Libre Baskerville',serif;font-size:22px;font-weight:700;color:var(--black);margin-bottom:4px}
+.pathway-price{font-family:'Libre Baskerville',serif;font-size:20px;font-weight:700;color:var(--black);margin-bottom:16px}
+.pathway-price span{font-size:13px;font-weight:400;color:var(--mid)}
+.pathway-card p{font-size:14px;color:var(--gray);line-height:1.75;margin-bottom:20px}
+.pathway-card a.t-link{font-size:13px;font-weight:700;color:var(--black);text-decoration:none;letter-spacing:.05em;text-transform:uppercase;border-bottom:2px solid var(--yellow);padding-bottom:2px}
+.pathway-card a.t-link:hover{color:var(--mauve)}
+.pathways-note{text-align:center;margin-top:36px;font-size:14px;color:var(--mid)}
+.pathways-note em{font-family:'Libre Baskerville',serif;font-style:italic;color:var(--black)}
+@media(max-width:680px){.pathways-grid{grid-template-columns:1fr}}
 
 /* ── TESTIMONIALS ───────────────────────────────────── */
 .testi-section{position:relative;padding:88px 0;overflow:hidden}
@@ -259,10 +301,8 @@ p strong{color:var(--black)}
       <li><a href="/">Home</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/resources/">Resources</a></li>
-      <li><a href="/organize/">Organize</a></li>
-      <li><a href="/confidence/">Confidence</a></li>
       <li><a href="/thrive/">Thrive</a></li>
-      <li><a href="https://buy.stripe.com/7sY5kD7E0bDm9Zk73y0RG2Q" class="nav-cta">Get Help Now , $97/wk</a></li>
+      <li><a href="https://buy.stripe.com/7sY5kD7E0bDm9Zk73y0RG2Q" class="nav-cta">Get Direct Help Now, Only $97</a></li>
     </ul>
   </div>
 </nav>
@@ -388,53 +428,132 @@ p strong{color:var(--black)}
     </div>
   </section>
 
-  <!-- PROGRAMS, TWO MAIN PATHWAYS -->
-  <section class="programs-section" id="thrive-flagship" aria-labelledby="programs-heading">
-    <div class="container-wide">
-      <div class="programs-intro">
-        <span class="eyebrow">Two Clear Ways to Work Together</span>
-        <h2 id="programs-heading">Get help this week, or have the full homeschool system held with care.</h2>
-        <p>Choose the level of support your family needs right now. The Clarity Room gives you quick access and direction. THRIVE is the private advisory experience for families who want deep support across the year.</p>
+   <!-- THRIVE FLAGSHIP SECTION -->
+  <section class="thrive-section" id="thrive" aria-labelledby="thrive-heading">
+    <div class="thrive-inner">
+      <div class="thrive-header">
+        <span class="eyebrow">Maria's Primary Work · Flagship Program</span>
+        <h2 id="thrive-heading">Most families don't need more information.<br>They need someone to <em>hold the whole thing.</em></h2>
+        <p>THRIVE is private homeschool advisory at the highest level. Maria handles the curriculum, the planning, the decisions, and the structure — so that your homeschool is actually working, month after month, not just when you have the energy to hold it together.</p>
       </div>
-
-      <div class="pathway-grid" aria-label="Homeschool support options">
-        <article class="pathway-card clarity">
-          <span class="pathway-kicker">Entry Support</span>
+ 
+      <div class="thrive-body">
+ 
+        <div class="thrive-left">
+          <div class="thrive-what">
+            <h3>What Maria actually takes off your plate</h3>
+          </div>
+ 
+          <ul class="thrive-pillars">
+            <li>
+              <div class="thrive-pillar-icon"><span>📋</span></div>
+              <div class="thrive-pillar-body">
+                <strong>Curriculum selection &amp; sequencing</strong>
+                <p>Maria chooses and sequences curriculum based on your child's specific learning profile, age, and your family's rhythm — not a catalog recommendation.</p>
+              </div>
+            </li>
+            <li>
+              <div class="thrive-pillar-icon"><span>🗓</span></div>
+              <div class="thrive-pillar-body">
+                <strong>Planning &amp; implementation</strong>
+                <p>Monthly, weekly, and daily structure built and maintained so you're never staring at a blank schedule wondering what comes next.</p>
+              </div>
+            </li>
+            <li>
+              <div class="thrive-pillar-icon"><span>🧭</span></div>
+              <div class="thrive-pillar-body">
+                <strong>Ongoing decision support</strong>
+                <p>When something stops working, when your child changes, when you need to pivot — Maria is in your corner with grounded, development-informed guidance.</p>
+              </div>
+            </li>
+            <li>
+              <div class="thrive-pillar-icon"><span>📁</span></div>
+              <div class="thrive-pillar-body">
+                <strong>Portfolio &amp; state documentation</strong>
+                <p>For families who need it — portfolio preparation and documentation support so compliance is handled, not added to your list.</p>
+              </div>
+            </li>
+            <li>
+              <div class="thrive-pillar-icon"><span>🏠</span></div>
+              <div class="thrive-pillar-body">
+                <strong>In-home visits (select Maine families)</strong>
+                <p>For Southern Maine families who want this built inside their real home — bi-monthly in-home visits where Maria works alongside you in your actual space.</p>
+              </div>
+            </li>
+          </ul>
+ 
+          <div class="thrive-pullq">
+            <p>"We have been searching for the 'just right' school solution for years. Public school. Private school. A different public school. Homeschool. Nothing seemed to be quite right. I'm happy to say we have finally found something that works for our family. The kids are happy and we are happy."</p>
+            <cite>— Scott B., THRIVE Client for 2 Years</cite>
+          </div>
+ 
+          <div class="thrive-pullq">
+            <p>"Maria gives me back time and peace of mind. Takes the worry and stress away entirely of having to think about what I'm teaching that day. I have the peace of mind that it's prepped and ready."</p>
+            <cite>— Kiana, Homeschooling Mother of 3 · THRIVE for 2 Years</cite>
+          </div>
+        </div>
+ 
+        <!-- THRIVE CARD -->
+        <div>
+          <div class="thrive-card">
+            <span class="thrive-card-eyebrow">Flagship Program</span>
+            <h3>THRIVE</h3>
+            <p class="thrive-card-sub">Private Homeschool Advisory</p>
+            <div class="thrive-price-line">$600 <span>/ week</span></div>
+            <p class="thrive-price-note">12-month program · Limited availability</p>
+ 
+            <div class="thrive-avail">
+              <strong>Availability</strong>
+              Available virtually for families everywhere. In-home support included for select Southern Maine families.
+            </div>
+ 
+            <ul class="thrive-card-list" aria-label="What THRIVE includes">
+              <li>Curriculum selection &amp; sequencing for your child</li>
+              <li>Full planning &amp; monthly structure built for you</li>
+              <li>Ongoing decision support — no guessing alone</li>
+              <li>Portfolio &amp; state documentation support</li>
+              <li>Bi-monthly in-home visits (Maine families)</li>
+              <li>12 months of consistent, held advisory</li>
+            </ul>
+ 
+            <a href="/thrive/" class="btn">Apply for THRIVE</a>
+            <p class="thrive-card-note">Not ready for THRIVE? <a href="https://buy.stripe.com/7sY5kD7E0bDm9Zk73y0RG2Q">Start with the Clarity Room →</a></p>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- LIGHTER PATHWAYS -->
+  <section class="pathways-section" id="programs" aria-labelledby="pathways-heading">
+    <div class="pathways-inner">
+      <div class="pathways-header">
+        <span class="eyebrow">Other Ways to Work Together</span>
+        <h2 id="pathways-heading">Not ready for THRIVE yet?<br><em>There's a place to start.</em></h2>
+        <p>Many families begin with the Clarity Room and grow from there. For those who need a defined planning or prep phase, ORGANIZE and CONFIDENCE remain available.</p>
+      </div>
+ 
+      <div class="pathways-grid">
+        <div class="pathway-card featured-path">
+          <span class="pathway-card-eyebrow">Entry Point</span>
           <h3>Clarity Room</h3>
-          <p>For the parent who needs real help now, before another week gets swallowed by second guessing, curriculum tabs, and trying to figure everything out alone.</p>
-          <div class="pathway-price">$97 <span>/ week</span></div>
-          <p class="pathway-subnote">Weekly private Telegram support, cancel any week.</p>
-          <ul class="pathway-list">
-            <li>Ask your real homeschool questions by message, voice note, or screenshot</li>
-            <li>Get curriculum, schedule, and routine guidance tailored to your child</li>
-            <li>Make faster decisions with a Child Development Specialist in your corner</li>
-            <li>Ideal when you need immediate relief and a grounded next step</li>
-          </ul>
-          <a href="https://buy.stripe.com/7sY5kD7E0bDm9Zk73y0RG2Q" class="btn">Get Help This Week</a>
-        </article>
-
-        <article class="pathway-card thrive">
-          <span class="pathway-kicker">Flagship Experience</span>
-          <h3>THRIVE</h3>
-          <p>For the family who wants the whole homeschool system supported with expert oversight, planning, implementation, documentation, and real-time decision support.</p>
-          <div class="pathway-price">$20K to $25K <span>/ year</span></div>
-          <p class="pathway-subnote">Private homeschool advisory for 1 to 5 children.</p>
-          <ul class="pathway-list">
-            <li>Custom homeschool system built around your real children, values, and schedule</li>
-            <li>Virtual monthly or bimonthly support for non-local families</li>
-            <li>In-home support available for select Maine families when travel and fit align</li>
-            <li>Telegram access for real-time questions, pivots, and implementation support</li>
-          </ul>
-          <a href="/thrive/" class="btn-dark">Explore THRIVE</a>
-        </article>
+          <div class="pathway-price">$97 <span>/ week · cancel any time</span></div>
+          <p>Direct access to Maria via a private Telegram room. Ask questions, get curriculum guidance, rebuild your routine, and make decisions with a specialist in your corner — week by week, no commitment required.</p>
+          <a href="https://buy.stripe.com/7sY5kD7E0bDm9Zk73y0RG2Q" class="t-link">Join This Week →</a>
+        </div>
+ 
+        <div class="pathway-card">
+          <span class="pathway-card-eyebrow">Returning Clients</span>
+          <h3>ORGANIZE &amp; CONFIDENCE</h3>
+          <div class="pathway-price">$200–$500 <span>/ week · 4–6 months</span></div>
+          <p>These programs are available to returning clients and families who've worked with Maria before. If that's you, reach out directly — Maria will talk through the right fit and next steps with you personally.</p>
+          <a href="https://www.instagram.com/thehomeschooladmin" class="t-link">DM @thehomeschooladmin →</a>
+          <span style="display:block;margin-top:10px;font-size:13px;color:var(--mid)">or email <a href="mailto:maria@thehomeschooladmin.com" style="color:var(--black);font-weight:700;border-bottom:1px solid var(--yellow);text-decoration:none">maria@thehomeschooladmin.com</a></span>
+        </div>
       </div>
-
-      <div class="pathway-footnote">
-        <p><strong>About ORGANIZE and CONFIDENCE:</strong> These are still available as lighter support pathways or continued support options for aligned families. They do not need to carry the homepage. The main decision is simple: get clarity this week, or explore THRIVE for the full year.</p>
-      </div>
-
-      <p class="apply-note"><em>When in doubt, start with the Clarity Room or apply for THRIVE.</em><br><br>
-      Want the full year held with support? <a href="/thrive/">Start with THRIVE</a></p>
+ 
+      <p class="pathways-note"><em>Not sure which is right for your family?</em> Apply for THRIVE and Maria will let you know the best fit — or DM <a href="https://www.instagram.com/thehomeschooladmin" style="color:var(--black);font-weight:700;border-bottom:2px solid var(--yellow);text-decoration:none">@thehomeschooladmin</a> with questions.</p>
     </div>
   </section>
 
