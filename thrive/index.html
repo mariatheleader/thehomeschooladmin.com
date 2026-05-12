@@ -11,8 +11,8 @@
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is THRIVE from The Homeschool Admin?","acceptedAnswer":{"@type":"Answer","text":""THRIVE is a private homeschool support experience for families who want bi-monthly deep-dive sessions with a child and youth development specialist. Sessions happen in-home for Southern Maine families and by video call for families everywhere else."}},
-{"@type":"Question","name":"How much does THRIVE cost?","acceptedAnswer":{"@type":"Answer","text":"$600/weekly."}},
+{"@type":"Question","name":"What is THRIVE from The Homeschool Admin?","acceptedAnswer":{"@type":"Answer","text":""THRIVE is a private homeschool support experience for families who want quarterly deep-dive sessions with a child and youth development specialist. Sessions happen in-home for Southern Maine families and by video call for families everywhere else."}},
+{"@type":"Question","name":"How much does THRIVE cost?","acceptedAnswer":{"@type":"Answer","text":""Pricing depends on family size. Families with 1 to 2 children pay $347 per week, and families with 3 to 5 children pay $575 per week."}},
 {"@type":"Question","name":"Where is THRIVE available?","acceptedAnswer":{"@type":"Answer","text":"THRIVE is available virtually for families everywhere. Southern Maine families may choose in-home deep-dive sessions, while families outside the area receive sessions by video call."}}
 ]}
 </script>
@@ -162,6 +162,9 @@ p strong{color:var(--black)}
 .price-card li::before{content:"✓";position:absolute;left:0;color:var(--yellow-dark);font-weight:900}
 .price-card .btn-dark{width:100%;text-align:center}
 .pricing-footnote{max-width:760px;margin:18px auto 0;text-align:center;font-size:14px;color:var(--mid)}
+.soft{background:var(--offwhite)}
+.container-wide{max-width:1120px;margin:0 auto;padding:0 24px}
+.center{text-align:center}
 
 /* ABOUT with photo */
 .about-section{background:var(--black);padding:72px 24px}
@@ -185,12 +188,92 @@ p strong{color:var(--black)}
 .footer-cta .note{font-size:13px;color:rgba(255,255,255,.55);margin-top:20px}
 
 @media(max-width:640px){
-  .deliverable-grid,.testimonial-grid,.pricing-tracks{grid-template-columns:1fr}
-  .visit-row{grid-template-columns:1fr;gap:4px}
-  .value-stack{padding:28px 20px}
-  .photo-break.landscape{height:280px}
-  .about-inner{grid-template-columns:1fr}
-  .about-photo{max-width:260px;margin:0 auto}
+  .deliverable-grid,
+  .testimonial-grid,
+  .pricing-grid{
+    grid-template-columns:1fr;
+  }
+
+  .visit-row{
+    grid-template-columns:1fr;
+    gap:4px;
+  }
+
+  .value-stack{
+    padding:28px 20px;
+  }
+
+  .photo-break.landscape{
+    height:280px;
+  }
+
+  .photo-break.portrait-short{
+    height:300px;
+  }
+
+  .about-inner{
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:0;
+  }
+
+  .about-photo,
+  .deliverable-img{
+    max-width:100%;
+  }
+
+  .hero{
+    min-height:78vh;
+  }
+
+  .hero-content{
+    padding:0 20px 48px;
+  }
+
+  .hero h1{
+    font-size:clamp(42px,16vw,64px);
+    line-height:1;
+  }
+
+  .hero-desc{
+    font-size:15px;
+    line-height:1.6;
+    margin:0 auto 28px;
+  }
+
+  .section{
+    padding:56px 0;
+  }
+
+  .testimonial-section,
+  .footer-cta,
+  .about-section{
+    padding:56px 20px;
+  }
+
+  .pricing-head,
+  .price-card{
+    padding:24px 20px;
+  }
+
+  .price-main{
+    font-size:42px;
+  }
+
+  .vs-item,
+  .vs-total{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .vs-value,
+  .vs-total-num{
+    white-space:normal;
+  }
+
+  p{
+    font-size:15px;
+  }
 }
 </style>
 </head>
@@ -218,7 +301,7 @@ p strong{color:var(--black)}
   <div class="hero-content">
     <span class="hero-eyebrow">Private Homeschool Support Available Virtually Everywhere</span>
     <h1>THRIVE</h1>
-    <p class="hero-desc">For the family who wants bi-monthly deep-dive support with a child and youth development specialist to build a homeschool system rooted in your real life. Sessions happen where you are, in your home or on a call.</p>
+    <p class="hero-desc">For the family who wants quarterly guidance from a child and youth development specialist to build a homeschool system fit for your family. Sessions happen where you are, in your home or on a call.</p>
     <a href="https://forms.gle/4GDVGbbp11c8fwpz9" class="btn">Apply Now</a>
   </div>
 </div>
@@ -343,7 +426,7 @@ p strong{color:var(--black)}
 
 <div class="value-stack">
       <span class="vs-label">Estimated Value</span>
-      <div class="vs-item"><span class="vs-name">Quarterly CheckI2FCFXDns - 90 min Deep Dive Virtual Sessions focused on homeschool strategy, curriculum direction, developmental guidance, implementation support, and family systems integration</span><span class="vs-value">$6,000</span></div>
+      <div class="vs-item"><span class="vs-name">Quarterly CheckIns - 90 min Deep Dive Virtual Sessions focused on homeschool strategy, curriculum direction, developmental guidance, implementation support, and family systems integration</span><span class="vs-value">$6,000</span></div>
       <div class="vs-item"><span class="vs-name">REASSURED™ Developmental Tracking System with Intrepratation + Implementation Support</span><span class="vs-value">$5,000</span></div>
       <div class="vs-item"><span class="vs-name">Custom Family Routine + Individual Child Agendas - Homeschool Systems Design</span><span class="vs-value">$8,000</span></div>
       <div class="vs-item"><span class="vs-name">Done-With-You Documentation Portfolio</span><span class="vs-value">$4,500</span></div>
@@ -392,7 +475,7 @@ p strong{color:var(--black)}
             <li>12 months direct access</li>
           </ul>
 
-          <a class="btn-dark" href="YOUR_APPLICATION_LINK_HERE">Apply For 1 To 2 Children</a>
+          <a class="btn-dark" href="https://forms.gle/4GDVGbbp11c8fwpz9">Apply For 1 To 2 Children</a>
         </div>
 
         <div class="price-card">
@@ -413,7 +496,7 @@ p strong{color:var(--black)}
             <li>12 months direct access</li>
           </ul>
 
-          <a class="btn-dark" href="YOUR_APPLICATION_LINK_HERE">Apply For 3 To 5 Children</a>
+          <a class="btn-dark" href="https://forms.gle/4GDVGbbp11c8fwpz9">Apply For 3 To 5 Children</a>
         </div>
       </div>
     </div>
@@ -431,7 +514,7 @@ p strong{color:var(--black)}
     <div class="about-text">
       <span class="eyebrow">About Maria</span>
       <h2>Maria Galyean,<br><em>Master of Leadership</em></h2>
-      <p>A former teacher and nanny who uses her experience, education in child and youth development, and leadership background to bring families private homeschool support through bi-monthly deep-dive sessions. Southern Maine families may meet in person. Families everywhere else meet by video call. <p>
+      <p>A former teacher and nanny who uses her experience, education in child and youth development, and leadership background to bring families private homeschool support through quarterly deep-dive sessions. Southern Maine families may meet in person. Families everywhere else meet by video call. <p>
       <strong>Founder of:</strong></p>
       <ul class="credential-list">
         <li>The Homeschool Admin</li>
