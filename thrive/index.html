@@ -132,24 +132,6 @@ p strong{color:var(--black)}
 .deliverable-no-img h3{font-family:'Libre Baskerville',serif;font-size:15px;font-weight:700;color:var(--black);margin-bottom:8px;line-height:1.4}
 .deliverable-no-img p{font-size:14px;color:var(--mid);margin:0;line-height:1.65}
 
-/* TRACK CARDS */
-.track-header{background:var(--black);padding:20px 28px}
-.track-header .fam-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);font-family:'Bricolage Grotesque',sans-serif;display:block;margin-bottom:6px}
-.track-header h3{font-family:'Libre Baskerville',serif;font-size:20px;font-weight:400;color:var(--white);margin:0}
-.pricing-tracks{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--black);border-top:none;margin-bottom:32px}
-.pricing-track{padding:32px 28px;background:var(--white);position:relative;border-right:1px solid var(--rule)}
-.pricing-track:last-child{border-right:none}
-.track-badge{position:absolute;top:-1px;right:20px;background:var(--yellow);color:var(--black);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:4px 14px;border-radius:0 0 4px 4px;font-family:'Bricolage Grotesque',sans-serif}
-.track-name{font-family:'Libre Baskerville',serif;font-size:20px;font-weight:700;color:var(--black);margin-bottom:8px}
-.track-desc{font-size:14px;color:var(--mid);margin-bottom:20px;line-height:1.6}
-.track-bullets{list-style:none;margin:0 0 20px}
-.track-bullets li{font-size:14px;color:var(--gray);padding:6px 0 6px 16px;border-bottom:1px solid var(--rule);position:relative;line-height:1.6}
-.track-bullets li:last-child{border-bottom:none}
-.track-bullets li::before{content:"—";position:absolute;left:0;color:var(--powder)}
-.track-price-main{font-family:'Libre Baskerville',serif;font-size:36px;color:var(--black);line-height:1;margin-bottom:6px}
-.track-price-sub{font-size:14px;color:var(--mid);margin-bottom:4px}
-.track-price-total{font-size:13px;color:var(--powder);font-weight:600;letter-spacing:.04em}
-
 /* VALUE STACK */
 .value-stack{background:var(--black);padding:40px;margin:32px 0;border-radius:2px}
 .value-stack .vs-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:24px;display:block;font-family:'Bricolage Grotesque',sans-serif}
@@ -160,6 +142,26 @@ p strong{color:var(--black)}
 .vs-total{display:flex;justify-content:space-between;align-items:center;padding-top:20px;margin-top:4px;border-top:2px solid rgba(255,211,97,.4)}
 .vs-total-label{font-family:'Bricolage Grotesque',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .vs-total-num{font-family:'Libre Baskerville',serif;font-size:28px;color:var(--yellow)}
+
+/* PRICING */
+.pricing-wrap{max-width:940px;margin:40px auto 0}
+.pricing-head{background:var(--black);padding:26px 30px;text-align:left}
+.pricing-head .fam-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);display:block;margin-bottom:8px;font-weight:700}
+.pricing-head h3{font-size:24px;font-weight:400;color:var(--white);margin:0}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--black);border-top:0;background:var(--white)}
+.price-card{padding:34px 30px;position:relative;border-right:1px solid var(--rule)}
+.price-card:last-child{border-right:0}
+.price-badge{position:absolute;top:-1px;right:20px;background:var(--yellow);color:var(--black);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:5px 14px;border-radius:0 0 4px 4px}
+.price-card h4{font-size:22px;color:var(--black);margin:0 0 10px}
+.price-desc{font-size:14px;color:var(--mid);line-height:1.65;margin-bottom:24px}
+.price-main{font-family:'Libre Baskerville',serif;font-size:52px;color:var(--black);line-height:1;margin-bottom:8px}
+.price-sub{font-size:14px;color:var(--mid);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;font-weight:700}
+.price-note{background:var(--powder-pale);border-left:4px solid var(--powder);padding:14px 16px;font-size:14px;color:var(--gray);line-height:1.6;margin:18px 0 24px}
+.price-card ul{list-style:none;margin:0 0 26px;padding:0}
+.price-card li{font-size:14px;color:var(--gray);padding:8px 0 8px 22px;border-bottom:1px solid var(--rule);position:relative;line-height:1.55}
+.price-card li::before{content:"✓";position:absolute;left:0;color:var(--yellow-dark);font-weight:900}
+.price-card .btn-dark{width:100%;text-align:center}
+.pricing-footnote{max-width:760px;margin:18px auto 0;text-align:center;font-size:14px;color:var(--mid)}
 
 /* ABOUT with photo */
 .about-section{background:var(--black);padding:72px 24px}
@@ -357,23 +359,68 @@ p strong{color:var(--black)}
 <div class="photo-break landscape">
   <img src="/assets/homeschool mom help.jpg" alt="Help for homeschool mom"> 
     </div>
+<!-- PRICING TABLE -->
+<section class="section soft" id="apply">
+  <div class="container-wide">
+    <div class="center">
+      <span class="eyebrow">Investment In Your Family’s Education</span>
+      <h2>Choose the family size that fits your household.</h2>
+      <p style="max-width:680px;margin-left:auto;margin-right:auto">THRIVE is priced by family size so the level of planning, support and implementation matches the needs of your children. Monthly payment details are shared inside the application.</p>
+    </div>
 
+    <div class="pricing-wrap">
+      <div class="pricing-head">
+        <span class="fam-tag">Apply By Family Size</span>
+        <h3>12 Month Private Homeschool Support</h3>
+      </div>
 
-  <!-- Main Price Card -->
-  <div style="display: inline-block; background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 40px 50px; max-width: 480px; width: 100%; margin-bottom: 40px;">
-    <p style="font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; color: #b08060; margin-bottom: 8px;">12-Month Program</p>
-    <h3 style="font-size: 3rem; color: #4a3728; margin: 0;">$600<span style="font-size: 1.2rem; color: #7a5c4f;">/week</span></h3>
-    <p style="color: #7a5c4f; margin: 8px 0 24px;">Billed as a 12-month commitment · $25,000/year total</p>
-    <hr style="border: none; border-top: 1px solid #f0e6dc; margin-bottom: 24px;">
-    <ul style="list-style: none; padding: 0; margin: 0 0 24px; text-align: left; color: #4a3728; font-size: 1rem; line-height: 2;">
-      <li>✅ Personalized homeschool planning & support</li>
-      <li>✅ Quarterly check in sessions included</li>
-      <li>✅ Direct access to your own personal homeschool consultant, Maria, The Homeschool Admin</li>
-      <li>✅ Private homeschool guidance year-round</li>
-    </ul>
-    <a href="https://forms.gle/n4mx14WjPhzPg7xp7" style="display: inline-block; background: #b08060; color: #fff; padding: 14px 36px; border-radius: 50px; text-decoration: none; font-size: 1rem; font-weight: bold;">Apply Now</a>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h4>Family of 1 to 2 Children</h4>
+          <p class="price-desc">For families who want personalized homeschool planning, rhythm design, developmental guidance and direct support across the year.</p>
+
+          <div class="price-main">$347</div>
+          <div class="price-sub">per week</div>
+
+          <p class="price-note">Monthly payment option available after acceptance. Full details are inside the application.</p>
+
+          <ul>
+            <li>6 private deep dive sessions</li>
+            <li>REASSURED™ developmental guidance</li>
+            <li>Custom routines and child agendas</li>
+            <li>Documentation and organization support</li>
+            <li>12 months direct access</li>
+          </ul>
+
+          <a class="btn-dark" href="YOUR_APPLICATION_LINK_HERE">Apply For 1 To 2 Children</a>
+        </div>
+
+        <div class="price-card">
+          <span class="price-badge">Larger Family Support</span>
+          <h4>Family of 3 to 5 Children</h4>
+          <p class="price-desc">For larger households needing multi child planning, rhythms, agendas and implementation support across several learners.</p>
+
+          <div class="price-main">$575</div>
+          <div class="price-sub">per week</div>
+
+          <p class="price-note">Monthly payment option available after acceptance. Full details are inside the application.</p>
+
+          <ul>
+            <li>6 private deep dive sessions</li>
+            <li>Multi child planning and support</li>
+            <li>Family rhythm and implementation guidance</li>
+            <li>Documentation support across the year</li>
+            <li>12 months direct access</li>
+          </ul>
+
+          <a class="btn-dark" href="YOUR_APPLICATION_LINK_HERE">Apply For 3 To 5 Children</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="pricing-footnote">After your application is accepted, you will receive a private invoice or payment link based on your family size and preferred payment rhythm.</p>
   </div>
-
+</section>
 <!-- ========== END PRICING TABLE ========== -->
 
   
