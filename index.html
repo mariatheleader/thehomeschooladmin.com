@@ -290,9 +290,35 @@ p strong{color:var(--black)}
   @media(max-width:640px){
   .footer-cta{padding:56px 20px}
 }
-</style>
-</head>
-<body>
+  
+/* FOOTER CTA */
+.footer-cta{background:var(--powder);padding:88px 24px;text-align:center}
+.footer-cta h2{color:var(--white);margin-bottom:16px}
+.footer-cta h2 em{color:var(--yellow)}
+.footer-cta p{color:rgba(255,255,255,.88);max-width:520px;margin:0 auto 16px}
+.footer-cta .note{font-size:13px;color:rgba(255,255,255,.55);margin-top:20px}
+
+  /* SEO FOOTER */
+.seo-footer{background:var(--black);padding:48px 24px 32px;border-top:1px solid rgba(255,255,255,.08)}
+.seo-footer-inner{max-width:1120px;margin:0 auto}
+.seo-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1)}
+.seo-footer-brand p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.75;margin-top:12px;max-width:260px}
+.seo-footer h4{font-family:'Bricolage Grotesque',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);margin-bottom:14px;font-weight:700}
+.seo-footer ul{list-style:none}
+.seo-footer ul li{margin-bottom:8px}
+.seo-footer ul li a{font-size:13px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s;line-height:1.5}
+.seo-footer ul li a:hover{color:var(--white)}
+.seo-footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;flex-wrap:wrap;gap:12px}
+.seo-footer-bottom p{font-size:12px;color:rgba(255,255,255,.3);margin:0}
+.seo-footer-bottom a{font-size:12px;color:rgba(255,255,255,.3);text-decoration:none}
+.seo-footer-bottom a:hover{color:rgba(255,255,255,.6)}
+.seo-footer-keywords{padding-top:24px;border-top:1px solid rgba(255,255,255,.06);margin-top:8px}
+.seo-footer-keywords p{font-size:11px;color:rgba(255,255,255,.2);line-height:1.9;margin:0}
+@media(max-width:640px){
+  .seo-footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .seo-footer-brand{grid-column:1/-1}
+  .seo-footer-bottom{flex-direction:column;align-items:flex-start}
+}
 
 <!-- NAV -->
 <nav class="nav" aria-label="Main navigation">
@@ -616,13 +642,6 @@ p strong{color:var(--black)}
     <p class="note">Find Maria at @thehomeschooladmin on Instagram</p>
   </div>
 </div>
-
-/* FOOTER CTA */
-.footer-cta{background:var(--powder);padding:88px 24px;text-align:center}
-.footer-cta h2{color:var(--white);margin-bottom:16px}
-.footer-cta h2 em{color:var(--yellow)}
-.footer-cta p{color:rgba(255,255,255,.88);max-width:520px;margin:0 auto 16px}
-.footer-cta .note{font-size:13px;color:rgba(255,255,255,.55);margin-top:20px}
   
 <!-- SEO FOOTER -->
 <footer class="seo-footer" aria-label="Site footer">
