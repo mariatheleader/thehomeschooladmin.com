@@ -121,8 +121,12 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, var(--powder-pale), var(--offwhite));
-      padding: 92px 24px 76px;
+      position: relative;
+      background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url('/images/homeschool-freedom-keeper.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 120px 24px 110px;
       border-bottom: 1px solid var(--rule);
     }
 
@@ -130,15 +134,16 @@
       max-width: 900px;
       margin: 0 auto;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
-
     .eyebrow {
       display: block;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: var(--mauve);
+      color: var(--yellow);
       margin-bottom: 18px;
     }
 
@@ -149,9 +154,12 @@
       line-height: 1.15;
       margin-bottom: 22px;
     }
+    .hero h1 {
+      color: var(--white);
+    }
 
-    h1 em {
-      color: var(--powder);
+    .hero h1 em {
+      color: var(--yellow);
       font-style: italic;
     }
 
@@ -159,17 +167,7 @@
       max-width: 720px;
       margin: 0 auto;
       font-size: 19px;
-      color: var(--gray);
-    }
-
-    .hero-image {
-      width: 100%;
-      max-width: 760px;
-      margin: 32px auto 0;
-      display: block;
-      border-radius: 6px;
-      box-shadow: 0 14px 38px rgba(0,0,0,.08);
-      object-fit: cover;
+      color: rgba(255,255,255,.92);
     }
 
     .section {
@@ -446,7 +444,6 @@
       <p class="hero-sub">
         Thank you for considering me to help with your homeschooling needs. I am a Child Development Specialist turned homeschool teacher and consultant who supports parents in breaking free from conventional systems and building something better for their children.
       </p>
-      <img src="/images/homeschool-freedom-keeper.jpg" alt="homeschool freedom keeper" class="hero-image" />
     </div>
   </header>
 
