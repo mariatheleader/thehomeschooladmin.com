@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're In! — Curriculum Shopping Party</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sage: #4a7c59;
+    --sage-light: #6b9e7a;
+    --sage-pale: #edf4ef;
+    --sage-mid: #c4dcc9;
+    --cream: #fdf8f0;
+    --warm-white: #fffef9;
+    --bark: #6b4f3a;
+    --bark-light: #c4a882;
+    --ink: #1e1a16;
+    --ink-soft: #4a4540;
+    --ink-muted: #8a817a;
+    --gold: #c8963a;
+    --gold-pale: #fdf3e2;
+    --gold-mid: #f0c97a;
+    --blush: #e8d5c4;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ─── TOP BAR ─── */
+  .top-bar {
+    background: var(--sage);
+    text-align: center;
+    padding: 0.9rem 1rem;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.02em;
+  }
+
+  /* ─── HERO ─── */
+  .confirm-hero {
+    background: var(--sage);
+    padding: 4.5rem 2rem 3.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .confirm-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 50% 50% at 70% 90%, rgba(255,255,255,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 50% at 20% 10%, rgba(255,255,255,0.05) 0%, transparent 60%);
+  }
+
+  .success-ring {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+
+  .success-ring svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .confirm-hero h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .confirm-hero p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ─── WAVE ─── */
+  .wave-divider {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  /* ─── MAIN CONTENT ─── */
+  .main-content {
+    flex: 1;
+    padding: 3.5rem 1.5rem 5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* ─── EVENT CARD ─── */
+  .event-card {
+    background: var(--warm-white);
+    border: 1px solid var(--sage-mid);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 32px rgba(74, 124, 89, 0.08);
+  }
+
+  .event-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--sage-mid);
+  }
+
+  .event-icon-box {
+    width: 3rem;
+    height: 3rem;
+    background: var(--sage-pale);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .event-icon-box svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    stroke: var(--sage);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .event-card-header h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.15rem;
+  }
+
+  .event-card-header p {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+  }
+
+  /* ─── DETAIL ROWS ─── */
+  .detail-rows { list-style: none; }
+
+  .detail-rows li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.97rem;
+  }
+
+  .detail-rows li:last-child { border-bottom: none; }
+
+  .detail-icon {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .detail-icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    stroke: var(--sage);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .detail-label {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    display: block;
+  }
+
+  .detail-value {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  /* ─── ACTION BUTTONS ─── */
+  .actions-card {
+    background: var(--warm-white);
+    border: 1px solid var(--sage-mid);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .actions-title {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+  }
+
+  .action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s, opacity 0.15s;
+    text-decoration: none;
+    border: none;
+    margin-bottom: 0.85rem;
+  }
+
+  .action-btn:hover { transform: translateY(-1px); opacity: 0.93; }
+  .action-btn:last-child { margin-bottom: 0; }
+
+  .btn-meet {
+    background: #1a73e8;
+    color: #fff;
+  }
+
+  .btn-menu {
+    background: var(--sage-pale);
+    color: var(--sage);
+    border: 1.5px solid var(--sage-mid);
+  }
+
+  .btn-calendar {
+    background: var(--gold-pale);
+    color: var(--bark);
+    border: 1.5px solid var(--gold-mid);
+  }
+
+  .action-btn svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+  /* ─── ZOOM LINK BOX ─── */
+  .zoom-link-box {
+    background: #eaf3ff;
+    border: 1px solid #b8d9ff;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+    display: none;
+  }
+
+  .zoom-link-box.visible { display: block; }
+
+  .zoom-link-box p {
+    font-size: 0.88rem;
+    color: #1a4e8a;
+    margin-bottom: 0.4rem;
+  }
+
+  .zoom-link-box a {
+    font-size: 0.85rem;
+    color: #1a4e8a;
+    word-break: break-all;
+    font-weight: 500;
+  }
+
+  /* ─── WHAT'S NEXT ─── */
+  .next-card {
+    background: var(--sage-pale);
+    border: 1px solid var(--sage-mid);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .next-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .checklist { list-style: none; }
+
+  .checklist li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .checklist li:last-child { margin-bottom: 0; }
+
+  .check-dot {
+    flex-shrink: 0;
+    width: 1.35rem;
+    height: 1.35rem;
+    background: var(--sage);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.1rem;
+  }
+
+  .check-dot svg {
+    width: 0.65rem;
+    height: 0.65rem;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ─── CLARITY ROOM ─── */
+  .clarity-card {
+    background: var(--ink);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .clarity-card .tag {
+    display: inline-block;
+    background: var(--gold-mid);
+    color: var(--bark);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.9rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .clarity-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.6rem;
+  }
+
+  .clarity-card p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .clarity-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+
+  .clarity-btn:hover { background: #b5872f; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    background: var(--cream);
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">🎉 You're registered! We can't wait to see you there.</div>
+
+<!-- HERO -->
+<section class="confirm-hero">
+  <div class="success-ring">
+    <svg viewBox="0 0 24 24"><polyline points="4,12 9,17 20,7"/></svg>
+  </div>
+  <h1>You're In!</h1>
+  <p>Your spot is saved for the Curriculum Shopping Party. Everything you need is right here on this page.</p>
+</section>
+
+<!-- WAVE -->
+<svg class="wave-divider" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <path d="M0,20 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#fdf8f0"/>
+</svg>
+
+<!-- MAIN -->
+<main class="main-content">
+
+  <!-- EVENT DETAILS CARD -->
+  <div class="event-card">
+    <div class="event-card-header">
+      <div class="event-icon-box">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div>
+        <h2>Curriculum Shopping Party</h2>
+        <p>Live 90-minute Google Meet workshop</p>
+      </div>
+    </div>
+
+    <ul class="detail-rows">
+      <li>
+        <span class="detail-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </span>
+        <div>
+          <span class="detail-label">Date</span>
+          <span class="detail-value">Monday, June 1st, 2026</span>
+        </div>
+      </li>
+      <li>
+        <span class="detail-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        </span>
+        <div>
+          <span class="detail-label">Time</span>
+          <span class="detail-value">3:30 PM Eastern Time</span>
+        </div>
+      </li>
+      <li>
+        <span class="detail-icon">
+          <svg viewBox="0 0 24 24"><polygon points="23,7 16,12 23,17"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </span>
+        <div>
+          <span class="detail-label">Platform</span>
+          <span class="detail-value">Google Meet (link below)</span>
+        </div>
+      </li>
+      <li>
+        <span class="detail-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </span>
+        <div>
+          <span class="detail-label">Duration</span>
+          <span class="detail-value">90 minutes</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div class="actions-card">
+    <p class="actions-title">Join the event</p>
+
+    <!-- GOOGLE MEET BUTTON -->
+    <a href="YOUR_GOOGLE_MEET_LINK_HERE" target="_blank" class="action-btn btn-meet">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23,7 16,12 23,17"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+      Join on Google Meet
+    </a>
+
+    <!-- CURRICULUM MENU BUTTON -->
+    <a href="https://drive.google.com/file/d/13tYFdnYd-LIYUciJ3YPeyxgh1hhgTYYE/view?usp=sharing" target="_blank" class="action-btn btn-menu">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+      Browse the Curriculum Menu
+    </a>
+
+    <!-- GOOGLE CALENDAR BUTTON -->
+    <a
+      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Curriculum+Shopping+Party&dates=20260601T193000Z/20260601T210000Z&details=Live+90-minute+homeschool+curriculum+planning+workshop+on+Google+Meet.+Join+here:+YOUR_GOOGLE_MEET_LINK_HERE%0A%0ABrowse+the+Curriculum+Menu+beforehand:+https://drive.google.com/file/d/13tYFdnYd-LIYUciJ3YPeyxgh1hhgTYYE/view&location=Google+Meet"
+      target="_blank"
+      class="action-btn btn-calendar"
+    >
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Add to Google Calendar
+    </a>
+
+    <div style="margin-top: 0.75rem; padding: 1rem; background: var(--sage-pale); border-radius: 10px; font-size: 0.88rem; color: var(--ink-soft); line-height: 1.6;">
+      📩 <strong>Check your email</strong> — Your Google Meet link and the digital Planning Template will also be delivered there. Can't find it? Check your spam folder.
+    </div>
+  </div>
+
+  <!-- WHAT TO PREPARE -->
+  <div class="next-card">
+    <h3>✏️ Before the Workshop</h3>
+    <ul class="checklist">
+      <li>
+        <span class="check-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+        <span><strong>Browse the Curriculum Menu</strong> (button above!) — come with your favorites, your questions, and any ideas already brewing. We'll sort through them together live.</span>
+      </li>
+      <li>
+        <span class="check-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+        <span>Have your child's <strong>current grade level</strong> and any learning preferences or notes handy.</span>
+      </li>
+      <li>
+        <span class="check-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+        <span>Use a <strong>laptop or tablet</strong> so you can have the Curriculum Menu and our call open side by side.</span>
+      </li>
+      <li>
+        <span class="check-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+        <span>Join a couple of minutes early so we can start right at <strong>3:30 PM</strong> together!</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- CLARITY ROOM UPSELL -->
+  <div class="clarity-card">
+    <span class="tag">✨ Exclusive Offer for Attendees</span>
+    <h3>The Clarity Room</h3>
+    <p>After the workshop, you'll have the option to join The Clarity Room for just $97 — your home base for personalized, ongoing support as you bring your curriculum plan to life throughout the year.</p>
+    <a href="#" class="clarity-btn">Learn More About The Clarity Room →</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>Questions? Reply to your confirmation email — we're here to help. · Curriculum Shopping Party &copy; 2025</p>
+</footer>
+
+</body>
+</html>
