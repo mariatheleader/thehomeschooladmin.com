@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Curriculum Shopping Party — June 1st</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -129,6 +130,20 @@
   }
 
   .price-note strong { color: var(--gold-mid); }
+
+  .stripe-button-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .stripe-button-wrap.hero-button {
+    margin-top: 0.5rem;
+  }
+
+  .stripe-button-wrap.cta-button {
+    margin-top: 0.5rem;
+  }
 
   /* ─── WAVES ─── */
   .wave-divider {
@@ -403,7 +418,14 @@
     📅 <strong>Monday, June 1st &nbsp;·&nbsp; 3:30 PM</strong> <span>· Live on Google Meet</span>
   </div>
   <br>
-  <a href="https://buy.stripe.com/3cI3cv0by36Q6N8gE80RG2S" class="hero-cta">Reserve My Spot — $27</a>
+
+  <div class="stripe-button-wrap hero-button">
+    <stripe-buy-button
+      buy-button-id="buy_btn_1TXrzbE4eh3L7ZetEh4CcpY3"
+      publishable-key="pk_live_51IhhpXE4eh3L7ZetzBUEhkdHmJS4a9qo6kCTknMY15oYBUGq25I1l6owya27kMZBNJNruI1RoxE613AqTSGpaU0R00BgT3av8d">
+    </stripe-buy-button>
+  </div>
+
   <p class="price-note">One-time fee. <strong>Instant access</strong> to the planning template included.</p>
 </section>
 
@@ -414,7 +436,7 @@
 
 <!-- INTRO QUOTE -->
 <section class="intro">
-  <p>Instead of spending the next three months second-guessing your choices, join me for a live <strong>Curriculum Shopping Party</strong> where we work through the entire Homeschool Curriculum Menu together — and make sure your child is covered from every angle.</p>
+  <p>Instead of spending the next three months second-guessing your choices, join me for a live <strong>Curriculum Shopping Party</strong> where we work through the entire Homeschool Curriculum Menu together so you can confidently choose what your family needs and move into summer with peace.</p>
 </section>
 
 <!-- WHAT WE DO -->
@@ -489,7 +511,14 @@
     <div class="desc">One-time · No subscription</div>
   </div>
   <br>
-  <a href="https://buy.stripe.com/3cI3cv0by36Q6N8gE80RG2S" class="cta-btn">Yes, I'm In — Register Now →</a>
+
+  <div class="stripe-button-wrap cta-button">
+    <stripe-buy-button
+      buy-button-id="buy_btn_1TXrzbE4eh3L7ZetEh4CcpY3"
+      publishable-key="pk_live_51IhhpXE4eh3L7ZetzBUEhkdHmJS4a9qo6kCTknMY15oYBUGq25I1l6owya27kMZBNJNruI1RoxE613AqTSGpaU0R00BgT3av8d">
+    </stripe-buy-button>
+  </div>
+
   <p class="cta-reassurance">Monday, June 1st · 3:30 PM · Live on Google Meet</p>
 </section>
 
