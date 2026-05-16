@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>About Maria Galyean, MLS | The Homeschool Admin</title>
-  <meta name="description" content="Meet Maria Galyean, MLS, Child Development Specialist, homeschool consultant, and founder of The Homeschool Admin, helping families build values and interest based homeschool plans with peace of mind." />
+  <meta name="description" content="Meet Maria Galyean, MLS, Child Development Specialist, homeschool consultant, and founder of The Homeschool Admin, helping families build values and interest based learning." />
   <link rel="canonical" href="https://www.thehomeschooladmin.com/about/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,32 +40,85 @@
       line-height: 1.8;
     }
 
-    . {
-  background: var(--black);
-  padding: 0 24px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
+    .nav {
+      background: var(--black);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
-.{background:var(--black);padding:0 24px;position:sticky;top:0;z-index:999}
-.-inner{max-width:1120px;margin:0 auto;min-height:60px;display:flex;align-items:center;justify-content:space-between;position:relative}
-.-brand{font-family:'Libre Baskerville',serif;color:var(--white);font-size:15px;text-decoration:none;letter-spacing:.02em;z-index:1001}
-.menu-toggle{display:none}
-.menu-button{display:none;color:var(--black);background:var(--yellow);padding:8px 14px;border-radius:2px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;z-index:1001}
-.-links{display:flex;align-items:center;gap:20px;list-style:none}
-.-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:8px 0;display:block;transition:color .15s}
-.-links a:hover{color:var(--yellow)}
-.-cta{background:var(--yellow)!important;color:var(--black)!important;padding:8px 16px!important;border-radius:2px}
-.-cta:hover{background:var(--yellow-dark)!important}
-@media(max-width:860px){
-  .-inner{min-height:64px}
-  .menu-button{display:block}
-  .-links{display:none;position:absolute;top:64px;left:-24px;right:-24px;background:var(--black);padding:20px 24px 28px;flex-direction:column;align-items:flex-start;gap:14px;border-top:1px solid rgba(255,255,255,.12)}
-  .menu-toggle:checked~.-links{display:flex}
-  .-links a{font-size:13px}
-  .-cta{display:inline-block;margin-top:4px}
-}
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .nav-brand {
+      font-family: 'Libre Baskerville', serif;
+      color: var(--white);
+      font-size: 15px;
+      text-decoration: none;
+      letter-spacing: .02em;
+      z-index: 1001;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .menu-button {
+      display: none;
+      color: var(--black);
+      background: var(--yellow);
+      padding: 8px 14px;
+      border-radius: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,.72);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 8px 0;
+      display: block;
+      transition: color .15s;
+    }
+
+    .nav-links a:hover {
+      color: var(--yellow);
+    }
+
+    .nav-cta {
+      background: var(--yellow) !important;
+      color: var(--black) !important;
+      padding: 8px 16px !important;
+      border-radius: 2px;
+    }
+
+    .nav-cta:hover {
+      background: var(--yellow-dark) !important;
+      color: var(--white) !important;
+    }
 
     .hero {
       background: linear-gradient(135deg, var(--powder-pale), var(--offwhite));
@@ -109,6 +162,16 @@
       color: var(--gray);
     }
 
+    .hero-image {
+      width: 100%;
+      max-width: 760px;
+      margin: 32px auto 0;
+      display: block;
+      border-radius: 6px;
+      box-shadow: 0 14px 38px rgba(0,0,0,.08);
+      object-fit: cover;
+    }
+
     .section {
       padding: 76px 24px;
     }
@@ -137,6 +200,14 @@
       position: sticky;
       top: 24px;
       border-top: 6px solid var(--yellow);
+    }
+
+    .profile-image {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      display: block;
+      object-fit: cover;
     }
 
     .profile-name {
@@ -220,6 +291,15 @@
       font-size: 18px;
     }
 
+    .content-image {
+      width: 100%;
+      border-radius: 6px;
+      margin: 28px 0 10px;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 10px 24px rgba(0,0,0,.06);
+    }
+
     .quote {
       border-left: 4px solid var(--yellow);
       background: var(--white);
@@ -292,9 +372,40 @@
       font-size: 13px;
     }
 
-    @media(max-width: 850px) {
-      .-links {
+    @media(max-width: 860px) {
+      .nav-inner {
+        min-height: 64px;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
         display: none;
+        position: absolute;
+        top: 64px;
+        left: -24px;
+        right: -24px;
+        background: var(--black);
+        padding: 20px 24px 28px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        border-top: 1px solid rgba(255,255,255,.08);
+      }
+
+      .menu-toggle:checked ~ .nav-links {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .nav-cta {
+        display: inline-block;
+        margin-top: 4px;
       }
 
       .split {
@@ -313,28 +424,29 @@
 </head>
 
 <body>
-<nav class="nav" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a class="nav-brand" href="/">The Homeschool Admin</a>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
-    <label for="menu-toggle" class="menu-button">Menu</label>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/thrive/">Thrive</a></li>
-      <li><a href="https://buy.stripe.com/7sY5kD7E0bDm9Zk73y0RG2Q" class="nav-cta">Get Direct Help Now, Only $97</a></li>
-      <li><a href="/resources/">Resources</a></li>
-      <li><a href="/about/">About</a></li>
-    </ul>
-  </div>
-</nav>
-  
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/">The Homeschool Admin</a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+      <label for="menu-toggle" class="menu-button">Menu</label>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/thrive/">Thrive</a></li>
+        <li><a href="https://buy.stripe.com/7sY5kD7E0bDm9Zk73y0RG2Q" class="nav-cta">Get Direct Help Now, Only $97</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header class="hero">
     <div class="hero-inner">
       <span class="eyebrow">About The Homeschool Admin</span>
       <h1>Homeschool support for families ready for <em>education emancipation.</em></h1>
       <p class="hero-sub">
-        Thank you for considering me to help with your homeschooling needs. I am a Child Development Specialist turned homeschool teacher and consultant who supports parents in breaking free from conventional, government education systems.
+        Thank you for considering me to help with your homeschooling needs. I am a Child Development Specialist turned homeschool teacher and consultant who supports parents in breaking free from conventional systems and building something better for their children.
       </p>
+      <img src="/images/about-hero.jpg" alt="A warm homeschool learning environment" class="hero-image" />
     </div>
   </header>
 
@@ -350,6 +462,8 @@
     <div class="container split">
 
       <aside class="card profile-card">
+        <img src="/images/maria-headshot.jpg" alt="Maria Galyean, founder of The Homeschool Admin" class="profile-image" />
+
         <p class="profile-name">Maria Galyean, MLS</p>
         <p class="profile-title">Master of Leadership Studies</p>
 
@@ -373,17 +487,19 @@
         </p>
 
         <p>
-          Maria works exclusively with homeschool families at all stages of the journey, helping students thrive by giving them tools to follow their interests while keeping parents organized with records of developmental progress.
+          Maria works exclusively with homeschool families at all stages of the journey, helping students thrive by giving them tools to follow their interests while keeping parents organized with records, structure, and encouragement.
         </p>
 
         <p>
-          Unlike other homeschool coaches and services, Maria specializes in <strong>done for you support</strong>, working one on one with parents and homeschoolers, long and short term, to create personalized lessons and plans tailored to the family’s values and the child’s interests.
+          Unlike other homeschool coaches and services, Maria specializes in <strong>done for you support</strong>, working one on one with parents and homeschoolers, long and short term, to create personalized systems and plans.
         </p>
+
+        <img src="/images/maria-working.jpg" alt="Maria planning homeschool support resources" class="content-image" />
 
         <h3>The V.I.B.E. Model</h3>
 
         <p>
-          The Values and Interest Based Educational model was created by The Homeschool Admin to empower learners and parents alike to tailor their homeschool around what means the most to them while focusing on the child’s developmental checkpoints.
+          The Values and Interest Based Educational model was created by The Homeschool Admin to empower learners and parents alike to tailor their homeschool around what means the most to them while also keeping educational growth in view.
         </p>
 
         <p>
@@ -397,7 +513,7 @@
         </p>
 
         <p>
-          This observational discovery tool enables parents to see if their child is on track and includes a one on one meeting with Maria to discuss practices and activities that support further development in the areas that need attention.
+          This observational discovery tool enables parents to see if their child is on track and includes a one on one meeting with Maria to discuss practices and activities that support further development.
         </p>
 
         <p>
@@ -410,12 +526,14 @@
 
         <h2>My Story</h2>
 
+        <img src="/images/my-story.jpg" alt="Maria in a warm and family-centered setting" class="content-image" />
+
         <p>
           During my career as an early childhood educator in childcare and Head Start programs before becoming a nanny, I found my morals and values triggered often.
         </p>
 
         <p>
-          In 2019, I learned about vaccine mandates forced on Maine students, and I focused much of my energy advocating for medical freedoms and rights. Eventually, I founded The Homeschool Admin in 2021 as infringements on family and student rights continued on a national level after 2020.
+          In 2019, I learned about vaccine mandates forced on Maine students, and I focused much of my energy advocating for medical freedoms and rights. Eventually, I founded The Homeschool Admin in response to the growing need for family-centered homeschool support.
         </p>
 
         <p>
