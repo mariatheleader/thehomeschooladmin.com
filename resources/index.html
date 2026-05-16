@@ -40,25 +40,25 @@
       line-height: 1.8;
     }
 
-.nav{background:var(--black);padding:0 24px;position:sticky;top:0;z-index:999}
-.nav-inner{max-width:1120px;margin:0 auto;min-height:60px;display:flex;align-items:center;justify-content:space-between;position:relative}
-.nav-brand{font-family:'Libre Baskerville',serif;color:var(--white);font-size:15px;text-decoration:none;letter-spacing:.02em;z-index:1001}
-.menu-toggle{display:none}
-.menu-button{display:none;color:var(--black);background:var(--yellow);padding:8px 14px;border-radius:2px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;z-index:1001}
-.nav-links{display:flex;align-items:center;gap:20px;list-style:none}
-.nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:8px 0;display:block;transition:color .15s}
-.nav-links a:hover{color:var(--yellow)}
-.nav-cta{background:var(--yellow)!important;color:var(--black)!important;padding:8px 16px!important;border-radius:2px}
-.nav-cta:hover{background:var(--yellow-dark)!important}
-@media(max-width:860px){
-  .nav-inner{min-height:64px}
-  .menu-button{display:block}
-  .nav-links{display:none;position:absolute;top:64px;left:-24px;right:-24px;background:var(--black);padding:20px 24px 28px;flex-direction:column;align-items:flex-start;gap:14px;border-top:1px solid rgba(255,255,255,.12)}
-  .menu-toggle:checked~.nav-links{display:flex}
-  .nav-links a{font-size:13px}
-  .nav-cta{display:inline-block;margin-top:4px}
-}
-    
+    .nav{background:var(--black);padding:0 24px;position:sticky;top:0;z-index:999}
+    .nav-inner{max-width:1120px;margin:0 auto;min-height:60px;display:flex;align-items:center;justify-content:space-between;position:relative}
+    .nav-brand{font-family:'Libre Baskerville',serif;color:var(--white);font-size:15px;text-decoration:none;letter-spacing:.02em;z-index:1001}
+    .menu-toggle{display:none}
+    .menu-button{display:none;color:var(--black);background:var(--yellow);padding:8px 14px;border-radius:2px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;z-index:1001}
+    .nav-links{display:flex;align-items:center;gap:20px;list-style:none}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:8px 0;display:block;transition:color .15s}
+    .nav-links a:hover{color:var(--yellow)}
+    .nav-cta{background:var(--yellow)!important;color:var(--black)!important;padding:8px 16px!important;border-radius:2px}
+    .nav-cta:hover{background:var(--yellow-dark)!important}
+    @media(max-width:860px){
+      .nav-inner{min-height:64px}
+      .menu-button{display:block}
+      .nav-links{display:none;position:absolute;top:64px;left:-24px;right:-24px;background:var(--black);padding:20px 24px 28px;flex-direction:column;align-items:flex-start;gap:14px;border-top:1px solid rgba(255,255,255,.08)}
+      .menu-toggle:checked~.nav-links{display:flex}
+      .nav-links a{font-size:13px}
+      .nav-cta{display:inline-block;margin-top:4px}
+    }
+
     .hero {
       padding: 86px 24px 70px;
       background: linear-gradient(135deg, var(--powder-pale), var(--offwhite));
@@ -99,6 +99,21 @@
       color: var(--gray);
       max-width: 680px;
       margin: 0 auto;
+    }
+
+    .hero-image-wrap {
+      margin-top: 34px;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 760px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 6px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.08);
+      border: 1px solid var(--rule);
     }
 
     .instant {
@@ -182,6 +197,16 @@
       border-top: 6px solid var(--mauve);
     }
 
+    .card-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      border: 1px solid var(--rule);
+      background: var(--offwhite);
+    }
+
     .label {
       display: inline-block;
       font-size: 10px;
@@ -197,6 +222,7 @@
       font-size: 27px;
       line-height: 1.2;
       margin-bottom: 14px;
+      margin-top: 4px;
     }
 
     .price {
@@ -317,6 +343,7 @@
     </ul>
   </div>
 </nav>
+
   <header class="hero">
     <div class="hero-inner">
       <span class="eyebrow">Resources for Homeschool Parents</span>
@@ -324,6 +351,9 @@
       <p class="hero-sub">
         Simple, instant access resources to help you get clear, get organized, and move through the homeschool process with more confidence.
       </p>
+      <div class="hero-image-wrap">
+        <img src="/images/my-story.jpg" alt="Maria of The Homeschool Admin sharing her homeschool story" class="hero-image">
+      </div>
     </div>
   </header>
 
@@ -343,18 +373,20 @@
 
       <div class="grid">
         <article class="card video">
+          <img src="/images/how-to-homeschool-3hrs-a-day.png" alt="How to Homeschool in Less Than 3 Hours a Day training mockup" class="card-image">
           <span class="label">Video Training</span>
           <h3>How to Homeschool in Less Than 3 Hours a Day</h3>
           <p>
             After this 47 minute video training, you will understand the homeschooling process much more clearly.
           </p>
           <p>
-            You will know how to structure your routine so your kids can receive a strong education and still spend most of each day living, hiking, going on playdates, honing their interests, learning life skills, and going on fun adventures with you.
+            You will know how to structure your routine so your kids can receive a strong education and still spend most of each day living, hiking, going on playdates, honing their interests, learning through real life, and enjoying one another more.
           </p>
           <a class="button" href="https://buy.stripe.com/7sYeVde2o5eY5J44Vq0RG2M">Get Clear on the Homeschool Process</a>
         </article>
 
         <article class="card video">
+          <img src="/images/homeschool-mindset-reset.png" alt="Deschooling Mindset Reset training mockup" class="card-image">
           <span class="label">Video Training</span>
           <h3>Deschooling Mindset Reset</h3>
           <p>
@@ -384,6 +416,7 @@
 
       <div class="grid-three">
         <article class="card free">
+          <img src="/images/homeschool-starter-guide.png" alt="Streamlined Starter Guide mockup" class="card-image">
           <span class="label">Free Download</span>
           <h3>Streamlined Starter Guide</h3>
           <p>
@@ -401,15 +434,17 @@
         </article>
 
         <article class="card free">
+          <img src="/assets/homeschooling%20without%20curriculum%20and%20knowing%20I%20am%20doing%20enough.jpg" alt="Teach Reading Without Frustration guide mockup" class="card-image">
           <span class="label">Free Download</span>
           <h3>Teach Reading Without Frustration</h3>
           <p>
-            If your child is between the ages of 5 and 9 and beginning to learn to read, but you are concerned they are not catching on, this guide gives you unconventional tips that may be exactly what you and your child need.
+            If your child is between the ages of 5 and 9 and beginning to learn to read, but you are concerned they are not catching on, this guide gives you unconventional tips that may be exactly what you need.
           </p>
           <a class="button button-dark" href="https://starterguide.thehomeschooladmin.com/reading101">Download the Reading Guide</a>
         </article>
 
         <article class="card free">
+          <img src="/images/core-value-bundle.png" alt="Connection and Values PDFs mockup" class="card-image">
           <span class="label">Free Download</span>
           <h3>Connection and Values PDFs</h3>
           <p>
@@ -445,6 +480,7 @@
 
       <div class="grid-three">
         <article class="card bundle">
+          <img src="/images/set-to-go-homeschool-bundle.png" alt="Set to Go Bundle mockup" class="card-image">
           <span class="label">Starter Bundle</span>
           <div class="price">$7</div>
           <h3>Set to Go Bundle</h3>
@@ -460,6 +496,7 @@
         </article>
 
         <article class="card bundle">
+          <img src="/images/unschooling-bundle.png" alt="Organization Bundle mockup" class="card-image">
           <span class="label">Organization Bundle</span>
           <div class="price">$17</div>
           <h3>Organization Bundle</h3>
@@ -475,6 +512,7 @@
         </article>
 
         <article class="card bundle">
+          <img src="/images/portfolio-homeschool-bundle.png" alt="Documentation Bundle mockup" class="card-image">
           <span class="label">Documentation Bundle</span>
           <div class="price">$21</div>
           <h3>Documentation Bundle</h3>
