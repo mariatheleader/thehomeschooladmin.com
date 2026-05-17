@@ -6,7 +6,164 @@
 <title>Curriculum Shopping Party — June 1st</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-<style>
+  .hero-photo-wrap {
+    max-width: 760px;
+    margin: 2rem auto 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-photo {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+    border: 4px solid rgba(255,255,255,0.18);
+  }
+
+  .about-section {
+    background: var(--warm-white);
+    padding: 5rem 2rem;
+  }
+
+  .about-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .about-photo-card {
+    background: #fff;
+    border: 1px solid var(--sage-mid);
+    border-radius: 18px;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(74,124,89,0.08);
+  }
+
+  .about-photo {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .about-photo-caption {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .about-content {
+    color: var(--ink-soft);
+  }
+
+  .about-kicker {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.85rem;
+  }
+
+  .about-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+    color: var(--bark);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-credentials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    margin: 1.75rem 0 2rem;
+  }
+
+  .about-credential {
+    background: var(--sage-pale);
+    border-left: 4px solid var(--sage);
+    padding: 1rem 1rem 1rem 1.1rem;
+    border-radius: 10px;
+  }
+
+  .about-credential strong {
+    display: block;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .about-highlight-quote {
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-mid);
+    border-radius: 12px;
+    padding: 1.2rem 1.25rem;
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    color: var(--bark);
+    margin: 1.75rem 0;
+  }
+
+  .about-story-box {
+    background: #fff;
+    border: 1px solid var(--blush);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .about-story-box h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.35rem;
+    color: var(--ink);
+    margin-bottom: 0.9rem;
+  }
+
+  .value-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0 1.5rem;
+  }
+
+  .value-pill {
+    background: var(--sage-pale);
+    color: var(--sage);
+    border: 1px solid var(--sage-mid);
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 820px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-photo-card {
+      max-width: 460px;
+      margin: 0 auto;
+    }
+  }
+ <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
@@ -426,7 +583,11 @@
     </stripe-buy-button>
   </div>
 
-  <p class="price-note">One-time fee. <strong>Instant access</strong> to the planning template included.</p>
+    <p class="price-note">One-time fee. <strong>Instant access</strong> to the planning template included.</p>
+
+  <div class="hero-photo-wrap">
+    <img src="images/homeschoolhelper.jpg" alt="Homeschool curriculum planning support" class="hero-photo">
+  </div>
 </section>
 
 <!-- WAVE -->
@@ -499,7 +660,102 @@
     <p>As a workshop attendee, you'll receive an invitation to join <strong>The Clarity Room</strong> for $97 — ongoing, personalized support as you implement your plan throughout the year.</p>
   </div>
 </section>
+<!-- ABOUT MARIA -->
+<section class="about-section">
+  <p class="section-label">About The Homeschool Admin</p>
 
+  <div class="about-grid">
+    <div class="about-photo-card">
+      <img src="images/my-story.jpg" alt="Maria Galyean, founder of The Homeschool Admin" class="about-photo">
+      <p class="about-photo-caption">
+        <strong>Maria Galyean, MLS</strong><br>
+        Founder of The Homeschool Admin
+      </p>
+    </div>
+
+    <div class="about-content">
+      <p class="about-kicker">Meet Maria</p>
+      <h2 class="about-title">Faith-filled homeschool support with structure, calm, and clarity</h2>
+
+      <p class="about-subtitle">
+        Child Development Specialist. Homeschool consultant. Mother. Wife. Advocate for faith, family, freedom, and child-centered education.
+      </p>
+
+      <p>
+        Specializing in Child and Youth Development, Maria Galyean is a consultant who holds a master’s degree in Leadership Studies from The University of Southern Maine and a bachelor’s degree in Child and Youth Development from Florida Gulf Coast University.
+      </p>
+
+      <p>
+        Maria works exclusively with homeschool families at all stages of the journey, helping students thrive by giving them tools to follow their interests while keeping parents organized with records, structure, and encouragement.
+      </p>
+
+      <p>
+        Unlike other homeschool coaches and services, Maria specializes in done-for-you support, working one on one with parents and homeschoolers, both long and short term, to create personalized systems and plans.
+      </p>
+
+      <div class="about-credentials">
+        <div class="about-credential">
+          <strong>Master’s Degree</strong>
+          Leadership Studies, The University of Southern Maine
+        </div>
+
+        <div class="about-credential">
+          <strong>Bachelor’s Degree</strong>
+          Child and Youth Development, Florida Gulf Coast University
+        </div>
+
+        <div class="about-credential">
+          <strong>Specialty</strong>
+          Done-for-you homeschool planning, curriculum support, and developmental guidance
+        </div>
+
+        <div class="about-credential">
+          <strong>Founder</strong>
+          The Homeschool Admin
+        </div>
+      </div>
+
+      <p>
+        Through intentional curriculum suggestions, personalized materials, and educational standards aligned with your family, Maria helps set homeschool families up to thrive.
+      </p>
+
+      <div class="about-highlight-quote">
+        “Maria will bring a sense of calm to your homeschool journey.”
+      </div>
+
+      <div class="about-story-box">
+        <h3>My Story</h3>
+
+        <p>
+          During her career as an early childhood educator in childcare and Head Start programs before becoming a nanny, Maria found her morals and values challenged often.
+        </p>
+
+        <p>
+          In 2019, after learning about vaccine mandates forced on Maine students, she focused much of her energy on advocating for medical freedoms and rights. Eventually, she founded The Homeschool Admin in response to the growing need for family-centered homeschool support.
+        </p>
+
+        <p>
+          She answered the calls from her local community to offer her education, experience, and expertise as a service for homeschooling families.
+        </p>
+
+        <p>
+          Asking God, “What do I have to give the world, and what does the world need?” she was led to shape her gifts into her true calling.
+        </p>
+
+        <div class="value-list">
+          <span class="value-pill">Faith</span>
+          <span class="value-pill">Family</span>
+          <span class="value-pill">Freedom</span>
+          <span class="value-pill">Child Advocacy</span>
+        </div>
+
+        <p>
+          Maria is a mother, a guardian and Godmother, and wife to a cherished man. Her hobbies and passions include dancing, gardening, cooking, and creating with words, paint, and drawing.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- CTA -->
 <section class="cta-section">
   <p class="section-label">Ready to shop?</p>
