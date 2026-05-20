@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Freedom Friends | Parent Present Homeschool Community in Southern Maine</title>
-<meta name="description" content="Freedom Friends is a parent present homeschool community in Southern Maine for families who want friendship, social emotional learning, mixed age connection, and homeschool support. Weekly Thursday gatherings from 10AM to 1PM in the Saco, Scarborough, and coastal Southern Maine area. Founding family enrollment is open.">
+<meta name="description" content="Freedom Friends is a parent present homeschool community in Southern Maine for families who want friendship, social emotional learning, mixed age connection, and homeschool support. Weekly Thursday gatherings from 10AM to 1PM in the Saco, Scarborough, Cumberland, and coastal Southern Maine area. The September through May season begins Thursday, September 3rd, 2026. Founding family enrollment is open.">
 <meta name="keywords" content="homeschool community Southern Maine, homeschool group Scarborough Maine, homeschool group Saco Maine, homeschool socialization Southern Maine, homeschool SEL program Maine, parent present homeschool community, homeschool co op Southern Maine, homeschool friends Maine, homeschool support Cumberland County Maine, homeschool program York County Maine, homeschool enrichment Southern Maine, homeschool classes Saco Maine, social emotional homeschool learning, homeschool friendships for kids">
 <link rel="canonical" href="https://www.thehomeschooladmin.com/freedom-friends/">
 
@@ -93,7 +93,7 @@
           "name": "Where does Freedom Friends meet?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Freedom Friends serves Southern Maine homeschool families, with gatherings planned in the Saco, Scarborough, Cumberland, and surrounding coastal Southern Maine area."
+            "text": "Freedom Friends serves Southern Maine homeschool families, with gatherings planned primarily at Salt Flat Dance Co. and the Saco Classroom on Main Street, plus local field trips in the Saco, Scarborough, Cumberland, and coastal Southern Maine area. Exact dates and addresses are shared with enrolled families."
           }
         },
         {
@@ -117,7 +117,7 @@
           "name": "What does the membership include?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Membership includes weekly Thursday gatherings, a family planning session before the year begins, Telegram parent community access, summer connection opportunities, social emotional learning facilitation, mixed age friendship building, and homeschool support from The Homeschool Admin."
+            "text": "Membership includes weekly Thursday gatherings from 10AM to 1PM beginning September 3rd, 2026, one family support session to be used within the first 3 months of enrollment, Telegram parent community access, summer connection opportunities, social emotional learning facilitation, mixed age friendship building, and homeschool support from The Homeschool Admin."
           }
         },
         {
@@ -142,25 +142,21 @@
 }
 
 :root{
-  --cream:#fdf8f0;
-  --warm-white:#fffef9;
+  --cream:#fbf5ea;
+  --warm-white:#fffdf8;
   --white:#fffef9;
-  --sage:#4a7c59;
-  --sage-light:#6b9e7a;
-  --sage-pale:#edf4ef;
-  --sage-mid:#c4dcc9;
-  --plum:#6c4f60;
-  --plum-deep:#4b3442;
-  --plum-pale:#f2e9ef;
-  --bark:#6b4f3a;
-  --ink:#1e1a16;
-  --ink-soft:#4a4540;
-  --ink-muted:#8a817a;
-  --gold:#c8963a;
-  --yellow:#f0c97a;
-  --gold-pale:#fdf3e2;
-  --gold-mid:#f0c97a;
-  --blush:#e8d5c4;
+  --sage:#506f59;
+  --sage-soft:#e9f0ea;
+  --sage-line:#cfdccf;
+  --plum:#5d4756;
+  --plum-deep:#3f2d39;
+  --plum-soft:#f1e8ee;
+  --ink:#211c19;
+  --ink-soft:#5f5852;
+  --muted:#8b8178;
+  --gold:#c99a48;
+  --gold-soft:#f8ebcf;
+  --blush:#ead8ca;
 }
 
 html{
@@ -171,8 +167,8 @@ body{
   font-family:'DM Sans',sans-serif;
   background:var(--cream);
   color:var(--ink);
+  line-height:1.75;
   overflow-x:hidden;
-  line-height:1.7;
 }
 
 img{
@@ -188,15 +184,15 @@ a{
   position:sticky;
   top:0;
   z-index:999;
-  background:rgba(253,248,240,.94);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(196,220,201,.72);
+  background:rgba(251,245,234,.88);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(207,220,207,.65);
 }
 
 .nav-inner{
   width:min(1180px,100%);
   margin:0 auto;
-  padding:1rem 1.5rem;
+  padding:.9rem 1.5rem;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -233,15 +229,15 @@ a{
 .nav-links a{
   text-decoration:none;
   color:var(--ink-soft);
-  font-size:.92rem;
+  font-size:.9rem;
   font-weight:600;
 }
 
 .nav-links .nav-cta{
   background:var(--plum);
   color:#fff;
-  padding:.7rem 1rem;
-  border-radius:100px;
+  padding:.65rem 1rem;
+  border-radius:999px;
 }
 
 .hero{
@@ -249,89 +245,87 @@ a{
   min-height:92vh;
   display:flex;
   align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:7rem 2rem 6rem;
+  padding:7rem 2rem 5rem;
   background:
-    linear-gradient(rgba(44,35,39,.62), rgba(44,35,39,.74)),
+    linear-gradient(90deg, rgba(63,45,57,.80) 0%, rgba(63,45,57,.58) 46%, rgba(63,45,57,.18) 100%),
     url('/ff.images/homeschool-natureclass.jpg') center center / cover no-repeat;
-}
-  
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(ellipse 70% 45% at 15% 85%, rgba(240,201,122,.16), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 85% 15%, rgba(237,244,239,.12), transparent 60%);
-  pointer-events:none;
 }
 
 .hero-inner{
+  width:min(1180px,100%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 390px;
+  gap:3rem;
+  align-items:center;
   position:relative;
   z-index:2;
-  max-width:980px;
-  margin:0 auto;
+}
+
+.hero-copy{
+  max-width:760px;
 }
 
 .badge{
-  display:inline-block;
-  background:rgba(255,255,255,.14);
-  border:1px solid rgba(255,255,255,.28);
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  background:rgba(255,253,248,.14);
+  border:1px solid rgba(255,253,248,.28);
   color:#fff;
-  font-size:.78rem;
+  font-size:.74rem;
   font-weight:700;
-  letter-spacing:.13em;
+  letter-spacing:.12em;
   text-transform:uppercase;
-  padding:.48rem 1.15rem;
-  border-radius:100px;
-  margin-bottom:1.5rem;
-  backdrop-filter:blur(8px);
+  padding:.48rem 1rem;
+  border-radius:999px;
+  margin-bottom:1.35rem;
+  backdrop-filter:blur(10px);
 }
 
 .hero h1{
   font-family:'Lora',serif;
-  font-size:clamp(2.65rem,7vw,5.65rem);
+  font-size:clamp(3rem,7vw,5.75rem);
   line-height:1.02;
   color:#fff;
   font-weight:700;
-  margin-bottom:1.35rem;
+  margin-bottom:1.25rem;
+  letter-spacing:-.03em;
 }
 
 .hero h1 em{
-  color:var(--gold-mid);
+  color:#f4d28b;
   font-style:italic;
 }
 
 .hero-sub{
-  max-width:760px;
-  margin:0 auto 2.15rem;
-  color:rgba(255,255,255,.9);
-  font-size:clamp(1.05rem,2vw,1.25rem);
+  max-width:690px;
+  color:rgba(255,255,255,.92);
+  font-size:clamp(1.08rem,2vw,1.28rem);
+  margin-bottom:2rem;
 }
 
 .hero-actions{
   display:flex;
-  justify-content:center;
   gap:1rem;
   flex-wrap:wrap;
-  margin-top:2rem;
 }
 
 .button{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-height:3.2rem;
-  padding:0 1.6rem;
+  min-height:3.15rem;
+  padding:0 1.5rem;
   border-radius:999px;
   text-decoration:none;
   font-weight:700;
   transition:.2s ease;
+  border:1px solid transparent;
 }
 
 .button-primary{
-  background:var(--gold-mid);
+  background:#f4d28b;
   color:var(--plum-deep);
   box-shadow:0 18px 45px rgba(0,0,0,.18);
 }
@@ -343,23 +337,80 @@ a{
 .button-secondary{
   background:rgba(255,255,255,.12);
   color:#fff;
-  border:1px solid rgba(255,255,255,.28);
+  border-color:rgba(255,255,255,.28);
+}
+
+.founding-card{
+  background:rgba(255,253,248,.94);
+  border:1px solid rgba(255,255,255,.72);
+  border-radius:30px;
+  padding:2rem;
+  box-shadow:0 28px 80px rgba(0,0,0,.20);
+}
+
+.founding-card .micro{
+  color:var(--sage);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:800;
+  font-size:.72rem;
+  margin-bottom:.55rem;
+}
+
+.founding-card h2{
+  font-family:'Lora',serif;
+  color:var(--plum-deep);
+  font-size:2rem;
+  line-height:1.08;
+  margin-bottom:.8rem;
+}
+
+.founding-card p{
+  color:var(--ink-soft);
+  font-size:.98rem;
+}
+
+.price-mini{
+  margin:1.25rem 0;
+  padding:1rem;
+  background:var(--cream);
+  border:1px solid var(--blush);
+  border-radius:20px;
+}
+
+.price-mini strong{
+  display:block;
+  font-size:1.55rem;
+  color:var(--sage);
+  line-height:1.1;
+}
+
+.price-mini span{
+  display:block;
+  color:var(--muted);
+  font-size:.9rem;
+  margin-top:.25rem;
+}
+
+.founding-card .button{
+  width:100%;
+  margin-top:1rem;
 }
 
 .notice-bar{
   background:var(--plum-deep);
   color:#fff;
-  padding:1rem 2rem;
+  padding:.95rem 2rem;
   text-align:center;
   font-weight:600;
 }
 
 .notice-bar strong{
-  color:var(--gold-mid);
+  color:#f4d28b;
 }
 
 .section{
-  padding:5rem 2rem;
+  padding:5.5rem 2rem;
 }
 
 .container{
@@ -369,22 +420,23 @@ a{
 
 .section-label{
   text-align:center;
-  font-size:.76rem;
+  font-size:.74rem;
   font-weight:800;
   letter-spacing:.14em;
   text-transform:uppercase;
   color:var(--sage);
-  margin-bottom:.75rem;
+  margin-bottom:.8rem;
 }
 
 .section-title{
   font-family:'Lora',serif;
-  font-size:clamp(2rem,4vw,3.65rem);
-  line-height:1.12;
+  font-size:clamp(2.15rem,4vw,3.65rem);
+  line-height:1.08;
   font-weight:700;
   text-align:center;
   color:var(--ink);
-  margin-bottom:1.25rem;
+  margin-bottom:1.15rem;
+  letter-spacing:-.02em;
 }
 
 .section-sub{
@@ -392,28 +444,55 @@ a{
   margin:0 auto;
   text-align:center;
   color:var(--ink-soft);
-  font-size:1.05rem;
+  font-size:1.06rem;
+}
+
+.program-details{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1rem;
+  margin-top:2.5rem;
+}
+
+.detail-pill{
+  background:rgba(255,253,248,.86);
+  border:1px solid var(--sage-line);
+  border-radius:22px;
+  padding:1.25rem;
+}
+
+.detail-pill strong{
+  display:block;
+  font-family:'Lora',serif;
+  font-size:1.25rem;
+  color:var(--plum-deep);
+  margin-bottom:.25rem;
+}
+
+.detail-pill span{
+  color:var(--ink-soft);
+  font-size:.94rem;
 }
 
 .split{
   display:grid;
-  grid-template-columns:1.05fr .95fr;
+  grid-template-columns:1fr 1fr;
   gap:3rem;
   align-items:center;
 }
 
 .split-card{
-  background:var(--warm-white);
-  border:1px solid var(--sage-mid);
-  border-radius:26px;
-  padding:2.5rem;
-  box-shadow:0 16px 45px rgba(74,124,89,.09);
+  background:rgba(255,253,248,.92);
+  border:1px solid var(--sage-line);
+  border-radius:34px;
+  padding:3rem;
+  box-shadow:0 24px 70px rgba(74,124,89,.08);
 }
 
 .split-card h2{
   font-family:'Lora',serif;
-  font-size:clamp(2rem,4vw,3.25rem);
-  line-height:1.12;
+  font-size:clamp(2.15rem,4vw,3.3rem);
+  line-height:1.08;
   margin-bottom:1rem;
   color:var(--plum-deep);
 }
@@ -424,81 +503,75 @@ a{
 }
 
 .photo-bg{
-  min-height:520px;
-  border-radius:30px;
+  min-height:560px;
+  border-radius:34px;
   background:
-    linear-gradient(rgba(74,124,89,.15), rgba(75,52,66,.18)),
+    linear-gradient(rgba(74,124,89,.03), rgba(75,52,66,.08)),
     url('/ff.images/circletime.jpg') center / cover no-repeat;
   border:1px solid rgba(255,255,255,.65);
-  box-shadow:0 20px 60px rgba(75,52,66,.14);
+  box-shadow:0 24px 70px rgba(75,52,66,.13);
 }
 
 .cards-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
   gap:1.25rem;
   margin-top:3rem;
 }
 
 .card{
-  background:var(--warm-white);
-  border:1px solid var(--sage-mid);
-  border-radius:22px;
+  background:rgba(255,253,248,.92);
+  border:1px solid var(--sage-line);
+  border-radius:26px;
   padding:2rem;
   position:relative;
   overflow:hidden;
-}
-
-.card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:5px;
-  background:linear-gradient(90deg,var(--sage),var(--gold-mid),var(--plum));
+  box-shadow:0 14px 40px rgba(74,124,89,.05);
 }
 
 .card h3{
   font-family:'Lora',serif;
   font-size:1.55rem;
-  margin-bottom:.65rem;
+  line-height:1.15;
+  margin-bottom:.7rem;
   color:var(--plum-deep);
 }
 
 .card p{
   color:var(--ink-soft);
+  font-size:.97rem;
 }
 
 .band{
-  background:var(--sage-pale);
+  background:var(--sage-soft);
 }
 
 .photo-strip{
   display:grid;
-  grid-template-columns:1.1fr .9fr;
+  grid-template-columns:1.12fr .88fr;
   gap:1.25rem;
   margin-top:3rem;
 }
 
 .photo-large,
 .photo-small{
-  border-radius:26px;
+  border-radius:30px;
   overflow:hidden;
-  min-height:390px;
+  min-height:410px;
   background:center / cover no-repeat;
   position:relative;
+  box-shadow:0 22px 58px rgba(75,52,66,.12);
 }
 
 .photo-large{
   background-image:
-    linear-gradient(rgba(30,26,22,.05), rgba(30,26,22,.28)),
+    linear-gradient(rgba(30,26,22,.01), rgba(30,26,22,.18)),
     url('/ff.images/homeschool-pjday.jpg');
 }
 
 .photo-small{
   background-image:
-    linear-gradient(rgba(30,26,22,.04), rgba(30,26,22,.22)),
+    linear-gradient(rgba(30,26,22,.01), rgba(30,26,22,.16)),
     url('/ff.images/homeschoolers.jpg');
 }
 
@@ -506,43 +579,46 @@ a{
   position:absolute;
   left:1.25rem;
   bottom:1.25rem;
-  background:rgba(255,254,249,.88);
-  border-radius:100px;
+  background:rgba(255,253,248,.9);
+  border-radius:999px;
   padding:.55rem 1rem;
   font-weight:700;
   color:var(--plum-deep);
   font-size:.9rem;
 }
+
 .included-section{
   position:relative;
   overflow:hidden;
   background:
-    linear-gradient(rgba(253,248,240,.90), rgba(253,248,240,.93)),
+    linear-gradient(rgba(251,245,234,.76), rgba(251,245,234,.83)),
     url('/ff.images/homeschool-showcase-maine.jpg') center / cover no-repeat;
+  background-attachment:fixed;
 }
 
 .included-section .container{
   position:relative;
   z-index:2;
 }
+
 .pricing-wrap{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1.05fr .95fr;
   gap:1.5rem;
   margin-top:3rem;
 }
 
 .pricing-card{
-  background:#fff;
-  border-radius:28px;
-  padding:2.25rem;
-  border:1px solid var(--sage-mid);
-  box-shadow:0 14px 44px rgba(74,124,89,.08);
+  background:rgba(255,253,248,.94);
+  border-radius:34px;
+  padding:2.4rem;
+  border:1px solid var(--sage-line);
+  box-shadow:0 18px 58px rgba(74,124,89,.08);
 }
 
 .pricing-card.featured{
-  border:2px solid var(--gold-mid);
-  box-shadow:0 20px 55px rgba(200,150,58,.15);
+  border:2px solid #f4d28b;
+  box-shadow:0 24px 70px rgba(201,154,72,.17);
 }
 
 .pricing-kicker{
@@ -551,41 +627,34 @@ a{
   letter-spacing:.13em;
   text-transform:uppercase;
   color:var(--sage);
-  margin-bottom:.55rem;
+  margin-bottom:.6rem;
 }
 
 .pricing-card h3{
   font-family:'Lora',serif;
-  font-size:2rem;
-  line-height:1.15;
+  font-size:2.15rem;
+  line-height:1.12;
   color:var(--plum-deep);
   margin-bottom:1rem;
 }
-.pricing-button-wrap{
-  margin-top:1.25rem;
-}
 
-.pricing-button-wrap .button{
-  width:100%;
-  text-align:center;
-}
 .price-line{
   display:flex;
   align-items:flex-end;
-  gap:.45rem;
-  margin:1.25rem 0;
+  gap:.55rem;
+  margin:1.2rem 0;
 }
 
 .price{
-  font-size:3.35rem;
+  font-size:3.25rem;
   line-height:1;
   font-weight:800;
   color:var(--sage);
 }
 
 .price-note{
-  color:var(--ink-muted);
-  margin-bottom:.42rem;
+  color:var(--muted);
+  margin-bottom:.35rem;
 }
 
 .price-list{
@@ -596,7 +665,7 @@ a{
 .price-list li{
   position:relative;
   padding-left:1.5rem;
-  margin-bottom:.85rem;
+  margin-bottom:.8rem;
   color:var(--ink-soft);
 }
 
@@ -609,28 +678,91 @@ a{
 }
 
 .deposit-box{
-  background:var(--gold-pale);
-  border:1px solid var(--gold-mid);
+  background:var(--gold-soft);
+  border:1px solid rgba(201,154,72,.45);
   border-radius:22px;
-  padding:1.5rem;
+  padding:1.25rem;
   margin-top:1.5rem;
+  color:var(--ink-soft);
 }
 
 .deposit-box strong{
   color:var(--plum-deep);
 }
 
+.pricing-button-wrap{
+  margin-top:1.25rem;
+  display:flex;
+  gap:.8rem;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.pricing-button-wrap .button{
+  text-align:center;
+}
+
+.pricing-card .pricing-button-wrap .button{
+  width:100%;
+}
+
+.policy-box{
+  background:rgba(255,253,248,.92);
+  border:1px solid var(--sage-line);
+  border-radius:34px;
+  padding:2.25rem;
+  margin-top:2rem;
+  box-shadow:0 18px 58px rgba(74,124,89,.08);
+}
+
+.policy-box h3{
+  font-family:'Lora',serif;
+  color:var(--plum-deep);
+  font-size:2rem;
+  line-height:1.15;
+  margin-bottom:1rem;
+}
+
+.policy-box > p{
+  color:var(--ink-soft);
+}
+
+.policy-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+
+.policy-item{
+  background:var(--cream);
+  border-radius:20px;
+  padding:1.1rem;
+  border:1px solid var(--blush);
+}
+
+.policy-item strong{
+  display:block;
+  color:var(--sage);
+  margin-bottom:.25rem;
+}
+
+.policy-item p{
+  color:var(--ink-soft);
+  font-size:.95rem;
+}
+
 .how-it-works{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(225px,1fr));
   gap:1rem;
-  margin-top:3rem;
+  margin-top:2rem;
 }
 
 .step{
-  background:var(--warm-white);
-  border:1px solid var(--sage-mid);
-  border-radius:22px;
+  background:rgba(255,253,248,.9);
+  border:1px solid var(--sage-line);
+  border-radius:26px;
   padding:1.7rem;
 }
 
@@ -654,51 +786,64 @@ a{
   color:var(--plum-deep);
 }
 
+.testimonials{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:1.5rem;
+  margin-top:3rem;
+}
+
 .quote{
-  background:rgba(255,254,249,.96);
-  border-radius:26px;
-  border:1px solid rgba(232,213,196,.9);
-  padding:1.4rem 1.4rem 1.8rem;
-  box-shadow:0 18px 42px rgba(75,52,66,.09);
-  text-align:center;
-  position:relative;
+  background:rgba(255,253,248,.96);
+  border-radius:30px;
+  border:1px solid var(--blush);
+  padding:1.1rem 1.1rem 1.6rem;
+  box-shadow:0 18px 48px rgba(75,52,66,.08);
   overflow:hidden;
 }
 
-.quote::before{
-  content:"";
-  position:absolute;
-  inset:0 auto auto 0;
+.testimonial-photo{
   width:100%;
-  height:5px;
-  background:linear-gradient(90deg,var(--sage),var(--gold-mid),var(--plum));
+  aspect-ratio:4/3;
+  border-radius:22px;
+  overflow:hidden;
+  margin-bottom:1.2rem;
+  background:var(--sage-soft);
+}
+
+.testimonial-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .quote p{
   font-family:'Lora',serif;
   font-style:italic;
-  font-size:1.05rem;
-  line-height:1.8;
+  font-size:1.03rem;
+  line-height:1.75;
   color:var(--plum-deep);
   margin-bottom:1rem;
+  padding:0 .35rem;
 }
 
 .quote span{
   display:block;
   color:var(--sage);
-  font-weight:700;
-  font-size:.95rem;
+  font-weight:800;
+  font-size:.92rem;
+  padding:0 .35rem;
 }
-  
+
 .faq{
   max-width:900px;
   margin:3rem auto 0;
 }
 
 .faq details{
-  background:var(--warm-white);
-  border:1px solid var(--sage-mid);
-  border-radius:18px;
+  background:rgba(255,253,248,.92);
+  border:1px solid var(--sage-line);
+  border-radius:22px;
   padding:1.25rem 1.4rem;
   margin-bottom:.9rem;
 }
@@ -716,17 +861,17 @@ a{
 
 .final-cta{
   background:
-    linear-gradient(rgba(75,52,66,.78), rgba(75,52,66,.82)),
+    linear-gradient(rgba(63,45,57,.75), rgba(63,45,57,.82)),
     url('/ff.images/circletime.jpg') center / cover no-repeat;
-  padding:6rem 2rem;
+  padding:6.5rem 2rem;
   text-align:center;
   color:#fff;
 }
 
 .final-cta h2{
   font-family:'Lora',serif;
-  font-size:clamp(2.3rem,5vw,4.25rem);
-  line-height:1.1;
+  font-size:clamp(2.45rem,5vw,4.35rem);
+  line-height:1.08;
   margin-bottom:1rem;
 }
 
@@ -794,7 +939,7 @@ a{
 }
 
 .seo-footer a:hover{
-  color:var(--gold-mid);
+  color:#f4d28b;
 }
 
 .seo-footer-keywords{
@@ -819,6 +964,131 @@ a{
   flex-wrap:wrap;
 }
 
+.cta-slim{
+  padding:3rem 2rem;
+  background:var(--cream);
+  text-align:center;
+}
+
+.cta-slim .button-secondary{
+  background:transparent;
+  color:var(--plum-deep);
+  border-color:var(--sage-line);
+}
+
+
+.founding-note{
+  text-align:center;
+  margin-top:.85rem;
+  font-size:.9rem;
+}
+
+.founding-note a{
+  color:var(--plum-deep);
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+
+.details-near-faq{
+  background:var(--cream);
+  padding-top:4rem;
+  padding-bottom:4rem;
+}
+
+.policy-section{
+  background:var(--cream);
+  padding-top:4rem;
+}
+
+
+.facilitator-section{
+  background:var(--warm-white);
+}
+
+.facilitator-card{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:2.5rem;
+  align-items:center;
+  background:rgba(255,253,248,.96);
+  border:1px solid var(--sage-line);
+  border-radius:36px;
+  padding:2rem;
+  box-shadow:0 22px 64px rgba(74,124,89,.08);
+  margin-top:2.5rem;
+}
+
+.facilitator-photo{
+  min-height:420px;
+  border-radius:28px;
+  background:
+    linear-gradient(rgba(63,45,57,.08), rgba(63,45,57,.14)),
+    url('/ff.images/maria-teaching-homeschool.jpg') center / cover no-repeat;
+}
+
+.facilitator-copy .micro{
+  color:var(--sage);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:800;
+  font-size:.74rem;
+  margin-bottom:.65rem;
+}
+
+.facilitator-copy h2{
+  font-family:'Lora',serif;
+  font-size:clamp(2.2rem,4vw,3.6rem);
+  line-height:1.08;
+  color:var(--plum-deep);
+  margin-bottom:1rem;
+}
+
+.facilitator-copy p{
+  color:var(--ink-soft);
+  margin-bottom:1rem;
+}
+
+.session-note{
+  background:var(--sage-soft);
+  border:1px solid var(--sage-line);
+  border-radius:24px;
+  padding:1.4rem;
+  margin-top:1.4rem;
+}
+
+.session-note strong{
+  display:block;
+  font-family:'Lora',serif;
+  font-size:1.45rem;
+  line-height:1.15;
+  color:var(--plum-deep);
+  margin-bottom:.4rem;
+}
+
+@media(max-width:980px){
+  .hero{
+    min-height:auto;
+    padding:5rem 1.5rem;
+  }
+
+  .hero-inner{
+    grid-template-columns:1fr;
+  }
+
+  .founding-card{
+    max-width:520px;
+  }
+
+  .program-details,
+  .split,
+  .pricing-wrap,
+  .photo-strip,
+  .facilitator-card,
+  .seo-footer-grid{
+    grid-template-columns:1fr;
+  }
+}
+
 @media(max-width:900px){
   .nav-inner{
     align-items:flex-start;
@@ -841,21 +1111,27 @@ a{
     display:flex;
   }
 
-  .split,
-  .pricing-wrap,
-  .photo-strip,
-  .seo-footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero{
-    min-height:82vh;
-  }
-
   .photo-bg,
   .photo-large,
   .photo-small{
     min-height:320px;
+  }
+}
+
+@media(max-width:560px){
+  .section{
+    padding:4rem 1.25rem;
+  }
+
+  .split-card,
+  .pricing-card,
+  .policy-box{
+    padding:1.5rem;
+    border-radius:26px;
+  }
+
+  .hero h1{
+    font-size:3.1rem;
   }
 }
 </style>
@@ -880,18 +1156,31 @@ a{
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="badge">Founding Family Enrollment Now Open</div>
-    <h1>Freedom Friends<br><em>Southern Maine Homeschool Community</em></h1>
-    <p class="hero-sub">A parent present weekly homeschool community where children build lasting friendships, practice social emotional skills, and grow inside a consistent mixed age rhythm families can count on.</p>
-    <div class="hero-actions">
-      <a href="https://forms.gle/EXVNLTLUcVnC8FAk6" class="button button-primary">Apply for Founding Family Enrollment</a>
-      <a href="#pricing" class="button button-secondary">View Pricing</a>
+    <div class="hero-copy">
+      <div class="badge">Founding Family Enrollment Now Open</div>
+      <h1>Freedom Friends<br><em>Southern Maine Homeschool Community</em></h1>
+      <p class="hero-sub">A parent present weekly homeschool community where children build lasting friendships, practice social emotional skills, and grow inside a consistent mixed age rhythm families can count on.</p>
+      <div class="hero-actions">
+        <a href="https://forms.gle/EXVNLTLUcVnC8FAk6" class="button button-primary">Apply for Founding Family Enrollment</a>
+      </div>
     </div>
+
+    <aside class="founding-card" aria-label="Founding family enrollment details">
+      <div class="micro">Founding enrollment</div>
+      <h2>A softer start to your homeschool year.</h2>
+      <p>For the first 12 families or until July 15th, founding families can reserve their place early, join the parent Telegram group, and begin connecting through complimentary summer gatherings.</p>
+      <div class="price-mini">
+        <strong>$197/month</strong>
+        <span>first child, plus $50/month for each additional participating child</span>
+      </div>
+      <a href="https://forms.gle/EXVNLTLUcVnC8FAk6" class="button button-primary">Apply to Secure Your Spot</a>
+      <p class="founding-note"><a href="#pricing">View full pricing and enrollment details</a></p>
+    </aside>
   </div>
 </section>
 
 <div class="notice-bar">
-  Founding rates are available for the first <strong>12 families</strong> or until <strong>July 15th</strong>, whichever comes first.
+  Founding family enrollment is open now for families ready to join the September through May season.
 </div>
 
 <section class="section">
@@ -951,11 +1240,11 @@ a{
     <div class="cards-grid">
       <div class="card">
         <h3>Thursdays 10AM to 1PM</h3>
-        <p>Weekly parent present gatherings in the Saco, Scarborough, Cumberland, and surrounding coastal Southern Maine area.</p>
+        <p>Weekly parent present gatherings on Thursdays from 10AM to 1PM, primarily using Salt Flat Dance Co. and the Saco Classroom on Main Street, with local field trips detailed on the enrolled family calendar.</p>
       </div>
       <div class="card">
         <h3>Family Planning Session</h3>
-        <p>Before the year begins, each family has a personalized homeschool rhythm and planning conversation with Maria.</p>
+        <p>Each family receives an included support session. You may choose a private Telegram support week or a private 90 minute call, scheduled through the Calendly link shared inside the Telegram group.</p>
       </div>
       <div class="card">
         <h3>Telegram Parent Community</h3>
@@ -972,6 +1261,10 @@ a{
       <div class="card">
         <h3>Portfolio Support Layer</h3>
         <p>Families receive gentle guidance for noticing and documenting growth, learning, friendship skills, and meaningful moments throughout the year.</p>
+      </div>
+      <div class="card">
+        <h3>Parent Present Responsibility</h3>
+        <p>Parents remain responsible for supervision, snacks, bathroom help, and child safety while Maria facilitates the rhythm and social emotional learning environment.</p>
       </div>
     </div>
   </div>
@@ -1000,15 +1293,15 @@ a{
           <a href="https://forms.gle/EXVNLTLUcVnC8FAk6" class="button button-primary">Apply for Founding Family Enrollment</a>
         </div>
         <ul class="price-list">
-          <li>Locks in the founding family rate for Sept 2026 to May 2027</li>
+          <li>Locks in the founding family rate for September 2026 through May 2027</li>
           <li>Includes weekly Thursday gatherings from 10AM to 1PM</li>
-          <li>Includes one family planning session before the year begins</li>
+          <li>Includes one family support session, used within the first 3 months of enrollment</li>
           <li>Includes parent Telegram group access upon enrollment</li>
           <li>Includes complimentary summer gatherings for enrolled families</li>
         </ul>
         <div class="deposit-box">
           <strong>$97 non refundable family enrollment deposit</strong><br>
-          Applied toward September tuition. Your September invoice is reduced by $97.
+          Applied toward September tuition. Monthly tuition begins September 1st, 2026. Your September invoice is reduced by $97.
         </div>
       </div>
 
@@ -1032,11 +1325,10 @@ a{
         </ul>
         <div class="deposit-box">
           <strong>$147 non refundable family enrollment deposit</strong><br>
-          Applied toward September tuition or your first active month of membership.
+          Applied toward September tuition or your first active month of membership. Monthly tuition begins September 1st, 2026 for families starting with the full season.
         </div>
       </div>
     </div>
-
     <div class="how-it-works">
       <div class="step">
         <div class="step-num">1</div>
@@ -1056,7 +1348,7 @@ a{
       <div class="step">
         <div class="step-num">4</div>
         <h3>Begin</h3>
-        <p>Your planning session happens before the year begins, then weekly Thursday gatherings begin in September.</p>
+        <p>Your planning session happens before the year begins, then weekly Thursday gatherings begin on September 3rd, 2026.</p>
       </div>
     </div>
   </div>
@@ -1074,27 +1366,27 @@ a{
         </div>
         <p>"This program has been life-changing for our family. We have found a place we feel accepted. Having something reoccur week after week, added a new excitement to our schedule and enjoyed the new classes.
 My son immediately felt comfortable and bonded. It was a great thing to see, and I personally have gained a friendship of the same values."</p>
-        <span>Stepanie, Member for 2 years</span>
-      </div
-        <div class="quote">
+        <span>Stephanie, Member for 2 years</span>
+      </div>
+      <div class="quote">
         <div class="testimonial-photo">
           <img src="/ff.images/saco-class-the-homeschool-admin.jpg" alt="Saco, Maine Homeschool Freedom Friends">
         </div>
         <p>"This is a wonderful way to meet new friends and have weekly organized learning and field trips that you and your child will enjoy together! They have gained better listening, teamwork and social skills as a result of the weekly gathering with friends."</p>
         <span>Lindsay, Mom of 3, Member for 1.5 years</span>
-      </div
+      </div>
       <div class="quote">
         <div class="testimonial-photo">
           <img src="/ff.images/homeschool-friends.jpg" alt="Happy Freedom Friends Homeschool">
         </div>
-        <p>"Attending these classes has my daughter socialization and the confidence to make new friends... I would tell someone considering joining to add it to your homeschool week! It's a great example of teaching structure and socializing with other homeschool moms. We always look forward to your class and are very happy you are continuing with another course."</p>
+        <p>"Attending these classes has given my daughter socialization and the confidence to make new friends... I would tell someone considering joining to add it to your homeschool week! It's a great example of teaching structure and socializing with other homeschool moms. We always look forward to your class and are very happy you are continuing with another course."</p>
         <span>Melody, Member for 2 years</span>
       </div>
       <div class="quote">
         <div class="testimonial-photo">
           <img src="/ff.images/letsgather.jpg" alt="Homeschool friends gathering in saco maine">
         </div>
-        <p>"Maria's classes brought us all a together, and her group brought was ❤️❤️❤️ </p>
+        <p>"Maria’s classes brought us all together, and her group brought so much heart."</p>
         <span>Sarah, Mom of 2, Member for 2 years</span>
       </div>
     </div>
@@ -1105,20 +1397,79 @@ My son immediately felt comfortable and bonded. It was a great thing to see, and
   <a href="https://forms.gle/EXVNLTLUcVnC8FAk6" class="button button-primary">Apply for Founding Family Enrollment</a>
   <a href="#faq" class="button button-secondary pricing-secondary">Questions? Read FAQs</a>
 </div>
-<section class="section band">
+
+
+<section class="section facilitator-section">
+  <div class="container">
+    <p class="section-label">Meet your facilitator</p>
+
+    <div class="facilitator-card">
+      <div class="facilitator-photo" role="img" aria-label="Maria Galyean facilitating homeschool learning with children in Southern Maine"></div>
+
+      <div class="facilitator-copy">
+        <div class="micro">Maria Galyean · Founder of The Homeschool Admin</div>
+        <h2>Led by a child development specialist who knows how to make learning feel natural.</h2>
+        <p>Maria holds a Master of Leadership and brings her background in child and youth development, leadership studies, and homeschool support into every gathering.</p>
+        <p>Using creative approaches, she connects with children in a way that helps them feel seen, included, and capable. Learning does not have to look one way to be meaningful.</p>
+        <p>In Freedom Friends, Maria honors the parents who come with the child and models a family style of learning that parents can observe, absorb, and bring home.</p>
+
+        <div class="session-note">
+          <strong>Your family support session is included.</strong>
+          <p>After enrollment, families receive a Calendly link inside the Telegram group to schedule their included session. You may choose a private Telegram support week or a private 90 minute call. This support is optional, but should be used within the first 3 months of enrollment so your family receives the most benefit early in the season.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section details-near-faq">
+  <div class="container">
+    <p class="section-label">The practical details</p>
+    <h2 class="section-title">Before you apply, here is what to know</h2>
+
+    <div class="program-details">
+      <div class="detail-pill">
+        <strong>Season</strong>
+        <span>September 2026 through May 2027</span>
+      </div>
+      <div class="detail-pill">
+        <strong>First Gathering</strong>
+        <span>Thursday, September 3rd, 2026</span>
+      </div>
+      <div class="detail-pill">
+        <strong>Tuition Begins</strong>
+        <span>Monthly tuition begins September 1st, 2026</span>
+      </div>
+      <div class="detail-pill">
+        <strong>Community Size</strong>
+        <span>Approximately 8 to 12 families, usually 12 to 18 children depending on enrolled sibling groups</span>
+      </div>
+      <div class="detail-pill">
+        <strong>Main Locations</strong>
+        <span>Salt Flat Dance Co. in Scarborough and our "Classroom" in Saco on Main street - with a monthly rotation of fieldtrips in surrounding areas.</span>
+      </div>
+      <div class="detail-pill">
+        <strong>Calendar Details</strong>
+        <span>Exact dates, addresses, and field trip plans are shared upon enrollment</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="faq">
   <div class="container">
     <p class="section-label">Frequently asked questions</p>
-    <h2 class="section-title">For families looking for homeschool community in Southern Maine</h2>
+    <h2 class="section-title">For families looking for homeschool program for their children and community in Southern Maine</h2>
 
     <div class="faq">
       <details>
         <summary>Is Freedom Friends a homeschool co-op?</summary>
-        <p>Freedom Friends is a parent present homeschool community led by The Homeschool Admin. It has the community feel families often want from a co-op, with more intentional facilitation, SEL guidance, and homeschool parent support built in.</p>
+        <p> No, parents are not required to plan or teach the children of the group. Freedom Friends is a parent present homeschool community led by The Homeschool Admin. It has the community feel families often want from a co-op, without the responsiblity of having to teach.</p>
       </details>
 
       <details>
         <summary>Where will gatherings happen?</summary>
-        <p>Gatherings are planned for the Saco, Scarborough, Cumberland, and surrounding coastal Southern Maine area. The goal is to keep the rhythm predictable and mapped out clearly for enrolled families.</p>
+        <p>Gatherings rotate between pre-planned locations including our 'classroom' in Saco, the studio in Scarborough, and other seasonal locations in York and Cumberland county, areas mostly surrounding coastal area. The goal is to keep the rhythm predictable and mapped out clearly for enrolled families.</p>
       </details>
 
       <details>
@@ -1143,25 +1494,54 @@ My son immediately felt comfortable and bonded. It was a great thing to see, and
 
       <details>
         <summary>Does this replace my homeschool curriculum?</summary>
-        <p>No. Freedom Friends supports your homeschool through friendship, SEL, community, shared experiences, and parent guidance. Your family still chooses your core curriculum and home instruction plan.</p>
+        <p>No, through it does fall into the subject of social studies and Maine studies for homeschool requirements. Freedom Friends supports your homeschool through friendship, SEL, community, shared experiences, and parent guidance. Your family should still choose your core curriculum and home instruction plan, Maria can help you with this in your personalized planning session should your family need suggestions.</p>
       </details>
 
       <details>
         <summary>What happens after I apply?</summary>
-        <p>Maria reviews your application and sends a deposit invoice if your family is a fit for the current roster. Once your deposit is paid, your family receives Telegram access and summer connection opportunities.</p>
+        <p>Maria reviews your application and sends a deposit invoice if your family is a fit for the current roster. Once your deposit is paid, your family receives Telegram access to schedule your family's personal session, and get first updates for fall, and the summer connection opportunities.</p>
       </details>
 
       <details>
         <summary>Can I ask questions before committing?</summary>
-        <p>Yes. The application is the best place to share questions. Maria can answer them before sending your deposit invoice.</p>
+        <p>Yes. Parents are welcome and encouraged to email Maria@thehomeschooldadmin.com or message Maria on socials at @thehomeschooladmin with any questions you have before applying.</p>
       </details>
+    </div>
+  </div>
+</section>
+
+
+<section class="section policy-section">
+  <div class="container">
+    <div class="policy-box">
+      <h3>Cancellation & Refund Policy</h3>
+      <p>Freedom Friends is intentionally small and planned around the families who enroll. This policy keeps expectations clear while still honoring real family life.</p>
+
+      <div class="policy-grid">
+        <div class="policy-item">
+          <strong>Enrollment deposits</strong>
+          <p>Enrollment deposits are non refundable and reserve your family’s place for the 2026 to 2027 season. Deposits are applied toward September tuition.</p>
+        </div>
+        <div class="policy-item">
+          <strong>Monthly membership tuition</strong>
+          <p>Monthly tuition reserves your family’s ongoing place in the community. Families may cancel with 30 days written notice.</p>
+        </div>
+        <div class="policy-item">
+          <strong>Missed gatherings</strong>
+          <p>No partial refunds are issued for missed gatherings, vacations, illness, schedule conflicts, or withdrawn participation during an active billing cycle.</p>
+        </div>
+        <div class="policy-item">
+          <strong>Weather and schedule shifts</strong>
+          <p>Gatherings, field trips, or locations may shift for rescheduling due to weather, illness, safety, or venue availability. Updates are shared in the Telegram parent community.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="final-cta">
   <h2>Secure your family’s place inside a community your children can actually grow inside.</h2>
-  <p>Founding enrollment is open for the first 12 families or until July 15th, whichever comes first. Apply now, share your questions, and Maria will follow up with the next step.</p>
+  <p>Founding enrollment is open for the first 12 families or until July 15th, whichever comes first. Apply now, share your questions, or message @thehomeschooladmin on socials or email maria@thehomeschooladmin.com if you want to connect before applying.</p>
   <a href="https://forms.gle/EXVNLTLUcVnC8FAk6" class="button button-primary">Apply for Founding Family Enrollment</a>
 </section>
 
@@ -1184,7 +1564,7 @@ My son immediately felt comfortable and bonded. It was a great thing to see, and
         <h4>Support</h4>
         <ul>
           <li><a href="/thrive/">THRIVE Program</a></li>
-          <li><a href="https://buy.stripe.com/7sY5kD7E0bDm9Zk73y0RG2Q">Quick Help, $97</a></li>
+          <li><a href="/claritysession/">Quick Clarity & Help</a></li>
           <li><a href="https://forms.gle/EXVNLTLUcVnC8FAk6">Apply for Freedom Friends</a></li>
         </ul>
       </div>
@@ -1212,7 +1592,7 @@ My son immediately felt comfortable and bonded. It was a great thing to see, and
     </div>
 
     <div class="seo-footer-bottom">
-      <p>&copy; 2025 The Homeschool Admin · Maria Galyean · Scarborough, Maine</p>
+      <p>&copy; 2026 The Homeschool Admin · Maria Galyean · Scarborough, Maine</p>
       <div style="display:flex;gap:20px;flex-wrap:wrap">
         <a href="/privacy-policy/">Privacy Policy</a>
         <a href="/thrive/">THRIVE</a>
