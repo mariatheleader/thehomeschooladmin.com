@@ -253,10 +253,10 @@ a{
   text-align:center;
   padding:7rem 2rem 6rem;
   background:
-    linear-gradient(rgba(44,35,39,.50), rgba(44,35,39,.66)),
-    url('/ff.images/kids-and-maria-banner.png') center center / cover no-repeat;
+    linear-gradient(rgba(44,35,39,.62), rgba(44,35,39,.74)),
+    url('/ff.images/homeschool-natureclass.jpg') center center / cover no-repeat;
 }
-
+  
 .hero::after{
   content:"";
   position:absolute;
@@ -513,7 +513,18 @@ a{
   color:var(--plum-deep);
   font-size:.9rem;
 }
+.included-section{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(253,248,240,.90), rgba(253,248,240,.93)),
+    url('/ff.images/homeschool-showcase-maine.jpg') center / cover no-repeat;
+}
 
+.included-section .container{
+  position:relative;
+  z-index:2;
+}
 .pricing-wrap{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -643,47 +654,42 @@ a{
   color:var(--plum-deep);
 }
 
-.testimonials{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1.25rem;
-  margin-top:3rem;
-}
-.testimonial-photo{
-  width:90px;
-  height:90px;
-  margin:0 auto 1rem;
-  border-radius:50%;
+.quote{
+  background:rgba(255,254,249,.96);
+  border-radius:26px;
+  border:1px solid rgba(232,213,196,.9);
+  padding:1.4rem 1.4rem 1.8rem;
+  box-shadow:0 18px 42px rgba(75,52,66,.09);
+  text-align:center;
+  position:relative;
   overflow:hidden;
 }
 
-.testimonial-photo img{
+.quote::before{
+  content:"";
+  position:absolute;
+  inset:0 auto auto 0;
   width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-.quote{
-  background:#fff;
-  border-radius:24px;
-  border:1px solid var(--blush);
-  padding:2rem;
-  box-shadow:0 12px 34px rgba(75,52,66,.07);
+  height:5px;
+  background:linear-gradient(90deg,var(--sage),var(--gold-mid),var(--plum));
 }
 
 .quote p{
   font-family:'Lora',serif;
   font-style:italic;
-  font-size:1.08rem;
+  font-size:1.05rem;
+  line-height:1.8;
   color:var(--plum-deep);
   margin-bottom:1rem;
 }
 
 .quote span{
-  color:var(--ink-muted);
+  display:block;
+  color:var(--sage);
   font-weight:700;
+  font-size:.95rem;
 }
-
+  
 .faq{
   max-width:900px;
   margin:3rem auto 0;
@@ -936,7 +942,7 @@ a{
   </div>
 </section>
 
-<section class="section">
+<section class="section included-section">
   <div class="container">
     <p class="section-label">What is included</p>
     <h2 class="section-title">A full family membership, not just a weekly class</h2>
