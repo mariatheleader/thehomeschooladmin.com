@@ -122,8 +122,8 @@
 
     .hero {
       position: relative;
-      background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url('/assets/confidence/cc-and-i.jpg');
-      background-size: 80%;
+      background-image: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('/assets/confidence/cc-and-i.jpg');
+      background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
       padding: 120px 24px 110px;
@@ -369,7 +369,16 @@
       padding: 34px 24px;
       font-size: 13px;
     }
+    @media(max-width: 860px) {
+      .hero {
+        padding: 90px 20px 80px;
+        background-position: center top;
+      }
 
+      .hero-sub {
+        font-size: 17px;
+      }
+    }
     @media(max-width: 860px) {
       .nav-inner {
         min-height: 64px;
