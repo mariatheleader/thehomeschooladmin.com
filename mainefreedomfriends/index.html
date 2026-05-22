@@ -15,7 +15,13 @@
 <meta property="og:url" content="https://www.thehomeschooladmin.com/mainefreedomfriends/">
 <meta property="og:image" content="https://www.thehomeschooladmin.com/ff.images/kids-and-maria-banner.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">make it a grid item instead of a full-width image.
+
+That would mean the photo sits inside the same grid as:
+
+100+ hours guided gathering time
+100+ hours behind the scenes
+etc.
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -262,27 +268,53 @@ img{max-width:100%;display:block} a{color:inherit}
 .value-note strong{
   color:var(--black);
 }
-.value-photo-wrap{
-  margin-top:28px;
+.value-photo-card{
+  position:relative;
+  min-height:320px;
+  border:1px solid var(--rule);
   border-radius:2px;
   overflow:hidden;
-  border:1px solid var(--rule);
   box-shadow:0 20px 45px rgba(26,26,26,.08);
-  background:var(--white);
+  background:
+    linear-gradient(rgba(26,26,26,.18), rgba(26,26,26,.38)),
+    url('/ff.images/helpinglittlebig.jpg') center / cover no-repeat;
+  display:flex;
+  align-items:flex-end;
 }
 
-.value-photo-wrap img{
+.value-photo-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(26,26,26,.72) 0%, rgba(26,26,26,.18) 55%, rgba(26,26,26,.06) 100%);
+}
+
+.value-photo-card-content{
+  position:relative;
+  z-index:1;
   width:100%;
-  display:block;
-  height:auto;
+  padding:22px;
+  color:var(--white);
 }
 
-.value-photo-caption{
-  padding:14px 18px;
+.value-photo-card-content strong{
+  display:block;
+  font-family:'Libre Baskerville',serif;
+  font-size:24px;
+  font-weight:400;
+  line-height:1.25;
+  margin-bottom:8px;
+  color:var(--white);
+}
+
+.value-photo-card-content span{
+  display:block;
   font-size:14px;
   line-height:1.7;
-  color:var(--gray);
-  background:var(--white);
+  color:rgba(255,255,255,.92);
+}
+.value-photo-card{
+  grid-column:span 2;
 }
 .pricing-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}.pricing-card{background:var(--white);border-radius:2px;padding:34px 30px;border:1px solid var(--rule);border-top:5px solid var(--powder);box-shadow:0 20px 45px rgba(26,26,26,.04)}
 .pricing-card.featured{border:1px solid var(--rule);border-top:5px solid var(--yellow-dark);box-shadow:0 20px 45px rgba(26,26,26,.04)}
@@ -305,6 +337,11 @@ img{max-width:100%;display:block} a{color:inherit}
 @media(max-width:980px){.hero{min-height:auto}.hero-inner{grid-template-columns:1fr;padding-top:100px}.founding-card{max-width:560px}.split,.pricing-wrap,.photo-strip,.facilitator-card,.seo-footer-grid{grid-template-columns:1fr}.photo-strip{height:auto}.photo-large,.photo-small{height:300px}}
 @media(max-width:900px){.nav-inner{min-height:64px;align-items:center;flex-wrap:wrap}.menu-button{display:block}.nav-links{display:none;position:absolute;top:64px;left:-24px;right:-24px;background:var(--black);padding:20px 24px 28px;flex-direction:column;align-items:flex-start;gap:14px;border-top:1px solid rgba(255,255,255,.1)}.menu-toggle:checked~.nav-links{display:flex}.nav-links a{font-size:13px}.nav-cta{display:inline-block;margin-top:4px}.photo-bg,.facilitator-photo{min-height:320px}}
 @media(max-width:640px){.section{padding:68px 24px}.hero-copy{text-align:center}.hero-sub{margin-left:auto;margin-right:auto}.hero-actions{justify-content:center}.split-card,.pricing-card,.policy-box,.facilitator-card{padding:26px}.hero h1{font-size:34px}.button{width:100%}.seo-footer-grid{grid-template-columns:1fr 1fr;gap:28px}.seo-footer-brand{grid-column:1/-1}.seo-footer-bottom{flex-direction:column;align-items:flex-start}}
+@media(max-width:640px){
+  .value-photo-card{
+    grid-column:span 1;
+  }
+}
 @media (max-width: 768px) {
   img {
     display: block;
@@ -694,6 +731,12 @@ img{max-width:100%;display:block} a{color:inherit}
           <strong>Professional picture day</strong>
           <span>A homeschool picture day with a professional photographer is included on the first day so families have a real keepsake from the year.</span>
         </div>
+        <div class="value-photo-card">
+          <div class="value-photo-card-content">
+            <strong>What this looks like in real life</strong>
+            <span>Children build confidence, connection, and leadership by growing together in a community that feels familiar over time.</span>
+      </div>
+    </div>
 
         <div class="value-item">
           <strong>Coordinated group experiences</strong>
