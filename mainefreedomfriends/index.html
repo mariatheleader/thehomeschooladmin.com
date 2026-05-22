@@ -193,9 +193,12 @@ img{max-width:100%;display:block} a{color:inherit}
 .photo-label{position:absolute;left:16px;bottom:16px;background:var(--yellow);border-radius:2px;padding:8px 14px;font-weight:700;color:var(--black);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .included-section{position:relative;overflow:hidden;background:linear-gradient(rgba(250,250,248,.88),rgba(250,250,248,.9)),url('/ff.images/homeschool-showcase-maine.jpg') center / cover no-repeat}
 .value-section{
-  background:var(--offwhite);
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(250,250,248,.88), rgba(250,250,248,.92)),
+    url('/ff.images/helpinglittlebig.jpg') center / cover no-repeat;
 }
-
 .value-card{
   margin-top:46px;
   background:var(--white);
@@ -256,9 +259,30 @@ img{max-width:100%;display:block} a{color:inherit}
   font-size:15px;
   line-height:1.75;
 }
-
 .value-note strong{
   color:var(--black);
+}
+.value-photo-wrap{
+  margin-top:28px;
+  border-radius:2px;
+  overflow:hidden;
+  border:1px solid var(--rule);
+  box-shadow:0 20px 45px rgba(26,26,26,.08);
+  background:var(--white);
+}
+
+.value-photo-wrap img{
+  width:100%;
+  display:block;
+  height:auto;
+}
+
+.value-photo-caption{
+  padding:14px 18px;
+  font-size:14px;
+  line-height:1.7;
+  color:var(--gray);
+  background:var(--white);
 }
 .pricing-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}.pricing-card{background:var(--white);border-radius:2px;padding:34px 30px;border:1px solid var(--rule);border-top:5px solid var(--powder);box-shadow:0 20px 45px rgba(26,26,26,.04)}
 .pricing-card.featured{border:1px solid var(--rule);border-top:5px solid var(--yellow-dark);box-shadow:0 20px 45px rgba(26,26,26,.04)}
@@ -682,6 +706,12 @@ img{max-width:100%;display:block} a{color:inherit}
         </div>
       </div>
 
+            <div class="value-photo-wrap">
+        <img src="/ff.images/helpinglittlebig.jpg" alt="Older and younger homeschool friends learning together at Freedom Friends in Southern Maine">
+        <div class="value-photo-caption">
+          The heart of Freedom Friends is children growing in confidence, connection, and leadership together over time.
+        </div>
+      </div>
       <div class="value-note">
         <strong>What families are really paying for:</strong> the consistency, leadership, social architecture, SEL facilitation, planning, and community rhythm that allows children to see familiar faces, warm up over time, practice communication, build confidence, and grow inside a homeschool community that someone else is holding.
       </div>
