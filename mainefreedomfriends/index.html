@@ -192,6 +192,74 @@ img{max-width:100%;display:block} a{color:inherit}
 .photo-large{background-image:url('/ff.images/homeschool-pjday.jpg')}.photo-small{background-image:url('/ff.images/homeschoolers.jpg')}
 .photo-label{position:absolute;left:16px;bottom:16px;background:var(--yellow);border-radius:2px;padding:8px 14px;font-weight:700;color:var(--black);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .included-section{position:relative;overflow:hidden;background:linear-gradient(rgba(250,250,248,.88),rgba(250,250,248,.9)),url('/ff.images/homeschool-showcase-maine.jpg') center / cover no-repeat}
+.value-section{
+  background:var(--offwhite);
+}
+
+.value-card{
+  margin-top:46px;
+  background:var(--white);
+  border:1px solid var(--rule);
+  border-top:5px solid var(--yellow);
+  border-radius:2px;
+  padding:38px;
+  box-shadow:0 20px 45px rgba(26,26,26,.04);
+}
+
+.value-card-intro{
+  max-width:780px;
+  margin:0 auto 34px;
+  text-align:center;
+}
+
+.value-card-intro p{
+  color:var(--gray);
+  font-size:16px;
+  line-height:1.85;
+}
+
+.value-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+}
+
+.value-item{
+  background:var(--offwhite);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:22px;
+}
+
+.value-item strong{
+  display:block;
+  font-family:'Libre Baskerville',serif;
+  font-size:20px;
+  font-weight:400;
+  color:var(--black);
+  margin-bottom:6px;
+}
+
+.value-item span{
+  display:block;
+  color:var(--gray);
+  font-size:14px;
+  line-height:1.65;
+}
+
+.value-note{
+  margin-top:28px;
+  padding:22px;
+  background:#fff7d8;
+  border:1px solid rgba(230,169,9,.35);
+  color:var(--gray);
+  font-size:15px;
+  line-height:1.75;
+}
+
+.value-note strong{
+  color:var(--black);
+}
 .pricing-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}.pricing-card{background:var(--white);border-radius:2px;padding:34px 30px;border:1px solid var(--rule);border-top:5px solid var(--powder);box-shadow:0 20px 45px rgba(26,26,26,.04)}
 .pricing-card.featured{border:1px solid var(--rule);border-top:5px solid var(--yellow-dark);box-shadow:0 20px 45px rgba(26,26,26,.04)}
 .pricing-kicker{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin-bottom:10px}.pricing-card h3{font-family:'Libre Baskerville',serif;font-size:26px;line-height:1.25;color:var(--black);font-weight:400;margin-bottom:12px}
@@ -571,7 +639,56 @@ img{max-width:100%;display:block} a{color:inherit}
     </div>
   </div>
 </section>
+<section class="section value-section" id="season-value">
+  <div class="container">
+    <p class="section-label">What tuition supports</p>
+    <h2 class="section-title">The value is in the rhythm being held for you.</h2>
+    <p class="section-sub">Freedom Friends is not priced around whether a park, library, or community location is free to enter. Families are paying for the full experience of it all being planned, organized, facilitated, led, and sustained across the season.</p>
 
+    <div class="value-card">
+      <div class="value-card-intro">
+        <p>Across the September through May season, Freedom Friends represents a minimum of 200 hours of planning, coordination, communication, preparation, facilitation, and leadership. That includes the visible Thursday gatherings and the invisible work that makes the community feel predictable, calm, and worth returning to.</p>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-item">
+          <strong>100+ hours of guided gathering time</strong>
+          <span>Weekly 3 hour gatherings led by Maria across the school year with intentional SEL, friendship building, group rhythm, and mixed age facilitation.</span>
+        </div>
+
+        <div class="value-item">
+          <strong>100+ hours behind the scenes</strong>
+          <span>Seasonal planning, calendar building, family communication, location coordination, activity preparation, field trip details, and group organization.</span>
+        </div>
+
+        <div class="value-item">
+          <strong>Five provided meals</strong>
+          <span>Maria provides lunch for five gatherings during the season, reaching up to $150 per group meal.</span>
+        </div>
+
+        <div class="value-item">
+          <strong>Professional picture day</strong>
+          <span>A homeschool picture day with a professional photographer is included on the first day so families have a real keepsake from the year.</span>
+        </div>
+
+        <div class="value-item">
+          <strong>Coordinated group experiences</strong>
+          <span>Libraries, fire station, animal refuge, veterans home, museums, local parks, educational tours, showcases, Casco Bay mail cruise, caroling, projects, and community outings are coordinated as group learning experiences.</span>
+        </div>
+
+        <div class="value-item">
+          <strong>Parent support layer</strong>
+          <span>Every enrolled family receives Telegram parent community access and one included family planning session with Maria The Homeschool Admin.</span>
+        </div>
+      </div>
+
+      <div class="value-note">
+        <strong>What families are really paying for:</strong> the consistency, leadership, social architecture, SEL facilitation, planning, and community rhythm that allows children to see familiar faces, warm up over time, practice communication, build confidence, and grow inside a homeschool community that someone else is holding.
+      </div>
+    </div>
+  </div>
+</section>
+  
 <section class="section band" id="pricing">
   <div class="container">
     <p class="section-label">Enrollment & Tuition</p>
