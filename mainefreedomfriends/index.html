@@ -269,11 +269,11 @@ img{max-width:100%;display:block} a{color:inherit}
   border-radius:2px;
   overflow:hidden;
   box-shadow:0 20px 45px rgba(26,26,26,.08);
-  background:
-    linear-gradient(rgba(26,26,26,.18), rgba(26,26,26,.38)),
-    url('/ff.images/helpinglittlebig.jpg') center / cover no-repeat;
   display:flex;
   align-items:flex-end;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 
 .value-photo-card::before{
@@ -307,8 +307,21 @@ img{max-width:100%;display:block} a{color:inherit}
   line-height:1.7;
   color:rgba(255,255,255,.92);
 }
+
 .value-photo-card{
   grid-column:span 1;
+}
+
+.value-photo-card.photo-one{
+  background:
+    linear-gradient(rgba(26,26,26,.18), rgba(26,26,26,.38)),
+    url('/ff.images/helpinglittlebig.jpg') center / cover no-repeat;
+}
+
+.value-photo-card.photo-two{
+  background:
+    linear-gradient(rgba(26,26,26,.18), rgba(26,26,26,.38)),
+    url('/ff.images/homeschooling-at-memorial-park-scarborough-maine.jpg') center / cover no-repeat;
 }
 .pricing-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}.pricing-card{background:var(--white);border-radius:2px;padding:34px 30px;border:1px solid var(--rule);border-top:5px solid var(--powder);box-shadow:0 20px 45px rgba(26,26,26,.04)}
 .pricing-card.featured{border:1px solid var(--rule);border-top:5px solid var(--yellow-dark);box-shadow:0 20px 45px rgba(26,26,26,.04)}
@@ -736,17 +749,23 @@ img{max-width:100%;display:block} a{color:inherit}
           <span>Every enrolled family receives Telegram parent community access and one included family planning session with Maria The Homeschool Admin.</span>
         </div>
       </div>
-
-      <div class="value-note">
-        <strong>What families are really paying for:</strong> the consistency, leadership, social architecture, SEL facilitation, planning, and community rhythm that allows children to see familiar faces, warm up over time, practice communication, build confidence, and grow inside a homeschool community that someone else is holding.
-      </div>
-    </div>
-            <div class="value-photo-card">
-          <div class="value-photo-card-content">
+      <div class="value-photo-card">
+          <div class="ff.images/homeschool-christmas-carols.jpg">
             <strong>What this looks like in real life</strong>
             <span>Children build confidence, connection, and leadership by growing together in a community that feels familiar over time.</span>
       </div>
     </div>
+      <div class="value-photo-card photo-two">
+  <div class="/ff.images/homeschooling-at-memorial-park-scarborough-maine.jpg">
+    <strong>What tuition is paying for</strong>
+    <span>Freedom Friends tuition helps pay Maria a real working wage for planning, coordinating, communicating, preparing, leading gatherings, and holding the rhythm of the community week after week. After the full season’s work is counted, the hourly pay is modest and reflects the many unseen hours that make the experience possible.</span>
+  </div>
+</div>
+      <div class="value-note">
+        <strong>What families are really paying for:</strong> the consistency, leadership, social architecture, SEL facilitation, planning, and community rhythm that allows children to see familiar faces, warm up over time, practice communication, build confidence, and grow inside a homeschool community that someone else is holding.
+      </div>
+    </div>
+            
   </div>
 </section>
   
