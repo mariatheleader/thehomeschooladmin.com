@@ -26,11 +26,14 @@
       "@id": "https://www.thehomeschooladmin.com/#maria",
       "name": "Maria",
       "jobTitle": "Child Development Specialist and Homeschool Assistant",
-      "description": "Maria is The Homeschool Admin, a child development specialist helping homeschool families build routines, choose curriculum, plan transcripts, organize records, and homeschool with confidence.",
+      "description": "Maria is The Homeschool Admin, a child development specialist helping homeschool families build routines, choose curriculum, plan transcripts, organize records, and homeschool with more clarity and confidence.",
       "url": "https://www.thehomeschooladmin.com/",
       "sameAs": [
         "https://www.instagram.com/thehomeschooladmin"
-      ]
+      ],
+      "worksFor": {
+        "@id": "https://www.thehomeschooladmin.com/#business"
+      }
     },
     {
       "@type": "LocalBusiness",
@@ -50,46 +53,136 @@
         "York County, Maine",
         "United States"
       ],
-      "description": "The Homeschool Admin provides homeschool clarity sessions, curriculum guidance, Southern Maine homeschool community, transcript support, diploma planning, and private homeschool support for families."
+      "description": "The Homeschool Admin provides homeschool clarity sessions, curriculum guidance, Southern Maine homeschool community, transcript support, diploma planning, and private homeschool support for families locally and remotely.",
+      "sameAs": [
+        "https://www.instagram.com/thehomeschooladmin",
+        "https://www.facebook.com/thehomeschooladmin"
+      ]
     },
     {
       "@type": "Service",
-      "@id": "https://www.thehomeschooladmin.com/#services",
-      "name": "Homeschool Support Services",
+      "@id": "https://www.thehomeschooladmin.com/#clarity-sessions",
+      "name": "Homeschool Clarity Sessions",
       "provider": {
         "@id": "https://www.thehomeschooladmin.com/#business"
       },
-      "serviceType": "Homeschool consulting, homeschool planning, homeschool community, homeschool curriculum guidance, homeschool transcript support, private homeschool support",
+      "serviceType": "Homeschool consulting and planning support",
+      "url": "https://www.thehomeschooladmin.com/claritysessions/",
+      "description": "One-time homeschool support for parents who need help with curriculum choices, routines, preschool planning, transcript questions, or next steps. Available through Telegram, virtual sessions, and in-person sessions in Southern Maine.",
+      "areaServed": [
+        "United States",
+        "Southern Maine",
+        "Scarborough, Maine",
+        "Saco, Maine",
+        "Cumberland, Maine"
+      ],
+      "availableChannel": [
+        {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://www.thehomeschooladmin.com/claritysessions/",
+          "serviceLocation": {
+            "@type": "Place",
+            "name": "Southern Maine"
+          }
+        },
+        {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://www.thehomeschooladmin.com/claritysessions/",
+          "availableLanguage": "English"
+        }
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "price": "97",
+          "priceCurrency": "USD",
+          "description": "Telegram support week"
+        },
+        {
+          "@type": "Offer",
+          "price": "197",
+          "priceCurrency": "USD",
+          "description": "Virtual 90 minute session"
+        },
+        {
+          "@type": "Offer",
+          "price": "297",
+          "priceCurrency": "USD",
+          "description": "In-person Southern Maine session"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.thehomeschooladmin.com/#freedom-friends",
+      "name": "Freedom Friends",
+      "provider": {
+        "@id": "https://www.thehomeschooladmin.com/#business"
+      },
+      "serviceType": "Homeschool community and enrichment program",
+      "url": "https://www.thehomeschooladmin.com/mainefreedomfriends/",
+      "description": "A parent-present Southern Maine homeschool community with weekly social emotional learning, friendship, mixed age connection, and parent support.",
       "areaServed": [
         "Southern Maine",
         "Scarborough, Maine",
         "Saco, Maine",
         "Cumberland, Maine",
-        "United States"
+        "Cumberland County, Maine",
+        "York County, Maine"
       ],
-      "description": "Homeschool support for parents who need direct help, local community, curriculum planning, organization, transcript support, or high touch private homeschool partnership.",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Homeschool Clarity Sessions",
-          "price": "97",
-          "priceCurrency": "USD",
-          "description": "Immediate homeschool support through Telegram, virtual sessions, or in person Southern Maine sessions. Options start at $97."
-        },
-        {
-          "@type": "Offer",
-          "name": "Freedom Friends",
-          "price": "197",
-          "priceCurrency": "USD",
-          "description": "Parent present Southern Maine homeschool community with weekly social emotional learning, friendship, mixed age connection, and parent support."
-        },
-        {
-          "@type": "Offer",
-          "name": "THRIVE Private Homeschool Support",
-          "priceCurrency": "USD",
-          "description": "High touch private homeschool support for families who want ongoing planning, systems, curriculum guidance, developmental support, and direct partnership."
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.thehomeschooladmin.com/mainefreedomfriends/",
+        "serviceLocation": {
+          "@type": "Place",
+          "name": "Southern Maine"
         }
-      ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "197",
+        "priceCurrency": "USD",
+        "description": "Founding family rates start at $197 per month. Additional children are $50 per month."
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.thehomeschooladmin.com/#thrive",
+      "name": "THRIVE Private Homeschool Support",
+      "provider": {
+        "@id": "https://www.thehomeschooladmin.com/#business"
+      },
+      "serviceType": "Private homeschool support and consulting",
+      "url": "https://www.thehomeschooladmin.com/thrive/",
+      "description": "High-touch private homeschool support for families who want ongoing planning, systems, curriculum guidance, developmental support, records help, and direct partnership. Available virtually with in-person options for Southern Maine families.",
+      "areaServed": [
+        "United States",
+        "Southern Maine",
+        "Scarborough, Maine",
+        "Saco, Maine",
+        "Cumberland, Maine"
+      ],
+      "availableChannel": [
+        {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://www.thehomeschooladmin.com/thrive/",
+          "availableLanguage": "English"
+        },
+        {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://www.thehomeschooladmin.com/thrive/",
+          "serviceLocation": {
+            "@type": "Place",
+            "name": "Southern Maine"
+          }
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "347",
+        "priceCurrency": "USD",
+        "description": "Private homeschool support starts at $347 per week."
+      }
     },
     {
       "@type": "FAQPage",
@@ -130,25 +223,6 @@
       ]
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "The Homeschool Admin",
-  "url": "https://www.thehomeschooladmin.com/",
-  "logo": "https://www.thehomeschooladmin.com/thehomeschooladmin.logo.png",
-  "description": "Homeschool consulting, enrichment programs, and parent support services.",
-  "sameAs": [
-    "https://www.instagram.com/thehomeschooladmin",
-    "https://www.facebook.com/thehomeschooladmin"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer support",
-    "email": "maria@thehomeschooladmin.com"
-  }
 }
 </script>
 
