@@ -59,111 +59,142 @@
   </script>
 
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.7; }
-    h1 { margin-bottom: 10px; }
-    .breadcrumbs { font-size: 0.9rem; margin-bottom: 20px; }
-    .breadcrumbs a { color: #0077cc; text-decoration: none; }
-    .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
-    .post-card { border: 1px solid #eee; border-radius: 8px; padding: 20px; transition: box-shadow 0.2s ease; }
-    .post-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-    .post-card h2 { margin-top: 0; font-size: 1.3rem; }
-    .post-card a { text-decoration: none; color: #0077cc; }
-    .post-card p { color: #444; }
-    .blog-hero {
-  <style>
-    body { font-family: system-ui, sans-serif; line-height: 1.7; max-width: 760px; margin: 40px auto; padding: 0 20px; }
-    h1, h2, h3 { line-height: 1.3; }
-    .breadcrumbs { font-size: 0.9rem; margin-bottom: 20px; }
-    .breadcrumbs a { color: #0077cc; text-decoration: none; }
-    .breadcrumbs span { color: #555; }
-    .blog-hero {
-  background: url('/blog/assets/homeschool.blog.backround1.png') no-repeat center/cover;
-  padding: 120px 20px;
-  border-radius: 12px;
-  margin-bottom: 40px;
-}
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+      color: #333;
+    }
 
-.blog-section-1 {
-  background: url('/blog/assets/homeschool.blog.backround2.png') no-repeat center/cover;
-  padding: 80px 20px;
-  border-radius: 12px;
-  margin: 40px 0;
-}
+    .blog-page {
+      position: relative;
+      min-height: 100vh;
+      padding: 120px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-.blog-section-2 {
-  background: url('/blog/assets/homeschool.blog.backround3.png') no-repeat center/cover;
-  padding: 80px 20px;
-  border-radius: 12px;
-  margin: 40px 0;
-}
+    .blog-page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        rgba(255,255,255,0.88),
+        rgba(255,255,255,0.88)
+      );
+      z-index: 1;
+    }
 
-.blog-section-3 {
-  background: url('/blog/assets/homeschool.blog.backround4.png) no-repeat center/cover;
-  padding: 80px 20px;
-  border-radius: 12px;
-  margin: 40px 0;
-}
+    .blog-page > * {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
 
-.blog-hero h1,
-.blog-section-1 h2,
-.blog-section-2 h2,
-.blog-section-3 h2 {
-  color: #333;
-  text-align: center;
-  margin: 0;
-}
+    h1 {
+      margin-top: 0;
+      font-size: 2.4rem;
+    }
 
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .post-card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .post-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .post-card h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .post-card a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    .breadcrumbs {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumbs a {
+      color: #0077cc;
+      text-decoration: none;
+    }
   </style>
 </head>
 
 <body>
 
-<div class="breadcrumbs">
-  <a href="/">Home</a> › <span>Blog</span>
-</div>
+<!-- PAGE 1 — FULL SCREEN BACKGROUND -->
+<section class="blog-page" style="background-image: url('/blog/assets/homeschool.blog.backround1.png');">
 
-<div class="blog-hero">
+  <div class="breadcrumbs">
+    <a href="/">Home</a> › <span>Blog</span>
+  </div>
+
   <h1>The Homeschool Admin Blog</h1>
-</div>
+  <p>Guides, how‑tos, and support for homeschooling in Maine. Updated regularly with practical, parent‑friendly resources.</p>
 
-<p>Guides, how‑tos, and support for homeschooling in Maine. Updated regularly with practical, parent‑friendly resources.</p>
+  <div class="post-grid">
 
-<div class="post-grid">
+    <!-- BLOG POST 1 -->
+    <div class="post-card">
+      <h2>
+        <a href="/blog/how-to-start-homeschooling-in-maine-2026/">
+          How to Start Homeschooling in Maine (2026 Guide)
+        </a>
+      </h2>
+      <p>A complete step‑by‑step guide to starting homeschool in Maine, including legal requirements, Learning Languages, and common mistakes to avoid.</p>
+      <a href="/blog/how-to-start-homeschooling-in-maine-2026/">Read more →</a>
+    </div>
 
-  <!-- BLOG POST 1 -->
-  <div class="post-card">
-    <h2>
-      <a href="/blog/how-to-start-homeschooling-in-maine-2026/">
-        How to Start Homeschooling in Maine (2026 Guide)
-      </a>
-    </h2>
-    <p>A complete step‑by‑step guide to starting homeschool in Maine, including legal requirements, Learning Languages, and common mistakes to avoid.</p>
-    <a href="/blog/how-to-start-homeschooling-in-maine-2026/">Read more →</a>
+    <!-- BLOG POST 2 -->
+    <div class="post-card">
+      <h2>
+        <a href="/blog/homeschool-groups-in-southern-maine/">
+          Homeschool Groups in Southern Maine: Full List + How to Join
+        </a>
+      </h2>
+      <p>A parent‑friendly directory of homeschool groups, meetups, and co‑ops across Southern Maine — plus how to choose the right one.</p>
+      <a href="/blog/homeschool-groups-in-southern-maine/">Read more →</a>
+    </div>
+
+    <!-- BLOG POST 3 -->
+    <div class="post-card">
+      <h2>
+        <a href="/blog/do-you-need-teacher-certification-to-homeschool-in-maine/">
+          Do You Need Teacher Certification to Homeschool in Maine?
+        </a>
+      </h2>
+      <p>Short answer: no — but here’s what Maine law actually requires and how to stay compliant without stress.</p>
+      <a href="/blog/do-you-need-teacher-certification-to-homeschool-in-maine/">Read more →</a>
+    </div>
+
   </div>
 
-  <!-- BLOG POST 2 (placeholder for next post) -->
-  <div class="post-card">
-    <h2>
-      <a href="/blog/homeschool-groups-in-southern-maine/">
-        Homeschool Groups in Southern Maine: Full List + How to Join
-      </a>
-    </h2>
-    <p>A parent‑friendly directory of homeschool groups, meetups, and co‑ops across Southern Maine — plus how to choose the right one.</p>
-    <a href="/blog/homeschool-groups-in-southern-maine/">Read more →</a>
-  </div>
-
-  <!-- BLOG POST 3 (placeholder) -->
-  <div class="post-card">
-    <h2>
-      <a href="/blog/do-you-need-teacher-certification-to-homeschool-in-maine/">
-        Do You Need Teacher Certification to Homeschool in Maine?
-      </a>
-    </h2>
-    <p>Short answer: no — but here’s what Maine law actually requires and how to stay compliant without stress.</p>
-    <a href="/blog/do-you-need-teacher-certification-to-homeschool-in-maine/">Read more →</a>
-  </div>
-
-</div>
+</section>
 
 </body>
 </html>
