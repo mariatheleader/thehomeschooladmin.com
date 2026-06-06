@@ -61,7 +61,7 @@
         page-break-after: avoid;
         margin: 30px 0;
       }
-      a {
+      a, button {
         color: #000;
         text-decoration: underline;
       }
@@ -89,8 +89,13 @@ This portfolio highlights how I design AI workflows, enablement systems, and cus
 
 <h2>How This Portfolio Was Built (Enablement in Action)</h2>
 <p>
-To demonstrate my approach to scalable enablement, this portfolio is built as a single HTML source of truth with print‑optimized CSS. This allows me to update content once and instantly generate a clean, 8.5×11 PDF version directly from the browser. It reflects how I design systems that reduce friction, improve clarity, and support repeatable, self‑serve enablement at scale.
+To model scalable enablement practices, this portfolio is built as a single‑source HTML system with print‑optimized CSS and a built‑in print‑to‑PDF workflow. This ensures consistency, reduces maintenance overhead, and enables rapid, self‑serve PDF generation for GTM teams directly from the browser.
 </p>
+
+<!-- PRINT TO PDF BUTTON -->
+<button onclick="printPortfolio()" style="background:none;border:none;color:#0645AD;text-decoration:underline;cursor:pointer;font-size:1rem;padding:0;">
+  Download AI Enablement Portfolio (PDF)
+</button>
 
 <hr>
 
@@ -178,19 +183,18 @@ To demonstrate my approach to scalable enablement, this portfolio is built as a 
 
 <hr>
 
-<h2>Downloadable PDF Version</h2>
-<p>
-Once uploaded, your PDF will be available here:<br>
-<a href="ai-portfolio.pdf" download>Download AI Enablement Portfolio (PDF)</a>
-</p>
-
-<hr>
-
 <h2>Contact</h2>
 <p>
 Email: <a href="mailto:maria@thehomeschooladmin.com">maria@thehomeschooladmin.com</a><br>
 LinkedIn: <a href="https://www.linkedin.com/in/mariagalyean">linkedin.com/in/mariagalyean</a>
 </p>
+
+<!-- PRINT SCRIPT -->
+<script>
+function printPortfolio() {
+  window.print();
+}
+</script>
 
 </body>
 </html>
