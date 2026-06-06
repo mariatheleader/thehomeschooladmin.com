@@ -35,47 +35,41 @@
     hr {
       margin: 40px 0;
     }
+
     /* PRINT STYLING FOR 8.5x11 PDF EXPORT */
-@media print {
-  @page {
-    size: 8.5in 11in;
-    margin: 0.75in;
-  }
-
-  body {
-    font-size: 12pt;
-    line-height: 1.5;
-    color: #000;
-  }
-
-  h1, h2, h3 {
-    page-break-after: avoid;
-  }
-
-  .asset {
-    page-break-inside: avoid;
-    border: none;
-    background: none;
-    padding: 0;
-    margin-bottom: 30px;
-  }
-
-  hr {
-    page-break-after: avoid;
-    margin: 30px 0;
-  }
-
-  a {
-    color: #000;
-    text-decoration: underline;
-  }
-
-  /* Remove website-only elements if needed */
-  nav, footer {
-    display: none;
-  }
-}
-</style>
+    @media print {
+      @page {
+        size: 8.5in 11in;
+        margin: 0.75in;
+      }
+      body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+      }
+      h1, h2, h3 {
+        page-break-after: avoid;
+      }
+      .asset {
+        page-break-inside: avoid;
+        border: none;
+        background: none;
+        padding: 0;
+        margin-bottom: 30px;
+      }
+      hr {
+        page-break-after: avoid;
+        margin: 30px 0;
+      }
+      a {
+        color: #000;
+        text-decoration: underline;
+      }
+      nav, footer {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -89,6 +83,13 @@
 <h2>Why This Portfolio Matters</h2>
 <p>
 This portfolio highlights how I design AI workflows, enablement systems, and customer education assets that help people understand and adopt complex tools. Each asset demonstrates a different dimension of my work: workflow architecture, messaging frameworks, automation logic, and customer-facing documentation. These examples reflect how I support sales, onboarding, and customer success teams in fast-moving product environments.
+</p>
+
+<hr>
+
+<h2>How This Portfolio Was Built (Enablement in Action)</h2>
+<p>
+To demonstrate my approach to scalable enablement, this portfolio is built as a single HTML source of truth with print‑optimized CSS. This allows me to update content once and instantly generate a clean, 8.5×11 PDF version directly from the browser. It reflects how I design systems that reduce friction, improve clarity, and support repeatable, self‑serve enablement at scale.
 </p>
 
 <hr>
