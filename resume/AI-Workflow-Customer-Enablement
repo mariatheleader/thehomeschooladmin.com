@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maria Galyean – AI Workflow & Customer Enablement Specialist</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      color: #202124;
+      background: #f5f2ed;
+    }
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 40px 22px 70px;
+    }
+    .hero {
+      background: #ffffff;
+      border: 1px solid #dfd8cf;
+      border-radius: 18px;
+      padding: 32px;
+      margin-bottom: 26px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.05);
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      color: #6d6257;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    h1, h2, h3 {
+      color: #151515;
+      line-height: 1.18;
+      margin-top: 0;
+    }
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 3.4rem);
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+    }
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    p { margin-top: 0; }
+    a { color: #315f4f; font-weight: 700; }
+    .lead { font-size: 1.05rem; max-width: 850px; }
+    .contact-line { margin-top: 16px; color: #4a423b; }
+    .section {
+      background: #ffffff;
+      border: 1px solid #dfd8cf;
+      border-radius: 18px;
+      padding: 26px;
+      margin-bottom: 22px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+    .card {
+      border: 1px solid #e5ded5;
+      border-radius: 14px;
+      padding: 18px;
+      background: #fffdf9;
+    }
+    .metric {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #315f4f;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    ul { padding-left: 20px; margin-top: 6px; }
+    li { margin-bottom: 6px; }
+    .tag-row { margin: 6px 0 10px; }
+    .tag {
+      display: inline-block;
+      background: #e8efe8;
+      color: #315f4f;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    @media (max-width: 850px) {
+      .grid, .grid.two { grid-template-columns: 1fr; }
+      .hero, .section { padding: 22px; }
+    }
+    @media print {
+      @page { size: 8.5in 11in; margin: 0.65in; }
+      body { background: #ffffff; color: #000000; font-size: 11pt; }
+      .page { max-width: none; padding: 0; }
+      .hero, .section, .card { box-shadow: none; border-color: #cccccc; page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">AI workflow · customer enablement · product education</div>
+      <h1>Maria Galyean</h1>
+      <p class="lead">
+        <strong>AI Workflow & Customer Enablement Specialist</strong> with a Master’s in Leadership Studies and founder-led AI implementation experience.
+        I turn complex AI workflows into clear training, documentation, and customer-facing systems that help people actually use the tools they buy.
+      </p>
+      <p class="contact-line">
+        Email: <a href="mailto:maria@thehomeschooladmin.com">maria@thehomeschooladmin.com</a> ·
+        LinkedIn: <a href="https://www.linkedin.com/in/mariagalyean">linkedin.com/in/mariagalyean</a>
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Core Competencies</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Customer Enablement</h3>
+          <ul>
+            <li>Customer training and facilitation</li>
+            <li>Client onboarding and support documentation</li>
+            <li>Instructional design and SOP development</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>AI Workflow & Product Adoption</h3>
+          <ul>
+            <li>AI workflow design and prompt systems</li>
+            <li>AI workflow adoption and product education</li>
+            <li>Revenue-supporting content systems</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Communication & Operations</h3>
+          <ul>
+            <li>Stakeholder communication and change management</li>
+            <li>Call center and customer communication</li>
+            <li>Program delivery and implementation support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Founder Revenue & Go-To-Market Experience</h2>
+      <div class="grid.two">
+        <div class="card">
+          <div class="metric">$109K+</div>
+          <p><strong>Solopreneur revenue generated</strong> across The Homeschool Admin and The Worth Room through concept creation, sales, marketing, operations, delivery, and retention.</p>
+        </div>
+        <div class="card">
+          <div class="metric">$78K</div>
+          <p><strong>Generated in the last 24 months</strong>, including <strong>$20K</strong> from The Worth Room through community programming and relationship-led sales.</p>
+        </div>
+      </div>
+      <p>
+        Owned the full revenue engine across both businesses: offer development, market positioning, sales messaging, audience growth, direct sales,
+        client delivery, and retention.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Professional Experience</h2>
+
+      <div class="card">
+        <h3>The Worth Room · Founder · 2025–Present</h3>
+        <ul>
+          <li>Delivered structured programming and customer education experiences that helped entrepreneurs understand, apply, and implement new ideas in real time.</li>
+          <li>Created training-style prompts, learning frameworks, and repeatable content systems that turned conversations into clear implementation steps.</li>
+          <li>Led community operations and program delivery using structured learning frameworks, customer communication rhythms, and organized content systems.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>The Homeschool Admin · Founder · 2021–Present</h3>
+        <ul>
+          <li>Designed parent-facing learning systems, onboarding processes, documentation, and custom educational guidance that made complex planning easier to use.</li>
+          <li>Translated assessment data and family needs into clear recommendations, reports, lesson plans, and next-step guidance.</li>
+          <li>Built operational systems for curriculum delivery, client onboarding, assessment intake, reporting, documentation, and family communication.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Earlier Customer Operations & Training</h3>
+        <ul>
+          <li>Listen Up – Inbound Call Center Agent: handled real-time customer communication, issue triage, and service conversations in an overnight environment.</li>
+          <li>Olympus Asset Management – Admin roles: supported high-pressure operations, records, documentation, and customer issue resolution.</li>
+          <li>Ted’s Montana Grill – Team Lead & Certified Trainer: trained team members on service standards, communication, and fast-paced guest experience.</li>
+          <li>York County Community College – Office Admin: supported office operations, student communication, scheduling, and coordination.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>AI Systems, Training & Research</h2>
+      <div class="grid.two">
+        <div class="card">
+          <h3>AI Workflow Systems</h3>
+          <ul>
+            <li>Real Time Content Vault – transforms voice inputs into structured content outputs across multiple platforms.</li>
+            <li>Instagram to Email Content Engine – API-integrated workflow converting social content into organized email drafts.</li>
+            <li>Community Content Systems – capture, organize, and repurpose educational content, workshops, and events.</li>
+            <li>AI Assisted Curriculum & Assessment Systems – turn assessment data into reports, recommendations, and lesson plans.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Research & Analysis</h3>
+          <ul>
+            <li>Completed IRB-approved qualitative research on servant leadership using interviews, NVivo coding, and thematic analysis.</li>
+            <li>Translated human responses into organized themes, findings, and usable documentation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Tools & Technical Stack</h2>
+      <p><strong>AI & automation:</strong> ChatGPT, Claude, Gemini, prompt engineering, workflow design, process automation, AI-assisted content systems.</p>
+      <p><strong>Technical:</strong> Python, API workflows, Telegram bots, GitHub, HTML, CSS.</p>
+      <p><strong>Operations & enablement:</strong> Google Workspace, Docs, Sheets, Forms, Canva, Stripe, Kit, documentation systems, instructional design.</p>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <ul>
+        <li>Master of Leadership Studies, University of Southern Maine, 2019</li>
+        <li>Bachelor of Science, Child and Youth Development, Florida Gulf Coast University, 2014</li>
+        <li>Associate of Liberal Studies, York County Community College, 2010</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
