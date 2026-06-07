@@ -95,54 +95,44 @@
     }
 
     @media print {
+      @page {
+        size: 8.5in 11in;
+        margin: 0.75in;
+      }
 
-  /* Ensure clean page size + margins */
-  @page {
-    size: 8.5in 11in;
-    margin: 0.75in;
-  }
+      h1, h2, h3 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+      }
 
-  /* Prevent headings from being stranded at bottom of page */
-  h1, h2, h3 {
-    page-break-after: avoid;
-    page-break-inside: avoid;
-  }
+      section, .section {
+        page-break-inside: avoid;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
 
-  /* Prevent sections from splitting awkwardly */
-  section, .section {
-    page-break-inside: avoid;
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-  }
+      p {
+        page-break-inside: avoid;
+      }
 
-  /* Prevent paragraphs from splitting mid‑sentence */
-  p {
-    page-break-inside: avoid;
-  }
+      ul, li {
+        page-break-inside: avoid;
+      }
 
-  /* Prevent lists from breaking in half */
-  ul, li {
-    page-break-inside: avoid;
-  }
+      hr {
+        page-break-after: avoid;
+        margin: 1.4rem 0;
+      }
 
-  /* Keep horizontal rules with their following section */
-  hr {
-    page-break-after: avoid;
-    margin: 1.4rem 0;
-  }
+      .hero, .section {
+        box-shadow: none !important;
+        border-color: #ccc !important;
+      }
 
-  /* Remove any shadows/borders that print weird */
-  .hero, .section {
-    box-shadow: none !important;
-    border-color: #ccc !important;
-  }
-
-  /* Hide anything interactive */
-  button, nav, footer {
-    display: none !important;
-  }
-}
-
+      button, nav, footer {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -151,8 +141,8 @@
   <h1>AI Enablement Portfolio</h1>
   <p class="meta-line"><strong>Maria Galyean</strong> — AI Workflow & Customer Enablement Specialist</p>
   <p class="meta-line">
-  Email: <a href="mailto:maria@thehomeschooladmin.com">maria@thehomeschooladmin.com</a> ·
-  LinkedIn: <a href="https://www.linkedin.com/in/mariagalyean">linkedin.com/in/mariagalyean</a>
+    Email: <a href="mailto:maria@thehomeschooladmin.com">maria@thehomeschooladmin.com</a> ·
+    LinkedIn: <a href="https://www.linkedin.com/in/mariagalyean">linkedin.com/in/mariagalyean</a>
   </p>
 
   <p class="print-link small-note">
@@ -164,7 +154,6 @@
     simple systems, clear structure, and workflows that reduce friction.
   </p>
 
-
   <hr />
 
   <h2>Portfolio Overview</h2>
@@ -174,9 +163,7 @@
     actually use. It translates my founder experience into the language of product, enablement, and implementation
     teams inside fast-moving companies.
   </p>
-  <p>
-    Over the last five years I have:
-  </p>
+  <p>Over the last five years I have:</p>
   <ul>
     <li><strong>Generated $109K+ in solopreneur revenue</strong> across The Homeschool Admin™ and The Worth Room™.</li>
     <li><strong>Generated $78K in the last 24 months</strong>, including <strong>$20K from The Worth Room™</strong> alone.</li>
@@ -191,6 +178,7 @@
   <hr />
 
   <h2>Founder Experience → Enterprise Value</h2>
+
   <p><strong>Founder, The Worth Room™ (2025–Present)</strong></p>
   <ul>
     <li>Designed and led an asynchronous “Worth Room” container where entrepreneurs practiced storyselling, built assets in real time, and turned conversations into conversions.</li>
@@ -210,6 +198,43 @@
     <li><strong>Product & workflow thinking:</strong> I design systems that move messy human input into structured, repeatable outputs.</li>
     <li><strong>Customer enablement:</strong> I create frameworks, prompts, and documentation that help non-technical users adopt complex tools.</li>
     <li><strong>Revenue alignment:</strong> I build workflows that directly support sales, retention, and customer outcomes.</li>
+  </ul>
+
+  <hr />
+
+  <!-- NEW MAJOR SECTION -->
+  <h2>Homeschool Admin™: Programs, Systems & Website Ecosystem</h2>
+
+  <h3>Maine Freedom Friends (In‑Person Enrichment Program)</h3>
+  <p>
+    A multi‑age, in‑person enrichment program designed to support homeschoolers through hands‑on learning, structured developmental experiences, and community‑based education.
+  </p>
+  <ul>
+    <li>Designed weekly curriculum themes, activities, and developmental scaffolding.</li>
+    <li>Built operational workflows for safety, logistics, communication, and parent coordination.</li>
+    <li>Created documentation systems for attendance, planning, and family communication.</li>
+    <li>Integrated AI‑assisted planning tools to streamline curriculum creation and reporting.</li>
+  </ul>
+
+  <h3>Curriculum & Assessment Systems</h3>
+  <p>
+    Systems that translate qualitative and quantitative educational data into clear, parent‑facing reports, recommendations, and individualized learning plans.
+  </p>
+  <ul>
+    <li>Assessment workflows that turn observations into structured developmental summaries.</li>
+    <li>Curriculum frameworks that support creativity, social development, and personalized learning paths.</li>
+    <li>Documentation templates for planning, communication, and ongoing support.</li>
+  </ul>
+
+  <h3>The Homeschool Admin™ HTML Website Ecosystem</h3>
+  <p>
+    A fully hand‑coded HTML website rebuilt from scratch to improve clarity, SEO, accessibility, and long‑term maintainability.
+  </p>
+  <ul>
+    <li>Built and maintained pages for: About, Clarity Sessions, Thrive, Confidence, Resources, Curriculum Help, Preschool, and Maine Freedom Friends.</li>
+    <li>Implemented structured data (schema) for LocalBusiness, Organization, FAQ, and Article pages.</li>
+    <li>Created clean navigation, responsive layouts, and print‑friendly documentation pages.</li>
+    <li>Used GitHub Pages for deployment and version control.</li>
   </ul>
 
   <hr />
@@ -266,6 +291,26 @@
     <li>Built on top of qualitative research and real family use cases.</li>
   </ul>
 
+  <h3>Maine Freedom Friends Operational Systems</h3>
+  <p>
+    In‑person program systems supporting curriculum, logistics, safety, and parent communication.
+  </p>
+  <ul>
+    <li>Weekly planning workflows and developmental scaffolding.</li>
+    <li>Attendance, communication, and documentation systems.</li>
+    <li>AI‑assisted curriculum planning and reporting.</li>
+  </ul>
+
+  <h3>The Homeschool Admin™ Website Ecosystem</h3>
+  <p>
+    A multi‑page HTML ecosystem built from scratch using AI‑assisted workflows and GitHub Pages.
+  </p>
+  <ul>
+    <li>Hand‑coded pages for all services, programs, and resources.</li>
+    <li>Schema markup for SEO and structured data.</li>
+    <li>Responsive layouts and print‑friendly documentation.</li>
+  </ul>
+
   <hr />
 
   <h2>AI Workflows & Conversation Systems</h2>
@@ -316,6 +361,13 @@
     <li>Documentation and guidance that make complex developmental information usable.</li>
   </ul>
 
+  <h3>Parent‑Facing Enablement Systems</h3>
+  <ul>
+    <li>Documentation and guidance that translate complex developmental and educational information into clear next steps.</li>
+    <li>Curriculum planning templates, assessment summaries, and learning recommendations.</li>
+    <li>Communication workflows that support families through onboarding, planning, and ongoing support.</li>
+  </ul>
+
   <hr />
 
   <h2>Timeline of Innovation</h2>
@@ -328,6 +380,7 @@
     <li><strong>Dec 2025 — Bit Bots:</strong> Niche Telegram bots for Instagram, podcasting, hooks, and long-form content.</li>
     <li><strong>Jan 2026 — Book Writing:</strong> Voice-authored book drafts that surfaced HTML page generation as a product pattern.</li>
     <li><strong>Mar 2026 — HTML Page Ecosystem:</strong> Built multiple landing pages (Signal, Hook to Close™, Monetize Your Memoirs™, X Factor, and others) using AI-assisted HTML workflows.</li>
+    <li><strong>2021–2026 — Maine Freedom Friends:</strong> Designed and operated an in‑person enrichment program with curriculum systems, developmental frameworks, and parent‑facing enablement.</li>
   </ul>
 
   <hr />
@@ -353,15 +406,4 @@
 
   <hr />
 
-  <h2>Contact</h2>
-  <p>
-    <strong>Email:</strong> <a href="mailto:maria@thehomeschooladmin.com">maria@thehomeschooladmin.com</a><br />
-    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mariagalyean">linkedin.com/in/mariagalyean</a>
-  </p>
-  <p class="small-note">
-    This portfolio is intentionally minimal and print-ready. It is meant to be read like a strategic brief:
-    a clear translation of founder-led innovation into enterprise-ready AI workflow, enablement, and implementation skills.
-  </p>
-
-</body>
-</html>
+  <h2>Contact</
