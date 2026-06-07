@@ -94,33 +94,55 @@
       font-size: 0.9rem;
     }
 
-    /* Print styling for 8.5 x 11 export */
     @media print {
-      @page {
-        size: 8.5in 11in;
-        margin: 0.75in;
-      }
-      body {
-        margin: 0;
-        max-width: none;
-        padding: 0;
-        color: #000;
-        font-size: 11pt;
-      }
-      a {
-        color: #000;
-        text-decoration: underline;
-      }
-      button, nav, footer {
-        display: none;
-      }
-      h1, h2, h3 {
-        page-break-after: avoid;
-      }
-      hr {
-        page-break-after: avoid;
-      }
-    }
+
+  /* Ensure clean page size + margins */
+  @page {
+    size: 8.5in 11in;
+    margin: 0.75in;
+  }
+
+  /* Prevent headings from being stranded at bottom of page */
+  h1, h2, h3 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Prevent sections from splitting awkwardly */
+  section, .section {
+    page-break-inside: avoid;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Prevent paragraphs from splitting mid‑sentence */
+  p {
+    page-break-inside: avoid;
+  }
+
+  /* Prevent lists from breaking in half */
+  ul, li {
+    page-break-inside: avoid;
+  }
+
+  /* Keep horizontal rules with their following section */
+  hr {
+    page-break-after: avoid;
+    margin: 1.4rem 0;
+  }
+
+  /* Remove any shadows/borders that print weird */
+  .hero, .section {
+    box-shadow: none !important;
+    border-color: #ccc !important;
+  }
+
+  /* Hide anything interactive */
+  button, nav, footer {
+    display: none !important;
+  }
+}
+
   </style>
 </head>
 <body>
