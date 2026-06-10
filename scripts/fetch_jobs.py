@@ -79,7 +79,7 @@ def send_email_sendgrid(jobs):
                 "to": [{"email": "maria.galyean.work@gmail.com"}]
             }
         ],
-        "from": {"email": "maria.galyean.work@gmail.com", "name": "Job Alert Bot"},
+        "from": {"email": "maria@thehomeschooladmin.com", "name": "Job Alert Bot"},
         "subject": f"🎯 Remote Jobs - {datetime.now().strftime('%B %d, %Y')}",
         "content": [
             {
