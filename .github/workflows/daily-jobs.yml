@@ -1,0 +1,23 @@
+name: Daily Async Remote Jobs Email
+on:
+  schedule:
+    - cron: '0 13 * * *'
+
+jobs:
+  send-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install requests
+      
+      - name: Fetch jobs and send email
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+        run: python scripts/fetch_jobs.py
