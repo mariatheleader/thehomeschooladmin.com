@@ -1,7 +1,7 @@
-name: Daily Job Email
+name: Daily Async Remote Jobs Email
 on:
   schedule:
-    - cron: '0 8 * * *'  # Every day at 8 AM EST (adjust to your timezone)
+    - cron: '0 13 * * *'  # 8 AM Maine time every day
 
 jobs:
   send-jobs:
@@ -15,11 +15,9 @@ jobs:
           python-version: '3.11'
       
       - name: Install dependencies
-        run: pip install requests python-dotenv
+        run: pip install requests
       
       - name: Fetch jobs and send email
         env:
-          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
-          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
-          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
         run: python scripts/fetch_jobs.py
