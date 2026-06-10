@@ -2,10 +2,8 @@ import requests
 import os
 from datetime import datetime
 
-SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
-
 def fetch_jobs():
-    """Fetch jobs from Himalayas API (FREE, no auth needed)"""
+    """Fetch jobs from Himalayas API"""
     
     url = "https://api.himalayas.app/v1/jobs"
     
@@ -53,11 +51,10 @@ def fetch_jobs():
     return unique_jobs
 
 def send_email_sendgrid(jobs):
-    """Send via SendGrid (no password needed)"""
+    """Send via SendGrid"""
     
     api_key = os.getenv("SENDGRID_API_KEY")
     
-    # Build email HTML
     html = f"""
     <html>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -90,7 +87,6 @@ def send_email_sendgrid(jobs):
     </html>
     """
     
-    # SendGrid API request
     url = "https://api.sendgrid.com/v3/mail/send"
     headers = {
         "Authorization": f"Bearer {api_key}",
@@ -118,7 +114,7 @@ def send_email_sendgrid(jobs):
     if response.status_code == 202:
         print(f"✅ Email sent! {len(jobs)} jobs included")
     else:
-        print(f"❌ Error: {response.text}")
+        print(f"❌ Error: {response.status_code} - {response.text}")
 
 if __name__ == "__main__":
     jobs = fetch_jobs()
