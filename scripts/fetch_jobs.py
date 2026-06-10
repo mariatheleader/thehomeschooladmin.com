@@ -1,54 +1,104 @@
 import requests
 import smtplib
+import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-import os
 from datetime import datetime
 
-# Job boards to scrape (or use their APIs)
-SEARCH_TERMS = [
-    "async remote enablement",
-    "async remote operations",
-    "async remote documentation",
-    "async remote product operations"
-]
-
 def fetch_jobs():
-    """Fetch jobs from Indeed, LinkedIn, or use job board APIs"""
-    jobs = []
+    """Fetch jobs from Himalayas API (FREE, no auth needed)"""
     
-    # Example: Scrape Indeed (or use their API if you have access)
-    for term in SEARCH_TERMS:
-        # This is pseudocode - you'd use a job API or web scraping
-        url = f"https://www.indeed.com/jobs?q={term}+remote+async"
-        # Fetch and parse results
-        pass
+    url = "https://api.himalayas.app/v1/jobs"
     
-    return jobs
+    # Your search terms
+    queries = [
+        "enablement",
+        "operations", 
+        "documentation",
+        "product operations",
+        "learning operations"
+    ]
+    
+    all_jobs = []
+    
+    for query in queries:
+        params = {
+            "search": query,
+            "employment_type": "Full-time",
+            "remote": "true"
+        }
+        
+        try:
+            response = requests.get(url, params=params)
+            data = response.json()
+            
+            for job in data.get("jobs", [])[:10]:  # Get first 10 per search
+                all_jobs.append({
+                    "title": job.get("title", "N/A"),
+                    "company": job.get("company_name", "N/A"),
+                    "location": job.get("location", "Remote"),
+                    "salary": job.get("salary_range", "Competitive"),
+                    "description": job.get("description", "")[:250],
+                    "link": job.get("job_url", "#"),
+                    "posted": job.get("published_at", "Today")
+                })
+        except Exception as e:
+            print(f"Error fetching {query}: {e}")
+    
+    # Remove duplicates
+    seen = set()
+    unique_jobs = []
+    for job in all_jobs:
+        if job["link"] not in seen:
+            seen.add(job["link"])
+            unique_jobs.append(job)
+    
+    return unique_jobs
 
 def send_email(jobs):
-    """Send formatted job list to your email"""
+    """Send jobs to your email"""
+    
     sender = os.getenv("SENDER_EMAIL")
     password = os.getenv("SENDER_PASSWORD")
     recipient = os.getenv("RECIPIENT_EMAIL")
     
-    # Build email
     message = MIMEMultipart("alternative")
-    message["Subject"] = f"Daily Async Remote Jobs - {datetime.now().strftime('%B %d')}"
+    message["Subject"] = f"🎯 Today's Async Remote Jobs - {datetime.now().strftime('%B %d, %Y')}"
     message["From"] = sender
     message["To"] = recipient
     
-    # Format job list as HTML
-    html = "<h2>Today's Async Remote Jobs</h2><ul>"
-    for job in jobs:
-        html += f"""
-        <li>
-            <strong>{job['title']}</strong> @ {job['company']} | {job['salary']}<br>
-            {job['description']}<br>
-            <a href="{job['link']}">Apply →</a>
-        </li>
-        """
-    html += "</ul>"
+    # Build HTML email
+    html = f"""
+    <html>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+            <h2 style="color: #2c3e50;">📧 Async Remote Jobs Posted Today</h2>
+            <p>Found <strong>{len(jobs)}</strong> new opportunities matching your profile.</p>
+    """
+    
+    if jobs:
+        html += "<ul style='list-style: none; padding: 0;'>"
+        for i, job in enumerate(jobs, 1):
+            html += f"""
+            <li style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-left: 4px solid #3498db; border-radius: 4px;">
+                <strong style="font-size: 16px;">#{i} {job['title']}</strong><br>
+                <span style="color: #7f8c8d;"><strong>{job['company']}</strong> • {job['location']}</span><br>
+                <span style="color: #27ae60; font-weight: bold;">{job['salary']}</span><br>
+                <p style="margin: 10px 0; font-size: 14px;">{job['description']}...</p>
+                <a href="{job['link']}" style="display: inline-block; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px;">Apply Now →</a>
+            </li>
+            """
+        html += "</ul>"
+    else:
+        html += "<p>No jobs found today. Check back tomorrow!</p>"
+    
+    html += """
+            <hr style="margin-top: 30px; border: none; border-top: 1px solid #ddd;">
+            <p style="font-size: 12px; color: #95a5a6;">
+                This email was generated automatically by your GitHub Actions workflow.
+            </p>
+        </body>
+    </html>
+    """
     
     part = MIMEText(html, "html")
     message.attach(part)
@@ -58,11 +108,8 @@ def send_email(jobs):
         server.login(sender, password)
         server.sendmail(sender, recipient, message.as_string())
     
-    print(f"✅ Email sent to {recipient}")
+    print(f"✅ Email sent! {len(jobs)} jobs included")
 
 if __name__ == "__main__":
     jobs = fetch_jobs()
-    if jobs:
-        send_email(jobs)
-    else:
-        print("No jobs found today")
+    send_email(jobs)
