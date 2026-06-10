@@ -1,16 +1,14 @@
 import requests
-import smtplib
 import os
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 from datetime import datetime
+
+SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 
 def fetch_jobs():
     """Fetch jobs from Himalayas API (FREE, no auth needed)"""
     
     url = "https://api.himalayas.app/v1/jobs"
     
-    # Your search terms
     queries = [
         "enablement",
         "operations", 
@@ -32,15 +30,14 @@ def fetch_jobs():
             response = requests.get(url, params=params)
             data = response.json()
             
-            for job in data.get("jobs", [])[:10]:  # Get first 10 per search
+            for job in data.get("jobs", [])[:10]:
                 all_jobs.append({
                     "title": job.get("title", "N/A"),
                     "company": job.get("company_name", "N/A"),
                     "location": job.get("location", "Remote"),
                     "salary": job.get("salary_range", "Competitive"),
                     "description": job.get("description", "")[:250],
-                    "link": job.get("job_url", "#"),
-                    "posted": job.get("published_at", "Today")
+                    "link": job.get("job_url", "#")
                 })
         except Exception as e:
             print(f"Error fetching {query}: {e}")
@@ -55,19 +52,12 @@ def fetch_jobs():
     
     return unique_jobs
 
-def send_email(jobs):
-    """Send jobs to your email"""
+def send_email_sendgrid(jobs):
+    """Send via SendGrid (no password needed)"""
     
-    sender = os.getenv("SENDER_EMAIL")
-    password = os.getenv("SENDER_PASSWORD")
-    recipient = os.getenv("RECIPIENT_EMAIL")
+    api_key = os.getenv("SENDGRID_API_KEY")
     
-    message = MIMEMultipart("alternative")
-    message["Subject"] = f"🎯 Today's Async Remote Jobs - {datetime.now().strftime('%B %d, %Y')}"
-    message["From"] = sender
-    message["To"] = recipient
-    
-    # Build HTML email
+    # Build email HTML
     html = f"""
     <html>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -100,16 +90,36 @@ def send_email(jobs):
     </html>
     """
     
-    part = MIMEText(html, "html")
-    message.attach(part)
+    # SendGrid API request
+    url = "https://api.sendgrid.com/v3/mail/send"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
     
-    # Send via Gmail
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-        server.login(sender, password)
-        server.sendmail(sender, recipient, message.as_string())
+    data = {
+        "personalizations": [
+            {
+                "to": [{"email": "maria.galyean.work@gmail.com"}]
+            }
+        ],
+        "from": {"email": "noreply@mariajobs.com", "name": "Maria's Job Bot"},
+        "subject": f"🎯 Today's Async Remote Jobs - {datetime.now().strftime('%B %d, %Y')}",
+        "content": [
+            {
+                "type": "text/html",
+                "value": html
+            }
+        ]
+    }
     
-    print(f"✅ Email sent! {len(jobs)} jobs included")
+    response = requests.post(url, json=data, headers=headers)
+    
+    if response.status_code == 202:
+        print(f"✅ Email sent! {len(jobs)} jobs included")
+    else:
+        print(f"❌ Error: {response.text}")
 
 if __name__ == "__main__":
     jobs = fetch_jobs()
-    send_email(jobs)
+    send_email_sendgrid(jobs)
