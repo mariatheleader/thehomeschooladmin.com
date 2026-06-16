@@ -1,144 +1,317 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>{{BLOG_TITLE}}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="{{META_DESCRIPTION}}" />
+<!-- SEO -->
 
-  <link rel="canonical" href="https://www.thehomeschooladmin.com/blog/{{SLUG}}/" />
+<title>BLOG TITLE HERE | The Homeschool Admin</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{BLOG_TITLE}}" />
-  <meta property="og:description" content="{{META_DESCRIPTION}}" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://www.thehomeschooladmin.com/blog/{{SLUG}}/" />
-  <meta property="og:image" content="https://www.thehomeschooladmin.com/assets/{{OG_IMAGE}}" />
+<meta name="description" content="BLOG META DESCRIPTION HERE">
 
-  <!-- Breadcrumb Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thehomeschooladmin.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.thehomeschooladmin.com/blog/" },
-      { "@type": "ListItem", "position": 3, "name": "{{BLOG_TITLE}}", "item": "https://www.thehomeschooladmin.com/blog/{{SLUG}}/" }
-    ]
-  }
-  </script>
+<link rel="canonical" href="https://www.thehomeschooladmin.com/blog/blog-url-slug/">
 
-  <!-- Article Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "{{BLOG_TITLE}}",
-    "description": "{{META_DESCRIPTION}}",
-    "author": { "@type": "Person", "name": "Maria, The Homeschool Admin" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "The Homeschool Admin",
-      "logo": { "@type": "ImageObject", "url": "https://www.thehomeschooladmin.com/assets/logo.png" }
+<!-- Open Graph -->
+
+<meta property="og:title" content="BLOG TITLE HERE">
+<meta property="og:description" content="BLOG META DESCRIPTION HERE">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.thehomeschooladmin.com/blog/blog-url-slug/">
+<meta property="og:image" content="https://www.thehomeschooladmin.com/assets/blog-feature-image.jpg">
+
+<!-- Twitter -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BLOG TITLE HERE">
+<meta name="twitter:description" content="BLOG META DESCRIPTION HERE">
+<meta name="twitter:image" content="https://www.thehomeschooladmin.com/assets/blog-feature-image.jpg">
+
+<!-- Breadcrumb Schema -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Home",
+      "item":"https://www.thehomeschooladmin.com/"
     },
-    "mainEntityOfPage": "https://www.thehomeschooladmin.com/blog/{{SLUG}}/",
-    "image": "https://www.thehomeschooladmin.com/assets/{{OG_IMAGE}}",
-    "datePublished": "{{PUBLISH_DATE}}"
-  }
-  </script>
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, sans-serif;
-      color: #333;
-      line-height: 1.7;
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Blog",
+      "item":"https://www.thehomeschooladmin.com/blog/"
+    },
+    {
+      "@type":"ListItem",
+      "position":3,
+      "name":"BLOG TITLE HERE",
+      "item":"https://www.thehomeschooladmin.com/blog/blog-url-slug/"
     }
+  ]
+}
+</script>
 
-    .blog-page {
-      position: relative;
-      min-height: 100vh;
-      padding: 120px 20px 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      text-align: left;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+<!-- Article Schema -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"BLOG TITLE HERE",
+  "description":"BLOG META DESCRIPTION HERE",
+  "author":{
+    "@type":"Person",
+    "name":"Maria Galyean"
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"The Homeschool Admin",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://www.thehomeschooladmin.com/assets/logo.png"
     }
+  },
+  "mainEntityOfPage":"https://www.thehomeschooladmin.com/blog/blog-url-slug/",
+  "image":"https://www.thehomeschooladmin.com/assets/blog-feature-image.jpg",
+  "datePublished":"2026-06-16",
+  "dateModified":"2026-06-16"
+}
+</script>
 
-    .blog-page::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,0.92);
-      z-index: 1;
-    }
+<style>
 
-    .blog-page > * {
-      position: relative;
-      z-index: 2;
-      max-width: 760px;
-      width: 100%;
-    }
+:root{
+  --cream:#faf8f4;
+  --plum:#3f2328;
+  --brown:#794911;
+  --sage:#88a6a0;
+  --gold:#ffd361;
+  --text:#333333;
+}
 
-    h1, h2, h3 { line-height: 1.3; }
-    h1 { font-size: 2.4rem; margin-bottom: 16px; }
-    h2 { font-size: 1.9rem; margin-top: 0; margin-bottom: 16px; }
-    h3 { font-size: 1.3rem; margin-top: 24px; margin-bottom: 8px; }
+*{
+  box-sizing:border-box;
+}
 
-    p, ul { font-size: 1rem; margin-bottom: 16px; }
-    ul { padding-left: 20px; }
+body{
+  margin:0;
+  padding:0;
+  font-family:Georgia, serif;
+  line-height:1.8;
+  color:var(--text);
+}
 
-    .breadcrumbs {
-      font-size: 0.9rem;
-      margin-bottom: 20px;
-    }
-    .breadcrumbs a { color: #0077cc; text-decoration: none; }
-    .breadcrumbs span { color: #555; }
+.blog-page{
+  position:relative;
+  min-height:100vh;
+  padding:120px 20px 80px;
+  background-image:url('/blog/assets/homeschool.blog.backround1.png');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
 
-    footer {
-      background: #f7f7f7;
-      padding: 40px 20px;
-      text-align: center;
-      margin-top: 60px;
-      border-top: 1px solid #ddd;
-    }
-  </style>
+.blog-page::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,.93);
+}
+
+.blog-content{
+  position:relative;
+  z-index:2;
+  max-width:760px;
+  margin:0 auto;
+}
+
+.breadcrumbs{
+  font-size:.9rem;
+  margin-bottom:24px;
+}
+
+.breadcrumbs a{
+  color:var(--brown);
+  text-decoration:none;
+}
+
+.breadcrumbs span{
+  color:#666;
+}
+
+.blog-label{
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  font-size:.75rem;
+  color:var(--brown);
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+h1{
+  color:var(--plum);
+  font-size:clamp(2.4rem,5vw,3.5rem);
+  line-height:1.15;
+  margin:0 0 20px;
+}
+
+h2{
+  color:var(--plum);
+  font-size:2rem;
+  margin-top:56px;
+  margin-bottom:16px;
+}
+
+h3{
+  color:var(--brown);
+  margin-top:36px;
+}
+
+p{
+  margin-bottom:20px;
+}
+
+ul,
+ol{
+  margin-bottom:24px;
+}
+
+img{
+  width:100%;
+  height:auto;
+  display:block;
+  margin:32px auto;
+  border-radius:12px;
+}
+
+a{
+  color:var(--brown);
+  font-weight:600;
+}
+
+blockquote{
+  border-left:4px solid var(--sage);
+  padding-left:20px;
+  margin:32px 0;
+  font-style:italic;
+}
+
+hr{
+  border:none;
+  border-top:1px solid rgba(0,0,0,.1);
+  margin:48px 0;
+}
+
+.cta-box{
+  background:#ffffff;
+  border:1px solid rgba(0,0,0,.08);
+  padding:32px;
+  margin-top:48px;
+  border-radius:12px;
+}
+
+.cta-box h2{
+  margin-top:0;
+}
+
+.blog-footer{
+  background:var(--plum);
+  color:white;
+  text-align:center;
+  padding:60px 20px;
+}
+
+.blog-footer h2{
+  color:white;
+}
+
+.blog-footer a{
+  color:var(--gold);
+}
+
+</style>
+
 </head>
 
 <body>
 
-<section class="blog-page" style="background-image: url('/blog/assets/{{BACKGROUND1}}');">
+<section class="blog-page">
 
-  <div class="breadcrumbs">
-    <a href="/">Home</a> › 
-    <a href="/blog/">Blog</a> › 
-    <span>{{BLOG_TITLE}}</span>
-  </div>
+<div class="blog-content">
 
-  <h1>{{BLOG_TITLE}}</h1>
+<div class="breadcrumbs">
+<a href="/">Home</a> ›
+<a href="/blog/">Blog</a> ›
+<span>BLOG TITLE HERE</span>
+</div>
 
-  {{CONTENT_SECTION_1}}
+<div class="blog-label">
+THE HOMESCHOOL ADMIN
+</div>
+
+<h1>BLOG TITLE HERE</h1>
+
+<p>
+Opening paragraph that clearly explains what this article will help the reader understand, solve, or accomplish.
+</p>
+
+<img src="/assets/blog-feature-image.jpg" alt="Describe image here">
+
+<h2>First Section Heading</h2>
+
+<p>
+Blog content goes here.
+</p>
+
+<h2>Second Section Heading</h2>
+
+<p>
+Blog content goes here.
+</p>
+
+<div class="cta-box">
+
+<h2>Need Help Creating Your Homeschool Plan?</h2>
+
+<p>
+A Clarity Session helps you identify what matters most, simplify your next steps, and create a plan that fits your child and your family.
+</p>
+
+<p>
+<a href="/claritysessions/">
+Book a Clarity Session →
+</a>
+</p>
+
+</div>
+
+</div>
 
 </section>
 
-<section class="blog-page" style="background-image: url('/blog/assets/{{BACKGROUND2}}');">
+<footer class="blog-footer">
 
-  {{CONTENT_SECTION_2}}
+<h2>The Homeschool Admin</h2>
 
-</section>
+<p>
+Helping families homeschool with confidence through developmental insight, planning support, and practical systems.
+</p>
 
-<footer>
-  <h2>Need Personalized Help?</h2>
-  <p>Your homeschool can feel peaceful, confident, and aligned with your child’s needs. A Clarity Session gives you a customized plan and next steps.</p>
-  <p><a href="/claritysessions/">Book Your Clarity Session →</a></p>
+<p>
+<a href="/claritysessions/">
+Work With Me →
+</a>
+</p>
+
 </footer>
 
 </body>
 </html>
+```
