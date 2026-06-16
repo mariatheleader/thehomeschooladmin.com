@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{{BLOG_TITLE}}</title>
+
+  <meta name="description" content="{{META_DESCRIPTION}}" />
+
+  <link rel="canonical" href="https://www.thehomeschooladmin.com/blog/{{SLUG}}/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{BLOG_TITLE}}" />
+  <meta property="og:description" content="{{META_DESCRIPTION}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.thehomeschooladmin.com/blog/{{SLUG}}/" />
+  <meta property="og:image" content="https://www.thehomeschooladmin.com/assets/{{OG_IMAGE}}" />
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thehomeschooladmin.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.thehomeschooladmin.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "{{BLOG_TITLE}}", "item": "https://www.thehomeschooladmin.com/blog/{{SLUG}}/" }
+    ]
+  }
+  </script>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{BLOG_TITLE}}",
+    "description": "{{META_DESCRIPTION}}",
+    "author": { "@type": "Person", "name": "Maria, The Homeschool Admin" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Homeschool Admin",
+      "logo": { "@type": "ImageObject", "url": "https://www.thehomeschooladmin.com/assets/logo.png" }
+    },
+    "mainEntityOfPage": "https://www.thehomeschooladmin.com/blog/{{SLUG}}/",
+    "image": "https://www.thehomeschooladmin.com/assets/{{OG_IMAGE}}",
+    "datePublished": "{{PUBLISH_DATE}}"
+  }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, sans-serif;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .blog-page {
+      position: relative;
+      min-height: 100vh;
+      padding: 120px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .blog-page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.92);
+      z-index: 1;
+    }
+
+    .blog-page > * {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      width: 100%;
+    }
+
+    h1, h2, h3 { line-height: 1.3; }
+    h1 { font-size: 2.4rem; margin-bottom: 16px; }
+    h2 { font-size: 1.9rem; margin-top: 0; margin-bottom: 16px; }
+    h3 { font-size: 1.3rem; margin-top: 24px; margin-bottom: 8px; }
+
+    p, ul { font-size: 1rem; margin-bottom: 16px; }
+    ul { padding-left: 20px; }
+
+    .breadcrumbs {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .breadcrumbs a { color: #0077cc; text-decoration: none; }
+    .breadcrumbs span { color: #555; }
+
+    footer {
+      background: #f7f7f7;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="blog-page" style="background-image: url('/blog/assets/{{BACKGROUND1}}');">
+
+  <div class="breadcrumbs">
+    <a href="/">Home</a> › 
+    <a href="/blog/">Blog</a> › 
+    <span>{{BLOG_TITLE}}</span>
+  </div>
+
+  <h1>{{BLOG_TITLE}}</h1>
+
+  {{CONTENT_SECTION_1}}
+
+</section>
+
+<section class="blog-page" style="background-image: url('/blog/assets/{{BACKGROUND2}}');">
+
+  {{CONTENT_SECTION_2}}
+
+</section>
+
+<footer>
+  <h2>Need Personalized Help?</h2>
+  <p>Your homeschool can feel peaceful, confident, and aligned with your child’s needs. A Clarity Session gives you a customized plan and next steps.</p>
+  <p><a href="/claritysessions/">Book Your Clarity Session →</a></p>
+</footer>
+
+</body>
+</html>
