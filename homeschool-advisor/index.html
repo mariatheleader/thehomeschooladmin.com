@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Homeschool Advisor | The Homeschool Admin</title>
+  <meta name="description" content="Private homeschool advisory support for hands-on parents who want real time guidance, curriculum direction, resource recommendations, and confidence without handing their homeschool over to someone else." />
+
+  <style>
+    :root {
+      --cream: #fbf6ef;
+      --warm: #f3e3d1;
+      --sand: #d9bfa4;
+      --clay: #9b654f;
+      --brown: #4a3128;
+      --ink: #2e2521;
+      --white: #ffffff;
+      --sage: #8f9b7f;
+      --gold: #c89b5d;
+      --border: rgba(74, 49, 40, 0.16);
+      --shadow: 0 18px 50px rgba(74, 49, 40, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
+    .section {
+      padding: 80px 22px;
+    }
+
+    .container {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: var(--clay);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.08;
+      color: var(--brown);
+      margin: 0 0 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 5.8rem);
+      max-width: 980px;
+      letter-spacing: -0.055em;
+    }
+
+    h2 {
+      font-size: clamp(2.1rem, 4.5vw, 4rem);
+      letter-spacing: -0.04em;
+      max-width: 880px;
+    }
+
+    h3 {
+      font-size: 1.45rem;
+    }
+
+    p {
+      margin: 0 0 18px;
+      font-size: 1.08rem;
+    }
+
+    .lead {
+      font-size: clamp(1.22rem, 2vw, 1.55rem);
+      max-width: 790px;
+      color: #5e473e;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid transparent;
+      font-family: Arial, sans-serif;
+      letter-spacing: 0.01em;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary {
+      background: var(--brown);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--brown);
+      border-color: var(--brown);
+    }
+
+    .hero {
+      background: radial-gradient(circle at 20% 10%, #fff8f0 0, transparent 35%), linear-gradient(135deg, var(--cream), var(--warm));
+      padding: 92px 22px 70px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--border);
+      padding: 34px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .price-card {
+      background: var(--brown);
+      color: var(--white);
+      border-radius: 34px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .price-card h2,
+    .price-card h3,
+    .price-card p {
+      color: var(--white);
+    }
+
+    .price {
+      font-size: 3.8rem;
+      line-height: 1;
+      font-weight: 800;
+      margin: 20px 0 8px;
+      letter-spacing: -0.05em;
+      font-family: Arial, sans-serif;
+    }
+
+    .price span {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .micro {
+      font-size: 0.95rem;
+      opacity: 0.86;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-family: Arial, sans-serif;
+      font-size: 0.92rem;
+      color: var(--brown);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(74, 49, 40, 0.07);
+      height: 100%;
+    }
+
+    .soft {
+      background: var(--warm);
+    }
+
+    .deep {
+      background: var(--brown);
+      color: var(--white);
+    }
+
+    .deep h2,
+    .deep h3,
+    .deep p,
+    .deep li {
+      color: var(--white);
+    }
+
+    .quote {
+      font-size: clamp(1.7rem, 3vw, 2.7rem);
+      line-height: 1.18;
+      color: var(--brown);
+      max-width: 880px;
+      letter-spacing: -0.03em;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 18px 0 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    .check-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 34px;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--clay);
+      font-weight: 900;
+    }
+
+    .x-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .x-list li {
+      position: relative;
+      padding-left: 34px;
+    }
+
+    .x-list li::before {
+      content: "×";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      color: var(--clay);
+      font-weight: 900;
+      font-size: 1.25rem;
+    }
+
+    .band {
+      background: var(--brown);
+      color: var(--white);
+      padding: 54px 22px;
+      text-align: center;
+    }
+
+    .band h2,
+    .band p {
+      color: var(--white);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--clay);
+      color: white;
+      font-family: Arial, sans-serif;
+      font-weight: 800;
+    }
+
+    .faq details {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px 24px;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 20px rgba(74, 49, 40, 0.05);
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--brown);
+      font-size: 1.08rem;
+    }
+
+    .faq p {
+      margin-top: 14px;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, var(--warm), #fff8f0);
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      padding: 46px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .small-caps {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      color: var(--clay);
+      font-weight: 800;
+    }
+
+    footer {
+      padding: 34px 22px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #755d54;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 62px 18px;
+      }
+
+      .hero {
+        padding-top: 64px;
+      }
+
+      .hero-card,
+      .price-card,
+      .card,
+      .cta-box {
+        padding: 26px;
+        border-radius: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">The Homeschool Admin™</div>
+          <h1>Private homeschool support in your back pocket.</h1>
+          <p class="lead">For the hands on homeschool mom who wants to teach her child herself, but does not want to carry every question, curriculum decision, resistance moment, and “am I doing this right?” spiral alone.</p>
+
+          <div class="pill-list">
+            <div class="pill">Private Telegram channel</div>
+            <div class="pill">Voice note support</div>
+            <div class="pill">Resource library access</div>
+            <div class="pill">Cancel anytime</div>
+          </div>
+
+          <div class="button-row">
+            <a href="#join" class="btn btn-primary">Join Private Homeschool Advisor</a>
+            <a href="#included" class="btn btn-secondary">See what is included</a>
+          </div>
+        </div>
+
+        <aside class="price-card">
+          <div class="small-caps">Monthly private advisory</div>
+          <h2>Your homeschool thought partner, in real time.</h2>
+          <div class="price">$397<span>/month</span></div>
+          <p>Private access, ongoing support, and practical guidance as your homeschool questions come up.</p>
+          <p class="micro">Pay month to month. Cancel anytime. Done for you services are available separately.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="quote">You do not need another course sitting in a login. You need someone who can look at what is actually happening in your home and help you make the next right decision.</p>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container grid-2">
+        <div>
+          <div class="eyebrow">This is for you if</div>
+          <h2>You want to stay the teacher, but you want support behind you.</h2>
+          <p>You are not trying to hand your homeschool over to someone else.</p>
+          <p>You want to understand your child better, choose resources with more confidence, stop second guessing every decision, and have a trusted person to go to when something feels confusing.</p>
+        </div>
+
+        <div class="card">
+          <h3>This helps when you are asking...</h3>
+          <ul class="check-list">
+            <li>Is this resistance normal, or do I need to change something?</li>
+            <li>Should I keep going with this curriculum?</li>
+            <li>Can you look at this workbook page and tell me what you notice?</li>
+            <li>What should I use for reading, writing, math, routines, or record keeping?</li>
+            <li>How do I make this simpler without feeling like I am doing less?</li>
+            <li>Where in your resources should I start?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="included">
+      <div class="container">
+        <div class="eyebrow">What is included</div>
+        <h2>Private homeschool advisory support, without waiting for a scheduled call.</h2>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Private Telegram channel</h3>
+            <p>Bring your questions as they come up. Send voice notes, photos, updates, and context from your actual homeschool day.</p>
+          </div>
+
+          <div class="card">
+            <h3>Voice note consulting</h3>
+            <p>Receive thoughtful guidance, next steps, and perspective so you can move forward without overthinking every decision.</p>
+          </div>
+
+          <div class="card">
+            <h3>Resource library access</h3>
+            <p>Use the homeschool resources, guides, planning tools, and templates I have created from years of client work.</p>
+          </div>
+
+          <div class="card">
+            <h3>Curriculum direction</h3>
+            <p>Ask what to buy, what to skip, what to keep, what to adjust, and what might fit your child better.</p>
+          </div>
+
+          <div class="card">
+            <h3>Learning support</h3>
+            <p>Get help noticing patterns in resistance, pacing, attention, skill gaps, motivation, and your child’s learning language.</p>
+          </div>
+
+          <div class="card">
+            <h3>Confidence while you lead</h3>
+            <p>Stay the one leading your homeschool, with someone experienced helping you think clearly along the way.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <h2>This is support for the mom who wants to learn how to do it herself.</h2>
+        <p class="lead">You stay in charge of your homeschool. I help you see what matters, choose what fits, and keep going with more confidence.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card">
+          <div class="eyebrow">Included</div>
+          <h2>What you can ask for</h2>
+          <ul class="check-list">
+            <li>Guidance on homeschool routines and flow</li>
+            <li>Support choosing or adjusting curriculum</li>
+            <li>Feedback from photos of work samples, materials, or setup</li>
+            <li>Help understanding resistance, overwhelm, or shutdowns</li>
+            <li>Resource recommendations based on your family</li>
+            <li>Direction inside the resource library</li>
+            <li>Simple next steps when you feel stuck</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Available separately</div>
+          <h2>What this does not include</h2>
+          <ul class="x-list">
+            <li>Custom curriculum creation</li>
+            <li>Full yearly planning done for you</li>
+            <li>Portfolio building or record keeping done for you</li>
+            <li>Printed materials or physical organization</li>
+            <li>In person implementation visits</li>
+            <li>Live teaching for your child</li>
+            <li>Emergency or same minute support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container grid-2">
+        <div>
+          <div class="eyebrow">How it works</div>
+          <h2>Simple, private, and easy to use.</h2>
+          <p>This is designed to fit the real way homeschool questions happen. In the middle of your day. While you are looking at the workbook. When your child refuses to write. When you are choosing between three curriculum options at 10:30 at night.</p>
+        </div>
+
+        <div>
+          <div class="step">
+            <div class="num">1</div>
+            <div>
+              <h3>Join monthly</h3>
+              <p>You get access to your private Telegram channel and the member resource library.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="num">2</div>
+            <div>
+              <h3>Bring your questions</h3>
+              <p>Send voice notes, photos, curriculum links, or context when you want guidance.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="num">3</div>
+            <div>
+              <h3>Receive direction</h3>
+              <p>I respond with perspective, resources, and next steps so you can keep moving.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div>
+          <div class="eyebrow">Why this works</div>
+          <h2>The magic is in the middle of the moment.</h2>
+        </div>
+
+        <div>
+          <p>Most homeschool support asks you to wait until the next call, watch another training, or figure out how a general resource applies to your actual child.</p>
+          <p>This gives you a place to bring the real situation while it is still fresh.</p>
+          <p>The messy workbook page. The curriculum you regret buying. The child who suddenly hates math. The schedule that looked beautiful on paper and fell apart by Wednesday.</p>
+          <p>You bring the real life version. I help you make sense of it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section deep">
+      <div class="container grid-2">
+        <div>
+          <div class="eyebrow">Investment</div>
+          <h2>Private Homeschool Advisor</h2>
+          <p class="lead">Ongoing private support for your homeschool decisions, curriculum questions, learning concerns, resources, routines, and next steps.</p>
+        </div>
+
+        <div class="card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18);">
+          <div class="price">$397<span>/month</span></div>
+          <p>Month to month. Cancel anytime.</p>
+          <ul class="check-list">
+            <li>Private Telegram advisory channel</li>
+            <li>Voice note support</li>
+            <li>Photo and work sample feedback</li>
+            <li>Curriculum and resource direction</li>
+            <li>Resource library access</li>
+            <li>Done for you services available separately</li>
+          </ul>
+          <div class="button-row">
+            <a href="#join" class="btn btn-primary" style="background: #fff; color: var(--brown);">Join now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container">
+        <div class="eyebrow">Questions</div>
+        <h2>Before you join</h2>
+
+        <details>
+          <summary>Is this a course?</summary>
+          <p>No. This is private advisory support. You will have access to resources, but the main value is being able to ask questions and receive direction for your actual homeschool.</p>
+        </details>
+
+        <details>
+          <summary>Is this coaching?</summary>
+          <p>This is best understood as homeschool advisory and consulting. You bring the situation, and I help you think through what is happening, what matters, and what to do next.</p>
+        </details>
+
+        <details>
+          <summary>Can I cancel?</summary>
+          <p>Yes. This is month to month and cancel anytime.</p>
+        </details>
+
+        <details>
+          <summary>Do you make my curriculum for me?</summary>
+          <p>No. Custom planning, curriculum creation, printed portfolios, and full setup are available separately. This membership gives you access, guidance, resources, and direction.</p>
+        </details>
+
+        <details>
+          <summary>How fast do you respond?</summary>
+          <p>Messages are answered during business hours, typically within one business day. This is not emergency support, but it is designed to help you avoid waiting weeks for guidance.</p>
+        </details>
+
+        <details>
+          <summary>Who is this best for?</summary>
+          <p>This is best for a hands on parent who wants to teach, lead, and implement, but wants an experienced homeschool advisor in her corner while she does it.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="join">
+      <div class="container">
+        <div class="cta-box">
+          <div class="eyebrow">Ready for support?</div>
+          <h2>Get private homeschool guidance in your back pocket.</h2>
+          <p class="lead">Join Private Homeschool Advisor and bring your questions to the place where they can actually get answered.</p>
+          <div class="button-row" style="justify-content: center;">
+            <a href="YOUR-CHECKOUT-LINK-HERE" class="btn btn-primary">Join for $397/month</a>
+            <a href="mailto:hello@thehomeschooladmin.com?subject=Private%20Homeschool%20Advisor" class="btn btn-secondary">Ask a question first</a>
+          </div>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 The Homeschool Admin™. All rights reserved.</p>
+  </footer>
+</body>
+</html>
