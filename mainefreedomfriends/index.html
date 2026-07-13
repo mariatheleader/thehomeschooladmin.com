@@ -1,396 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Freedom Friends™ Update | The Homeschool Admin™</title>
-  <meta name="description" content="An update about Freedom Friends™ and current ways to work with The Homeschool Admin™.">
+<title>Freedom Friends™ | The Homeschool Admin™</title>
 
-  <style>
-    :root {
-      --plum: #4a214f;
-      --deep-plum: #301433;
-      --gold: #f3c75f;
-      --cream: #fbf7ef;
-      --white: #ffffff;
-      --ink: #2f2930;
-      --soft-ink: #6f6570;
-      --border: rgba(74, 33, 79, 0.16);
-      --shadow: 0 18px 50px rgba(48, 20, 51, 0.12);
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+:root{
+    --yellow:#FFD361;
+    --darkyellow:#E6A909;
+    --blue:#8AA6A0;
+    --mauve:#C16F63;
+    --cream:#FFFCF8;
+    --text:#1B1B1B;
+    --light:#F7F7F7;
+}
 
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(243, 199, 95, 0.18), transparent 32%),
-        linear-gradient(180deg, var(--cream) 0%, #fffdf8 100%);
-      min-height: 100vh;
-      line-height: 1.65;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    a {
-      color: inherit;
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    .site-header {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 28px 0 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
+body{
+    font-family:Georgia, serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.9;
+}
 
-    .brand {
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      color: var(--plum);
-      text-decoration: none;
-    }
+h1,h2,h3,
+.kicker,
+.button{
+    font-family:"Bricholege","Lora",serif;
+}
 
-    .home-link {
-      font-size: 0.95rem;
-      color: var(--soft-ink);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s ease, color 0.2s ease;
-    }
+.container{
+    width:min(900px,92%);
+    margin:auto;
+    padding:80px 0;
+}
 
-    .home-link:hover,
-    .home-link:focus {
-      color: var(--plum);
-      border-color: var(--plum);
-    }
+.hero{
+    text-align:center;
+}
 
-    main {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 34px 0 72px;
-    }
+.logo{
+    width:170px;
+    margin:0 auto 40px;
+    display:block;
+}
 
-    .update-card {
-      overflow: hidden;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
+.kicker{
+    font-size:.8rem;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    color:var(--blue);
+}
 
-    .hero {
-      position: relative;
-      background:
-        linear-gradient(135deg, rgba(48, 20, 51, 0.98), rgba(74, 33, 79, 0.94)),
-        var(--plum);
-      color: var(--white);
-      padding: 76px 70px 64px;
-      text-align: center;
-    }
+h1{
+    font-size:clamp(3rem,7vw,5rem);
+    margin:18px 0;
+    font-weight:600;
+}
 
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      background: rgba(243, 199, 95, 0.13);
-      pointer-events: none;
-    }
+.line{
+    width:85px;
+    height:3px;
+    background:var(--yellow);
+    margin:35px auto;
+}
 
-    .hero::before {
-      width: 240px;
-      height: 240px;
-      top: -110px;
-      right: -70px;
-    }
+.subtitle{
+    font-size:1.2rem;
+    color:#666;
+    max-width:600px;
+    margin:auto;
+}
 
-    .hero::after {
-      width: 160px;
-      height: 160px;
-      bottom: -80px;
-      left: -55px;
-    }
+.section{
+    margin-top:90px;
+}
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 18px;
-      color: var(--gold);
-      font-size: 0.82rem;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
+.story{
+    max-width:680px;
+    margin:auto;
+    font-size:1.08rem;
+}
 
-    h1 {
-      max-width: 780px;
-      margin: 0 auto;
-      font-size: clamp(2.45rem, 6vw, 4.9rem);
-      line-height: 1.06;
-      font-weight: 700;
-    }
+.story p{
+    margin-bottom:24px;
+}
 
-    .hero-copy {
-      max-width: 700px;
-      margin: 24px auto 0;
-      color: rgba(255, 255, 255, 0.86);
-      font-size: 1.15rem;
-    }
+.divider{
+    width:40px;
+    margin:70px auto;
+    text-align:center;
+    color:var(--blue);
+    font-size:1.5rem;
+}
 
-    .content {
-      padding: 64px 70px 70px;
-    }
+.cta{
+    text-align:center;
+}
 
-    .message {
-      max-width: 780px;
-      margin: 0 auto;
-      text-align: center;
-    }
+.cta h2{
+    font-size:2.6rem;
+    margin-bottom:18px;
+    color:var(--mauve);
+}
 
-    .message h2 {
-      color: var(--plum);
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      line-height: 1.18;
-      margin-bottom: 22px;
-    }
+.cta p{
+    max-width:600px;
+    margin:0 auto 35px;
+    color:#555;
+}
 
-    .message p {
-      font-size: 1.08rem;
-      margin-bottom: 18px;
-    }
+.button{
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+}
 
-    .notice {
-      max-width: 760px;
-      margin: 38px auto 0;
-      padding: 28px 30px;
-      background: var(--cream);
-      border: 1px solid rgba(243, 199, 95, 0.55);
-      border-radius: 18px;
-      text-align: left;
-    }
+.waitlist{
+    background:var(--yellow);
+    color:#111;
+}
 
-    .notice strong {
-      color: var(--plum);
-    }
+.waitlist:hover{
+    background:var(--darkyellow);
+}
 
-    .actions {
-      max-width: 900px;
-      margin: 52px auto 0;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-    }
+.secondary{
+    background:var(--blue);
+    color:white;
+}
 
-    .action-card {
-      padding: 32px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: #fff;
-    }
+.secondary:hover{
+    opacity:.9;
+}
 
-    .action-card h3 {
-      color: var(--plum);
-      font-size: 1.45rem;
-      line-height: 1.25;
-      margin-bottom: 12px;
-    }
+.signature{
+    margin-top:90px;
+    text-align:center;
+    color:#666;
+}
 
-    .action-card p {
-      color: var(--soft-ink);
-      margin-bottom: 24px;
-    }
+.signature strong{
+    color:#111;
+    font-family:"Bricholege","Lora",serif;
+    font-size:1.2rem;
+}
 
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 13px 22px;
-      border-radius: 999px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.94rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
+footer{
+    text-align:center;
+    padding:50px;
+    color:#999;
+    font-size:.9rem;
+}
 
-    .button:hover,
-    .button:focus {
-      transform: translateY(-2px);
-    }
+</style>
 
-    .button-primary {
-      background: var(--plum);
-      color: var(--white);
-      box-shadow: 0 10px 24px rgba(74, 33, 79, 0.2);
-    }
-
-    .button-primary:hover,
-    .button-primary:focus {
-      background: var(--deep-plum);
-    }
-
-    .button-secondary {
-      background: var(--gold);
-      color: var(--deep-plum);
-      box-shadow: 0 10px 24px rgba(243, 199, 95, 0.24);
-    }
-
-    .button-secondary:hover,
-    .button-secondary:focus {
-      background: #e8b846;
-    }
-
-    .closing {
-      max-width: 760px;
-      margin: 52px auto 0;
-      padding-top: 38px;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--soft-ink);
-    }
-
-    .closing strong {
-      color: var(--plum);
-    }
-
-    footer {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 0 0 36px;
-      text-align: center;
-      color: var(--soft-ink);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 760px) {
-      .site-header {
-        padding-top: 20px;
-      }
-
-      .hero {
-        padding: 58px 26px 48px;
-      }
-
-      .content {
-        padding: 46px 24px 52px;
-      }
-
-      .actions {
-        grid-template-columns: 1fr;
-      }
-
-      .action-card {
-        padding: 26px;
-      }
-
-      .button {
-        width: 100%;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="brand" href="https://www.thehomeschooladmin.com/">
-      The Homeschool Admin™
-    </a>
 
-    <a class="home-link" href="https://www.thehomeschooladmin.com/">
-      Return to the website
-    </a>
-  </header>
+<div class="container">
 
-  <main>
-    <section class="update-card" aria-labelledby="page-title">
-      <div class="hero">
-        <span class="eyebrow">Program Update</span>
+<section class="hero">
 
-        <h1 id="page-title">Freedom Friends™</h1>
+<img
+class="logo"
+src="/assets/thehomeschooladmin.logo.png"
+alt="The Homeschool Admin™ Logo">
 
-        <p class="hero-copy">
-          Thank you for your interest in this community and the vision behind it.
-        </p>
-      </div>
+<div class="kicker">
+A NOTE FROM THE HOMESCHOOL ADMIN™
+</div>
 
-      <div class="content">
-        <div class="message">
-          <h2>Freedom Friends™ will not be moving forward for the Fall 2026 season.</h2>
+<h1>
+Freedom Friends™
+</h1>
 
-          <p>
-            The enrollment needed to create the full community experience was not reached, so I chose to pause the program rather than offer a version that did not match the vision families were invited into.
-          </p>
+<div class="line"></div>
 
-          <p>
-            I am deeply grateful to every parent who asked questions, submitted an application, shared the program, or imagined their family inside this space.
-          </p>
+<p class="subtitle">
+Every season has a purpose.
+</p>
 
-          <p>
-            Freedom Friends™ may return in a new season, with a new structure, or in a format that creates even more access for homeschool families.
-          </p>
-        </div>
+</section>
 
-        <div class="notice">
-          <strong>Looking for support right now?</strong>
-          <p>
-            The Homeschool Admin™ is still here to help you understand your child, organize your homeschool, document development, and make confident decisions about what comes next.
-          </p>
-        </div>
 
-        <div class="actions">
-          <article class="action-card">
-            <h3>Explore REASSURED™</h3>
+<section class="section story">
 
-            <p>
-              A formal homeschool development record designed to help you see progress clearly and build a tailored routine that fits your family.
-            </p>
+<p>
+When I first imagined Freedom Friends™, I envisioned a place where homeschool families could gather each week, build friendships, learn together, and create memories that would last long after childhood.
+</p>
 
-            <a class="button button-secondary" href="YOUR_REASSURED_LINK_HERE">
-              Learn About REASSURED™
-            </a>
-          </article>
+<p>
+This season simply wasn't the right season for that vision.
+</p>
 
-          <article class="action-card">
-            <h3>Book a Clarity Session</h3>
+<p>
+Rather than move forward with something smaller than I believed families deserved, I chose to pause the program and continue building resources that serve homeschool parents wherever they are.
+</p>
 
-            <p>
-              Get direct support sorting through curriculum, routines, development, documentation, or the next decision sitting heavily on your mind.
-            </p>
+<p>
+Thank you to every family who reached out, encouraged the vision, shared the program, or imagined your family becoming part of this community.
+</p>
 
-            <a class="button button-primary" href="YOUR_CLARITY_SESSION_LINK_HERE">
-              Book Your Clarity Session
-            </a>
-          </article>
-        </div>
+<p>
+My mission hasn't changed. I'm still here to help homeschool parents feel confident, organized, and reassured every step of the way.
+</p>
 
-        <div class="closing">
-          <p>
-            <strong>You do not have to figure out every piece alone.</strong>
-          </p>
+</section>
 
-          <p>
-            There are still thoughtful, practical ways to receive support from The Homeschool Admin™.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    © 2026 The Homeschool Admin™. All rights reserved.
-  </footer>
+<div class="divider">
+✿
+</div>
+
+
+<section class="cta">
+
+<h2>
+Continue Your Journey
+</h2>
+
+<p>
+
+<strong>REASSURED™</strong><br>
+
+A homeschool development record designed to help parents document progress, understand their child, and homeschool with confidence.
+
+</p>
+
+<a
+class="button waitlist"
+href="https://thehomeschooladmin.ck.page/b17b79df32">
+
+Join the REASSURED™ Waitlist
+
+</a>
+
+</section>
+
+
+<div class="divider">
+✿
+</div>
+
+
+<section class="cta">
+
+<h2>
+Need Personal Guidance?
+</h2>
+
+<p>
+
+Sometimes a conversation is exactly what you need.
+
+<br><br>
+
+If you'd like help choosing curriculum, understanding development, organizing your homeschool, or simply talking through your next step, I'd love to help.
+
+</p>
+
+<a
+class="button secondary"
+href="https://www.thehomeschooladmin.com/claritysessions">
+
+Book a Clarity Session
+
+</a>
+
+</section>
+
+
+<section class="signature">
+
+<p>
+Thank you for stopping by.
+</p>
+
+<br>
+
+<strong>Maria</strong>
+
+<p>
+The Homeschool Admin™
+</p>
+
+</section>
+
+</div>
+
+<footer>
+
+© 2026 The Homeschool Admin™
+
+</footer>
+
 </body>
 </html>
