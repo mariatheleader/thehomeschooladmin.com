@@ -224,8 +224,9 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
 <body>
 
 <div class="announce">
-  <p class="open-only">Enough · 3 weeks 1:1 with me, so you can stop wondering if you're doing enough · Nov 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
-  <p class="closed-only" hidden>Enough is in session · <a href="/more-than-enough/">More Than Enough</a> starts Dec 7</p>
+  <p data-bar="enough">New: Enough, 3 weeks 1:1 with me · Nov 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
+  <p data-bar="mte" hidden>New: More Than Enough, a self-guided course through all nine growth focuses · Starts Dec 7 · $97/month · <a href="/morethanenough/">Join by Dec 4</a></p>
+  <p data-bar="after" hidden>Enough and More Than Enough are in session · <a href="https://www.instagram.com/thehomeschooladmin">Follow along on Instagram</a> to hear what's next</p>
 </div>
 
 <nav class="nav" aria-label="Main navigation">
@@ -395,7 +396,7 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
         <h3>Or go self-guided with More Than Enough</h3>
         <div class="price">$97<span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:400;color:var(--mid)"> /month for 4 months</span></div>
         <p>All nine growth focuses, one every two weeks (literacy arrives Jan 18): the full matrix, a short video from me, a guide to reading your circles, and next-step activities for every box. Go at your own pace.</p>
-        <a class="btn-dark" href="/more-than-enough/">See More Than Enough</a>
+        <a class="btn-dark" href="/morethanenough/">See More Than Enough</a>
       </div>
     </div>
 
@@ -405,7 +406,7 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
         <h3>More Than Enough</h3>
         <div class="price">$97<span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:400;color:var(--mid)"> /month for 4 months</span></div>
         <p>You just did literacy. More Than Enough walks you through all nine growth focuses, one every two weeks: the full matrix, a short video from me, a guide to reading your circles, and next-step activities for every box. Self-guided, at your own pace.</p>
-        <a class="btn" href="/more-than-enough/">See More Than Enough</a>
+        <a class="btn" href="/morethanenough/">See More Than Enough</a>
       </div>
       <div class="cta mte-closed-only" hidden>
         <span class="k">Stay in the loop</span>
@@ -822,7 +823,7 @@ function buildPDF(logo){
   });
   var now=new Date(), deeper=null;
   if(now<new Date('2026-10-30T23:59:59-04:00')) deeper={k:'This is the map. It can’t see your child.', body:'Everything here is based on what’s typical at each stage. It doesn’t know why reading is clicking but writing isn’t, what your days look like, or what curriculum is on your table. And literacy is one of nine growth focuses. Enough is a 3-week program (Nov 2-20) where I work with you 1:1 to see exactly where your child is in the area that worries you most, so you can stop wondering if you’re doing enough. You pick the growth focus, I look at your child’s page and send you a personal voice note on what I see, and you get a lesson plan built for your child.', link:'thehomeschooladmin.com/enough'};
-  else if(now<new Date('2026-12-04T23:59:59-05:00')) deeper={k:'That was one of nine.', body:'More Than Enough walks you through all nine growth focuses, one every two weeks, with the full matrix, a short video from me, and next-step activities for every box. Starts Dec 7.', link:'thehomeschooladmin.com/more-than-enough'};
+  else if(now<new Date('2026-12-04T23:59:59-05:00')) deeper={k:'That was one of nine.', body:'More Than Enough walks you through all nine growth focuses, one every two weeks, with the full matrix, a short video from me, and next-step activities for every box. Starts Dec 7.', link:'thehomeschooladmin.com/morethanenough'};
   if(deeper){
     var dl=doc.split(deeper.body,'hel',10.5,CW-36), dh=dl.length*15.2+86;
     y+=24; need(dh); doc.rect(M,y,CW,dh,BLACK);
@@ -871,6 +872,16 @@ $('retake').onclick=retake; $('retake2').onclick=retake;
     all('.enough-amt').forEach(function(el){ el.textContent = '$147'; });
     all('.founding-only').forEach(function(el){ el.hidden = false; });
   }
+})();
+</script>
+<script>
+/* TOP BAR: switches on its own. Through Oct 30: Enough. Oct 31 - Dec 4: More Than Enough. After Dec 4: the free Reading Check. */
+(function(){
+  var ENOUGH_CLOSES = new Date('2026-10-30T23:59:59-04:00'), MTE_CLOSES = new Date('2026-12-04T23:59:59-05:00'), now = new Date();
+  document.querySelectorAll('[data-bar]').forEach(function(el){
+    var k = el.getAttribute('data-bar');
+    el.hidden = !((k === 'enough' && now < ENOUGH_CLOSES) || (k === 'mte' && now >= ENOUGH_CLOSES && now < MTE_CLOSES) || (k === 'after' && now >= MTE_CLOSES));
+  });
 })();
 </script>
 </body>
