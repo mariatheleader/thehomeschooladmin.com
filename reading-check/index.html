@@ -151,6 +151,12 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
 .box.next{background:#FFFBEE;border:1px solid #f3e2a8}
 .box.next .k{color:var(--yellow-dark)}
 .box.notice{background:var(--powder-pale);border:1px solid #d4e5e2}
+.box.try{background:var(--white);border:2px solid var(--yellow)}
+.box.try .k{color:var(--black)}
+.acts{list-style:none;margin:8px 0 0;padding:0}
+.acts li{position:relative;padding-left:26px;margin-bottom:8px;font-size:15px}
+.acts li:before{content:'';position:absolute;left:4px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--yellow)}
+.box .small{font-size:13px;color:var(--gray);margin-top:6px}
 .box.notice .k{color:var(--powder)}
 .note-from{margin:30px 0;border-left:4px solid var(--yellow);background:var(--white);padding:22px 26px}
 .note-from p{font-family:'Libre Baskerville',serif;font-style:italic;font-size:17px;color:var(--black);line-height:1.7}
@@ -234,7 +240,7 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
     <ul class="intro-points">
       <li><strong>Check what you've seen</strong>Things your child does on their own, in everyday life.</li>
       <li><strong>See their baseline</strong>Where they are in four areas of literacy.</li>
-      <li><strong>Know what's next</strong>What's emerging, and what to watch for this week.</li>
+      <li><strong>Know what to do next</strong>What’s emerging, plus simple activities to try this week.</li>
     </ul>
     <div class="panel">
       <p style="font-size:15px"><strong>Before you start:</strong> don't test your child or quiz them. Only check what you've noticed come up naturally. If you haven't seen it, leave it unchecked. That's not a problem. It just hasn't emerged yet.</p>
@@ -276,7 +282,8 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
       <p>Get the full Reading Check, free:</p>
       <ul>
         <li>What you’ve already seen, stage by stage</li>
-        <li>What’s naturally emerging next in each area</li>
+        <li>What your child’s stage actually means, in each area</li>
+        <li>Simple, no-prep activities to make room for the next step</li>
         <li>One thing to watch for this week</li>
         <li>A note from me</li>
       </ul>
@@ -376,7 +383,7 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
         <a class="btn-dark" href="https://thehomeschooladmin.ck.page/b17b79df32">Join the Book Waitlist</a>
       </div>
     </div>
-    <p class="disclaimer">This is an observation snapshot, not an assessment or diagnosis. If you have concerns about your child's development, talk with your pediatrician.<br><button class="link-btn" id="retake2">Check another child</button></p>
+    <p class="disclaimer">This is a snapshot of what you’ve seen at home, not a test or a grade. Come back in a few months and check again. It’s fun to see what’s grown.<br><button class="link-btn" id="retake2">Check another child</button></p>
   </section>
 
 </main>
@@ -479,6 +486,65 @@ var SKILLS = [
       ['Writes with purpose',['Uses writing for advocacy, connection, and leaving something behind']]
     ]}
 ];
+
+
+/* What each stage MEANS (means[stage]) and simple activities that
+   make room for a stage (acts[stage]). {K}/{k} = child's name. */
+var GUIDE = {
+  reading_engagement:{
+    means:['Books are becoming something {k} enjoys. This is the root of everything else: enjoyment comes before skill.',
+      '{K} is connecting stories to symbols. Letters are starting to mean something, especially the personal ones, like the letters in their name.',
+      '{K} is cracking the code. The marks on the page are turning into sounds and meaning on their own.',
+      'Reading has become a way {k} follows longer ideas and forms opinions, not just a skill they practice.',
+      '{K} is starting to question the text itself. That’s a big shift, from “what does it say?” to “why does it say it?”',
+      'Reading is a tool {k} uses to chase their own curiosity across many sources.'],
+    acts:[['Keep a low basket of books on the floor where they play, not up on a shelf.','Read the same favorite book as many times as they ask. Repetition is the work.','Pause before the last word on a familiar page and let them fill it in.'],
+      ['Point out the first letter of their name wherever it shows up: cereal boxes, signs, the mail.','After a story, ask “what happened?” and let them retell it with the pictures. No corrections.','Let them choose the bedtime book, even if it’s the same one all week.'],
+      ['Play I Spy with sounds: “I spy something that starts with mmm.”','Write a short word on a sticky note (cat, sun, mom) and stick it on that thing. Let them find it.','Take turns: you read a page, they read a word or a line.'],
+      ['Start a chapter book as a read-aloud and stop at a cliffhanger.','Ask “what did you think of that part?” and really listen. There’s no wrong answer.','At the library, let them pick one book from a section they’ve never tried: comics, poetry, or nonfiction.'],
+      ['Read two books or articles on the same topic and ask which one they trust more, and why.','Wonder out loud: “Who do you think wrote this? Why?”','Watch an ad together and talk about what it wants you to believe.'],
+      ['Let one of their questions become a research rabbit hole: books, videos, maybe an interview.','Ask them to tell you what two sources said and where they disagree.','Protect free reading time with no report attached.']]},
+  print_awareness:{
+    means:['{K} is noticing that marks in the world carry meaning. That’s the very first step toward reading.',
+      '{K} is learning that spoken words and printed words match up, one to one.',
+      '{K} has strategies for getting unstuck. Knowing how to figure out a word matters more than already knowing every word.',
+      '{K} knows how they read best. That self-knowledge is a real skill, not a crutch.',
+      '{K} sees books as made by real people, and is comfortable with all kinds of text.',
+      '{K} reads with an eye for perspective, and reading belongs to them now.'],
+    acts:[['Read signs out loud as you drive or walk: STOP, EXIT, the grocery store’s name.','Let them “read” the cereal box or a menu to you, however they want.','Make labels together for a few things in their space: door, bed, toy bin.'],
+      ['Run your finger under the words as you read a short, familiar book.','Make a mini book about your day, one short sentence per page, and let them point as you read it.','Write out the words to a song they love on big paper and point along as you sing.'],
+      ['When they’re stuck, ask “what would make sense here?” or “what does the picture show?” before giving the word.','Model it: “Hmm, I don’t know this word. Let me reread the sentence.”','Play with silly made-up words: how would you say “zib” or “flom”?'],
+      ['Offer a book two ways: print and the audiobook at the same time.','Ask “does it help to read out loud or in your head?”','Let them use a finger or bookmark without comment. Their tool, their choice.'],
+      ['Look up the author of a favorite book and find another one they wrote.','Add one new format to your next library trip: a graphic novel, poetry, or a map.','Read an old letter, photo caption, or document together about something they love.'],
+      ['Compare how two news sources tell the same story.','Ask what an author might have wanted readers to feel or believe.','Talk about what you’re reading as an adult. Let them see reading is for life.']]},
+  writing_marks:{
+    means:['{K} is discovering their hand can leave a mark on purpose. That’s the first form of writing.',
+      '{K} is moving from shapes to letters, usually starting with the letters that matter to them.',
+      '{K} can get a clear idea down in a sentence someone else can read.',
+      '{K} is choosing the right form for the job and starting to look back at their own work.',
+      '{K} writes for real people, and that gives writing a reason.',
+      'Writing is how {k} thinks and connects, in their own voice.'],
+    acts:[['Keep crayons, chalk, and paper where they can grab them anytime.','Draw in sand, shaving cream, or on a steamy window.','Ask “tell me about your picture” instead of “what is it?”'],
+      ['Write their name on their artwork and leave room for them to copy it if they want to.','Give them their own notepad to “write” the grocery list next to you.','Make letters out of playdough, sticks, or pebbles outside.'],
+      ['Let them tell you a sentence for a card, then write one word of it themselves.','Hang a family message board where everyone leaves short notes.','Invite them to add a one-line caption to a drawing.'],
+      ['Try a new form each week: a list, a letter, a recipe, a comic strip.','Read their writing back to them and ask “is that what you meant?”','Journal side by side for ten minutes. You write too.'],
+      ['Set up a pen pal. A grandparent counts.','Have them write a review of a book, movie, or restaurant for the family.','Make a little book together and “publish” it on the family bookshelf.'],
+      ['Let them take on a big project: a zine, a story series, a blog.','Talk through drafts like a real editor: what’s working, what’s unclear?','Encourage writing to sort out a feeling or make a decision.']]},
+  writing_communication:{
+    means:['{K} is noticing that lines and curves combine into letters.',
+      '{K} knows a picture can carry a message, and that writing is a way to tell someone something.',
+      '{K} writes because it’s useful, not because it’s assigned.',
+      '{K} understands how stories and sentences are built, and uses that on purpose.',
+      '{K} is creating with digital tools and thinking about how their message looks.',
+      '{K} uses writing to make a difference, connect with people, and leave something behind.'],
+    acts:[['Make letters with your bodies or sticks: a line and a curve make a D.','Trace a letter on their back and let them guess it.','Point out shapes hiding in letters: “that A looks like a tent.”'],
+      ['Ask them to draw a story, then tell it to you. Write their words under the picture.','Mail a drawn “letter” to someone and let them see it arrive.','Say out loud why you write: “I wrote it down so I’d remember.”'],
+      ['Let them write the grocery list or a sign for their bedroom door.','Make birthday cards for real people.','Ask them to leave a note for a sibling or parent to find.'],
+      ['Retell a favorite story together with “first… then… at the end…”','Write a short sentence and make it longer together, one word at a time.','Talk about a story’s problem and how it got solved.'],
+      ['Make a digital book or slideshow about something they love.','Design a poster or flyer for a family event.','Start a simple family photo journal with captions.'],
+      ['Write a letter to a local business or official about something they care about.','Interview a grandparent and write up the family story.','Write something to give away: a guide, or a story for a younger child.']]}
+};
+function fillName(t){ return t.replace(/\{K\}/g, Kid()).replace(/\{k\}/g, kid()); }
 
 /* ========================================================= */
 function blank(){ return SKILLS.map(function(s){ return s.stages.map(function(st){ return st[1].map(function(){return false;}); }); }); }
@@ -595,30 +661,30 @@ function list(items){ return '<ul style="margin:6px 0 0 18px">'+items.map(functi
 
 function renderFull(){
   $('f-title').innerHTML=esc(poss(true))+' reading and writing, <em>up close.</em>';
-  $('f-sub').textContent='For each area: what you’ve already seen, what’s naturally emerging next, and one thing to watch for this week.';
+  $('f-sub').textContent='For each area: what '+poss(false)+' stage means, what’s coming next, and a few simple things to try this week. Pick one or two. You don’t need to do them all.';
   var html='';
   SKILLS.forEach(function(s,i){
-    var v=stageOf(i), seenItems=[], gaps=[], next=[], watch;
-    s.stages.forEach(function(st,si){ st[1].forEach(function(item,ii){
-      if(state.checks[i][si][ii]) seenItems.push(item);
-      else if(si<=v) gaps.push(item);
-    }); });
-    if(v<5){ s.stages[v+1][1].forEach(function(item){ next.push(item); }); }
-    var watchItem = gaps.length ? gaps[gaps.length-1] : (next.length ? next[0] : null);
-    watch = watchItem ? 'Watch for moments when '+kid()+' '+lower(watchItem)+'. Don’t set it up or test it. Just notice if it shows up on its own, and jot it down when it does.'
+    var v=stageOf(i), g=GUIDE[s.key], seenCount=countSkill(i), gaps=0;
+    s.stages.forEach(function(st,si){ st[1].forEach(function(_,ii){ if(si<=v && !state.checks[i][si][ii]) gaps++; }); });
+    var target = v<0 ? 0 : Math.min(v+1,5);
+    var top = v===5;
+    var nowHtml = v<0
+      ? '<p>You haven’t seen these yet, and that’s a real starting point, not a problem. Everything in this area grows from the very first stage: <strong>'+esc(lower(s.stages[0][0]))+'</strong>.</p>'
+      : '<p><strong>'+esc(STAGES[v])+'.</strong> '+esc(fillName(g.means[v]))+'</p>'+
+        '<p class="small">You checked '+seenCount+' thing'+(seenCount===1?'':'s')+' here.'+(gaps?' A few pieces at this stage or earlier haven’t shown up yet. That’s normal. They often come in any order.':'')+'</p>';
+    var nextHtml = top
+      ? '<p>'+esc(Kid())+' is at the top of this map. The goal now is to keep it theirs: real audiences, real purposes, and books they choose.</p>'
+      : '<p><strong>'+esc(STAGES[target])+': '+esc(lower(s.stages[target][0]))+'.</strong> '+esc(fillName(g.means[target]))+'</p>';
+    var tryHtml = '<p>'+(top?'Ways to keep it growing:':'No prep, no worksheets. Simple ways to make room for the next step:')+'</p>'+
+      '<ul class="acts">'+g.acts[target].map(function(a){return '<li>'+esc(a)+'</li>';}).join('')+'</ul>';
+    var watchItem = top ? null : s.stages[target][1][0];
+    var watch = watchItem ? 'Watch for a moment when '+kid()+' '+lower(watchItem)+'. Don’t test it. Just notice if it shows up on its own, and jot it down when it does.'
       : 'Notice what '+kid()+' chooses to read or write when nobody asks. That’s where their next project is hiding.';
-    var nowHtml = v<0 ? '<p>You haven’t seen these yet, and that’s a real starting point, not a problem.</p>'
-      : '<p><strong>'+esc(STAGES[v])+': '+esc(lower(s.stages[v][0]))+'.</strong> You’ve seen '+seenItems.length+' thing'+(seenItems.length===1?'':'s')+' in this area, including:</p>'+list(seenItems.slice(-3));
-    var nextHtml = '';
-    if(gaps.length) nextHtml+='<p>Still filling in (completely normal, these often come in any order):</p>'+list(gaps)+'<div style="height:10px"></div>';
-    if(v<0) nextHtml+='<p><strong>'+esc(STAGES[0])+':</strong></p>'+list(s.stages[0][1]);
-    else if(v<5) nextHtml+='<p><strong>'+esc(STAGES[v+1])+': '+esc(lower(s.stages[v+1][0]))+'</strong></p>'+list(next);
-    else if(!gaps.length) nextHtml+='<p>You’re at the top of this map. Keep feeding '+esc(kid())+'’s curiosity with real audiences, real purposes, and books they choose.</p>';
-    if(v<0){ watch='Watch for moments when '+kid()+' '+lower(s.stages[0][1][0])+'. Even one small moment counts.'; }
     html+='<div class="full-skill"><h3>'+esc(s.name)+' <span class="track-stage" style="font-family:inherit;margin-left:6px">'+esc(stageName(v))+'</span></h3>'+
-      '<div class="box now"><span class="k">What you’ve seen</span>'+nowHtml+'</div>'+
-      '<div class="box next"><span class="k">What’s emerging next</span>'+nextHtml+'</div>'+
-      '<div class="box notice"><span class="k">Watch for this week</span><p>'+esc(watch)+'</p></div></div>';
+      '<div class="box now"><span class="k">Where '+esc(kid())+' is</span>'+nowHtml+'</div>'+
+      '<div class="box next"><span class="k">'+(top?'What’s next':'Coming next')+'</span>'+nextHtml+'</div>'+
+      '<div class="box try"><span class="k">Try this week</span>'+tryHtml+'</div>'+
+      '<div class="box notice"><span class="k">Watch for</span><p>'+esc(watch)+'</p></div></div>';
   });
   $('full-list').innerHTML=html;
   $('f-note').textContent='"Here’s what I want you to hear: wherever '+kid()+' landed today is not a grade. It’s a place on a path. The fact that you took a few minutes to really notice your child tells me you’re doing more than you think. Keep noticing. That’s the whole secret."';
