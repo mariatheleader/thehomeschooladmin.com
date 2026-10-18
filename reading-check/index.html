@@ -167,6 +167,17 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
 .enough-amt{font-weight:inherit}
 .founding-strike{opacity:.5;font-weight:400;margin-right:6px}
 .founding-note{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mauve);margin-top:6px}
+.focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0 6px}
+.focus{background:var(--white);border:1px solid var(--rule);border-left:5px solid var(--c);padding:12px 14px;border-radius:2px}
+.focus b{display:block;font-family:'Libre Baskerville',serif;font-size:15px;color:var(--black);margin-bottom:2px}
+.focus span{font-size:13px;color:var(--mid);line-height:1.45;display:block}
+.vs{display:grid;grid-template-columns:1fr 1.2fr;gap:14px;margin:6px 0 26px}
+.vs > div{background:var(--white);border:1px solid var(--rule);padding:20px 22px;border-radius:2px}
+.vs .vs-me{background:#FFFBEE;border-color:#f3e2a8}
+.vs .k{display:block;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:8px}
+.vs ul{margin:0 0 0 18px}
+.vs li{font-size:14px;color:var(--gray);margin-bottom:6px;line-height:1.5}
+@media(max-width:640px){.focus-grid,.vs{grid-template-columns:1fr}}
 .disclaimer{font-size:12px;color:var(--mid);margin-top:28px;text-align:center}
 
 /* FOOTER */
@@ -193,7 +204,8 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
 <body>
 
 <div class="announce">
-  <p>Enough · a 3-week homeschool reset · November 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
+  <p class="open-only">Enough · a 3-week homeschool reset · November 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
+  <p class="closed-only" hidden>Enough is in session · <a href="/more-than-enough/">More Than Enough</a> starts Dec 7</p>
 </div>
 
 <nav class="nav" aria-label="Main navigation">
@@ -305,21 +317,63 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
       <cite>Maria Galyean, Child Development Specialist · The Homeschool Admin</cite>
     </div>
 
-    <h2>Want me to look at this <em>with you?</em></h2>
-    <p>This snapshot shows you where to look. Enough is where I look with you: you circle the full growth focus, I send you a personal voice note on what it shows, and I build a lesson plan for exactly what's next.</p>
-    <div class="cta-grid">
+    <h2>That was literacy. <em>There are eight more.</em></h2>
+    <p>What you just did is a small taste of how I work with families. Literacy is one of the <strong>nine growth focuses</strong> in my Peace of Mind Framework. Here are the other eight, and the question each one answers:</p>
+    <div class="focus-grid">
+      <div class="focus" style="--c:#402328"><b>Social-emotional</b><span>Is my child's behavior with siblings and friends normal for their age?</span></div>
+      <div class="focus" style="--c:#E0A01C"><b>Cognitive</b><span>How does my child think, remember, and solve problems?</span></div>
+      <div class="focus" style="--c:#7F9993"><b>Language</b><span>Is their speaking and listening on track?</span></div>
+      <div class="focus" style="--c:#7E9CC0"><b>Math</b><span>Are they behind in math, or just not ready for this curriculum's next lesson?</span></div>
+      <div class="focus" style="--c:#C77B3F"><b>Science</b><span>How do I plan science when it feels hard to pin down?</span></div>
+      <div class="focus" style="--c:#9FAE6E"><b>Social studies</b><span>What does social studies even look like at this age?</span></div>
+      <div class="focus" style="--c:#C98A8F"><b>Health &amp; physical</b><span>Are their motor skills and healthy habits on track?</span></div>
+      <div class="focus" style="--c:#5F8C86"><b>Art</b><span>How do I make room for art in a way that fits my child?</span></div>
+    </div>
+
+    <h2 style="margin-top:44px">What a checklist <em>can't do.</em></h2>
+    <div class="vs">
+      <div><span class="k">The free Reading Check</span>
+        <ul><li>Shows where your child is in one growth focus</li><li>Lists the skills that come next on the map</li><li>Gives you something to watch for</li></ul></div>
+      <div class="vs-me"><span class="k">Enough, with me</span>
+        <ul><li>You pick <strong>any one</strong> of the nine, or go deeper on reading</li><li>I look at <strong>your</strong> child's page and send you a <strong>personal voice note</strong> on what it means and what to do next</li><li>A <strong>lesson plan made for your child</strong></li><li>Three weeks to ask me anything: curriculum, schedules, behavior</li></ul></div>
+    </div>
+
+    <div class="cta-grid open-only">
       <div class="cta">
-        <span class="k">3 weeks · November 2–20</span>
-        <h3>Enough</h3>
+        <span class="k">3 weeks · November 2–20 · 10 families</span>
+        <h3>Deep dive with me in Enough</h3>
         <div class="price"><s class="founding-only founding-strike" hidden>$197</s><b class="enough-amt">$197</b><span class="founding-only founding-note" hidden>Founding price through Sun, Oct 25</span></div>
-        <p>Pick one of nine growth focuses (reading is one), get a personal voice note on where your child is and what can come next, plus a lesson plan made for them. All in Telegram, no live calls.</p>
-        <a class="btn" href="/enough/">Join Enough</a>
+        <p>Pick the growth focus that keeps you up at night. I'll tell you exactly where your child is and build the plan for what's next. All in Telegram, no live calls. Enrollment closes Friday, Oct 30.</p>
+        <a class="btn" href="/enough/">See Enough</a>
+      </div>
+      <div class="cta cool">
+        <span class="k">Want all nine? Starts Dec 7</span>
+        <h3>Or go self-guided with More Than Enough</h3>
+        <div class="price">$97<span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:400;color:var(--mid)"> /month for 4 months</span></div>
+        <p>All nine growth focuses, one every two weeks (literacy arrives Jan 18): the full matrix, a short video from me, a guide to reading your circles, and next-step activities for every box. Go at your own pace.</p>
+        <a class="btn-dark" href="/more-than-enough/">See More Than Enough</a>
+      </div>
+    </div>
+
+    <div class="cta-grid closed-only" hidden>
+      <div class="cta mte-open-only">
+        <span class="k">Starts December 7 · Enrollment closes Dec 4</span>
+        <h3>More Than Enough</h3>
+        <div class="price">$97<span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:400;color:var(--mid)"> /month for 4 months</span></div>
+        <p>You just did literacy. More Than Enough walks you through all nine growth focuses, one every two weeks: the full matrix, a short video from me, a guide to reading your circles, and next-step activities for every box. Self-guided, at your own pace.</p>
+        <a class="btn" href="/more-than-enough/">See More Than Enough</a>
+      </div>
+      <div class="cta mte-closed-only" hidden>
+        <span class="k">Stay in the loop</span>
+        <h3>More is coming</h3>
+        <p>You're on my list, so you'll hear first when the next round of Enough or More Than Enough opens.</p>
+        <a class="btn" href="https://www.instagram.com/thehomeschooladmin">Follow Along on Instagram</a>
       </div>
       <div class="cta cool">
         <span class="k">The book · Coming soon</span>
         <h3>REASSURED™</h3>
         <p>All nine growth focuses of the Peace of Mind Framework, so you can check every area of your child's growth, any time.</p>
-        <a class="btn-dark" href="https://thehomeschooladmin.ck.page/b17b79df32">Join the Waitlist</a>
+        <a class="btn-dark" href="https://thehomeschooladmin.ck.page/b17b79df32">Join the Book Waitlist</a>
       </div>
     </div>
     <p class="disclaimer">This is an observation snapshot, not an assessment or diagnosis. If you have concerns about your child's development, talk with your pediatrician.<br><button class="link-btn" id="retake2">Check another child</button></p>
@@ -575,13 +629,27 @@ $('retake').onclick=retake; $('retake2').onclick=retake;
 </script>
 
 <script>
-/* ENOUGH FOUNDING PRICE TIMER (matches the rest of the site) */
+/* ENOUGH TIMERS (match the rest of the site)
+   Before Oct 25: founding price $147.  After Oct 25: $197.
+   After Oct 30 (enrollment closed): Enough offer swaps to More Than Enough. */
 (function(){
   var DEADLINE = new Date('2026-10-25T23:59:59-04:00');
-  var FOUNDING = '$147';
-  if (new Date() >= DEADLINE) return;
-  document.querySelectorAll('.enough-amt').forEach(function(el){ el.textContent = FOUNDING; });
-  document.querySelectorAll('.founding-only').forEach(function(el){ el.hidden = false; });
+  var ENROLLMENT_CLOSES = new Date('2026-10-30T23:59:59-04:00');
+  var MTE_CLOSES = new Date('2026-12-04T23:59:59-05:00'); // More Than Enough enrollment closes
+  var now = new Date(), all = function(q){ return document.querySelectorAll(q); };
+  if (now >= MTE_CLOSES) {
+    all('.mte-open-only').forEach(function(el){ el.hidden = true; });
+    all('.mte-closed-only').forEach(function(el){ el.hidden = false; });
+  }
+  if (now >= ENROLLMENT_CLOSES) {
+    all('.open-only').forEach(function(el){ el.hidden = true; });
+    all('.closed-only').forEach(function(el){ el.hidden = false; });
+    return;
+  }
+  if (now < DEADLINE) {
+    all('.enough-amt').forEach(function(el){ el.textContent = '$147'; });
+    all('.founding-only').forEach(function(el){ el.hidden = false; });
+  }
 })();
 </script>
 </body>
