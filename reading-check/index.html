@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><!DOCTYPE html>
-<html lang="en">
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Am I Doing Enough? The Free Reading Check | The Homeschool Admin</title>
@@ -162,6 +159,19 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
 .acts li:before{content:'';position:absolute;left:4px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--yellow)}
 .box .small{font-size:13px;color:var(--gray);margin-top:6px}
 .box.notice .k{color:var(--powder)}
+.nav-brand img{height:34px;width:auto;vertical-align:middle;margin-right:10px;background:#fff;border-radius:6px;padding:2px}
+.byline{display:flex;align-items:center;gap:14px;margin:22px 0 20px}
+.byline img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--yellow)}
+.byline p{margin:0;font-size:14px;color:var(--gray);line-height:1.5}
+.note-inner{display:flex;gap:18px;align-items:flex-start}
+.note-inner img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--yellow)}
+.deeper{margin:30px 0 0;background:var(--black);color:#fff;padding:24px 26px;border-radius:2px}
+.deeper .k{display:block;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);margin-bottom:8px}
+.deeper h3{font-family:'Libre Baskerville',serif;font-size:22px;margin:0 0 10px;color:#fff}
+.deeper p{color:#e9e6df;font-size:15px;margin:0 0 10px}
+.deeper ul{margin:0 0 14px 18px;padding:0}.deeper li{color:#e9e6df;font-size:15px;margin-bottom:6px}
+.deeper a{color:var(--yellow);font-weight:700}
+.deeper strong{color:#fff}
 .note-from{margin:30px 0;border-left:4px solid var(--yellow);background:var(--white);padding:22px 26px}
 .note-from p{font-family:'Libre Baskerville',serif;font-style:italic;font-size:17px;color:var(--black);line-height:1.7}
 .note-from cite{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--powder)}
@@ -220,7 +230,7 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
 
 <nav class="nav" aria-label="Main navigation">
   <div class="nav-inner">
-    <a class="nav-brand" href="/">The Homeschool Admin</a>
+    <a class="nav-brand" href="/"><img src="/homeschooladminlogo.png" alt="">The Homeschool Admin</a>
     <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
     <label for="menu-toggle" class="menu-button">Menu</label>
     <ul class="nav-links">
@@ -246,6 +256,7 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
       <li><strong>See their baseline</strong>Where they are in four areas of literacy.</li>
       <li><strong>Know what to do next</strong>What’s emerging, plus simple activities to try this week.</li>
     </ul>
+    <div class="byline"><img src="/assets/homeschool-assistant-maria.jpg" alt="Maria Galyean"><p>Built by <strong>Maria Galyean</strong>, Child Development Specialist, from the same literacy framework I use with families one-on-one.</p></div>
     <div class="panel">
       <p style="font-size:15px"><strong>Before you start:</strong> don't test your child or quiz them. Only check what you've noticed come up naturally. If you haven't seen it, leave it unchecked. That's not a problem. It just hasn't emerged yet.</p>
       <label class="field" for="child">Your child's first name <span style="font-weight:400;color:var(--mid)">(optional, so your results feel like theirs)</span></label>
@@ -325,12 +336,28 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
     <div id="full-list" style="margin-top:22px"></div>
     <button class="btn dl-btn" type="button" id="dl2">Download My Results (PDF)</button>
 
-    <div class="note-from">
-      <p id="f-note"></p>
-      <cite>Maria Galyean, Child Development Specialist · The Homeschool Admin</cite>
+    <div class="deeper open-only">
+      <span class="k">Before you go</span>
+      <h3>This is the map. It can't see your child.</h3>
+      <p>Everything above is based on what's typical at each stage. It's a good start, and it's only the surface. It doesn't know why reading is clicking but writing isn't, what your days look like, or what curriculum is sitting on your table. And literacy is just one of nine growth focuses.</p>
+      <p>That's the part I do in <strong>Enough</strong>, three weeks with me (Nov 2–20):</p>
+      <ul><li>You pick the growth focus that's on your mind: reading, math, behavior, any of the nine</li><li>I look at <strong>your</strong> child's page and send you a personal voice note on what I see, and why</li><li>You get a lesson plan built for your child, not a typical one</li><li>Three weeks to ask me anything in Telegram</li></ul>
+      <a href="#go-further">See how Enough goes deeper ↓</a>
     </div>
+    <div class="closed-only" hidden><div class="deeper mte-open-only">
+      <span class="k">Before you go</span>
+      <h3>That was one of nine.</h3>
+      <p>Everything above is based on what's typical at each stage, for one growth focus. More Than Enough walks you through all nine, one every two weeks, with the full matrix, a short video from me, and next-step activities for every box.</p>
+      <a href="#go-further">See More Than Enough ↓</a>
+    </div></div>
 
-    <h2>That was literacy. <em>There are eight more.</em></h2>
+    <div class="note-from"><div class="note-inner">
+      <img src="/assets/homeschool-assistant-maria.jpg" alt="Maria Galyean">
+      <div><p id="f-note"></p>
+      <cite>Maria Galyean, Child Development Specialist · The Homeschool Admin</cite></div>
+    </div></div>
+
+    <h2 id="go-further">That was literacy. <em>There are eight more.</em></h2>
     <p>What you just did is a small taste of how I work with families. Literacy is one of the <strong>nine growth focuses</strong> in my Peace of Mind Framework. Here are the other eight, and the question each one answers:</p>
     <div class="focus-grid">
       <div class="focus" style="--c:#402328"><b>Social-emotional</b><span>Is my child's behavior with siblings and friends normal for their age?</span></div>
@@ -728,26 +755,46 @@ function MiniPDF(){
     circle:function(cx,cy,r,c){ var k=0.5523*r, y=H-cy;
       cur.push(col(c)+' rg '+n(cx+r)+' '+n(y)+' m '+n(cx+r)+' '+n(y+k)+' '+n(cx+k)+' '+n(y+r)+' '+n(cx)+' '+n(y+r)+' c '+n(cx-k)+' '+n(y+r)+' '+n(cx-r)+' '+n(y+k)+' '+n(cx-r)+' '+n(y)+' c '+n(cx-r)+' '+n(y-k)+' '+n(cx-k)+' '+n(y-r)+' '+n(cx)+' '+n(y-r)+' c '+n(cx+k)+' '+n(y-r)+' '+n(cx+r)+' '+n(y-k)+' '+n(cx+r)+' '+n(y)+' c f'); },
     count:function(){ return pages.length; }, setPage:function(i){ cur=pages[i]; },
+    image:null,
+    setImage:function(bytes,w,h){ api.image={bytes:bytes,w:w,h:h}; },
+    drawImage:function(x,y,w,h){ cur.push('q '+n(w)+' 0 0 '+n(h)+' '+n(x)+' '+n(H-y-h)+' cm /Im1 Do Q'); },
     blob:function(){
-      var objs=[], np=pages.length, fontStart=3, pageStart=7;
+      var objs=[], np=pages.length, fontStart=3, pageStart=7, imgObj=pageStart+np*2;
       objs[1]='<< /Type /Catalog /Pages 2 0 R >>';
       var kids=[]; for(var i=0;i<np;i++) kids.push((pageStart+i*2)+' 0 R');
       objs[2]='<< /Type /Pages /Kids ['+kids.join(' ')+'] /Count '+np+' >>';
       ['Helvetica','Helvetica-Bold','Times-Bold','Times-Italic'].forEach(function(b,i){ objs[fontStart+i]='<< /Type /Font /Subtype /Type1 /BaseFont /'+b+' /Encoding /WinAnsiEncoding >>'; });
       pages.forEach(function(pg,i){ var po=pageStart+i*2, stream=pg.join('\n');
-        objs[po]='<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents '+(po+1)+' 0 R >>';
+        objs[po]='<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >>'+(api.image?' /XObject << /Im1 '+imgObj+' 0 R >>':'')+' >> /Contents '+(po+1)+' 0 R >>';
         objs[po+1]='<< /Length '+stream.length+' >>\nstream\n'+stream+'\nendstream'; });
-      var out='%PDF-1.4\n', offs=[];
-      for(var j=1;j<objs.length;j++){ offs[j]=out.length; out+=j+' 0 obj\n'+objs[j]+'\nendobj\n'; }
-      var xref=out.length; out+='xref\n0 '+objs.length+'\n0000000000 65535 f \n';
-      for(j=1;j<objs.length;j++) out+=('0000000000'+offs[j]).slice(-10)+' 00000 n \n';
-      out+='trailer\n<< /Size '+objs.length+' /Root 1 0 R >>\nstartxref\n'+xref+'\n%%EOF';
-      return new Blob([out],{type:'application/pdf'});
+      if(api.image) objs[imgObj]=['<< /Type /XObject /Subtype /Image /Width '+api.image.w+' /Height '+api.image.h+' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length '+api.image.bytes.length+' >>\nstream\n', api.image.bytes, '\nendstream'];
+      var parts=[], len=0, offs=[];
+      function add(x){ parts.push(x); len+=x.length; }
+      add('%PDF-1.4\n');
+      for(var j=1;j<objs.length;j++){ offs[j]=len; add(j+' 0 obj\n'); if(Array.isArray(objs[j])) objs[j].forEach(add); else add(objs[j]); add('\nendobj\n'); }
+      var xref=len, tail='xref\n0 '+objs.length+'\n0000000000 65535 f \n';
+      for(j=1;j<objs.length;j++) tail+=('0000000000'+offs[j]).slice(-10)+' 00000 n \n';
+      tail+='trailer\n<< /Size '+objs.length+' /Root 1 0 R >>\nstartxref\n'+xref+'\n%%EOF'; add(tail);
+      return new Blob(parts,{type:'application/pdf'});
     }
   };
   return api;
 }
-function downloadPDF(){
+function loadLogo(cb){
+  var done=false, finish=function(v){ if(!done){ done=true; cb(v); } };
+  setTimeout(function(){ finish(null); }, 2500);
+  var img=new Image();
+  img.onload=function(){ try{
+    var h=120, w=Math.round(img.naturalWidth*h/img.naturalHeight), c=document.createElement('canvas'); c.width=w; c.height=h;
+    var x=c.getContext('2d'); x.fillStyle='#FFD361'; x.fillRect(0,0,w,h); x.drawImage(img,0,0,w,h);
+    var b64=c.toDataURL('image/jpeg',0.92).split(',')[1], bin=atob(b64), u=new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) u[i]=bin.charCodeAt(i);
+    finish({bytes:u,w:w,h:h}); }catch(e){ finish(null); } };
+  img.onerror=function(){ finish(null); };
+  img.src='/homeschooladminlogo.png';
+}
+function downloadPDF(){ loadLogo(buildPDF); }
+function buildPDF(logo){
   var doc=MiniPDF(); doc.addPage();
   var W=612, M=54, y=0, CW=W-2*M, BOTTOM=730;
   var BLACK=[26,26,26], GRAY=[95,95,95], YEL=[255,211,97], DY=[176,128,20], POW=[95,140,134], CREAM=[247,244,236];
@@ -756,6 +803,7 @@ function downloadPDF(){
     doc.split(t,f||'hel',size,CW-indent).forEach(function(l){ need(size*1.45); doc.text(l,M+indent,y,f||'hel',size,color); y+=size*1.45; }); }
   function label(t,color){ need(40); y+=8; doc.text(t.toUpperCase(),M,y,'helB',8.5,color,null,1); y+=14; }
   doc.rect(0,0,W,100,YEL);
+  if(logo){ doc.setImage(logo.bytes,logo.w,logo.h); var lh=64, lw=logo.w*lh/logo.h; doc.drawImage(W-M-lw,18,lw,lh); }
   doc.text('THE HOMESCHOOL ADMIN  ·  READING CHECK',M,38,'helB',9,BLACK,null,1);
   doc.text(poss(true)+' reading and writing',M,74,'timB',24,BLACK);
   y=130;
@@ -772,6 +820,17 @@ function downloadPDF(){
     r.acts.forEach(function(a){ need(16); doc.circle(M+5,y-3.5,3,YEL); para(a,10.5,BLACK,'hel',16); y+=3; });
     label('Watch for',POW); para(r.watch,10.5,BLACK);
   });
+  var now=new Date(), deeper=null;
+  if(now<new Date('2026-10-30T23:59:59-04:00')) deeper={k:'This is the map. It can’t see your child.', body:'Everything here is based on what’s typical at each stage. It doesn’t know why reading is clicking but writing isn’t, what your days look like, or what curriculum is on your table. And literacy is one of nine growth focuses. In Enough (3 weeks with me, Nov 2-20), you pick the growth focus that’s on your mind, I look at your child’s page and send you a personal voice note on what I see, and you get a lesson plan built for your child.', link:'thehomeschooladmin.com/enough'};
+  else if(now<new Date('2026-12-04T23:59:59-05:00')) deeper={k:'That was one of nine.', body:'More Than Enough walks you through all nine growth focuses, one every two weeks, with the full matrix, a short video from me, and next-step activities for every box. Starts Dec 7.', link:'thehomeschooladmin.com/more-than-enough'};
+  if(deeper){
+    var dl=doc.split(deeper.body,'hel',10.5,CW-36), dh=dl.length*15.2+86;
+    y+=24; need(dh); doc.rect(M,y,CW,dh,BLACK);
+    doc.text('WANT TO GO DEEPER?',M+18,y+24,'helB',8.5,YEL,null,1);
+    doc.text(deeper.k,M+18,y+46,'timB',15,[255,255,255]);
+    dl.forEach(function(l,k){ doc.text(l,M+18,y+66+k*15.2,'hel',10.5,[233,230,223]); });
+    doc.text(deeper.link,M+18,y+dh-14,'helB',10.5,YEL); y+=dh;
+  }
   var note=doc.split($('f-note').textContent,'timI',11,CW-28), h=note.length*15+46;
   y+=20; need(h+40); doc.rect(M,y,CW,h,CREAM);
   note.forEach(function(l,k){ doc.text(l,M+14,y+24+k*15,'timI',11,BLACK); });
@@ -785,724 +844,6 @@ function downloadPDF(){
   setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
 }
 $('dl1').onclick=downloadPDF; $('dl2').onclick=downloadPDF;
-
-function retake(){ state={child:'',i:0,checks:blank()}; $('child').value=''; show('s-intro'); }
-$('retake').onclick=retake; $('retake2').onclick=retake;
-</script>
-
-<script>
-/* ENOUGH TIMERS (match the rest of the site)
-   Before Oct 25: founding price $147.  After Oct 25: $197.
-   After Oct 30 (enrollment closed): Enough offer swaps to More Than Enough. */
-(function(){
-  var DEADLINE = new Date('2026-10-25T23:59:59-04:00');
-  var ENROLLMENT_CLOSES = new Date('2026-10-30T23:59:59-04:00');
-  var MTE_CLOSES = new Date('2026-12-04T23:59:59-05:00'); // More Than Enough enrollment closes
-  var now = new Date(), all = function(q){ return document.querySelectorAll(q); };
-  if (now >= MTE_CLOSES) {
-    all('.mte-open-only').forEach(function(el){ el.hidden = true; });
-    all('.mte-closed-only').forEach(function(el){ el.hidden = false; });
-  }
-  if (now >= ENROLLMENT_CLOSES) {
-    all('.open-only').forEach(function(el){ el.hidden = true; });
-    all('.closed-only').forEach(function(el){ el.hidden = false; });
-    return;
-  }
-  if (now < DEADLINE) {
-    all('.enough-amt').forEach(function(el){ el.textContent = '$147'; });
-    all('.founding-only').forEach(function(el){ el.hidden = false; });
-  }
-})();
-</script>
-</body>
-</html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Am I Doing Enough? The Free Reading Check | The Homeschool Admin</title>
-<link rel="canonical" href="https://www.thehomeschooladmin.com/reading-check/">
-<meta name="description" content="A free 3-minute reading and writing check for homeschool parents. Check off the reading and writing skills you've already seen your child do, and see their literacy baseline and what's emerging next. From child development specialist Maria Galyean.">
-<meta property="og:title" content="Am I Doing Enough? The Free Reading Check">
-<meta property="og:description" content="Check what you've seen. See where your child is in reading and writing, and what's emerging next. No tests, no grade levels.">
-<meta property="og:url" content="https://www.thehomeschooladmin.com/reading-check/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://www.thehomeschooladmin.com/images/mariathehomeschooladmin.jpg">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "The Free Reading Check",
-  "url": "https://www.thehomeschooladmin.com/reading-check/",
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Any",
-  "isAccessibleForFree": true,
-  "description": "A free observation-based reading and writing check for homeschool parents, built on the literacy growth focus of the Peace of Mind Framework from REASSURED.",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "provider": { "@type": "Person", "name": "Maria Galyean", "jobTitle": "Child Development Specialist", "url": "https://www.thehomeschooladmin.com/about/" }
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --yellow:#FFD361;--yellow-dark:#E6A909;--powder:#8AA6A0;--powder-pale:#EBF2F1;--mauve:#C16F63;
-  --black:#1a1a1a;--white:#ffffff;--offwhite:#FAFAF8;--gray:#3d3d2e;--mid:#666;--rule:#e4eded;--plum:#402328;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Bricolage Grotesque',sans-serif;background:var(--offwhite);color:var(--black);line-height:1.75}
-img{max-width:100%;display:block}
-a{color:inherit}
-p{font-size:16px;color:var(--gray);margin-bottom:14px}
-p strong{color:var(--black)}
-[hidden]{display:none!important}
-
-/* ANNOUNCE + NAV */
-.announce{background:var(--yellow);padding:12px 24px;text-align:center}
-.announce p{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--black);margin:0;line-height:1.6}
-.announce a{text-decoration:none;border-bottom:2px solid var(--black)}
-.nav{background:var(--black);padding:0 24px;position:sticky;top:0;z-index:999}
-.nav-inner{max-width:1120px;margin:0 auto;min-height:60px;display:flex;align-items:center;justify-content:space-between;position:relative}
-.nav-brand{font-family:'Libre Baskerville',serif;color:var(--white);font-size:15px;text-decoration:none}
-.menu-toggle{display:none}
-.menu-button{display:none;color:var(--black);background:var(--yellow);padding:8px 14px;border-radius:2px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;cursor:pointer}
-.nav-links{display:flex;align-items:center;gap:20px;list-style:none}
-.nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:8px 0;display:block}
-.nav-links a:hover{color:var(--yellow)}
-.nav-cta{background:var(--yellow)!important;color:var(--black)!important;padding:8px 16px!important;border-radius:2px}
-@media(max-width:860px){
-  .menu-button{display:block}
-  .nav-links{display:none;position:absolute;top:60px;left:-24px;right:-24px;background:var(--black);padding:20px 24px 28px;flex-direction:column;align-items:flex-start;gap:14px}
-  .menu-toggle:checked~.nav-links{display:flex}
-  .nav-links a{font-size:13px}
-}
-
-/* BUTTONS */
-.btn{display:inline-block;background:var(--yellow);color:var(--black);font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:16px 36px;border-radius:2px;border:none;cursor:pointer;transition:background .2s,color .2s;text-align:center}
-.btn:hover{background:var(--yellow-dark);color:var(--white)}
-.btn:disabled{opacity:.45;cursor:not-allowed;background:var(--yellow);color:var(--black)}
-.btn-dark{display:inline-block;background:var(--black);color:var(--white);font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:16px 36px;border-radius:2px;text-align:center}
-.btn-dark:hover{background:#333}
-.link-btn{background:none;border:none;font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);cursor:pointer;padding:12px 4px}
-.link-btn:hover{color:var(--black)}
-
-/* SHELL */
-.app{max-width:760px;margin:0 auto;padding:56px 24px 88px}
-.eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mauve);margin-bottom:14px}
-h1{font-family:'Libre Baskerville',serif;font-weight:400;font-size:clamp(32px,5.5vw,52px);line-height:1.15;margin-bottom:18px}
-h1 em{font-style:italic;color:var(--powder)}
-h2{font-family:'Libre Baskerville',serif;font-weight:400;font-size:clamp(22px,3.6vw,32px);line-height:1.3;margin-bottom:14px}
-h2 em{font-style:italic;color:var(--powder)}
-.panel{background:var(--white);border:1px solid var(--rule);border-radius:2px;padding:34px;box-shadow:0 18px 40px rgba(26,26,26,.05)}
-
-/* INTRO */
-.intro-points{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0 28px}
-.intro-points li{background:var(--powder-pale);padding:14px 16px;border-radius:2px;font-size:14px;color:var(--gray);line-height:1.5}
-.intro-points strong{display:block;font-family:'Libre Baskerville',serif;font-size:18px;color:var(--black)}
-label.field{display:block;font-size:13px;font-weight:700;color:var(--black);margin-bottom:6px}
-input[type=text],input[type=email]{width:100%;font-family:inherit;font-size:16px;padding:14px 16px;border:1px solid #cfd8d6;border-radius:2px;background:var(--offwhite);color:var(--black);margin-bottom:18px}
-input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
-.fine{font-size:12px;color:var(--mid);margin:12px 0 0}
-
-/* CHECKLIST */
-.progress{display:flex;align-items:center;gap:12px;margin-bottom:26px}
-.progress-bar{flex:1;height:6px;background:var(--rule);border-radius:99px;overflow:hidden}
-.progress-bar span{display:block;height:100%;background:var(--yellow-dark);transition:width .3s}
-.progress-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);white-space:nowrap}
-.q-skill{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--powder);margin-bottom:8px;display:block}
-.q-help{font-size:14px;color:var(--gray);background:var(--powder-pale);border-left:4px solid var(--powder);padding:12px 16px;margin-bottom:22px}
-.stage-group{margin-bottom:18px}
-.stage-label{display:flex;align-items:center;gap:10px;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:8px}
-.stage-label::after{content:"";flex:1;height:1px;background:var(--rule)}
-.checks{display:grid;gap:8px}
-.chk{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;background:var(--white);border:1px solid var(--rule);border-radius:2px;padding:12px 16px;font-family:inherit;font-size:15px;color:var(--gray);line-height:1.5;cursor:pointer;transition:border-color .15s,background .15s}
-.chk:hover{border-color:var(--powder)}
-.chk[aria-checked=true]{border-color:var(--yellow-dark);background:#FFFBEE;color:var(--black)}
-.chk .box-ui{flex:none;width:20px;height:20px;border-radius:3px;border:2px solid #b9c6c3;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:transparent}
-.chk[aria-checked=true] .box-ui{border-color:var(--yellow-dark);background:var(--yellow-dark);color:var(--white)}
-.count-line{font-size:13px;color:var(--mid);margin:6px 0 18px}
-.q-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;position:sticky;bottom:0;background:var(--offwhite);padding:12px 0;border-top:1px solid var(--rule)}
-
-/* RESULTS */
-.result-head{margin-bottom:26px}
-.track-row{padding:18px 0;border-bottom:1px solid var(--rule)}
-.track-row:first-of-type{border-top:1px solid var(--rule)}
-.track-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap}
-.track-skill{font-family:'Libre Baskerville',serif;font-weight:700;font-size:16px}
-.track-stage{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mauve)}
-.track{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
-.track span{height:10px;border-radius:2px;background:var(--rule)}
-.track span.on{background:var(--yellow-dark)}
-.track span.now{background:var(--black)}
-.track-legend{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:6px}
-.track-legend i{font-style:normal;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--mid);text-align:center;line-height:1.3}
-.reassure{background:var(--powder-pale);border-left:4px solid var(--powder);padding:18px 22px;margin:26px 0 0}
-.reassure p{margin:0;font-size:15px}
-
-.gate{margin-top:30px;background:var(--black);color:var(--white);padding:32px;border-radius:2px;border-top:5px solid var(--yellow)}
-.gate h3{font-family:'Libre Baskerville',serif;font-size:22px;font-weight:400;line-height:1.35;margin-bottom:8px}
-.gate p{color:rgba(255,255,255,.75);font-size:15px}
-.gate ul{list-style:none;margin:6px 0 20px}
-.gate li{font-size:14px;color:rgba(255,255,255,.82);padding:6px 0 6px 22px;position:relative}
-.gate li::before{content:"✓";position:absolute;left:0;color:var(--yellow);font-weight:900}
-.gate label.field{color:var(--white)}
-.gate input{background:#2a2a2a;border-color:#444;color:var(--white)}
-.gate .btn{width:100%}
-.gate .fine{color:rgba(255,255,255,.5)}
-.err{color:#ffb4a8;font-size:13px;margin:-8px 0 12px}
-.gate-select{width:100%;font-family:inherit;font-size:16px;padding:14px 16px;border:1px solid #444;border-radius:2px;background:#2a2a2a;color:var(--white);margin-bottom:18px}
-
-.full-skill{padding:24px 0;border-bottom:1px solid var(--rule)}
-.full-skill:first-of-type{border-top:1px solid var(--rule)}
-.full-skill h3{font-family:'Libre Baskerville',serif;font-size:20px;margin-bottom:12px}
-.box{padding:14px 18px;border-radius:2px;margin-bottom:10px}
-.box .k{display:block;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
-.box p{margin:0;font-size:15px}
-.box.now{background:var(--offwhite);border:1px solid var(--rule)}
-.box.now .k{color:var(--mid)}
-.box.next{background:#FFFBEE;border:1px solid #f3e2a8}
-.box.next .k{color:var(--yellow-dark)}
-.box.notice{background:var(--powder-pale);border:1px solid #d4e5e2}
-.box.try{background:var(--white);border:2px solid var(--yellow)}
-.box.try .k{color:var(--black)}
-.acts{list-style:none;margin:8px 0 0;padding:0}
-.acts li{position:relative;padding-left:26px;margin-bottom:8px;font-size:15px}
-.acts li:before{content:'';position:absolute;left:4px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--yellow)}
-.box .small{font-size:13px;color:var(--gray);margin-top:6px}
-.box.notice .k{color:var(--powder)}
-.note-from{margin:30px 0;border-left:4px solid var(--yellow);background:var(--white);padding:22px 26px}
-.note-from p{font-family:'Libre Baskerville',serif;font-style:italic;font-size:17px;color:var(--black);line-height:1.7}
-.note-from cite{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--powder)}
-
-.cta-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:10px}
-.cta{background:var(--white);border:1px solid var(--rule);border-top:5px solid var(--yellow-dark);padding:26px;display:flex;flex-direction:column}
-.cta.cool{border-top-color:var(--mauve)}
-.cta .k{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:8px}
-.cta h3{font-family:'Libre Baskerville',serif;font-size:22px;margin-bottom:8px}
-.cta .price{font-family:'Libre Baskerville',serif;font-weight:700;font-size:26px;margin-bottom:10px}
-.cta p{font-size:14px}
-.cta .btn,.cta .btn-dark{margin-top:auto}
-.enough-amt{font-weight:inherit}
-.founding-strike{opacity:.5;font-weight:400;margin-right:6px}
-.founding-note{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mauve);margin-top:6px}
-.focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0 6px}
-.focus{background:var(--white);border:1px solid var(--rule);border-left:5px solid var(--c);padding:12px 14px;border-radius:2px}
-.focus b{display:block;font-family:'Libre Baskerville',serif;font-size:15px;color:var(--black);margin-bottom:2px}
-.focus span{font-size:13px;color:var(--mid);line-height:1.45;display:block}
-.vs{display:grid;grid-template-columns:1fr 1.2fr;gap:14px;margin:6px 0 26px}
-.vs > div{background:var(--white);border:1px solid var(--rule);padding:20px 22px;border-radius:2px}
-.vs .vs-me{background:#FFFBEE;border-color:#f3e2a8}
-.vs .k{display:block;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:8px}
-.vs ul{margin:0 0 0 18px}
-.vs li{font-size:14px;color:var(--gray);margin-bottom:6px;line-height:1.5}
-@media(max-width:640px){.focus-grid,.vs{grid-template-columns:1fr}}
-.disclaimer{font-size:12px;color:var(--mid);margin-top:28px;text-align:center}
-
-/* FOOTER */
-.seo-footer{background:var(--black);padding:40px 24px 28px}
-.seo-footer-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
-.seo-footer p,.seo-footer a{font-size:12px;color:rgba(255,255,255,.45);text-decoration:none;margin:0}
-.seo-footer a:hover{color:var(--white)}
-.seo-footer nav{display:flex;gap:18px;flex-wrap:wrap}
-
-@media(max-width:640px){
-  .app{padding:36px 18px 64px}
-  .panel{padding:22px 18px}
-  .intro-points{grid-template-columns:1fr}
-  .gate{padding:24px 18px}
-  .cta-grid{grid-template-columns:1fr}
-  .track-legend i{font-size:8px}
-  p{font-size:15px}
-}
-</style>
-
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b545f1b503474e728f330024c81e07a9"}'></script><!-- End Cloudflare Web Analytics -->
-</head>
-
-<body>
-
-<div class="announce">
-  <p class="open-only">Enough · a 3-week homeschool reset · November 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
-  <p class="closed-only" hidden>Enough is in session · <a href="/more-than-enough/">More Than Enough</a> starts Dec 7</p>
-</div>
-
-<nav class="nav" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a class="nav-brand" href="/">The Homeschool Admin</a>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
-    <label for="menu-toggle" class="menu-button">Menu</label>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/enough/" class="nav-cta">Join Enough</a></li>
-      <li><a href="/claritysessions/">Clarity Sessions</a></li>
-      <li><a href="/thrive/">Thrive</a></li>
-      <li><a href="/resources/">Resources</a></li>
-      <li><a href="/about/">About</a></li>
-    </ul>
-  </div>
-</nav>
-
-<main class="app" id="app" aria-live="polite">
-
-  <!-- STEP 0: INTRO -->
-  <section id="s-intro">
-    <span class="eyebrow">Free · 5 minutes · From a child development specialist</span>
-    <h1>Am I doing enough? <em>The free Reading Check.</em></h1>
-    <p>No tests. No grade levels. No "behind." Just a simple checklist of the reading and writing skills in my literacy framework. You check off what you've <strong>already seen your child do</strong>, and you'll see where they are right now and what's naturally emerging next.</p>
-    <ul class="intro-points">
-      <li><strong>Check what you've seen</strong>Things your child does on their own, in everyday life.</li>
-      <li><strong>See their baseline</strong>Where they are in four areas of literacy.</li>
-      <li><strong>Know what to do next</strong>What’s emerging, plus simple activities to try this week.</li>
-    </ul>
-    <div class="panel">
-      <p style="font-size:15px"><strong>Before you start:</strong> don't test your child or quiz them. Only check what you've noticed come up naturally. If you haven't seen it, leave it unchecked. That's not a problem. It just hasn't emerged yet.</p>
-      <label class="field" for="child">Your child's first name <span style="font-weight:400;color:var(--mid)">(optional, so your results feel like theirs)</span></label>
-      <input type="text" id="child" maxlength="30" autocomplete="off" placeholder="e.g. Ella">
-      <button class="btn" id="start" style="width:100%">Start the Reading Check</button>
-      <p class="fine">Doing this for more than one child? Take it once per child.</p>
-    </div>
-  </section>
-
-  <!-- CHECKLIST, ONE SKILL PER SCREEN -->
-  <section id="s-quiz" hidden>
-    <div class="progress"><div class="progress-bar"><span id="bar" style="width:0"></span></div><span class="progress-label" id="plabel"></span></div>
-    <span class="q-skill" id="q-skill"></span>
-    <h2 id="q-title"></h2>
-    <p class="q-help" id="q-help"></p>
-    <div id="options"></div>
-    <p class="count-line" id="count-line"></p>
-    <div class="q-nav">
-      <button class="link-btn" id="back">← Back</button>
-      <button class="btn" id="next">Next</button>
-    </div>
-  </section>
-
-  <!-- SHORT RESULT + EMAIL GATE -->
-  <section id="s-result" hidden>
-    <div class="result-head">
-      <span class="eyebrow">Your Reading Check snapshot</span>
-      <h1 id="r-title"></h1>
-      <p id="r-sub"></p>
-    </div>
-    <div class="panel">
-      <div id="tracks"></div>
-      <div class="reassure"><p id="r-reassure"></p></div>
-    </div>
-
-    <div class="gate" id="gate">
-      <h3 id="g-title">Want to know what comes next?</h3>
-      <p>Get the full Reading Check, free:</p>
-      <ul>
-        <li>What you’ve already seen, stage by stage</li>
-        <li>What your child’s stage actually means, in each area</li>
-        <li>Simple, no-prep activities to make room for the next step</li>
-        <li>One thing to watch for this week</li>
-        <li>A note from me</li>
-      </ul>
-      <form id="kit-form" novalidate>
-        <label class="field" for="fname">Your first name</label>
-        <input type="text" id="fname" name="fields[first_name]" autocomplete="given-name" required>
-        <label class="field" for="email">Your email</label>
-        <input type="email" id="email" name="email_address" autocomplete="email" required>
-        <p class="err" id="err" hidden>Please enter a valid email so I can send your results.</p>
-        <label class="field" for="heard">Where did you find the Reading Check? <span style="font-weight:400;opacity:.6">(optional)</span></label>
-        <select id="heard" class="gate-select">
-          <option value="">Choose one…</option>
-          <option>Instagram</option>
-          <option>Facebook</option>
-          <option>Pinterest</option>
-          <option>The podcast</option>
-          <option>Google search</option>
-          <option>An email from Maria</option>
-          <option>A friend or another homeschool mom</option>
-          <option>Other</option>
-        </select>
-        <button class="btn" type="submit" id="unlock">Show My Full Results</button>
-        <p class="fine">You'll also get a copy by email, plus occasional notes from me. Unsubscribe anytime.</p>
-      </form>
-    </div>
-    <p class="disclaimer"><button class="link-btn" id="retake">Retake the Reading Check</button></p>
-  </section>
-
-  <!-- FULL RESULT -->
-  <section id="s-full" hidden>
-    <span class="eyebrow">Your full Reading Check</span>
-    <h1 id="f-title"></h1>
-    <p id="f-sub"></p>
-    <div id="full-list" style="margin-top:22px"></div>
-
-    <div class="note-from">
-      <p id="f-note"></p>
-      <cite>Maria Galyean, Child Development Specialist · The Homeschool Admin</cite>
-    </div>
-
-    <h2>That was literacy. <em>There are eight more.</em></h2>
-    <p>What you just did is a small taste of how I work with families. Literacy is one of the <strong>nine growth focuses</strong> in my Peace of Mind Framework. Here are the other eight, and the question each one answers:</p>
-    <div class="focus-grid">
-      <div class="focus" style="--c:#402328"><b>Social-emotional</b><span>Is my child's behavior with siblings and friends normal for their age?</span></div>
-      <div class="focus" style="--c:#E0A01C"><b>Cognitive</b><span>How does my child think, remember, and solve problems?</span></div>
-      <div class="focus" style="--c:#7F9993"><b>Language</b><span>Is their speaking and listening on track?</span></div>
-      <div class="focus" style="--c:#7E9CC0"><b>Math</b><span>Are they behind in math, or just not ready for this curriculum's next lesson?</span></div>
-      <div class="focus" style="--c:#C77B3F"><b>Science</b><span>How do I plan science when it feels hard to pin down?</span></div>
-      <div class="focus" style="--c:#9FAE6E"><b>Social studies</b><span>What does social studies even look like at this age?</span></div>
-      <div class="focus" style="--c:#C98A8F"><b>Health &amp; physical</b><span>Are their motor skills and healthy habits on track?</span></div>
-      <div class="focus" style="--c:#5F8C86"><b>Art</b><span>How do I make room for art in a way that fits my child?</span></div>
-    </div>
-
-    <h2 style="margin-top:44px">What a checklist <em>can't do.</em></h2>
-    <div class="vs">
-      <div><span class="k">The free Reading Check</span>
-        <ul><li>Shows where your child is in one growth focus</li><li>Lists the skills that come next on the map</li><li>Gives you something to watch for</li></ul></div>
-      <div class="vs-me"><span class="k">Enough, with me</span>
-        <ul><li>You pick <strong>any one</strong> of the nine, or go deeper on reading</li><li>I look at <strong>your</strong> child's page and send you a <strong>personal voice note</strong> on what it means and what to do next</li><li>A <strong>lesson plan made for your child</strong></li><li>Three weeks to ask me anything: curriculum, schedules, behavior</li></ul></div>
-    </div>
-
-    <div class="cta-grid open-only">
-      <div class="cta">
-        <span class="k">3 weeks · November 2–20 · 10 families</span>
-        <h3>Deep dive with me in Enough</h3>
-        <div class="price"><s class="founding-only founding-strike" hidden>$197</s><b class="enough-amt">$197</b><span class="founding-only founding-note" hidden>Founding price through Sun, Oct 25</span></div>
-        <p>Pick the growth focus that keeps you up at night. I'll tell you exactly where your child is and build the plan for what's next. All in Telegram, no live calls. Enrollment closes Friday, Oct 30.</p>
-        <a class="btn" href="/enough/">See Enough</a>
-      </div>
-      <div class="cta cool">
-        <span class="k">Want all nine? Starts Dec 7</span>
-        <h3>Or go self-guided with More Than Enough</h3>
-        <div class="price">$97<span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:400;color:var(--mid)"> /month for 4 months</span></div>
-        <p>All nine growth focuses, one every two weeks (literacy arrives Jan 18): the full matrix, a short video from me, a guide to reading your circles, and next-step activities for every box. Go at your own pace.</p>
-        <a class="btn-dark" href="/more-than-enough/">See More Than Enough</a>
-      </div>
-    </div>
-
-    <div class="cta-grid closed-only" hidden>
-      <div class="cta mte-open-only">
-        <span class="k">Starts December 7 · Enrollment closes Dec 4</span>
-        <h3>More Than Enough</h3>
-        <div class="price">$97<span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:400;color:var(--mid)"> /month for 4 months</span></div>
-        <p>You just did literacy. More Than Enough walks you through all nine growth focuses, one every two weeks: the full matrix, a short video from me, a guide to reading your circles, and next-step activities for every box. Self-guided, at your own pace.</p>
-        <a class="btn" href="/more-than-enough/">See More Than Enough</a>
-      </div>
-      <div class="cta mte-closed-only" hidden>
-        <span class="k">Stay in the loop</span>
-        <h3>More is coming</h3>
-        <p>You're on my list, so you'll hear first when the next round of Enough or More Than Enough opens.</p>
-        <a class="btn" href="https://www.instagram.com/thehomeschooladmin">Follow Along on Instagram</a>
-      </div>
-      <div class="cta cool">
-        <span class="k">The book · Coming soon</span>
-        <h3>REASSURED™</h3>
-        <p>All nine growth focuses of the Peace of Mind Framework, so you can check every area of your child's growth, any time.</p>
-        <a class="btn-dark" href="https://thehomeschooladmin.ck.page/b17b79df32">Join the Book Waitlist</a>
-      </div>
-    </div>
-    <p class="disclaimer">This is a snapshot of what you’ve seen at home, not a test or a grade. Come back in a few months and check again. It’s fun to see what’s grown.<br><button class="link-btn" id="retake2">Check another child</button></p>
-  </section>
-
-</main>
-
-<footer class="seo-footer">
-  <div class="seo-footer-inner">
-    <p>&copy; 2026 The Homeschool Admin · Maria Galyean · Scarborough, Maine</p>
-    <nav aria-label="Footer"><a href="/">Home</a><a href="/enough/">Enough</a><a href="/resources/">Free Resources</a><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a></nav>
-  </div>
-</footer>
-
-<script>
-/* =========================================================
-   SETTINGS: fill this in
-   ========================================================= */
-// Your Kit form ID (the number in your Kit form's embed code, e.g. https://app.kit.com/forms/1234567/subscriptions)
-var KIT_FORM_ID = '10063817';
-
-/* =========================================================
-   SOURCE TRACKING: where each sign-up came from
-   1) If the link has ?utm_source=... (your own tagged links), that wins.
-   2) Otherwise it guesses from the site they clicked from (Instagram, Facebook, Google...).
-   3) Remembers the FIRST place someone came from, even if they come back later to finish.
-   ========================================================= */
-var SOURCE_KEY='thsa_reading_check_source';
-function detectSource(){
-  var q=new URLSearchParams(location.search), ref='';
-  try{ ref=document.referrer ? new URL(document.referrer).hostname.replace(/^www\./,'') : ''; }catch(e){}
-  if(ref.indexOf('thehomeschooladmin.com')>-1) ref='thehomeschooladmin.com';
-  var guess='direct';
-  if(/instagram/.test(ref)) guess='instagram';
-  else if(/facebook|fb\.com|fb\.me/.test(ref)) guess='facebook';
-  else if(/pinterest|pin\.it/.test(ref)) guess='pinterest';
-  else if(/google/.test(ref)) guess='google';
-  else if(/bing|duckduckgo|yahoo/.test(ref)) guess='search';
-  else if(/podcasts\.apple|spotify/.test(ref)) guess='podcast';
-  else if(/kit\.com|convertkit|ck\.page|mail\./.test(ref)) guess='email';
-  else if(ref==='thehomeschooladmin.com') guess='website';
-  else if(ref) guess=ref;
-  return {
-    source:(q.get('utm_source')||guess).toLowerCase(),
-    medium:(q.get('utm_medium')||(ref?'referral':'none')).toLowerCase(),
-    campaign:(q.get('utm_campaign')||'none').toLowerCase(),
-    referrer:ref||'none'
-  };
-}
-var FIRST_SOURCE=(function(){
-  var now=detectSource(), saved=null;
-  try{ saved=JSON.parse(localStorage.getItem(SOURCE_KEY)||'null'); }catch(e){}
-  if(saved && !(location.search.indexOf('utm_source')>-1)) return saved;
-  try{ localStorage.setItem(SOURCE_KEY, JSON.stringify(now)); }catch(e){}
-  return now;
-})();
-function getSource(){ return FIRST_SOURCE; }
-
-/* =========================================================
-   MATRIX: Literacy Development (REASSURED, growth focus 03)
-   Each stage: [title, [things a parent can check]]
-   ========================================================= */
-var STAGES = ['Early Form','Forming','Clear Form','Expanding','Connecting','Applying'];
-var SKILLS = [
-  { key:'reading_engagement', name:'Reading Engagement', group:'Core Literacy',
-    q:'What have you seen {child} do with books?',
-    stages:[
-      ['Interest in books',['Handles books with interest','Listens while being read to','Understands a book has a beginning, middle, and end','Pretends to read']],
-      ['Recognizes letters',['Recognizes some letters, especially in their own name','Retells a story using their own words and pictures','Has favorite books they return to']],
-      ['Reads simple words',['Decodes simple words','Reads short books independently or with minimal support','Reads for pleasure on their own']],
-      ['Reads chapter books',['Reads chapter books with comprehension','Discusses what they read with genuine opinion','Reads across genres and formats']],
-      ['Reads critically',['Begins to read critically','Asks who wrote this, why, and what might have been left out']],
-      ['Reads with fluency',['Reads with fluency and comprehension across complex texts','Synthesizes across sources','Chooses what to read based on genuine curiosity']]
-    ]},
-  { key:'print_awareness', name:'Print Awareness', group:'Core Literacy',
-    q:'What have you seen {child} do with the words around them and on the page?',
-    stages:[
-      ['Notices print in the world',['Notices print in the world, on bottles, boxes, signs, and labels','Understands that those marks mean something']],
-      ['Tracks words and speech',['Understands that words on a page match words being spoken','Follows along with a finger or tracks with their eyes']],
-      ['Figures out unknown words',['Sounds out unknown words','Looks at the picture to help figure out a word','Rereads the sentence to figure out a word']],
-      ['Reads in their way',['Reads in a way that matches their learning style: aloud, with a finger, or with audio alongside the book']],
-      ['Connects authors and topics',['Connects specific books to authors and topics','Reads nonfiction, poetry, graphic novels, and primary sources with equal comfort']],
-      ['Reads with perspective',['Understands that all text has a perspective and reads with that awareness','Treats reading as a lifelong habit, not a school subject']]
-    ]},
-  { key:'writing_marks', name:'Writing and Making Marks', group:'Literacy in Real Life',
-    q:'What have you seen {child} do when they write or draw?',
-    stages:[
-      ['Marks with meaning',['Scribbles and draws freely','Makes marks with purpose: lines, circles, squiggles']],
-      ['Forms letters',['Writes their own name or first letter with some consistency','Copies letters and words they see around them']],
-      ['Writes clear sentences',['Writes sentences that convey a clear message','Spells common words correctly','Uses punctuation and capitalization with growing consistency']],
-      ['Writes in many forms',['Writes in multiple formats: stories, letters, lists, journal entries','Edits their own work and notices what is unclear']],
-      ['Writes for real people',['Writes for a real audience: a pen pal, a family member, a community newsletter, a self-published book']],
-      ['Owns their writing',['Produces polished writing with a clear voice','Understands the full writing process','Uses writing as a tool for thinking and connection']]
-    ]},
-  { key:'writing_communication', name:'Writing as Communication', group:'Literacy in Real Life',
-    q:'What have you seen {child} do to communicate through writing?',
-    stages:[
-      ['Letters have meaning',['Recognizes that specific shapes become specific letters (a line and a curve become a Y)']],
-      ['Draws to communicate',['Draws pictures to tell a story','Narrates what they drew','Understands that writing is communication']],
-      ['Writes for real use',['Writes for real purposes, like notes, lists, cards, stories, and captions, not just assignments']],
-      ['Uses structure',['Understands the parts of a story and a sentence','Uses story and sentence structure intentionally']],
-      ['Creates digitally',['Uses digital tools to create blogs, digital books, or designed documents']],
-      ['Writes with purpose',['Uses writing for advocacy, connection, and leaving something behind']]
-    ]}
-];
-
-
-/* What each stage MEANS (means[stage]) and simple activities that
-   make room for a stage (acts[stage]). {K}/{k} = child's name. */
-var GUIDE = {
-  reading_engagement:{
-    means:['Books are becoming something {k} enjoys. This is the root of everything else: enjoyment comes before skill.',
-      '{K} is connecting stories to symbols. Letters are starting to mean something, especially the personal ones, like the letters in their name.',
-      '{K} is cracking the code. The marks on the page are turning into sounds and meaning on their own.',
-      'Reading has become a way {k} follows longer ideas and forms opinions, not just a skill they practice.',
-      '{K} is starting to question the text itself. That’s a big shift, from “what does it say?” to “why does it say it?”',
-      'Reading is a tool {k} uses to chase their own curiosity across many sources.'],
-    acts:[['Keep a low basket of books on the floor where they play, not up on a shelf.','Read the same favorite book as many times as they ask. Repetition is the work.','Pause before the last word on a familiar page and let them fill it in.'],
-      ['Point out the first letter of their name wherever it shows up: cereal boxes, signs, the mail.','After a story, ask “what happened?” and let them retell it with the pictures. No corrections.','Let them choose the bedtime book, even if it’s the same one all week.'],
-      ['Play I Spy with sounds: “I spy something that starts with mmm.”','Write a short word on a sticky note (cat, sun, mom) and stick it on that thing. Let them find it.','Take turns: you read a page, they read a word or a line.'],
-      ['Start a chapter book as a read-aloud and stop at a cliffhanger.','Ask “what did you think of that part?” and really listen. There’s no wrong answer.','At the library, let them pick one book from a section they’ve never tried: comics, poetry, or nonfiction.'],
-      ['Read two books or articles on the same topic and ask which one they trust more, and why.','Wonder out loud: “Who do you think wrote this? Why?”','Watch an ad together and talk about what it wants you to believe.'],
-      ['Let one of their questions become a research rabbit hole: books, videos, maybe an interview.','Ask them to tell you what two sources said and where they disagree.','Protect free reading time with no report attached.']]},
-  print_awareness:{
-    means:['{K} is noticing that marks in the world carry meaning. That’s the very first step toward reading.',
-      '{K} is learning that spoken words and printed words match up, one to one.',
-      '{K} has strategies for getting unstuck. Knowing how to figure out a word matters more than already knowing every word.',
-      '{K} knows how they read best. That self-knowledge is a real skill, not a crutch.',
-      '{K} sees books as made by real people, and is comfortable with all kinds of text.',
-      '{K} reads with an eye for perspective, and reading belongs to them now.'],
-    acts:[['Read signs out loud as you drive or walk: STOP, EXIT, the grocery store’s name.','Let them “read” the cereal box or a menu to you, however they want.','Make labels together for a few things in their space: door, bed, toy bin.'],
-      ['Run your finger under the words as you read a short, familiar book.','Make a mini book about your day, one short sentence per page, and let them point as you read it.','Write out the words to a song they love on big paper and point along as you sing.'],
-      ['When they’re stuck, ask “what would make sense here?” or “what does the picture show?” before giving the word.','Model it: “Hmm, I don’t know this word. Let me reread the sentence.”','Play with silly made-up words: how would you say “zib” or “flom”?'],
-      ['Offer a book two ways: print and the audiobook at the same time.','Ask “does it help to read out loud or in your head?”','Let them use a finger or bookmark without comment. Their tool, their choice.'],
-      ['Look up the author of a favorite book and find another one they wrote.','Add one new format to your next library trip: a graphic novel, poetry, or a map.','Read an old letter, photo caption, or document together about something they love.'],
-      ['Compare how two news sources tell the same story.','Ask what an author might have wanted readers to feel or believe.','Talk about what you’re reading as an adult. Let them see reading is for life.']]},
-  writing_marks:{
-    means:['{K} is discovering their hand can leave a mark on purpose. That’s the first form of writing.',
-      '{K} is moving from shapes to letters, usually starting with the letters that matter to them.',
-      '{K} can get a clear idea down in a sentence someone else can read.',
-      '{K} is choosing the right form for the job and starting to look back at their own work.',
-      '{K} writes for real people, and that gives writing a reason.',
-      'Writing is how {k} thinks and connects, in their own voice.'],
-    acts:[['Keep crayons, chalk, and paper where they can grab them anytime.','Draw in sand, shaving cream, or on a steamy window.','Ask “tell me about your picture” instead of “what is it?”'],
-      ['Write their name on their artwork and leave room for them to copy it if they want to.','Give them their own notepad to “write” the grocery list next to you.','Make letters out of playdough, sticks, or pebbles outside.'],
-      ['Let them tell you a sentence for a card, then write one word of it themselves.','Hang a family message board where everyone leaves short notes.','Invite them to add a one-line caption to a drawing.'],
-      ['Try a new form each week: a list, a letter, a recipe, a comic strip.','Read their writing back to them and ask “is that what you meant?”','Journal side by side for ten minutes. You write too.'],
-      ['Set up a pen pal. A grandparent counts.','Have them write a review of a book, movie, or restaurant for the family.','Make a little book together and “publish” it on the family bookshelf.'],
-      ['Let them take on a big project: a zine, a story series, a blog.','Talk through drafts like a real editor: what’s working, what’s unclear?','Encourage writing to sort out a feeling or make a decision.']]},
-  writing_communication:{
-    means:['{K} is noticing that lines and curves combine into letters.',
-      '{K} knows a picture can carry a message, and that writing is a way to tell someone something.',
-      '{K} writes because it’s useful, not because it’s assigned.',
-      '{K} understands how stories and sentences are built, and uses that on purpose.',
-      '{K} is creating with digital tools and thinking about how their message looks.',
-      '{K} uses writing to make a difference, connect with people, and leave something behind.'],
-    acts:[['Make letters with your bodies or sticks: a line and a curve make a D.','Trace a letter on their back and let them guess it.','Point out shapes hiding in letters: “that A looks like a tent.”'],
-      ['Ask them to draw a story, then tell it to you. Write their words under the picture.','Mail a drawn “letter” to someone and let them see it arrive.','Say out loud why you write: “I wrote it down so I’d remember.”'],
-      ['Let them write the grocery list or a sign for their bedroom door.','Make birthday cards for real people.','Ask them to leave a note for a sibling or parent to find.'],
-      ['Retell a favorite story together with “first… then… at the end…”','Write a short sentence and make it longer together, one word at a time.','Talk about a story’s problem and how it got solved.'],
-      ['Make a digital book or slideshow about something they love.','Design a poster or flyer for a family event.','Start a simple family photo journal with captions.'],
-      ['Write a letter to a local business or official about something they care about.','Interview a grandparent and write up the family story.','Write something to give away: a guide, or a story for a younger child.']]}
-};
-function fillName(t){ return t.replace(/\{K\}/g, Kid()).replace(/\{k\}/g, kid()); }
-
-/* ========================================================= */
-function blank(){ return SKILLS.map(function(s){ return s.stages.map(function(st){ return st[1].map(function(){return false;}); }); }); }
-var state = { child:'', i:0, checks:blank() };
-function $(id){ return document.getElementById(id); }
-function esc(t){ var d=document.createElement('div'); d.textContent=t; return d.innerHTML; }
-function kid(){ return state.child || 'your child'; }
-function Kid(){ return state.child || 'Your child'; }
-function poss(cap){ return state.child ? state.child+'’s' : (cap?'Your':'your')+' child’s'; }
-function show(id){ ['s-intro','s-quiz','s-result','s-full'].forEach(function(s){ $(s).hidden = (s!==id); }); window.scrollTo({top:0,behavior:'smooth'}); }
-function lower(s){ return s.charAt(0).toLowerCase()+s.slice(1); }
-
-$('start').onclick = function(){
-  state.child = $('child').value.trim().replace(/[<>]/g,'');
-  state.i = 0; state.checks = blank();
-  renderQ(); show('s-quiz');
-};
-
-function renderQ(){
-  var s = SKILLS[state.i], n = state.i+1;
-  $('bar').style.width = (100*state.i/SKILLS.length)+'%';
-  $('plabel').textContent = 'Area '+n+' of '+SKILLS.length;
-  $('q-skill').textContent = s.group+' · '+s.name;
-  $('q-title').textContent = s.q.replace('{child}', kid());
-  $('q-help').textContent = 'Check everything you’ve seen '+kid()+' do on their own, naturally, in everyday life. Don’t test them, and don’t check what you’re hoping for. Unchecked is okay. It just means you haven’t seen it yet.';
-  var box=$('options'); box.innerHTML='';
-  s.stages.forEach(function(st, si){
-    var g=document.createElement('div'); g.className='stage-group';
-    g.innerHTML='<div class="stage-label">'+STAGES[si]+'</div>';
-    var c=document.createElement('div'); c.className='checks';
-    st[1].forEach(function(item, ii){
-      var b=document.createElement('button'); b.type='button'; b.className='chk';
-      var on=state.checks[state.i][si][ii];
-      b.setAttribute('role','checkbox'); b.setAttribute('aria-checked', String(on));
-      b.innerHTML='<span class="box-ui" aria-hidden="true">✓</span><span>'+esc(item)+'</span>';
-      b.onclick=function(){ state.checks[state.i][si][ii]=!state.checks[state.i][si][ii]; b.setAttribute('aria-checked', String(state.checks[state.i][si][ii])); updateCount(); };
-      c.appendChild(b);
-    });
-    g.appendChild(c); box.appendChild(g);
-  });
-  updateCount();
-  $('back').style.visibility = state.i===0 ? 'hidden':'visible';
-  $('next').textContent = n===SKILLS.length ? 'See My Results' : 'Next';
-}
-function countSkill(i){ var t=0; state.checks[i].forEach(function(st){ st.forEach(function(x){ if(x) t++; }); }); return t; }
-function updateCount(){
-  var n=countSkill(state.i);
-  $('count-line').textContent = n===0 ? 'Nothing checked yet. That’s okay if you haven’t seen these.' : n+' thing'+(n===1?'':'s')+' you’ve seen.';
-}
-$('back').onclick=function(){ if(state.i>0){ state.i--; renderQ(); window.scrollTo({top:0}); } };
-$('next').onclick=function(){
-  if(state.i<SKILLS.length-1){ state.i++; renderQ(); window.scrollTo({top:0,behavior:'smooth'}); }
-  else { renderResult(); show('s-result'); }
-};
-
-/* Stage = the highest stage where at least one thing was checked (-1 = nothing yet) */
-function stageOf(i){ var top=-1; state.checks[i].forEach(function(st,si){ if(st.some(Boolean)) top=si; }); return top; }
-function stageName(v){ return v<0 ? 'Not yet observed' : STAGES[v]; }
-function fill(i,si){ var st=state.checks[i][si]; return st.filter(Boolean).length/st.length; }
-
-function summary(){
-  var stages=SKILLS.map(function(_,i){return stageOf(i);}), seen=stages.filter(function(x){return x>=0;});
-  if(!seen.length) return {type:'none', stages:stages};
-  var min=Math.min.apply(null,seen), max=Math.max.apply(null,seen), counts={};
-  seen.forEach(function(x){counts[x]=(counts[x]||0)+1;});
-  var mode=+Object.keys(counts).sort(function(p,q){return counts[q]-counts[p] || p-q;})[0];
-  return {mode:mode, mixed:(counts[mode]<2 && seen.length>1), type:(max-min>=2?'uneven':'steady'), stages:stages};
-}
-
-function renderResult(){
-  var sm=summary();
-  $('r-title').innerHTML = sm.type==='none' ? 'Here’s where '+esc(kid())+' is starting.'
-    : sm.mixed ? esc(poss(true))+' literacy is growing <em>at its own pace</em> in each area.'
-    : 'Most of '+esc(poss(false))+' literacy is in <em>'+esc(STAGES[sm.mode])+'</em>.';
-  $('r-sub').textContent = 'Here’s '+poss(false)+' baseline in the four areas of the literacy growth focus. Each bar fills in with the things you’ve seen at that stage.';
-  var html='';
-  SKILLS.forEach(function(s,i){
-    var v=stageOf(i), bars='';
-    for(var k=0;k<6;k++){ var f=fill(i,k); bars+='<span style="background:linear-gradient(to right,'+(k===v?'var(--black)':'var(--yellow-dark)')+' '+(f*100)+'%,var(--rule) '+(f*100)+'%)"></span>'; }
-    html+='<div class="track-row"><div class="track-top"><span class="track-skill">'+esc(s.name)+'</span><span class="track-stage">'+esc(stageName(v))+'</span></div><div class="track">'+bars+'</div></div>';
-  });
-  html+='<div class="track-legend">'+STAGES.map(function(s){return '<i>'+s+'</i>';}).join('')+'</div>';
-  $('tracks').innerHTML=html;
-  var msg;
-  if(sm.type==='none') msg='Not seeing these yet is a real and normal place to be. Literacy starts long before the first letter. Your next step is simply to start noticing.';
-  else if(sm.type==='uneven') msg='Notice that '+kid()+' isn’t in the same place in every area. That’s completely normal, and it’s useful: it shows you exactly where to focus. There’s no "behind" on this map. Just where '+kid()+' is, and what’s next.';
-  else msg='Every stage on this map is a real place to be. There’s no "behind" here. Just where '+kid()+' is, and what’s naturally emerging next.';
-  $('r-reassure').textContent=msg;
-  $('g-title').textContent='Want to know what’s emerging next for '+kid()+'?';
-}
-
-$('kit-form').onsubmit=function(e){
-  e.preventDefault();
-  var email=$('email').value.trim(), fname=$('fname').value.trim();
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ $('err').hidden=false; return; }
-  $('err').hidden=true; $('unlock').disabled=true; $('unlock').textContent='One moment…';
-  var body=new URLSearchParams();
-  body.append('email_address',email); body.append('fields[first_name]',fname);
-  SKILLS.forEach(function(s,i){ body.append('fields['+s.key+']', stageName(stageOf(i))); });
-  var src=getSource();
-  body.append('fields[signup_source]', src.source);
-  body.append('fields[signup_medium]', src.medium);
-  body.append('fields[signup_campaign]', src.campaign);
-  body.append('fields[signup_referrer]', src.referrer);
-  body.append('fields[heard_about]', $('heard').value || 'Not answered');
-  var sm=summary(); body.append('fields[reading_check_stage]', sm.type==='none'?'Not yet observed':(sm.mixed?'Mixed':STAGES[sm.mode]));
-  var done=function(){ renderFull(); show('s-full'); $('unlock').disabled=false; $('unlock').textContent='Show My Full Results'; };
-  if(KIT_FORM_ID && KIT_FORM_ID!=='YOUR_FORM_ID'){
-    fetch('https://app.kit.com/forms/'+KIT_FORM_ID+'/subscriptions',{method:'POST',mode:'no-cors',body:body}).then(done,done);
-  } else { done(); }
-};
-
-function list(items){ return '<ul style="margin:6px 0 0 18px">'+items.map(function(t){return '<li style="font-size:15px;color:var(--gray);margin-bottom:4px">'+esc(t)+'</li>';}).join('')+'</ul>'; }
-
-function renderFull(){
-  $('f-title').innerHTML=esc(poss(true))+' reading and writing, <em>up close.</em>';
-  $('f-sub').textContent='For each area: what '+poss(false)+' stage means, what’s coming next, and a few simple things to try this week. Pick one or two. You don’t need to do them all.';
-  var html='';
-  SKILLS.forEach(function(s,i){
-    var v=stageOf(i), g=GUIDE[s.key], seenCount=countSkill(i), gaps=0;
-    s.stages.forEach(function(st,si){ st[1].forEach(function(_,ii){ if(si<=v && !state.checks[i][si][ii]) gaps++; }); });
-    var target = v<0 ? 0 : Math.min(v+1,5);
-    var top = v===5;
-    var nowHtml = v<0
-      ? '<p>You haven’t seen these yet, and that’s a real starting point, not a problem. Everything in this area grows from the very first stage: <strong>'+esc(lower(s.stages[0][0]))+'</strong>.</p>'
-      : '<p><strong>'+esc(STAGES[v])+'.</strong> '+esc(fillName(g.means[v]))+'</p>'+
-        '<p class="small">You checked '+seenCount+' thing'+(seenCount===1?'':'s')+' here.'+(gaps?' A few pieces at this stage or earlier haven’t shown up yet. That’s normal. They often come in any order.':'')+'</p>';
-    var nextHtml = top
-      ? '<p>'+esc(Kid())+' is at the top of this map. The goal now is to keep it theirs: real audiences, real purposes, and books they choose.</p>'
-      : '<p><strong>'+esc(STAGES[target])+': '+esc(lower(s.stages[target][0]))+'.</strong> '+esc(fillName(g.means[target]))+'</p>';
-    var tryHtml = '<p>'+(top?'Ways to keep it growing:':'No prep, no worksheets. Simple ways to make room for the next step:')+'</p>'+
-      '<ul class="acts">'+g.acts[target].map(function(a){return '<li>'+esc(a)+'</li>';}).join('')+'</ul>';
-    var watchItem = top ? null : s.stages[target][1][0];
-    var watch = watchItem ? 'Watch for a moment when '+kid()+' '+lower(watchItem)+'. Don’t test it. Just notice if it shows up on its own, and jot it down when it does.'
-      : 'Notice what '+kid()+' chooses to read or write when nobody asks. That’s where their next project is hiding.';
-    html+='<div class="full-skill"><h3>'+esc(s.name)+' <span class="track-stage" style="font-family:inherit;margin-left:6px">'+esc(stageName(v))+'</span></h3>'+
-      '<div class="box now"><span class="k">Where '+esc(kid())+' is</span>'+nowHtml+'</div>'+
-      '<div class="box next"><span class="k">'+(top?'What’s next':'Coming next')+'</span>'+nextHtml+'</div>'+
-      '<div class="box try"><span class="k">Try this week</span>'+tryHtml+'</div>'+
-      '<div class="box notice"><span class="k">Watch for</span><p>'+esc(watch)+'</p></div></div>';
-  });
-  $('full-list').innerHTML=html;
-  $('f-note').textContent='"Here’s what I want you to hear: wherever '+kid()+' landed today is not a grade. It’s a place on a path. The fact that you took a few minutes to really notice your child tells me you’re doing more than you think. Keep noticing. That’s the whole secret."';
-}
 
 function retake(){ state={child:'',i:0,checks:blank()}; $('child').value=''; show('s-intro'); }
 $('retake').onclick=retake; $('retake2').onclick=retake;
