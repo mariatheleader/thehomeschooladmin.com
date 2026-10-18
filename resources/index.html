@@ -227,7 +227,9 @@ p strong{color:var(--black)}
 <body>
 
 <div class="announce">
-  <p>Enough · 3 weeks 1:1 with me, so you can stop wondering if you're doing enough · Nov 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
+  <p data-bar="enough">New: Enough, 3 weeks 1:1 with me · Nov 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
+  <p data-bar="mte" hidden>New: More Than Enough, a self-guided course through all nine growth focuses · Starts Dec 7 · $97/month · <a href="/morethanenough/">Join by Dec 4</a></p>
+  <p data-bar="after" hidden>Free: the Reading Check · see where your child is in reading and writing · <a href="/reading-check/">Take it in 5 minutes</a></p>
 </div>
 
 <nav class="nav" aria-label="Main navigation">
@@ -512,6 +514,16 @@ p strong{color:var(--black)}
   if (new Date() >= DEADLINE) return;
   document.querySelectorAll('.enough-amt').forEach(function(el){ el.textContent = FOUNDING; });
   document.querySelectorAll('.founding-only').forEach(function(el){ el.hidden = false; });
+})();
+</script>
+<script>
+/* TOP BAR: switches on its own. Through Oct 30: Enough. Oct 31 - Dec 4: More Than Enough. After Dec 4: the free Reading Check. */
+(function(){
+  var ENOUGH_CLOSES = new Date('2026-10-30T23:59:59-04:00'), MTE_CLOSES = new Date('2026-12-04T23:59:59-05:00'), now = new Date();
+  document.querySelectorAll('[data-bar]').forEach(function(el){
+    var k = el.getAttribute('data-bar');
+    el.hidden = !((k === 'enough' && now < ENOUGH_CLOSES) || (k === 'mte' && now >= ENOUGH_CLOSES && now < MTE_CLOSES) || (k === 'after' && now >= MTE_CLOSES));
+  });
 })();
 </script>
 </body>
