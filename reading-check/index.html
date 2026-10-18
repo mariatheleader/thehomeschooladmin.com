@@ -224,7 +224,7 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
 <body>
 
 <div class="announce">
-  <p class="open-only">Enough · a 3-week homeschool reset · November 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
+  <p class="open-only">Enough · 3 weeks 1:1 with me, so you can stop wondering if you're doing enough · Nov 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
   <p class="closed-only" hidden>Enough is in session · <a href="/more-than-enough/">More Than Enough</a> starts Dec 7</p>
 </div>
 
@@ -340,7 +340,7 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
       <span class="k">Before you go</span>
       <h3>This is the map. It can't see your child.</h3>
       <p>Everything above is based on what's typical at each stage. It's a good start, and it's only the surface. It doesn't know why reading is clicking but writing isn't, what your days look like, or what curriculum is sitting on your table. And literacy is just one of nine growth focuses.</p>
-      <p>That's the part I do in <strong>Enough</strong>, three weeks with me (Nov 2–20):</p>
+      <p>That's what <strong>Enough</strong> is for: a 3-week program where I work with you 1:1 to see exactly where your child is in the area that worries you most, so you can stop wondering if you're doing enough. Nov 2–20.</p>
       <ul><li>You pick the growth focus that's on your mind: reading, math, behavior, any of the nine</li><li>I look at <strong>your</strong> child's page and send you a personal voice note on what I see, and why</li><li>You get a lesson plan built for your child, not a typical one</li><li>Three weeks to ask me anything in Telegram</li></ul>
       <a href="#go-further">See how Enough goes deeper ↓</a>
     </div>
@@ -379,7 +379,7 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
     </div>
 
     <h2 style="margin-top:44px" class="open-only">Two ways to <em>go further.</em></h2>
-    <p class="open-only">If you want someone to look at your child with you, that's <strong>Enough</strong>: three weeks with me where you pick the one growth focus that's on your mind, I send you a personal voice note on what I see, and you get a lesson plan made for your child. If you'd rather work through all nine on your own, that's <strong>More Than Enough</strong>.</p>
+    <p class="open-only">If you want someone to look at your child with you, that's <strong>Enough</strong>: a 3-week program where I work with you 1:1 to see exactly where your child is in the area that worries you most, so you can stop wondering if you're doing enough. You pick the growth focus, I send you a personal voice note on what I see, and you get a lesson plan made for your child. If you'd rather work through all nine on your own, that's <strong>More Than Enough</strong>.</p>
     <h2 style="margin-top:44px" class="closed-only" hidden>Want to <em>go further?</em></h2>
 
     <div class="cta-grid open-only">
@@ -387,7 +387,7 @@ input:focus{outline:2px solid var(--yellow-dark);outline-offset:1px}
         <span class="k">3 weeks · November 2–20 · 10 families</span>
         <h3>Deep dive with me in Enough</h3>
         <div class="price"><s class="founding-only founding-strike" hidden>$197</s><b class="enough-amt">$197</b><span class="founding-only founding-note" hidden>Founding price through Sun, Oct 25</span></div>
-        <p>Pick the growth focus that keeps you up at night. I'll tell you exactly where your child is and build the plan for what's next. All in Telegram, no live calls. Enrollment closes Friday, Oct 30.</p>
+        <p>3 weeks 1:1 with me, so you can stop wondering if you're doing enough. Pick the growth focus that keeps you up at night. I'll tell you exactly where your child is and build the plan for what's next. All in Telegram, no live calls. Enrollment closes Friday, Oct 30.</p>
         <a class="btn" href="/enough/">See Enough</a>
       </div>
       <div class="cta cool">
@@ -821,7 +821,7 @@ function buildPDF(logo){
     label('Watch for',POW); para(r.watch,10.5,BLACK);
   });
   var now=new Date(), deeper=null;
-  if(now<new Date('2026-10-30T23:59:59-04:00')) deeper={k:'This is the map. It can’t see your child.', body:'Everything here is based on what’s typical at each stage. It doesn’t know why reading is clicking but writing isn’t, what your days look like, or what curriculum is on your table. And literacy is one of nine growth focuses. In Enough (3 weeks with me, Nov 2-20), you pick the growth focus that’s on your mind, I look at your child’s page and send you a personal voice note on what I see, and you get a lesson plan built for your child.', link:'thehomeschooladmin.com/enough'};
+  if(now<new Date('2026-10-30T23:59:59-04:00')) deeper={k:'This is the map. It can’t see your child.', body:'Everything here is based on what’s typical at each stage. It doesn’t know why reading is clicking but writing isn’t, what your days look like, or what curriculum is on your table. And literacy is one of nine growth focuses. Enough is a 3-week program (Nov 2-20) where I work with you 1:1 to see exactly where your child is in the area that worries you most, so you can stop wondering if you’re doing enough. You pick the growth focus, I look at your child’s page and send you a personal voice note on what I see, and you get a lesson plan built for your child.', link:'thehomeschooladmin.com/enough'};
   else if(now<new Date('2026-12-04T23:59:59-05:00')) deeper={k:'That was one of nine.', body:'More Than Enough walks you through all nine growth focuses, one every two weeks, with the full matrix, a short video from me, and next-step activities for every box. Starts Dec 7.', link:'thehomeschooladmin.com/more-than-enough'};
   if(deeper){
     var dl=doc.split(deeper.body,'hel',10.5,CW-36), dh=dl.length*15.2+86;
