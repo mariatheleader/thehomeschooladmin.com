@@ -142,17 +142,25 @@ img{max-width:100%;display:block}
   .nav-cta{display:inline-block;margin-top:4px}
 }
 
-/* HERO */
-.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,26,.94) 0%,rgba(26,26,26,.55) 55%,rgba(26,26,26,.15) 100%)}
-.hero-content{position:relative;z-index:2;padding:0 24px 72px;max-width:720px;margin:0 auto;width:100%;text-align:center}
-.hero-eyebrow{display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:20px;font-weight:700}
-.hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(60px,12vw,96px);font-weight:700;line-height:.95;color:var(--white);letter-spacing:-.02em;margin-bottom:14px}
-.hero-tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:700;margin-bottom:22px;display:block}
-.hero-desc{font-family:'Libre Baskerville',serif;font-size:clamp(16px,2.3vw,19px);font-style:italic;color:rgba(255,255,255,.88);max-width:600px;margin:0 auto 16px;line-height:1.7}
-.hero-sub{font-size:14px;color:rgba(255,255,255,.55);margin:0 auto 36px;max-width:520px;letter-spacing:.03em}
-.hero-ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+/* HERO (split: text left, photo right) */
+.hero{background:var(--offwhite);border-bottom:1px solid var(--rule);overflow:hidden}
+.hero-grid{max-width:1160px;margin:0 auto;padding:84px 24px 96px;display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.hero-eyebrow{display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mauve);margin-bottom:18px;font-weight:700}
+.hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(56px,8vw,104px);font-weight:700;line-height:.92;color:var(--black);letter-spacing:-.02em;margin-bottom:18px}
+.hero-tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--powder);font-weight:700;margin-bottom:22px;display:block}
+.hero-desc{font-family:'Libre Baskerville',serif;font-size:clamp(17px,1.9vw,20px);font-style:italic;color:var(--black);max-width:540px;margin:0 0 14px;line-height:1.7}
+.hero-sub{font-size:14px;color:var(--mid);margin:0 0 32px;letter-spacing:.03em}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;padding-top:22px;border-top:1px solid var(--rule)}
+.hero-proof span{font-size:12px;color:var(--mid);letter-spacing:.05em}
+.hero-proof strong{color:var(--black);font-weight:700}
+.hero-photo{position:relative;padding:0 0 28px 28px}
+.hero-photo::before{content:"";position:absolute;right:-24px;top:-24px;width:72%;height:78%;background:var(--yellow);border-radius:2px;z-index:0}
+.hero-photo img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:45% 30%;border-radius:2px;box-shadow:0 24px 50px rgba(26,26,26,.14)}
+.hero-quote{position:absolute;z-index:2;left:0;bottom:0;max-width:300px;background:var(--white);border-left:4px solid var(--yellow);padding:18px 20px;box-shadow:0 16px 36px rgba(26,26,26,.12)}
+.hero-quote p{font-family:'Libre Baskerville',serif;font-style:italic;font-size:14px;color:var(--black);line-height:1.6;margin:0 0 8px}
+.hero-quote cite{font-style:normal;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--powder)}
+@media(max-width:900px) and (min-width:641px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero-photo{max-width:520px}}
 
 /* BUTTONS */
 .btn{display:inline-block;background:var(--yellow);color:var(--black);font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:16px 44px;border-radius:2px;transition:background .2s,color .2s}
@@ -329,9 +337,13 @@ p strong{color:var(--black)}
   .visit-row{grid-template-columns:1fr;gap:4px}
   .photo-break.landscape{height:260px}
   .about-inner{grid-template-columns:1fr;gap:24px}
-  .hero{min-height:80vh}
-  .hero-content{padding:0 20px 48px}
-  .hero h1{font-size:clamp(46px,16vw,64px);line-height:1}
+  .hero-grid{grid-template-columns:1fr;gap:44px;padding:48px 20px 64px}
+  .hero h1{font-size:clamp(52px,17vw,72px);line-height:.95}
+  .hero-ctas a{flex:1 1 100%;text-align:center}
+  .hero-photo{padding:0 0 24px 16px;margin-right:12px}
+  .hero-photo::before{right:-12px;top:-12px}
+  .hero-photo img{aspect-ratio:4/4.4}
+  .hero-quote{max-width:84%;padding:14px 16px}
   .section{padding:56px 0}
   .testimonial-section,.footer-cta,.about-section,.faq-section,.fit-section,.compare-section,.alt-section{padding:56px 20px}
   .pricing-head,.price-card,.includes{padding:24px 18px}
@@ -365,6 +377,12 @@ p strong{color:var(--black)}
 </style>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b545f1b503474e728f330024c81e07a9"}'></script><!-- End Cloudflare Web Analytics -->
+<style>
+/* ENOUGH FOUNDING PRICE (auto-switches, see script at bottom of page) */
+[hidden]{display:none!important}
+.enough-amt{font-weight:inherit}
+.founding-strike{opacity:.5;font-weight:400;margin-right:6px}
+</style>
 </head>
 <body>
 
@@ -390,17 +408,29 @@ p strong{color:var(--black)}
 
 <!-- HERO -->
 <header class="hero">
-  <img class="hero-img" src="/assets/confidence/IMG_2697.jpg" alt="A thriving homeschool family at home">
-  <div class="hero-overlay" aria-hidden="true"></div>
-  <div class="hero-content">
-    <span class="hero-eyebrow">Private Homeschool Assistant · 12 Months</span>
-    <h1>THRIVE</h1>
-    <span class="hero-tag">For the parent who chose home over private school</span>
-    <p class="hero-desc">For a full year, I become your private homeschool assistant and thinking partner. You stay your child's primary teacher. You stop carrying the planning, the logistics, and the loneliness by yourself.</p>
-    <p class="hero-sub">In-home in Southern Maine · Virtual everywhere</p>
-    <div class="hero-ctas">
-      <a href="https://forms.gle/4GDVGbbp11c8fwpz9" class="btn">Join the Waitlist</a>
-      <a href="#included" class="btn-outline">See What's Included</a>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="hero-eyebrow">Private Homeschool Assistant · 12 Months</span>
+      <h1>THRIVE</h1>
+      <span class="hero-tag">For the parent who chose home over private school</span>
+      <p class="hero-desc">For a full year, I become your private homeschool assistant and thinking partner. You stay your child's primary teacher. You stop carrying the planning, the logistics, and the loneliness by yourself.</p>
+      <p class="hero-sub">In-home in Southern Maine · Virtual everywhere</p>
+      <div class="hero-ctas">
+        <a href="https://forms.gle/4GDVGbbp11c8fwpz9" class="btn">Join the Waitlist</a>
+        <a href="#included" class="btn-outline-dark">See What's Included</a>
+      </div>
+      <div class="hero-proof">
+        <span><strong>55+</strong> families served</span>
+        <span><strong>5 years</strong> supporting homeschoolers</span>
+        <span><strong>Child Development</strong> Specialist</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="/images/thrivinghomeschooler.jpg" alt="Maria, The Homeschool Admin, at home">
+      <blockquote class="hero-quote">
+        <p>"We have finally found something that works for our family. The kids are happy and we are happy."</p>
+        <cite>Scott B., THRIVE client for 2 years</cite>
+      </blockquote>
     </div>
   </div>
 </header>
@@ -593,7 +623,7 @@ p strong{color:var(--black)}
         </div>
       </div>
       <div class="deliverable">
-        <img class="deliverable-img" src="/assets/REASSURED-page.png" alt="REASSURED developmental tracking">
+        <img class="deliverable-img" src="/assets/confidence/doing-enough-homeschooling.png" alt="REASSURED developmental tracking">
         <div class="deliverable-body">
           <h3>REASSURED™ Developmental Tracking</h3>
           <p>Clear insight into each child across the nine growth focuses of the Peace of Mind Framework, with a plan for what to do next.</p>
@@ -691,11 +721,11 @@ p strong{color:var(--black)}
         <span class="alt-kicker">3 weeks · November 2–20</span>
         <h3>Enough</h3>
         <p>A 3-week homeschool reset. Observe your child across nine growth focuses, get personal feedback on each child, and walk away with a customized lesson plan. It all happens in Telegram, with no live calls.</p>
-        <div class="alt-price">$197</div>
+        <div class="alt-price"><s class="founding-only founding-strike" hidden>$197</s><b class="enough-amt">$197</b><span class="founding-only" hidden style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mauve)">founding price through Sun, Oct 25</span></div>
         <a href="/enough/" class="btn">Join Enough</a>
       </div>
       <div class="alt-card cool">
-        <span class="alt-kicker">One-time help</span>
+        <span class="alt-kicker">Help as you need it</span>
         <h3>Clarity Sessions</h3>
         <p>One pressing question about curriculum, routines, preschool, transcripts, or what to do next? Get a clear answer through Telegram, a virtual session, or in person in Southern Maine.</p>
         <div class="alt-price">$97–$297</div>
@@ -837,5 +867,18 @@ p strong{color:var(--black)}
   </div>
 </footer>
 
+<script>
+/* ENOUGH FOUNDING PRICE TIMER
+   Before the deadline, every Enough price on this page shows the founding price.
+   After the deadline, it automatically shows the regular $197 (the price written in the HTML).
+   To change the deadline or price, edit the two lines below. */
+(function(){
+  var DEADLINE = new Date('2026-10-25T23:59:59-04:00'); // Sunday, Oct 25, 11:59pm Eastern
+  var FOUNDING = '$147';
+  if (new Date() >= DEADLINE) return;
+  document.querySelectorAll('.enough-amt').forEach(function(el){ el.textContent = FOUNDING; });
+  document.querySelectorAll('.founding-only').forEach(function(el){ el.hidden = false; });
+})();
+</script>
 </body>
 </html>
