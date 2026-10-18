@@ -63,18 +63,30 @@
       "@type": "Course",
       "@id": "https://www.thehomeschooladmin.com/#enough",
       "name": "Enough: A 3-Week Homeschool Reset",
-      "description": "A 3-week asynchronous homeschool reset for parents. Observe your child across nine growth focuses using the Peace of Mind Framework from REASSURED, get personal feedback for each child from a child development specialist, and walk away with a customized lesson plan.",
+      "description": "A 3-week asynchronous homeschool reset for parents. Pick one of nine growth focuses from the Peace of Mind Framework in REASSURED, observe your child, and get a personal voice note from a child development specialist on where your child is and what can come next, plus a customized lesson plan.",
       "url": "https://www.thehomeschooladmin.com/enough/",
       "provider": {
         "@id": "https://www.thehomeschooladmin.com/#business"
       },
-      "offers": {
-        "@type": "Offer",
-        "price": "197",
-        "priceCurrency": "USD",
-        "category": "Paid",
-        "url": "https://www.thehomeschooladmin.com/enough/"
-      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Founding cohort price",
+          "price": "147",
+          "priceCurrency": "USD",
+          "category": "Paid",
+          "validThrough": "2026-10-25T23:59:59-04:00",
+          "url": "https://www.thehomeschooladmin.com/enough/"
+        },
+        {
+          "@type": "Offer",
+          "name": "Regular price",
+          "price": "197",
+          "priceCurrency": "USD",
+          "category": "Paid",
+          "url": "https://www.thehomeschooladmin.com/enough/"
+        }
+      ],
       "hasCourseInstance": {
         "@type": "CourseInstance",
         "courseMode": "Online",
@@ -94,7 +106,7 @@
       },
       "serviceType": "Homeschool consulting and planning support",
       "url": "https://www.thehomeschooladmin.com/claritysessions/",
-      "description": "One-time homeschool support for parents who need help with curriculum choices, routines, preschool planning, transcript questions, or next steps. Available through Telegram, virtual sessions, and in-person sessions in Southern Maine.",
+      "description": "Homeschool help as you need it, for parents who need help with curriculum choices, routines, preschool planning, transcript questions, or next steps. Available through Telegram, virtual sessions, and in-person sessions in Southern Maine.",
       "areaServed": [
         "United States",
         "Southern Maine",
@@ -399,12 +411,18 @@ p strong{color:var(--black)}
 </style>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b545f1b503474e728f330024c81e07a9"}'></script><!-- End Cloudflare Web Analytics -->
+<style>
+/* ENOUGH FOUNDING PRICE (auto-switches, see script at bottom of page) */
+[hidden]{display:none!important}
+.enough-amt{font-weight:inherit}
+.founding-strike{opacity:.5;font-weight:400;margin-right:6px}
+</style>
 </head>
 
 <body>
 
 <div class="announce">
-  <p>Enough · a 3-week homeschool reset · November 2–20 · <a href="/enough/">Join for $197</a></p>
+  <p>Enough · a 3-week homeschool reset · November 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
 </div>
 
 <nav class="nav" aria-label="Main navigation">
@@ -429,9 +447,9 @@ p strong{color:var(--black)}
   <div class="hero-content">
     <span class="hero-eyebrow">Child Development Specialist · Homeschool Assistant</span>
     <h1>Enough with wondering if you're doing <em>enough.</em></h1>
-    <p class="hero-sub"><strong>Enough is a 3-week homeschool reset, November 2–20.</strong> See exactly where your child is, get personal feedback on each child from a child development specialist, and leave with a clear next step. It all happens in Telegram, so there are no live calls and no babysitter needed.</p>
+    <p class="hero-sub"><strong>Enough is a 3-week homeschool reset, November 2–20.</strong> Pick one growth focus, see exactly where your child is, and get a personal voice note from a child development specialist on what can come next. It all happens in Telegram, so there are no live calls and no babysitter needed.</p>
     <div class="hero-ctas">
-      <a href="/enough/" class="btn" style="font-size:14px;padding:17px 44px">Join Enough · $197</a>
+      <a href="/enough/" class="btn" style="font-size:14px;padding:17px 44px">Join Enough · <b class="enough-amt">$197</b></a>
       <a href="#ways-to-work" class="btn-ghost">See All Ways to Work Together</a>
     </div>
     <div class="hero-trust">
@@ -464,11 +482,11 @@ p strong{color:var(--black)}
           <span class="eyebrow">New this fall · Start here</span>
           <h2 id="enough-heading">Enough<br><em>A 3-week homeschool reset</em></h2>
           <p class="enough-tagline">Stop asking the Facebook group whether your kid is "behind." Get a real answer about your real child.</p>
-          <p>Enough is for the parent who is doing a lot and still lies awake wondering if it's enough. For three weeks, you'll look at your child through the <strong>Peace of Mind Framework</strong> from my book REASSURED™. That's nine growth focuses, all open to you. I'll tell you what I see and what to do next.</p>
+          <p>Enough is for the parent who is doing a lot and still lies awake wondering if it's enough. For three weeks, you'll look at your child through the <strong>Peace of Mind Framework</strong> from my book REASSURED™. You pick one of the nine growth focuses, the one you're most worried about. I'll tell you what I see and what can come next.</p>
           <ul class="enough-steps">
             <li><strong>Learn the framework together.</strong> Short teachings in our Telegram group, so you get the "why" without sitting through a class.</li>
-            <li><strong>Observe your child.</strong> Circle where your child is on each growth focus and send me a photo.</li>
-            <li><strong>Get personal feedback for each child.</strong> I reply to you one-on-one within 24 hours, with clear next steps.</li>
+            <li><strong>Observe your child.</strong> Circle what you see on the growth focus you chose and send me a photo.</li>
+            <li><strong>Get a personal voice note from me.</strong> I interpret what you circled, tell you where your child is, and what can come next.</li>
             <li><strong>Walk away with a customized lesson plan,</strong> so you can see exactly what intentional, child-led planning looks like.</li>
           </ul>
         </div>
@@ -477,11 +495,11 @@ p strong{color:var(--black)}
           <span class="way-kicker">Group teaching · 1:1 feedback</span>
           <h3>Enough</h3>
           <span class="enough-dates">November 2–20 · Online, anywhere</span>
-          <div class="enough-price">$197</div>
-          <span class="enough-price-sub">for all 3 weeks</span>
+          <div class="enough-price"><s class="founding-only founding-strike" hidden>$197</s><b class="enough-amt">$197</b></div>
+          <span class="enough-price-sub">for all 3 weeks<span class="founding-only" hidden> · founding price through Sun, Oct 25</span></span>
           <ul>
-            <li>All nine growth focuses open to you</li>
-            <li>Personal feedback for each of your children</li>
+            <li>Pick any one of nine growth focuses</li>
+            <li>A personal voice note interpreting your child's circles</li>
             <li>Replies within 24 hours</li>
             <li>A customized lesson plan for your child</li>
             <li>Asynchronous in Telegram, so you never need a babysitter</li>
@@ -545,10 +563,10 @@ p strong{color:var(--black)}
           <span class="way-kicker">Start here · Nov 2–20</span>
           <h3>Enough: A 3-Week Homeschool Reset</h3>
           <p>For parents who want to stop second-guessing and see clearly where each child is and what comes next.</p>
-          <div class="way-price">$197<span>for all three weeks</span></div>
+          <div class="way-price"><s class="founding-only founding-strike" hidden>$197</s><b class="enough-amt">$197</b><span>for all three weeks<b class="founding-only" hidden> · founding price through Sun, Oct 25</b></span></div>
           <ul class="way-list">
-            <li>Nine growth focuses from the Peace of Mind Framework</li>
-            <li>Personal feedback for each child within 24 hours</li>
+            <li>Pick one of nine growth focuses from the Peace of Mind Framework</li>
+            <li>A personal voice note on where your child is and what's next</li>
             <li>A customized lesson plan for your child</li>
             <li>Asynchronous in Telegram, with no live calls</li>
           </ul>
@@ -556,10 +574,10 @@ p strong{color:var(--black)}
         </div>
 
         <div class="way-card">
-          <span class="way-kicker">Immediate help</span>
+          <span class="way-kicker">Help as you need it</span>
           <h3>Homeschool Clarity Sessions</h3>
           <p>For parents with one pressing question: curriculum, preschool planning, routines, transcripts, high school direction, or what to do next.</p>
-          <div class="way-price">$97–$297<span>one-time support options</span></div>
+          <div class="way-price">$97–$297<span>book whenever you need support</span></div>
           <ul class="way-list">
             <li>Telegram support week, $97</li>
             <li>Virtual 90-minute session, $197</li>
@@ -610,12 +628,12 @@ p strong{color:var(--black)}
             <tr>
               <td><strong>Enough</strong><span class="tag">Start here</span></td>
               <td>Parents who keep wondering if they're doing enough, whether brand new or years in.</td>
-              <td>Three weeks in Telegram: group teaching on nine growth focuses, personal feedback for each child, and a customized lesson plan.</td>
-              <td>$197 · Nov 2–20</td>
+              <td>Three weeks in Telegram: pick one of nine growth focuses, get a personal voice note on what your child's circles show, and a customized lesson plan.</td>
+              <td><b class="enough-amt">$197</b><span class="founding-only" hidden> (founding price through Sun, Oct 25)</span> · Nov 2–20</td>
               <td><a href="/enough/">Join Enough</a></td>
             </tr>
             <tr>
-              <td><strong>Homeschool Clarity Sessions</strong><span class="tag">Quick help</span></td>
+              <td><strong>Homeschool Clarity Sessions</strong><span class="tag">Help as you need it</span></td>
               <td>Parents who need an answer now on curriculum, preschool planning, routines, transcripts, or a calm person to think with.</td>
               <td>Choose Telegram, virtual, or in-person support. Bring your questions, links, books, overwhelm, or half-formed plan.</td>
               <td>$97, $197, or $297</td>
@@ -805,5 +823,18 @@ p strong{color:var(--black)}
   </div>
 </footer>
 
+<script>
+/* ENOUGH FOUNDING PRICE TIMER
+   Before the deadline, every Enough price on this page shows the founding price.
+   After the deadline, it automatically shows the regular $197 (the price written in the HTML).
+   To change the deadline or price, edit the two lines below. */
+(function(){
+  var DEADLINE = new Date('2026-10-25T23:59:59-04:00'); // Sunday, Oct 25, 11:59pm Eastern
+  var FOUNDING = '$147';
+  if (new Date() >= DEADLINE) return;
+  document.querySelectorAll('.enough-amt').forEach(function(el){ el.textContent = FOUNDING; });
+  document.querySelectorAll('.founding-only').forEach(function(el){ el.hidden = false; });
+})();
+</script>
 </body>
 </html>
