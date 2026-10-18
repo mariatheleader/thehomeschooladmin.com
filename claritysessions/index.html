@@ -243,12 +243,18 @@ a{color:inherit}
 </style>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b545f1b503474e728f330024c81e07a9"}'></script><!-- End Cloudflare Web Analytics -->
+<style>
+/* ENOUGH FOUNDING PRICE (auto-switches, see script at bottom of page) */
+[hidden]{display:none!important}
+.enough-amt{font-weight:inherit}
+.founding-strike{opacity:.5;font-weight:400;margin-right:6px}
+</style>
 </head>
 
 <body>
 
 <div class="announce">
-  <p>New: Enough · a 3-week homeschool reset · November 2–20 · <a href="/enough/">Join for $197</a></p>
+  <p>New: Enough · 3 weeks 1:1 with me, so you can stop wondering if you're doing enough · Nov 2–20 · <a href="/enough/">Join for <b class="enough-amt">$197</b></a><span class="founding-only" hidden> · founding price through Sun, Oct 25</span></p>
 </div>
 
 <nav class="nav" aria-label="Main navigation">
@@ -408,7 +414,7 @@ a{color:inherit}
       </div>
       <div class="card">
         <h3>Go Deeper</h3>
-        <p>Want to see your child more clearly? Join <strong>Enough</strong>, my 3-week homeschool reset. Want a full year of private support? Get on the <strong>THRIVE</strong> waitlist.</p>
+        <p>Want to see your child more clearly? Join <strong>Enough</strong>: 3 weeks 1:1 with me, so you can stop wondering if you're doing enough. Want a full year of private support? Get on the <strong>THRIVE</strong> waitlist.</p>
         <a href="/enough/" class="card-link">Explore Enough</a>
       </div>
     </div>
@@ -454,7 +460,7 @@ a{color:inherit}
       <div>
         <h4>Support</h4>
         <ul>
-          <li><a href="/enough/">Enough: 3-Week Reset</a></li>
+          <li><a href="/enough/">Enough: 3 Weeks 1:1</a></li>
           <li><a href="/claritysessions/">Clarity Sessions</a></li>
           <li><a href="/thrive/">THRIVE Waitlist</a></li>
           <li><a href="/claritysessions/">Curriculum Help</a></li>
@@ -493,5 +499,18 @@ a{color:inherit}
   </div>
 </footer>
 
+<script>
+/* ENOUGH FOUNDING PRICE TIMER
+   Before the deadline, every Enough price on this page shows the founding price.
+   After the deadline, it automatically shows the regular $197 (the price written in the HTML).
+   To change the deadline or price, edit the two lines below. */
+(function(){
+  var DEADLINE = new Date('2026-10-25T23:59:59-04:00'); // Sunday, Oct 25, 11:59pm Eastern
+  var FOUNDING = '$147';
+  if (new Date() >= DEADLINE) return;
+  document.querySelectorAll('.enough-amt').forEach(function(el){ el.textContent = FOUNDING; });
+  document.querySelectorAll('.founding-only').forEach(function(el){ el.hidden = false; });
+})();
+</script>
 </body>
 </html>
